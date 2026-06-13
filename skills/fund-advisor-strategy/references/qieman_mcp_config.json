@@ -1,0 +1,201 @@
+{
+  "name": "qieman-mcp",
+  "description": "且慢(盈米)基金投顾MCP服务配置",
+  "version": "1.0.0",
+  "sse_endpoint": "https://stargate.yingmi.com/mcp/sse",
+  "api_base": "https://stargate.yingmi.com",
+  "tools": [
+    {
+      "name": "get_fund_info",
+      "description": "获取基金基本信息",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "基金代码，如: 000001"
+          }
+        },
+        "required": ["code"]
+      }
+    },
+    {
+      "name": "get_fund_nav",
+      "description": "获取基金净值数据",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "基金代码"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "开始日期 (YYYY-MM-DD)"
+          },
+          "end_date": {
+            "type": "string",
+            "description": "结束日期 (YYYY-MM-DD)"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "返回条数限制",
+            "default": 252
+          }
+        },
+        "required": ["code"]
+      }
+    },
+    {
+      "name": "search_funds",
+      "description": "搜索基金产品",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "搜索关键词（基金名称/代码）"
+          },
+          "fund_type": {
+            "type": "string",
+            "enum": ["stock", "bond", "mixed", "qdii", "index", "money"],
+            "description": "基金类型筛选"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "返回条数",
+            "default": 20
+          }
+        },
+        "required": ["keyword"]
+      }
+    },
+    {
+      "name": "analyze_portfolio",
+      "description": "分析投资组合的风险收益特征",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "holdings": {
+            "type": "array",
+            "description": "持仓列表",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "基金代码"
+                },
+                "weight": {
+                  "type": "number",
+                  "description": "权重 (0-1之间)"
+                }
+              },
+              "required": ["code", "weight"]
+            }
+          }
+        },
+        "required": ["holdings"]
+      }
+    },
+    {
+      "name": "get_strategy_recommendation",
+      "description": "根据风险偏好获取资产配置策略推荐",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "risk_profile": {
+            "type": "string",
+            "enum": ["conservative", "moderate", "balanced", "growth", "aggressive"],
+            "description": "风险偏好等级"
+          },
+          "amount": {
+            "type": "number",
+            "description": "投资金额(元)"
+          },
+          "horizon": {
+            "type": "string",
+            "enum": ["short", "medium", "long"],
+            "description": "投资期限",
+            "default": "long"
+          }
+        },
+        "required": ["risk_profile", "amount"]
+      }
+    },
+    {
+      "name": "get_investment_plan",
+      "description": "生成定投计划",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "fund_codes": {
+            "type": "array",
+            "description": "基金代码列表",
+            "items": {
+              "type": "string"
+            }
+          },
+          "amount": {
+            "type": "number",
+            "description": "每期定投金额(元)"
+          },
+          "frequency": {
+            "type": "string",
+            "enum": ["weekly", "monthly"],
+            "description": "定投频率",
+            "default": "monthly"
+          }
+        },
+        "required": ["fund_codes", "amount"]
+      }
+    },
+    {
+      "name": "get_market_overview",
+      "description": "获取市场概览数据",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_fund_performance",
+      "description": "获取基金业绩表现指标",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "基金代码"
+          },
+          "period": {
+            "type": "string",
+            "enum": ["1m", "3m", "6m", "1y", "3y", "5y", "all"],
+            "description": "统计周期",
+            "default": "1y"
+          }
+        },
+        "required": ["code"]
+      }
+    }
+  ],
+  "auth": {
+    "type": "api_key",
+    "header": "Authorization",
+    "prefix": "Bearer "
+  },
+  "base_url": "https://api.qieman.com",
+  "endpoints": {
+    "fund_info": "/v1/fund/info",
+    "fund_nav": "/v1/fund/nav",
+    "fund_search": "/v1/fund/search",
+    "fund_performance": "/v1/fund/performance",
+    "portfolio_analyze": "/v1/portfolio/analyze",
+    "portfolio_risk": "/v1/portfolio/risk",
+    "strategy_recommend": "/v1/strategy/recommend",
+    "investment_plan": "/v1/plan/investment",
+    "market_overview": "/v1/market/overview",
+    "market_sector": "/v1/market/sector",
+    "market_macro": "/v1/market/macro"
+  }
+}
