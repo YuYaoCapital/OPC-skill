@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPC 周度陪伴报告</title>
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text: #333333;
+      --text-secondary: #666666;
+      --up: #e74c3c;
+      --down: #27ae60;
+      --border: #e8e8e8;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+      color: #fff;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+    header .subtitle { font-size: 14px; opacity: 0.9; }
+    main { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+    .section-title {
+      font-size: 16px; font-weight: 600; color: var(--primary);
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .report-list { list-style: none; }
+    .report-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px; border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .report-item:hover { background: #f8f9fa; }
+    .report-item:last-child { border-bottom: none; }
+    .report-info { flex: 1; }
+    .report-name { font-size: 14px; font-weight: 500; color: var(--text); }
+    .report-meta { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+    .report-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: var(--primary); color: #fff;
+      padding: 8px 16px; border-radius: 6px;
+      font-size: 13px; text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .report-link:hover { opacity: 0.85; }
+    .badge {
+      display: inline-block; font-size: 10px; font-weight: 600;
+      padding: 2px 8px; border-radius: 10px; margin-left: 8px;
+    }
+    .badge-new { background: #e8f5e9; color: #2e7d32; }
+    .empty-state {
+      text-align: center; padding: 60px 20px;
+      color: var(--text-secondary);
+    }
+    .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+    .empty-state p { font-size: 14px; }
+    footer {
+      max-width: 720px; margin: 0 auto; padding: 24px 16px;
+      font-size: 11px; color: #999; text-align: center;
+    }
+    @media (max-width: 600px) {
+      .report-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OPC 周度陪伴报告</h1>
+    <div class="subtitle">Portfolio Week Companion Reports</div>
+  </header>
+
+  <main>
+    <section id="reports">
+      <div class="section-title">📋 报告列表</div>
+      <div class="card">
+        <ul class="report-list" id="report-list">
+          <!-- 报告列表将通过 JS 动态加载 -->
+        </ul>
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="icon">📂</div>
+          <p>暂无报告，请稍后再来查看</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="info">
+      <div class="section-title">ℹ️ 关于</div>
+      <div class="card" style="font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
+        <p>本页面展示 OPC（One Page Companion）周度陪伴报告。</p>
+        <p>报告每周五更新，覆盖全球市场速览、产品表现、回撤修复、后市观点等 15 个模块。</p>
+        <p>实时数据每 5 分钟自动刷新，数据来源：天天基金、东方财富、Yahoo Finance。</p>
+        <p style="margin-top: 12px; font-size: 12px; color: #999;">
+          数据来源：{{数据来源列表}} | 制作日期：<span id="make-date"></span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
+    <p>部署平台：Cloudflare Pages | 实时数据每 5 分钟刷新</p>
+  </footer>
+
+  <script>
+    // 扫描 reports 目录下的报告文件
+    async function loadReports() {
+      const listEl = document.getElementById('report-list');
+      const emptyEl = document.getElementById('empty-state');
+
+      // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
+      // 这里使用静态列表，每次生成报告后更新此数组
+      const reports = [
+        // 示例格式：
+        // { name: '交银臻享多资产FOF A 周度陪伴报告', date: '2026-07-08', file: 'reports/20260708_交银臻享多资产FOF_A.html' },
+      ];
+
+      if (reports.length === 0) {
+        listEl.style.display = 'none';
+        emptyEl.style.display = 'block';
+        return;
+      }
+
+      // 按日期倒序
+      reports.sort((a, b) => b.date.localeCompare(a.date));
+
+      listEl.innerHTML = reports.map((r, i) => `
+        <li class="report-item">
+          <div class="report-info">
+            <div class="report-name">
+              ${r.name}
+              ${i === 0 ? '<span class="badge badge-new">最新</span>' : ''}
+            </div>
+            <div class="report-meta">${r.date}</div>
+          </div>
+          <a class="report-link" href="${r.file}" target="_blank">查看报告 →</a>
+        </li>
+      `).join('');
+    }
+
+    // 设置制作日期
+    document.getElementById('make-date').textContent = new Date().toLocaleDateString('zh-CN');
+
+    loadReports();
+  </script>
+</body>
+</html>

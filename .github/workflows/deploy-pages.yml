@@ -1,0 +1,31 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/portfolio-week-companion/site/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:  # 允许手动触发
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: opc-weekly-companion  # Cloudflare Pages 项目名称
+          directory: skills/portfolio-week-companion/site  # 部署目录
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

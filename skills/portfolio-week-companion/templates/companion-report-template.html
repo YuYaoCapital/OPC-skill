@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPC · {{产品名称}} 周度陪伴报告</title>
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text: #333333;
+      --text-secondary: #666666;
+      --up: #e74c3c;
+      --down: #27ae60;
+      --border: #e8e8e8;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+      color: #fff;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+    header .subtitle { font-size: 14px; opacity: 0.9; }
+    header .meta { font-size: 12px; opacity: 0.75; margin-top: 8px; }
+    main { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+    section { margin-bottom: 32px; }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 16px; font-weight: 600; color: var(--primary);
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .kpi-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;
+    }
+    .kpi-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 16px; text-align: center;
+    }
+    .kpi-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+    .kpi-value { font-size: 24px; font-weight: 700; font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif; }
+    .kpi-value.up { color: var(--up); }
+    .kpi-value.down { color: var(--down); }
+    .kpi-date { font-size: 11px; color: #999; margin-top: 4px; }
+    .fund-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+    }
+    .fund-item {
+      background: #fafbfc; border-radius: 8px; padding: 10px 12px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .fund-name { font-size: 13px; font-weight: 500; }
+    .fund-code { font-size: 11px; color: #999; }
+    .fund-return { font-size: 14px; font-weight: 600; }
+    .fund-return.up { color: var(--up); }
+    .fund-return.down { color: var(--down); }
+    .market-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    }
+    .market-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 14px; text-align: center;
+    }
+    .market-flag { font-size: 20px; margin-bottom: 4px; }
+    .market-name { font-size: 12px; color: var(--text-secondary); }
+    .market-close { font-size: 14px; font-weight: 600; margin: 4px 0; }
+    .market-return { font-size: 13px; font-weight: 600; }
+    .market-return.up { color: var(--up); }
+    .market-return.down { color: var(--down); }
+    .keyword-banner {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff; border-radius: var(--radius); padding: 20px;
+      text-align: center; font-size: 18px; font-weight: 600;
+    }
+    .keyword-tags { margin-top: 10px; }
+    .keyword-tag {
+      display: inline-block; background: rgba(255,255,255,0.25);
+      padding: 4px 12px; border-radius: 20px; font-size: 13px;
+      margin: 0 4px;
+    }
+    .theme-scroll {
+      display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px;
+    }
+    .theme-card {
+      min-width: 100px; background: var(--card-bg);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 12px; text-align: center; flex-shrink: 0;
+    }
+    .theme-name { font-size: 12px; font-weight: 500; }
+    .theme-etf { font-size: 11px; color: #999; }
+    .theme-return { font-size: 14px; font-weight: 600; margin-top: 4px; }
+    .fm-section { margin-bottom: 14px; }
+    .fm-section h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
+    .fm-section p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+    .ai-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    }
+    .ai-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
+    .ai-card h4 { font-size: 14px; color: var(--primary); margin-bottom: 8px; }
+    .ai-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+    .day-row {
+      display: flex; gap: 8px; justify-content: center; margin: 16px 0;
+    }
+    .day-card {
+      flex: 1; background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 12px 8px; text-align: center;
+    }
+    .day-date { font-size: 11px; color: #999; }
+    .day-return { font-size: 16px; font-weight: 700; margin-top: 4px; }
+    .day-return.up { color: var(--up); }
+    .day-return.down { color: var(--down); }
+    .drawdown-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    }
+    .drawdown-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 20px; text-align: center;
+    }
+    .drawdown-number { font-size: 28px; font-weight: 700; color: var(--primary); }
+    .drawdown-label { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+    .drawdown-note { font-size: 11px; color: #999; margin-top: 4px; }
+    .attribution-section { margin-bottom: 14px; }
+    .attribution-section h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
+    .attribution-section p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+    .outlook-section { margin-bottom: 14px; }
+    .outlook-section h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
+    .outlook-section p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 13px;
+    }
+    th, td {
+      padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border);
+    }
+    th { background: #f8f9fa; font-weight: 600; color: var(--primary); }
+    tr:hover { background: #fafbfc; }
+    .news-card { margin-bottom: 12px; }
+    .news-card summary {
+      font-size: 14px; font-weight: 600; color: var(--primary);
+      cursor: pointer; padding: 12px 16px; background: var(--card-bg);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      list-style: none; display: flex; align-items: center; gap: 8px;
+    }
+    .news-card summary::before { content: "▶"; font-size: 10px; transition: transform 0.2s; }
+    .news-card[open] summary::before { transform: rotate(90deg); }
+    .news-content { padding: 16px; background: var(--card-bg); border-radius: 0 0 var(--radius) var(--radius); box-shadow: var(--shadow); margin-top: -4px; }
+    .news-dimension { margin-bottom: 10px; }
+    .news-dimension strong { font-size: 13px; color: var(--primary); }
+    .news-dimension p { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: #f0f4f8; border: none; border-radius: 6px;
+      padding: 4px 10px; font-size: 12px; color: var(--primary);
+      cursor: pointer; margin-left: 8px;
+    }
+    .copy-btn:hover { background: #e2e8f0; }
+    .script-block {
+      background: #f8f9fa; border-left: 3px solid var(--primary);
+      padding: 12px 16px; margin: 8px 0; border-radius: 0 8px 8px 0;
+      font-size: 13px; color: var(--text-secondary); line-height: 1.7;
+    }
+    .faq-item { margin-bottom: 14px; }
+    .faq-q { font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
+    .faq-a { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+    .live-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; color: #fff;
+      background: #27ae60; padding: 2px 6px; border-radius: 4px;
+      margin-left: 6px; animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .live-tag.offline {
+      background: #999; animation: none;
+    }
+    footer {
+      max-width: 720px; margin: 0 auto; padding: 24px 16px;
+      font-size: 11px; color: #999; line-height: 1.8;
+    }
+    footer .risk-box {
+      background: #fff8f0; border: 1px solid #ffe4c4;
+      border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;
+      color: #8b6914;
+    }
+    @media (max-width: 600px) {
+      .kpi-row { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .kpi-card { padding: 12px 8px; }
+      .kpi-value { font-size: 18px; }
+      .market-grid { grid-template-columns: repeat(2, 1fr); }
+      .fund-grid { grid-template-columns: 1fr; }
+      .ai-grid { grid-template-columns: 1fr; }
+      .drawdown-grid { grid-template-columns: 1fr; }
+      .day-row { flex-wrap: wrap; }
+      .day-card { min-width: 60px; }
+      table { font-size: 12px; }
+      th, td { padding: 8px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .card, .kpi-card, .market-card, .theme-card, .day-card, .drawdown-card {
+        box-shadow: none; border: 1px solid #ddd;
+      }
+      .copy-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== 模块 1：报告头 ========== -->
+  <header>
+    <h1>OPC · {{产品名称}} 周度陪伴报告</h1>
+    <div class="subtitle">{{产品全称}}</div>
+    <div class="meta" id="report-meta">
+      <span id="week-range">{{报告期起始日}} 至 {{报告期结束日}}</span>
+      &nbsp;|&nbsp; 产品代码：{{产品代码}}
+      &nbsp;|&nbsp; 风险等级：{{风险等级}}
+      &nbsp;|&nbsp; 适合：{{适合客户画像}}
+      <span class="live-tag" id="live-tag">LIVE</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== 模块 2：产品概况 ========== -->
+    <section id="overview">
+      <div class="section-title">📋 产品概况</div>
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-label">最新净值 <span class="live-tag" id="nav-live-tag">LIVE</span></div>
+          <div class="kpi-value" id="latest-nav">{{最新净值}}</div>
+          <div class="kpi-date" id="nav-date">{{净值日期}}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">本周收益</div>
+          <div class="kpi-value {{本周收益方向}}" id="weekly-return">{{本周收益}}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">成立以来</div>
+          <div class="kpi-value {{成立以来方向}}">{{成立以来收益}}</div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:13px;color:#666;margin-bottom:10px;">
+          基金经理：{{基金经理}} &nbsp;|&nbsp; 核心持仓基金（截至 {{季报日期}}）
+        </div>
+        <div class="fund-grid">
+          <!-- 重复以下结构，每只持仓基金一个 -->
+          <div class="fund-item">
+            <div>
+              <div class="fund-name">{{基金名称}}</div>
+              <div class="fund-code">{{基金代码}}</div>
+            </div>
+            <div class="fund-return {{日涨跌方向}}">{{日涨跌}}</div>
+          </div>
+          <!-- /重复 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 3：全球市场速览 ========== -->
+    <section id="market">
+      <div class="section-title">🌍 全球市场速览（本周）</div>
+      <div class="market-grid" id="market-grid">
+        <div class="market-card" data-index="hs300">
+          <div class="market-flag">🇨🇳</div>
+          <div class="market-name">沪深300</div>
+          <div class="market-close" id="hs300-close">{{沪深300收盘价}}</div>
+          <div class="market-return {{沪深300方向}}" id="hs300-change">{{沪深300涨跌幅}}</div>
+        </div>
+        <div class="market-card" data-index="hsi">
+          <div class="market-flag">🇭🇰</div>
+          <div class="market-name">恒生指数</div>
+          <div class="market-close" id="hsi-close">{{恒生收盘价}}</div>
+          <div class="market-return {{恒生方向}}" id="hsi-change">{{恒生涨跌幅}}</div>
+        </div>
+        <div class="market-card" data-index="sp500">
+          <div class="market-flag">🇺🇸</div>
+          <div class="market-name">标普500</div>
+          <div class="market-close" id="sp500-close">{{标普500收盘价}}</div>
+          <div class="market-return {{标普500方向}}" id="sp500-change">{{标普500涨跌幅}}</div>
+        </div>
+        <div class="market-card" data-index="gold">
+          <div class="market-flag">🥇</div>
+          <div class="market-name">COMEX黄金</div>
+          <div class="market-close" id="gold-close">{{黄金价格}}</div>
+          <div class="market-return {{黄金方向}}" id="gold-change">{{黄金涨跌幅}}</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#666;">
+          <span>📊 沪深300 PE：<strong>{{PE值}}</strong>（{{PE评价}}）</span>
+          <span>📈 估值分位：<strong>{{分位值}}%</strong>（{{分位评价}}）</span>
+          <span>📉 10Y国债：<strong>{{国债收益率}}%</strong>（{{国债评价}}）</span>
+          <span>⚖️ 股债性价比：<strong>{{性价比数值}}</strong>（{{性价比评价}}）</span>
+        </div>
+        <div style="font-size:11px;color:#999;margin-top:8px;">
+          数据来源：东方财富 | 周度涨跌幅，与基金本周交易日对齐
+          <span id="market-refresh-time" style="margin-left:8px;"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 4：本周关键词 ========== -->
+    <section id="keywords">
+      <div class="keyword-banner">
+        <div>本周关键词：{{关键词短句}}</div>
+        <div class="keyword-tags">
+          <span class="keyword-tag">{{标签1}}</span>
+          <span class="keyword-tag">{{标签2}}</span>
+          <span class="keyword-tag">{{标签3}}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 5：热门主题 ========== -->
+    <section id="themes">
+      <div class="section-title">🔥 热门主题基金</div>
+      <div class="theme-scroll">
+        <!-- 重复以下结构 -->
+        <div class="theme-card">
+          <div class="theme-name">{{主题名称}}</div>
+          <div class="theme-etf">{{ETF名称}}</div>
+          <div class="theme-return {{涨跌幅方向}}">{{涨跌幅}}</div>
+          <div style="font-size:11px;color:#999;">近1周</div>
+        </div>
+        <!-- /重复 -->
+      </div>
+      <div style="font-size:11px;color:#999;margin-top:8px;">数据来源：东方财富、腾讯财经 | 主题ETF实时行情</div>
+    </section>
+
+    <!-- ========== 模块 6：基金经理观点 ========== -->
+    <section id="fm-view">
+      <div class="section-title">📋 基金经理市场观点（{{季报日期}}）</div>
+      <div class="card">
+        <div class="fm-section">
+          <h4>📊 市场回顾</h4>
+          <p>{{基金经理市场回顾内容}}</p>
+        </div>
+        <div class="fm-section">
+          <h4>🎯 组合运作思路</h4>
+          <p>{{组合运作思路内容}}</p>
+        </div>
+        <div class="fm-section">
+          <h4>🔭 后市展望</h4>
+          <p>{{后市展望内容}}</p>
+        </div>
+        <div style="font-size:11px;color:#999;margin-top:12px;">
+          数据来源：{{基金公司}} {{季报年份}}年{{季报季度}}季报 | 基金经理：{{基金经理}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 7：AI 智能解读 ========== -->
+    <section id="ai-insight">
+      <div class="section-title">🤖 AI 智能解读</div>
+      <div class="ai-grid">
+        <div class="ai-card">
+          <h4>🧠 市场概况</h4>
+          <p>{{AI市场概况内容}}</p>
+        </div>
+        <div class="ai-card">
+          <h4>📈 对产品的影响</h4>
+          <p>{{AI对产品影响内容}}</p>
+        </div>
+        <div class="ai-card">
+          <h4>💡 给投资者的建议</h4>
+          <p>{{AI投资建议内容}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 8：本周产品表现 ========== -->
+    <section id="performance">
+      <div class="section-title">📊 一、本周产品表现如何？</div>
+      <div class="card">
+        <p style="font-size:14px;color:#666;margin-bottom:16px;">
+          亲爱的投资者朋友，感谢您选择 {{产品名称}}。本周产品整体运行{{运行状态}}，周度收益为 <strong class="{{本周收益方向}}" id="perf-weekly-return">{{本周收益}}</strong>，{{收益解读}}。
+        </p>
+        <div class="day-row">
+          <!-- 重复 5 天 -->
+          <div class="day-card">
+            <div class="day-date">{{日期}}</div>
+            <div class="day-return {{涨跌方向}}">{{涨跌幅}}</div>
+            <div style="font-size:11px;color:#999;">{{星期}}</div>
+          </div>
+          <!-- /重复 -->
+        </div>
+        <p style="font-size:13px;color:#666;margin-top:12px;line-height:1.7;">{{市场综述}}</p>
+        <div style="font-size:11px;color:#999;margin-top:8px;">数据来源：天天基金网 | 成立以来净值走势</div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 9：回撤修复数据 ========== -->
+    <section id="drawdown">
+      <div class="section-title">⏱️ 跌了怎么办？</div>
+      <div class="card">
+        <p style="font-size:14px;color:#666;margin-bottom:16px;">
+          {{回撤安抚标语}}
+        </p>
+        <div class="drawdown-grid">
+          <div class="drawdown-card">
+            <div class="drawdown-number">{{最大回撤修复天数}}天</div>
+            <div class="drawdown-label">历史最大回撤修复</div>
+            <div class="drawdown-note">回撤{{最大回撤幅度}}</div>
+          </div>
+          <div class="drawdown-card">
+            <div class="drawdown-number">~{{平均修复天数}}天</div>
+            <div class="drawdown-label">其他几次小波动</div>
+            <div class="drawdown-note">平均{{平均修复天数}}天内恢复</div>
+          </div>
+          <div class="drawdown-card">
+            <div class="drawdown-number">{{当前回撤幅度}}</div>
+            <div class="drawdown-label">当前小幅回撤中</div>
+            <div class="drawdown-note">已持续{{当前回撤天数}}天，耐心持有</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 10：组合波动原因分析 ========== -->
+    <section id="attribution">
+      <div class="section-title">🔍 二、为什么本周会有波动？</div>
+      <div class="card">
+        <p style="font-size:14px;color:#666;margin-bottom:12px;">
+          作为一只以 <strong>{{核心资产类别}}</strong> 为底仓、适度配置{{其他资产}}的{{产品类型}}，本周的波动主要来源于以下几个方面：
+        </p>
+        <div class="attribution-section">
+          <h4>1. 债券端：债市表现</h4>
+          <p>{{债券端分析}}</p>
+        </div>
+        <div class="attribution-section">
+          <h4>2. 权益端：A股表现</h4>
+          <p>{{权益端分析}}</p>
+        </div>
+        <div class="attribution-section">
+          <h4>3. 黄金端：商品表现</h4>
+          <p>{{黄金端分析}}</p>
+        </div>
+        <div style="background:#f0f7ff;border-radius:8px;padding:12px 16px;margin-top:12px;">
+          <p style="font-size:13px;color:#2c5282;line-height:1.7;">
+            <strong>💡 小结：</strong>{{波动归因小结}}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 11：后市观点 ========== -->
+    <section id="outlook">
+      <div class="section-title">🔭 三、后市怎么看？</div>
+      <div class="card">
+        <div class="outlook-section">
+          <h4>债券市场：{{债市观点标题}}</h4>
+          <p>{{债市观点内容}}</p>
+        </div>
+        <div class="outlook-section">
+          <h4>权益市场：{{权益观点标题}}</h4>
+          <p>{{权益观点内容}}</p>
+        </div>
+        <div class="outlook-section">
+          <h4>黄金：{{黄金观点标题}}</h4>
+          <p>{{黄金观点内容}}</p>
+        </div>
+        <div style="background:#fff8f0;border-radius:8px;padding:12px 16px;margin-top:12px;">
+          <p style="font-size:13px;color:#8b6914;line-height:1.7;">
+            <strong>💡 给投资者的一句话：</strong>{{一句话建议}}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 模块 12：客户行动指南 ========== -->
+    <section id="action">
+      <div class="section-title">🎯 四、您该怎么做？</div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:28%">您的状态</th>
+              <th style="width:28%">建议动作</th>
+              <th style="width:44%">理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>持仓未满建议期</td>
+              <td><strong>安心持有</strong><br>不要因短期波动赎回</td>
+              <td>{{理由1}}</td>
+            </tr>
+            <tr>
+              <td>持仓已满建议期<br>且目前盈利</td>
+              <td><strong>继续配置</strong><br>可作为底仓长期持有</td>
+              <td>{{理由2}}</td>
+            </tr>
+            <tr>
+              <td>持仓已满建议期<br>但目前浮亏</td>
+              <td><strong>可考虑分批补仓</strong><br>或转换为定投</td>
+              <td>{{理由3}}</td>
+            </tr>
+            <tr>
+              <td>尚未持仓<br>在观望中</td>
+              <td><strong>可启动小额定投</strong><br>或一次性建仓</td>
+              <td>{{理由4}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:13px;color:#2c5282;margin-top:12px;background:#f0f7ff;padding:10px 14px;border-radius:6px;">
+          <strong>💡 财富小贴士：</strong>{{财富小贴士}}
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 模块 13：财经新闻与沟通策略 ========== -->
+    <section id="news">
+      <div class="section-title">📰 财经新闻与沟通策略</div>
+      <!-- 每个市场一个 details 卡片 -->
+      <details class="news-card" open>
+        <summary>🇨🇳 A股市场动态</summary>
+        <div class="news-content">
+          <div class="news-dimension"><strong>📊 市场动态</strong><p>{{A股市场动态}}</p></div>
+          <div class="news-dimension"><strong>📈 产生的影响</strong><p>{{A股对组合影响}}</p></div>
+          <div class="news-dimension"><strong>📚 历史上此类事件对市场的影响</strong><p>{{A股历史规律}}</p></div>
+          <div class="news-dimension"><strong>👥 影响哪些客户</strong><p>{{A股影响客群}}</p></div>
+          <div class="news-dimension">
+            <strong>💬 如何沟通</strong>
+            <div class="script-block" id="script-cn">{{A股沟通话术}}</div>
+            <button class="copy-btn" onclick="copyScript('script-cn')">📋 复制</button>
+          </div>
+        </div>
+      </details>
+      <details class="news-card">
+        <summary>🇭🇰 港股市场动态</summary>
+        <div class="news-content">
+          <div class="news-dimension"><strong>📊 市场动态</strong><p>{{港股市场动态}}</p></div>
+          <div class="news-dimension"><strong>📈 产生的影响</strong><p>{{港股对组合影响}}</p></div>
+          <div class="news-dimension"><strong>📚 历史上此类事件对市场的影响</strong><p>{{港股历史规律}}</p></div>
+          <div class="news-dimension"><strong>👥 影响哪些客户</strong><p>{{港股影响客群}}</p></div>
+          <div class="news-dimension">
+            <strong>💬 如何沟通</strong>
+            <div class="script-block" id="script-hk">{{港股沟通话术}}</div>
+            <button class="copy-btn" onclick="copyScript('script-hk')">📋 复制</button>
+          </div>
+        </div>
+      </details>
+      <details class="news-card">
+        <summary>🇺🇸 美股市场动态</summary>
+        <div class="news-content">
+          <div class="news-dimension"><strong>📊 市场动态</strong><p>{{美股市场动态}}</p></div>
+          <div class="news-dimension"><strong>📈 产生的影响</strong><p>{{美股对组合影响}}</p></div>
+          <div class="news-dimension"><strong>📚 历史上此类事件对市场的影响</strong><p>{{美股历史规律}}</p></div>
+          <div class="news-dimension"><strong>👥 影响哪些客户</strong><p>{{美股影响客群}}</p></div>
+          <div class="news-dimension">
+            <strong>💬 如何沟通</strong>
+            <div class="script-block" id="script-us">{{美股沟通话术}}</div>
+            <button class="copy-btn" onclick="copyScript('script-us')">📋 复制</button>
+          </div>
+        </div>
+      </details>
+      <details class="news-card">
+        <summary>🥇 黄金市场动态</summary>
+        <div class="news-content">
+          <div class="news-dimension"><strong>📊 市场动态</strong><p>{{黄金市场动态}}</p></div>
+          <div class="news-dimension"><strong>📈 产生的影响</strong><p>{{黄金对组合影响}}</p></div>
+          <div class="news-dimension"><strong>📚 历史上此类事件对市场的影响</strong><p>{{黄金历史规律}}</p></div>
+          <div class="news-dimension"><strong>👥 影响哪些客户</strong><p>{{黄金影响客群}}</p></div>
+          <div class="news-dimension">
+            <strong>💬 如何沟通</strong>
+            <div class="script-block" id="script-gold">{{黄金沟通话术}}</div>
+            <button class="copy-btn" onclick="copyScript('script-gold')">📋 复制</button>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== 模块 14：理财经理沟通贴士 ========== -->
+    <section id="advisor">
+      <div class="section-title">💼 五、理财经理本周沟通贴士</div>
+      <div class="card">
+        <p style="font-size:14px;font-weight:600;color:var(--primary);margin-bottom:12px;">🎯 本周沟通重点（3句话）</p>
+        <div style="margin-bottom:16px;">
+          <p style="font-size:13px;color:#666;line-height:2;">
+            1. <strong>定调：</strong>「{{沟通重点1}}」
+            <button class="copy-btn" onclick="copyText('{{沟通重点1}}')">📋 复制</button>
+          </p>
+          <p style="font-size:13px;color:#666;line-height:2;">
+            2. <strong>归因：</strong>「{{沟通重点2}}」
+            <button class="copy-btn" onclick="copyText('{{沟通重点2}}')">📋 复制</button>
+          </p>
+          <p style="font-size:13px;color:#666;line-height:2;">
+            3. <strong>建议：</strong>「{{沟通重点3}}」
+            <button class="copy-btn" onclick="copyText('{{沟通重点3}}')">📋 复制</button>
+          </p>
+        </div>
+
+        <p style="font-size:14px;font-weight:600;color:var(--primary);margin:16px 0 12px;">不同客群话术模板</p>
+        <div class="script-block">
+          <strong>新客户（持仓&lt;1个月）</strong><br>
+          {{新客户话术}}
+          <button class="copy-btn" onclick="copyText('{{新客户话术}}')">📋 复制</button>
+        </div>
+        <div class="script-block">
+          <strong>老客户（盈利）</strong><br>
+          {{盈利老客户话术}}
+          <button class="copy-btn" onclick="copyText('{{盈利老客户话术}}')">📋 复制</button>
+        </div>
+        <div class="script-block">
+          <strong>浮亏客户（持仓较短）</strong><br>
+          {{浮亏短持仓话术}}
+          <button class="copy-btn" onclick="copyText('{{浮亏短持仓话术}}')">📋 复制</button>
+        </div>
+        <div class="script-block">
+          <strong>浮亏客户（持仓较长）</strong><br>
+          {{浮亏长持仓话术}}
+          <button class="copy-btn" onclick="copyText('{{浮亏长持仓话术}}')">📋 复制</button>
+        </div>
+
+        <p style="font-size:14px;font-weight:600;color:var(--primary);margin:16px 0 12px;">常见客户异议回应</p>
+        <div class="faq-item">
+          <div class="faq-q">❓ 「{{异议问题1}}」</div>
+          <div class="faq-a">💬 {{异议回应1}}</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">❓ 「{{异议问题2}}」</div>
+          <div class="faq-a">💬 {{异议回应2}}</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">❓ 「{{异议问题3}}」</div>
+          <div class="faq-a">💬 {{异议回应3}}</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 模块 15：附录 ========== -->
+  <footer>
+    <div class="risk-box">
+      <strong>风险提示：</strong><br>
+      1. 本基金为混合型基金中基金，其预期风险与预期收益高于货币市场基金、货币型基金中基金、债券型基金和债券型基金中基金，低于股票型基金和股票型基金中基金。<br>
+      2. 本基金可投资港股通标的股票，会面临港股通机制下因投资环境、投资标的、市场制度以及交易规则等差异带来的特有风险。<br>
+      3. 本基金对每份基金份额设置{{最短持有期}}的最短持有期限，在最短持有期限内，您将面临因不能赎回或卖出基金份额而出现的流动性约束。<br>
+      4. 基金管理人依照恪尽职守、诚实信用、谨慎勤勉的原则管理和运用基金财产，但不保证基金一定盈利，也不保证最低收益。<br>
+      5. 基金过往业绩不代表未来表现，基金投资需谨慎。请您根据自身的风险承受能力，选择适合自己的基金产品。
+    </div>
+    <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
+    <p>
+      数据来源：{{数据来源列表}} |
+      数据更新：<span id="data-update-date">{{数据更新日期}}</span> |
+      制作日期：<span id="make-date">{{制作日期}}</span>
+      <span id="next-refresh" style="margin-left:8px;color:#999;"></span>
+    </p>
+  </footer>
+
+  <script>
+    // ============================================
+    // 一、配置：产品代码与数据源
+    // ============================================
+    const FUND_CODE = '{{产品代码}}' || '025313';  // 若模板变量为空则使用默认值
+    const REFRESH_INTERVAL = 5 * 60 * 1000;  // 5分钟（毫秒）
+
+    // 指数 secid 映射（东方财富）
+    const SECID_MAP = {
+      hs300: '1.000300',   // 沪深300
+      sse: '1.000001',     // 上证指数
+      chi_next: '0.399006',// 创业板指
+      hsi: '116.HSI'       // 恒生指数（可能不可用，需降级）
+    };
+
+    // ============================================
+    // 二、工具函数
+    // ============================================
+    function formatDateCN(date) {
+      return date.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-');
+    }
+
+    function formatDateTime(date) {
+      return date.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+    }
+
+    // 自动计算本周范围（周一 ~ 今天/周五）
+    function getWeekRange() {
+      const now = new Date();
+      const day = now.getDay();  // 0=周日, 1=周一, ..., 6=周六
+      const monday = new Date(now);
+      // 调整到本周一
+      const diffToMonday = (day === 0 ? -6 : 1) - day;  // 周日时回退6天到周一
+      monday.setDate(now.getDate() + diffToMonday);
+      monday.setHours(0, 0, 0, 0);
+
+      // 结束日：如果今天是周六/周日，则显示到周五；否则到今天
+      let endDay = new Date(now);
+      if (day === 0 || day === 6) {
+        const diffToFriday = (day === 0 ? -2 : -1);  // 周日→周五(-2)，周六→周五(-1)
+        endDay.setDate(now.getDate() + diffToFriday);
+      }
+      endDay.setHours(23, 59, 59, 999);
+
+      return {
+        start: formatDateCN(monday),
+        end: formatDateCN(endDay),
+        monday: monday,
+        endDay: endDay
+      };
+    }
+
+    // 多源降级获取
+    async function fetchWithFallback(fetchers) {
+      for (const fetcher of fetchers) {
+        try {
+          const data = await fetcher();
+          if (data && data !== null && data !== undefined) return data;
+        } catch (e) { console.warn('Source failed:', e.message); }
+      }
+      return null;
+    }
+
+    // 更新页面元素
+    function updateElement(id, value, className) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = value;
+      if (className) {
+        el.className = el.className.replace(/\b(up|down)\b/g, '').trim() + ' ' + className;
+      }
+    }
+
+    function updateClass(id, className) {
+      const el = document.getElementById(id);
+      if (el) el.className = className;
+    }
+
+    // ============================================
+    // 三、数据源 1：天天基金 JSONP（P7）— 基金净值
+    // ============================================
+    function fetchFundNav(fundCode) {
+      return new Promise((resolve) => {
+        const script = document.createElement('script');
+        const cb = '_fundgz_' + Date.now();
+        const timeout = setTimeout(() => {
+          cleanup(); resolve(null);
+        }, 8000);
+
+        function cleanup() {
+          clearTimeout(timeout);
+          delete window[cb];
+          if (script.parentNode) script.parentNode.removeChild(script);
+        }
+
+        window[cb] = (data) => {
+          cleanup();
+          if (!data) { resolve(null); return; }
+          resolve({
+            nav: data.dwjz,           // 单位净值
+            estimateNav: data.gsz,    // 估算净值
+            estimateTime: data.gztime,  // 估算时间
+            changePct: data.gszzl,    // 估算涨跌幅
+            name: data.name
+          });
+        };
+
+        script.onerror = () => { cleanup(); resolve(null); };
+        script.src = `https://fundgz.1234567.com.cn/js/${fundCode}.js?rt=${Date.now()}`;
+        document.head.appendChild(script);
+      });
+    }
+
+    // ============================================
+    // 数据源 2：东方财富 API（P4）— 指数行情
+    // ============================================
+    async function fetchIndexQuote(secid) {
+      try {
+        const url = `https://push2.eastmoney.com/api/qt/stock/get?secid=${secid}&fields=f43,f44,f45,f46,f57,f58,f60,f170,f171`;
+        const res = await fetch(url, { mode: 'cors' });
+        const json = await res.json();
+        const d = json.data;
+        if (!d) return null;
+        const price = d.f43 ? (d.f43 / 100).toFixed(2) : '--';
+        const prevClose = d.f60 || 1;
+        const changePct = d.f171 !== undefined ? (d.f171 / 100).toFixed(2) + '%' : '--';
+        const rawChange = d.f171 ? (d.f171 / 100) : 0;
+        return { price, changePct, rawChange, name: d.f58 };
+      } catch (e) {
+        console.warn('Eastmoney fetch failed:', e.message);
+        return null;
+      }
+    }
+
+    // ============================================
+    // 数据源 3：Yahoo Finance（P4）— 通过 Cloudflare Worker 代理
+    // ============================================
+    async function fetchYahooViaProxy(symbol) {
+      try {
+        // 假设部署在 Cloudflare Pages，使用 Functions 代理
+        const url = `/api/yahoo?symbol=${encodeURIComponent(symbol)}`;
+        const res = await fetch(url);
+        if (!res.ok) return null;
+        const data = await res.json();
+        return {
+          price: data.price?.toFixed(2) || '--',
+          changePct: data.changePct || '--',
+          rawChange: parseFloat(data.changePct) || 0
+        };
+      } catch (e) {
+        console.warn('Yahoo proxy failed:', e.message);
+        return null;
+      }
+    }
+
+    // ============================================
+    // 四、主刷新逻辑
+    // ============================================
+    async function refreshNav() {
+      const data = await fetchFundNav(FUND_CODE);
+      const liveTag = document.getElementById('nav-live-tag');
+      if (!data) {
+        if (liveTag) { liveTag.textContent = 'OFF'; liveTag.classList.add('offline'); }
+        return;
+      }
+      if (liveTag) { liveTag.textContent = 'LIVE'; liveTag.classList.remove('offline'); }
+
+      // 更新最新净值
+      const navEl = document.getElementById('latest-nav');
+      if (navEl && data.estimateNav) {
+        navEl.textContent = data.estimateNav;
+      }
+      // 更新净值日期
+      const dateEl = document.getElementById('nav-date');
+      if (dateEl && data.estimateTime) {
+        dateEl.textContent = data.estimateTime;
+      }
+      // 更新本周收益（用估算涨跌幅）
+      const weeklyEl = document.getElementById('weekly-return');
+      if (weeklyEl && data.changePct !== undefined) {
+        const pct = parseFloat(data.changePct);
+        weeklyEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+        weeklyEl.className = 'kpi-value ' + (pct >= 0 ? 'up' : 'down');
+      }
+      // 同步模块8的显示
+      const perfEl = document.getElementById('perf-weekly-return');
+      if (perfEl && data.changePct !== undefined) {
+        const pct = parseFloat(data.changePct);
+        perfEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+        perfEl.className = (pct >= 0 ? 'up' : 'down');
+      }
+    }
+
+    async function refreshIndices() {
+      const now = new Date();
+
+      // 1. 沪深300（P4 东方财富，浏览器端直接 fetch）
+      const hs300 = await fetchWithFallback([
+        () => fetchIndexQuote(SECID_MAP.hs300)
+      ]);
+      if (hs300) {
+        updateElement('hs300-close', hs300.price);
+        updateElement('hs300-change', hs300.changePct, hs300.rawChange >= 0 ? 'up' : 'down');
+      }
+
+      // 2. 恒生指数（P4 东方财富 → P4 Yahoo 代理）
+      const hsi = await fetchWithFallback([
+        () => fetchIndexQuote(SECID_MAP.hsi),
+        () => fetchYahooViaProxy('^HSI')
+      ]);
+      if (hsi) {
+        updateElement('hsi-close', hsi.price);
+        updateElement('hsi-change', hsi.changePct, hsi.rawChange >= 0 ? 'up' : 'down');
+      }
+
+      // 3. 标普500（P4 Yahoo 代理）
+      const sp500 = await fetchWithFallback([
+        () => fetchYahooViaProxy('^GSPC')
+      ]);
+      if (sp500) {
+        updateElement('sp500-close', sp500.price);
+        updateElement('sp500-change', sp500.changePct, sp500.rawChange >= 0 ? 'up' : 'down');
+      }
+
+      // 4. COMEX黄金（P4 Yahoo 代理）
+      const gold = await fetchWithFallback([
+        () => fetchYahooViaProxy('GC=F')
+      ]);
+      if (gold) {
+        updateElement('gold-close', gold.price);
+        updateElement('gold-change', gold.changePct, gold.rawChange >= 0 ? 'up' : 'down');
+      }
+
+      // 更新时间戳
+      const refreshTimeEl = document.getElementById('market-refresh-time');
+      if (refreshTimeEl) refreshTimeEl.textContent = '更新于 ' + formatDateTime(now);
+    }
+
+    async function refreshAll() {
+      console.log('[Refresh] Starting at', new Date().toLocaleString('zh-CN'));
+      await Promise.all([refreshNav(), refreshIndices()]);
+      updateNextRefreshTime();
+      console.log('[Refresh] Completed.');
+    }
+
+    function updateNextRefreshTime() {
+      const next = new Date(Date.now() + REFRESH_INTERVAL);
+      const el = document.getElementById('next-refresh');
+      if (el) el.textContent = '下次更新：' + formatDateTime(next);
+    }
+
+    // ============================================
+    // 五、初始化
+    // ============================================
+    function init() {
+      // 1. 自动计算周度范围
+      const week = getWeekRange();
+      const weekEl = document.getElementById('week-range');
+      if (weekEl) weekEl.textContent = `${week.start} 至 ${week.end}`;
+
+      // 2. 设置制作日期为今天
+      const makeDateEl = document.getElementById('make-date');
+      if (makeDateEl) makeDateEl.textContent = formatDateCN(new Date());
+
+      // 3. 首次加载数据
+      refreshAll();
+
+      // 4. 每5分钟自动刷新
+      setInterval(refreshAll, REFRESH_INTERVAL);
+      updateNextRefreshTime();
+
+      // 5. 页面可见性变化时立即刷新（用户切回页面时）
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) refreshAll();
+      });
+    }
+
+    // 页面加载完成后初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+    // ============================================
+    // 六、复制功能（保留原有）
+    // ============================================
+    function copyScript(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        event.target.textContent = '✅ 已复制';
+        setTimeout(() => event.target.textContent = '📋 复制', 2000);
+      });
+    }
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        event.target.textContent = '✅ 已复制';
+        setTimeout(() => event.target.textContent = '📋 复制', 2000);
+      });
+    }
+  </script>
+</body>
+</html>
