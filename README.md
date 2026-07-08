@@ -20,7 +20,7 @@ r9-skills-share/
 
 ## 包含的 Skill
 
-本仓库共包含 **93 个 Skill**，按板块分类如下：
+本仓库共包含 **94 个 Skill**，按板块分类如下：
 
 ### 1. 基金投研
 - bond-plus-fund-evaluation
@@ -130,6 +130,7 @@ r9-skills-share/
 - r9-opc-advisory-delivery
 - r9-opc-advisory-strategy
 - r9-opc-advisory-success
+- r9-opc-product-center
 
 ## 安装方式
 
