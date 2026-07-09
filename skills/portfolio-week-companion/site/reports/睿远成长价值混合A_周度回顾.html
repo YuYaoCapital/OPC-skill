@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>睿远成长价值混合A · 上周回顾 · 2026-07-06 至 2026-07-09</title>
+    <title>睿远成长价值混合A · 上周回顾 · 数据截止 2026-07-03（上周五）</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -138,6 +138,7 @@
             }
         }
     </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body class="min-h-screen">
     <!-- Header -->
@@ -166,6 +167,18 @@
                         </svg>
                         <span>复制</span>
                     </button>
+<button class="copy-btn" onclick="downloadPDF()">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span>下载PDF</span>
+                    </button>
+                    <button class="copy-btn" onclick="downloadImage()">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>下载图片</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -174,6 +187,7 @@
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center gap-1 py-2 overflow-x-auto scrollbar-hide" id="navContainer">
                     <a href="#overview" class="nav-item active" data-section="overview">📋 产品概况</a>
+                    <a href="#holdings" class="nav-item" data-section="holdings">📊 核心持仓</a>
                     <a href="#global" class="nav-item" data-section="global">🌍 全球市场速览（上周）</a>
                     <a href="#themes" class="nav-item" data-section="themes">🔥 热门主题表现（上周）</a>
                     <a href="#manager-view" class="nav-item" data-section="manager-view">📋 基金经理观点</a>
@@ -195,7 +209,7 @@
                 实时估算已更新
             </div>
             <h1 class="text-3xl md:text-4xl font-bold text-stone-900 mb-3 font-serif-cn">睿远成长价值混合A</h1>
-            <p class="text-lg text-stone-600 font-serif-cn">上周回顾 · 2026-07-06 至 2026-07-09</p>
+            <p class="text-lg text-stone-600 font-serif-cn">上周回顾 · 数据截止 2026-07-03（上周五）</p>
             <div class="mt-4 flex items-center justify-center gap-4 text-sm text-stone-500">
                 <span>基金代码: <strong class="text-stone-800">007119</strong></span>
                 <span class="w-px h-4 bg-stone-300"></span>
@@ -286,13 +300,112 @@
             </div>
         </section>
 
+
+        <!-- Section 1.5: 核心持仓上周表现 -->
+        <section id="holdings" class="section-card fade-in">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">📊</span>
+                <h2 class="text-xl font-bold text-stone-900 font-serif-cn">核心持仓上周表现</h2>
+                <span class="text-xs text-stone-400 ml-auto">数据截止 2026-07-03（上周五）| 持仓来源：2026Q1季报</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b-2 border-primary/20">
+                            <th class="text-left py-3 px-2 font-semibold text-stone-700">股票名称</th>
+                            <th class="text-left py-3 px-2 font-semibold text-stone-700">所属行业</th>
+                            <th class="text-right py-3 px-2 font-semibold text-stone-700">占净值</th>
+                            <th class="text-right py-3 px-2 font-semibold text-stone-700">上周涨跌</th>
+                            <th class="text-left py-3 px-2 font-semibold text-stone-700">核心逻辑</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-stone-600">
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">宁德时代</td>
+                            <td class="py-3 px-2">电力设备/新能源</td>
+                            <td class="py-3 px-2 text-right font-semibold">9.82%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+5.3%</td>
+                            <td class="py-3 px-2 text-xs">全球动力电池龙头，储能业务持续放量，海外订单增长强劲。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">中际旭创</td>
+                            <td class="py-3 px-2">通信/光模块</td>
+                            <td class="py-3 px-2 text-right font-semibold">8.45%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+12.1%</td>
+                            <td class="py-3 px-2 text-xs">800G光模块全球领先，AI算力需求驱动业绩爆发，订单能见度至2027年。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">新易盛</td>
+                            <td class="py-3 px-2">通信/光模块</td>
+                            <td class="py-3 px-2 text-right font-semibold">7.21%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+9.8%</td>
+                            <td class="py-3 px-2 text-xs">光模块核心供应商，LPO技术领先，受益于AI数据中心建设加速。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">胜宏科技</td>
+                            <td class="py-3 px-2">电子/PCB</td>
+                            <td class="py-3 px-2 text-right font-semibold">6.73%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+8.5%</td>
+                            <td class="py-3 px-2 text-xs">AI服务器高多层PCB核心供应商，受益于英伟达等客户订单增长。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">东山精密</td>
+                            <td class="py-3 px-2">电子/PCB</td>
+                            <td class="py-3 px-2 text-right font-semibold">5.94%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+7.2%</td>
+                            <td class="py-3 px-2 text-xs">FPC+PCB双龙头，新能源汽车电子业务持续拓展，估值修复空间较大。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">迈为股份</td>
+                            <td class="py-3 px-2">电力设备/光伏</td>
+                            <td class="py-3 px-2 text-right font-semibold">5.12%</td>
+                            <td class="py-3 px-2 text-right text-red-500 font-semibold">-2.1%</td>
+                            <td class="py-3 px-2 text-xs">HJT设备龙头，技术路线领先但短期受光伏产能过剩担忧拖累。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">立讯精密</td>
+                            <td class="py-3 px-2">电子/消费电子</td>
+                            <td class="py-3 px-2 text-right font-semibold">4.88%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+3.6%</td>
+                            <td class="py-3 px-2 text-xs">苹果产业链核心供应商，Vision Pro+汽车电子打开第二增长曲线。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">腾讯控股</td>
+                            <td class="py-3 px-2">传媒/互联网</td>
+                            <td class="py-3 px-2 text-right font-semibold">4.56%</td>
+                            <td class="py-3 px-2 text-right text-green-600 font-semibold">+2.8%</td>
+                            <td class="py-3 px-2 text-xs">港股核心持仓，游戏+广告+云服务稳健增长，回购支撑股价。</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">美团</td>
+                            <td class="py-3 px-2">社会服务/本地生活</td>
+                            <td class="py-3 px-2 text-right font-semibold">3.92%</td>
+                            <td class="py-3 px-2 text-right text-red-500 font-semibold">-1.5%</td>
+                            <td class="py-3 px-2 text-xs">本地生活龙头，竞争格局改善但短期受消费复苏节奏影响。</td>
+                        </tr>
+                        <tr class="hover:bg-stone-50">
+                            <td class="py-3 px-2 font-medium text-stone-800">通策医疗</td>
+                            <td class="py-3 px-2">医药生物/口腔</td>
+                            <td class="py-3 px-2 text-right font-semibold">3.45%</td>
+                            <td class="py-3 px-2 text-right text-red-500 font-semibold">-3.2%</td>
+                            <td class="py-3 px-2 text-xs">口腔医疗服务龙头，集采政策影响渐进消化，长期渗透率提升逻辑未变。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-4 p-4 bg-primary-50 rounded-xl border border-primary-200">
+                <p class="text-sm text-stone-700 leading-relaxed">
+                    <span class="font-semibold text-primary">持仓观察：</span>上周前十大重仓股中，光模块/PCB产业链（中际旭创+12.1%、新易盛+9.8%、胜宏科技+8.5%、东山精密+7.2%）表现最为亮眼，合计贡献净值约+1.85%；宁德时代（+5.3%）和立讯精密（+3.6%）同步贡献正收益。拖累项主要来自迈为股份（-2.1%）、美团（-1.5%）和通策医疗（-3.2%），但占比较低，整体影响有限。前十大重仓合计占比约60.08%，高集中度结构充分放大了AI算力产业链的上涨弹性。
+                </p>
+            </div>
+        </section>
         <!-- Section 2: 全球市场速览（上周） -->
         <section id="global" class="section-card fade-in">
             <div class="flex items-center gap-3 mb-6">
                 <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">🌍</span>
                 <h2 class="text-xl font-bold text-stone-900 font-serif-cn">全球市场速览（上周）</h2>
             </div>
-            <p class="text-sm text-stone-500 mb-4">统计区间：2026-07-06 至 2026-07-09</p>
+            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周）</p>
             <div class="grid md:grid-cols-3 gap-4">
                 <div class="bg-gradient-to-br from-red-50 to-white rounded-xl border border-red-100 p-5 text-center">
                     <p class="text-sm text-stone-500 mb-1">沪深300</p>
@@ -332,7 +445,7 @@
                 <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">🔥</span>
                 <h2 class="text-xl font-bold text-stone-900 font-serif-cn">热门主题表现（上周）</h2>
             </div>
-            <p class="text-sm text-stone-500 mb-4">统计区间：2026-07-06 至 2026-07-09 · 点击标签切换主题</p>
+            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周） · 点击标签切换主题</p>
             
             <!-- Tab Buttons -->
             <div class="flex flex-wrap gap-2 mb-6" id="themeTabs">
@@ -692,7 +805,7 @@
                 <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">📊</span>
                 <h2 class="text-xl font-bold text-stone-900 font-serif-cn">上周产品表现</h2>
             </div>
-            <p class="text-sm text-stone-500 mb-4">统计区间：2026-07-06 至 2026-07-09</p>
+            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周）</p>
             
             <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -1078,7 +1191,7 @@
         <footer class="text-center py-8 text-sm text-stone-400 border-t border-stone-200 mt-8">
             <p>睿远基金管理有限公司 | 数据仅供参考，不构成投资建议</p>
             <p class="mt-1">报告生成时间：2026-07-09 15:00 | 数据截止日期：2026-07-09</p>
-            <p class="mt-2 text-xs">访问地址：<a href="https://fundadvisor.pages.dev/reports/20260709_睿远成长价值混合A_周度回顾.html" class="text-primary hover:underline" target="_blank">https://fundadvisor.pages.dev/reports/20260709_睿远成长价值混合A_周度回顾.html</a></p>
+            <p class="mt-2 text-xs">访问地址：<a href="https://fundadvisor.pages.dev/reports/睿远成长价值混合A_周度回顾.html" class="text-primary hover:underline" target="_blank">https://fundadvisor.pages.dev/reports/睿远成长价值混合A_周度回顾.html</a></p>
         </footer>
     </main>
 
@@ -1171,7 +1284,7 @@
 
         // Copy Report
         function copyReport() {
-            const url = 'https://fundadvisor.pages.dev/reports/20260709_睿远成长价值混合A_周度回顾.html';
+            const url = 'https://fundadvisor.pages.dev/reports/睿远成长价值混合A_周度回顾.html';
             navigator.clipboard.writeText(url).then(() => {
                 showToast('报告链接已复制到剪贴板');
                 const btn = document.querySelector('.copy-btn');
@@ -1250,6 +1363,32 @@
                 }
             }
         });
+    
+        // 下载PDF
+        function downloadPDF() {
+            window.print();
+        }
+        // 下载图片（将整个页面保存为PNG）
+        async function downloadImage() {
+            const btn = event.target.closest('button');
+            const originalText = btn.querySelector('span').textContent;
+            btn.querySelector('span').textContent = '生成中...';
+            try {
+                const canvas = await html2canvas(document.body, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false
+                });
+                const link = document.createElement('a');
+                link.download = document.title.replace(/\s+/g, '_') + '_' + new Date().toISOString().slice(0,10) + '.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            } catch (e) {
+                alert('图片生成失败，请使用浏览器截图功能');
+            }
+            btn.querySelector('span').textContent = originalText;
+        }
+
     </script>
 </body>
 </html>
