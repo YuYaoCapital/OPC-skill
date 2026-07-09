@@ -21,10 +21,8 @@ export default {
 
     // 只允许 /api/yahoo 路径
     if (!path.startsWith('/api/yahoo')) {
-      return new Response(JSON.stringify({ error: 'Not Found' }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json' }
-      });
+      // 非 API 请求：正常访问静态文件（index.html、reports等）
+      return env.ASSETS.fetch(request);
     }
 
     const symbol = url.searchParams.get('symbol');
