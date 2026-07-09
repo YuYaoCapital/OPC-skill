@@ -188,3 +188,5 @@ description: >
 6. **风格一致**：市场热点部分用网络化口语，投后部分用专业但易懂的表达
 7. **周度报告独立调用**：当用户需要生成面向客户的「周度陪伴报告」时，直接调用 `portfolio-week-companion` Skill，
    而非通过本 Skill 间接生成。本 Skill 聚焦日常陪伴与即时沟通，`portfolio-week-companion` 聚焦标准化周报产出。
+8. **专业报告按需调用**：当理财经理需要面向自己的专业周度回顾报告（含持仓归因、因子分析）或融合基金经理深度横纵分析的报告时，
+   调用 `fund-weekly-review` 或 `fund-weekly-hybrid` Skill。本 Skill 不负责生成专业 PDF 报告。

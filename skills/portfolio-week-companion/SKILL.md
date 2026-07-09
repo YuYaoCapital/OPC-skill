@@ -47,6 +47,15 @@ outputs:
 
 > **参考样例**：`https://fof-weekly-report.pages.dev/`
 
+> **能力矩阵（互补关系）**：
+> | Skill | 输出格式 | 面向对象 | 使用场景 |
+> |-------|----------|----------|----------|
+> | `portfolio-week-companion` | **单页 HTML 网页** | 客户 | 投后陪伴，实时数据，沟通话术 |
+> | `fund-weekly-review` | **Markdown / PDF** | 理财经理 | 专业周度回顾，持仓归因，主动权益/量化双框架 |
+> | `fund-weekly-hybrid` | **Markdown / PDF** | 理财经理 | 融合版：周度回顾 + 基金经理横纵分析法深度档案 |
+> 
+> 当用户明确要求「面向客户的网页」「客户陪伴」「HTML」时触发本 Skill；当用户要求「PDF报告」「专业回顾」「深度分析」时，引导至 `fund-weekly-review` 或 `fund-weekly-hybrid`。
+
 ---
 
 ## 二、触发条件
