@@ -131,9 +131,9 @@
       // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
       // 这里使用静态列表，每次生成报告后更新此数组
       const reports = [
-        { name: '中欧价值回报混合A 周度回顾', date: '2026-07-09', file: 'reports/中欧价值回报混合A_周度回顾.html', tag: '回顾' },
+        { name: '中欧价值回报混合A 周度回顾', date: '2026-07-09', file: 'reports/中欧价值回报混合A_周度回顾.html', pdf: 'reports/中欧价值回报混合A_周度回顾.pdf', tag: '回顾' },
         { name: '睿远成长价值混合A 融合报告（横纵分析）', date: '2026-07-09', file: 'reports/睿远成长价值混合A_融合报告.html', tag: '融合' },
-        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-09', file: 'reports/睿远成长价值混合A_周度回顾.html', tag: '回顾' },
+        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-09', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
         { name: '交银臻享多资产FOF A 周度陪伴报告', date: '2026-07-09', file: 'reports/交银臻享多资产FOF_A_周度陪伴.html', tag: '陪伴' },
       ];
 
@@ -156,7 +156,10 @@
             </div>
             <div class="report-meta">${r.date}</div>
           </div>
-          <a class="report-link" href="${r.file}" target="_blank">查看报告 →</a>
+          <div style="display:flex;gap:8px;flex-shrink:0;">
+            <a class="report-link" href="${r.file}" target="_blank">查看 HTML →</a>
+            ${r.pdf ? '<a class="report-link" href="' + r.pdf + '" target="_blank" style="background:#6d0814;">下载 PDF →</a>' : ''}
+          </div>
         </li>
       `).join('');
     }
