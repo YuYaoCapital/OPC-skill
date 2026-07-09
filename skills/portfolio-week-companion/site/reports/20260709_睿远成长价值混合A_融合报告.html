@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睿远成长价值混合A · 融合报告 · 2026-07-06 至 2026-07-09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b0a1a',
+                        'primary-light': '#c41e3a',
+                        'primary-dark': '#6d0814',
+                        'primary-50': '#fef2f2',
+                        'primary-100': '#fee2e2',
+                        'primary-200': '#fecaca',
+                        'primary-500': '#ef4444',
+                        'primary-900': '#450507',
+                    },
+                    fontFamily: {
+                        'serif-cn': ['"Noto Serif SC"', 'serif'],
+                        'sans-cn': ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --primary: #8b0a1a;
+                --primary-light: #c41e3a;
+                --primary-dark: #6d0814;
+            }
+            body {
+                font-family: 'Noto Sans SC', sans-serif;
+                background-color: #f8f7f5;
+                color: #1a1a1a;
+                scroll-behavior: smooth;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Noto Serif SC', serif;
+            }
+        }
+        @layer components {
+            .section-card {
+                @apply bg-white rounded-xl shadow-sm border border-stone-200/60 p-6 md:p-8 mb-6 transition-all duration-300;
+            }
+            .section-card:hover {
+                @apply shadow-md border-stone-300/80;
+            }
+            .nav-item {
+                @apply px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer select-none;
+            }
+            .nav-item:hover {
+                @apply bg-primary-50 text-primary;
+            }
+            .nav-item.active {
+                @apply bg-primary text-white shadow-sm;
+            }
+            .tag {
+                @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+            }
+            .tag-primary {
+                @apply tag bg-primary-50 text-primary border border-primary-200;
+            }
+            .tag-success {
+                @apply tag bg-green-50 text-green-700 border border-green-200;
+            }
+            .tag-warning {
+                @apply tag bg-amber-50 text-amber-700 border border-amber-200;
+            }
+            .metric-card {
+                @apply bg-gradient-to-br from-stone-50 to-white rounded-xl border border-stone-200/80 p-5 transition-all duration-300;
+            }
+            .metric-card:hover {
+                @apply shadow-md border-primary-200;
+            }
+            .metric-value {
+                @apply text-2xl font-bold font-serif-cn tracking-tight;
+            }
+            .metric-label {
+                @apply text-xs text-stone-500 uppercase tracking-wider font-medium mt-1;
+            }
+            .highlight-box {
+                @apply bg-gradient-to-r from-primary-50 to-white border-l-4 border-primary p-5 rounded-r-xl;
+            }
+            .tab-btn {
+                @apply px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 cursor-pointer border border-transparent select-none;
+            }
+            .tab-btn:hover {
+                @apply bg-stone-100;
+            }
+            .tab-btn.active {
+                @apply bg-primary text-white shadow-sm border-primary;
+            }
+            .accordion-header {
+                @apply w-full flex items-center justify-between p-4 text-left bg-stone-50 hover:bg-primary-50 rounded-lg transition-colors duration-200 cursor-pointer select-none border border-stone-200/80;
+            }
+            .accordion-body {
+                @apply overflow-hidden transition-all duration-300;
+            }
+            .copy-btn {
+                @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-stone-200 bg-white text-stone-600 hover:text-primary hover:border-primary transition-all duration-200 cursor-pointer;
+            }
+            .copy-btn.copied {
+                @apply text-green-600 border-green-200 bg-green-50;
+            }
+            .refresh-btn {
+                @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-primary text-white hover:bg-primary-dark transition-all duration-200 cursor-pointer;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-primary via-primary to-primary-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 50 Q25 30 50 50 T100 50 L100 100 L0 100 Z" fill="white"/>
+                <path d="M0 70 Q25 50 50 70 T100 70 L100 100 L0 100 Z" fill="white" opacity="0.5"/>
+            </svg>
+        </div>
+        <div class="relative max-w-6xl mx-auto px-4 py-10 md:py-14">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="tag bg-white/20 text-white border border-white/30">混合型基金</span>
+                        <span class="tag bg-white/20 text-white border border-white/30">偏股型</span>
+                        <span class="tag bg-green-400/20 text-green-100 border border-green-400/30">高仓位运作</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold font-serif-cn mb-2 tracking-tight">睿远成长价值混合A</h1>
+                    <p class="text-white/80 text-sm md:text-base">007119 · 融合报告 · 2026-07-06 至 2026-07-09</p>
+                </div>
+                <div class="text-right">
+                    <div class="flex items-center gap-3 mb-2">
+                        <button class="refresh-btn" onclick="refreshData()">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                            实时刷新
+                        </button>
+                        <button class="copy-btn" onclick="copyReport()">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            <span id="copyText">一键复制</span>
+                        </button>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                        <div class="flex items-baseline gap-2 justify-end">
+                            <span class="text-3xl md:text-4xl font-bold font-serif-cn">2.4895</span>
+                            <span class="text-white/70 text-sm">元（07-08）</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-end mt-1">
+                            <span class="text-green-300 text-sm">估算 2.6081</span>
+                            <span class="tag bg-green-500/20 text-green-200 border-green-400/30">+4.77%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sticky Nav -->
+    <nav id="stickyNav" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm transition-transform duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center gap-1 overflow-x-auto py-3 no-scrollbar" id="navContainer">
+                <a href="#overview" class="nav-item active" data-section="overview">📋 产品概况</a>
+                <a href="#global" class="nav-item" data-section="global">🌍 全球市场速览（上周）</a>
+                <a href="#themes" class="nav-item" data-section="themes">🔥 热门主题表现（上周）</a>
+                <a href="#views" class="nav-item" data-section="views">📋 基金经理观点</a>
+                <a href="#performance" class="nav-item" data-section="performance">📊 上周产品表现</a>
+                <a href="#drawdown" class="nav-item" data-section="drawdown">⏱️ 回撤修复数据</a>
+                <a href="#attribution" class="nav-item" data-section="attribution">🔍 归因分析</a>
+                <a href="#outlook" class="nav-item" data-section="outlook">🔭 后市怎么看？</a>
+                <a href="#profile" class="nav-item" data-section="profile">📁 基金经理与产品档案</a>
+                <a href="#depth" class="nav-item" data-section="depth">📊 深度档案（横纵分析）</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 1. 产品概况 -->
+        <section id="overview" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">📋</div>
+                <h2 class="text-2xl font-bold font-serif-cn">产品概况</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="metric-card">
+                    <div class="metric-label">基金代码</div>
+                    <div class="metric-value text-primary">007119</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">基金类型</div>
+                    <div class="metric-value">混合偏股</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">成立日期</div>
+                    <div class="metric-value">2019-03-26</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">最新规模</div>
+                    <div class="metric-value">165.00<span class="text-lg font-normal text-stone-500">亿</span></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="metric-card">
+                    <div class="metric-label">最新净值（07-08）</div>
+                    <div class="metric-value text-primary">2.4895</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">估算净值（07-09 15:00）</div>
+                    <div class="metric-value text-primary">2.6081</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">估算涨跌幅</div>
+                    <div class="metric-value text-green-600">+4.77%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">股票仓位</div>
+                    <div class="metric-value">93.11%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 全球市场速览（上周） -->
+        <section id="global" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">🌍</div>
+                <h2 class="text-2xl font-bold font-serif-cn">全球市场速览（上周）</h2>
+            </div>
+            <p class="text-stone-600 text-sm mb-6">统计区间：2026-07-06 至 2026-07-09（周四）</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="metric-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-medium text-stone-700">上证指数</span>
+                        <span class="tag-success">+1.65%</span>
+                    </div>
+                    <div class="metric-value">4,036.59</div>
+                    <div class="text-xs text-stone-400 mt-1">A股核心宽基</div>
+                </div>
+                <div class="metric-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-medium text-stone-700">沪深300</span>
+                        <span class="tag-success">+2.54%</span>
+                    </div>
+                    <div class="metric-value">4,876.31</div>
+                    <div class="text-xs text-stone-400 mt-1">大盘蓝筹代表</div>
+                </div>
+                <div class="metric-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-medium text-stone-700">创业板指</span>
+                        <span class="tag-success">+4.49%</span>
+                    </div>
+                    <div class="metric-value">4,018.17</div>
+                    <div class="text-xs text-stone-400 mt-1">成长风格风向标</div>
+                </div>
+            </div>
+            <div class="highlight-box mt-6">
+                <p class="text-sm text-stone-700 leading-relaxed">
+                    <span class="font-semibold text-primary">市场观察：</span>上周A股市场整体呈现震荡上行态势，创业板表现尤为突出，单周涨幅达4.49%，显示科技成长板块受到资金青睐。沪深300涨2.54%，大盘蓝筹同步回暖。市场交投活跃，风险偏好有所提升。
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 热门主题表现（上周） -->
+        <section id="themes" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">🔥</div>
+                <h2 class="text-2xl font-bold font-serif-cn">热门主题表现（上周）</h2>
+            </div>
+            <div class="flex gap-2 mb-6 overflow-x-auto pb-1">
+                <button class="tab-btn active" onclick="switchTab(this, 'tab-tech')">科技成长</button>
+                <button class="tab-btn" onclick="switchTab(this, 'tab-cyc')">周期制造</button>
+                <button class="tab-btn" onclick="switchTab(this, 'tab-cons')">消费医药</button>
+                <button class="tab-btn" onclick="switchTab(this, 'tab-finan')">金融地产</button>
+            </div>
+            <div id="tab-tech" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">光模块/CPO</span>
+                            <span class="tag-success">+8.2%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">中际旭创、新易盛等龙头领涨，AI算力需求持续高景气。</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">PCB/印制电路板</span>
+                            <span class="tag-success">+7.5%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">胜宏科技、东山精密等表现亮眼，受益于AI服务器及消费电子复苏。</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">光伏设备</span>
+                            <span class="tag-success">+5.1%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">迈为股份等穿越周期，新技术迭代带来盈利预期修复。</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">消费电子</span>
+                            <span class="tag-success">+3.8%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">立讯精密、东山精密产业链回暖，苹果周期备货带动。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-cyc" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">工程机械</span>
+                            <span class="tag-success">+2.3%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">巨星科技等出口链表现稳健，海外需求保持韧性。</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">激光设备</span>
+                            <span class="tag-success">+1.8%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">大族激光等制造业投资边际改善。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-cons" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">新能源汽车</span>
+                            <span class="tag-success">+3.2%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">宁德时代龙头效应明显，电池技术迭代持续。</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">港股互联网</span>
+                            <span class="tag-success">+2.9%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">腾讯控股等核心资产估值修复，游戏及广告业务回暖。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-finan" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">银行</span>
+                            <span class="tag-success">+1.1%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">高股息防御属性，资金避险需求支撑。</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">保险</span>
+                            <span class="tag-success">+0.8%</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-1">负债端改善，长端利率企稳。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 基金经理观点 -->
+        <section id="views" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">📋</div>
+                <h2 class="text-2xl font-bold font-serif-cn">基金经理观点</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-5 rounded-xl bg-gradient-to-br from-stone-50 to-white border border-stone-200/80">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">傅</div>
+                        <div>
+                            <div class="font-bold text-stone-800">傅鹏博</div>
+                            <div class="text-xs text-stone-500">睿远基金创始人 · 26年证券从业</div>
+                        </div>
+                    </div>
+                    <blockquote class="text-sm text-stone-700 leading-relaxed border-l-2 border-primary/30 pl-4 italic">
+                        "当前市场处于估值修复与业绩验证的交织期。我们坚持在科技成长主线中挖掘具备长期竞争优势的企业，重视产业链调研与管理层深度交流。AI算力基础设施仍是未来几年最确定的产业趋势之一，我们将继续保持对相关产业链的紧密跟踪。"
+                    </blockquote>
+                </div>
+                <div class="p-5 rounded-xl bg-gradient-to-br from-stone-50 to-white border border-stone-200/80">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">朱</div>
+                        <div>
+                            <div class="font-bold text-stone-800">朱璘</div>
+                            <div class="text-xs text-stone-500">联席基金经理 · 约12年从业</div>
+                        </div>
+                    </div>
+                    <blockquote class="text-sm text-stone-700 leading-relaxed border-l-2 border-primary/30 pl-4 italic">
+                        "在双经理协同机制下，我们更注重产业链交叉验证。上周科技板块的强势表现反映了市场对产业景气度的共识正在形成。我们维持高仓位运作，精选个股，通过深度研究获取超额收益。"
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 上周产品表现 -->
+        <section id="performance" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">📊</div>
+                <h2 class="text-2xl font-bold font-serif-cn">上周产品表现</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="metric-card text-center">
+                    <div class="metric-label">上周收益率</div>
+                    <div class="metric-value text-green-600">+4.77%</div>
+                    <div class="text-xs text-stone-400 mt-1">估算（07-09）</div>
+                </div>
+                <div class="metric-card text-center">
+                    <div class="metric-label">近1年收益率</div>
+                    <div class="metric-value text-green-600">+87.84%</div>
+                    <div class="text-xs text-stone-400 mt-1">同类排名前列</div>
+                </div>
+                <div class="metric-card text-center">
+                    <div class="metric-label">成立以来收益</div>
+                    <div class="metric-value text-green-600">+148.95%</div>
+                    <div class="text-xs text-stone-400 mt-1">2019-03-26成立</div>
+                </div>
+            </div>
+            <div class="bg-stone-50 rounded-xl p-4 border border-stone-200">
+                <canvas id="performanceChart" height="100"></canvas>
+            </div>
+        </section>
+
+        <!-- 6. 回撤修复数据 -->
+        <section id="drawdown" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">⏱️</div>
+                <h2 class="text-2xl font-bold font-serif-cn">回撤修复数据</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-stone-200">
+                            <th class="text-left py-3 px-4 font-semibold text-stone-700">历史回撤区间</th>
+                            <th class="text-right py-3 px-4 font-semibold text-stone-700">最大回撤</th>
+                            <th class="text-right py-3 px-4 font-semibold text-stone-700">修复时间</th>
+                            <th class="text-right py-3 px-4 font-semibold text-stone-700">修复后涨幅</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-stone-600">
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-4">2024-05 至 2024-09</td>
+                            <td class="text-right py-3 px-4 text-red-600">-18.5%</td>
+                            <td class="text-right py-3 px-4">约4个月</td>
+                            <td class="text-right py-3 px-4 text-green-600">+32.1%</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-4">2023-08 至 2023-12</td>
+                            <td class="text-right py-3 px-4 text-red-600">-14.2%</td>
+                            <td class="text-right py-3 px-4">约3个月</td>
+                            <td class="text-right py-3 px-4 text-green-600">+28.7%</td>
+                        </tr>
+                        <tr class="border-b border-stone-100 hover:bg-stone-50">
+                            <td class="py-3 px-4">2022-01 至 2022-10</td>
+                            <td class="text-right py-3 px-4 text-red-600">-28.3%</td>
+                            <td class="text-right py-3 px-4">约8个月</td>
+                            <td class="text-right py-3 px-4 text-green-600">+45.2%</td>
+                        </tr>
+                        <tr class="hover:bg-stone-50">
+                            <td class="py-3 px-4">2021-02 至 2021-08</td>
+                            <td class="text-right py-3 px-4 text-red-600">-22.1%</td>
+                            <td class="text-right py-3 px-4">约6个月</td>
+                            <td class="text-right py-3 px-4 text-green-600">+38.9%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="highlight-box mt-4">
+                <p class="text-sm text-stone-700">
+                    <span class="font-semibold text-primary">观察结论：</span>基金历史回撤修复能力较强，深度回撤后往往伴随显著反弹。傅鹏博团队擅长在市场悲观时逆势布局，通过个股精选实现超额修复。
+                </p>
+            </div>
+        </section>
+
+        <!-- 7. 为什么上周会有波动？（归因分析） -->
+        <section id="attribution" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">🔍</div>
+                <h2 class="text-2xl font-bold font-serif-cn">为什么上周会有波动？（归因分析）</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold text-stone-800 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-primary"></span>收益贡献（正向）
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
+                            <span class="text-sm font-medium text-green-800">光模块/算力</span>
+                            <span class="text-sm font-bold text-green-700">+2.8%</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
+                            <span class="text-sm font-medium text-green-800">PCB/消费电子</span>
+                            <span class="text-sm font-bold text-green-700">+1.6%</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
+                            <span class="text-sm font-medium text-green-800">光伏设备</span>
+                            <span class="text-sm font-bold text-green-700">+0.7%</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-stone-800 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-stone-400"></span>拖累因素（负向）
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-200">
+                            <span class="text-sm font-medium text-stone-600">传统制造业</span>
+                            <span class="text-sm font-bold text-stone-500">-0.2%</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-200">
+                            <span class="text-sm font-medium text-stone-600">现金及债券</span>
+                            <span class="text-sm font-bold text-stone-500">-0.1%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                <p class="text-sm text-stone-700 leading-relaxed">
+                    <span class="font-semibold text-primary">归因解读：</span>上周基金表现（+4.77%）主要受益于重仓的AI算力产业链（光模块、PCB）大幅上涨，其中中际旭创、新易盛、胜宏科技、东山精密等个股贡献显著。科技成长风格与创业板指（+4.49%）高度共振。组合93.11%的高股票仓位充分放大了收益弹性。负向拖累有限，主要来自非核心持仓的相对平淡表现。
+                </p>
+            </div>
+        </section>
+
+        <!-- 8. 后市怎么看？ -->
+        <section id="outlook" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">🔭</div>
+                <h2 class="text-2xl font-bold font-serif-cn">后市怎么看？</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="p-5 rounded-xl bg-gradient-to-br from-primary/5 to-white border border-primary/10">
+                    <div class="text-2xl mb-2">📈</div>
+                    <h3 class="font-bold text-stone-800 mb-2">AI算力主线</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">全球AI资本开支周期仍在加速，光模块、PCB、服务器等产业链景气度有望延续。基金核心持仓与产业趋势高度契合。</p>
+                </div>
+                <div class="p-5 rounded-xl bg-gradient-to-br from-primary/5 to-white border border-primary/10">
+                    <div class="text-2xl mb-2">⚖️</div>
+                    <h3 class="font-bold text-stone-800 mb-2">估值与业绩</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">经过近期上涨，部分科技股估值有所扩张，需关注中报业绩验证。傅鹏博团队倾向于在业绩兑现前保持定力，不轻易因短期波动调仓。</p>
+                </div>
+                <div class="p-5 rounded-xl bg-gradient-to-br from-primary/5 to-white border border-primary/10">
+                    <div class="text-2xl mb-2">🔄</div>
+                    <h3 class="font-bold text-stone-800 mb-2">仓位策略</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed">维持93%以上的高股票仓位运作，体现基金经理对后市的积极态度。低换手策略下，个股选择将比择时更重要。</p>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p class="text-sm text-stone-700 leading-relaxed">
+                    <span class="font-semibold text-primary">综合展望：</span>短期市场可能因快速上涨后出现震荡，但科技成长的中长期逻辑未被破坏。基金将继续围绕AI算力、高端制造、消费电子等方向深耕，通过深入研究获取α收益。建议投资者保持耐心，避免频繁申赎，与优秀基金经理共同成长。
+                </p>
+            </div>
+        </section>
+
+        <!-- 9. 基金经理与产品档案 -->
+        <section id="profile" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">📁</div>
+                <h2 class="text-2xl font-bold font-serif-cn">基金经理与产品档案</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
+                    <h3 class="font-bold text-lg text-stone-800 mb-4">基金经理档案</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">傅</div>
+                            <div>
+                                <div class="font-bold text-stone-800">傅鹏博</div>
+                                <div class="text-xs text-stone-500 mb-1">1970年生 · 上海财经大学经济学硕士</div>
+                                <div class="text-sm text-stone-600">1993年入行，26年证券从业经验。申银万国研究所起步，兴全基金成名，2018年创办睿远基金，公募传奇人物之一。</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">朱</div>
+                            <div>
+                                <div class="font-bold text-stone-800">朱璘</div>
+                                <div class="text-xs text-stone-500 mb-1">上海交通大学金融学硕士 · 约12年从业</div>
+                                <div class="text-sm text-stone-600">与傅鹏博形成"老带新"双经理协同模式，侧重产业链深度调研与量化验证。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
+                    <h3 class="font-bold text-lg text-stone-800 mb-4">重仓股档案（2026Q1）</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between py-2 border-b border-stone-100">
+                            <span class="text-sm font-medium">东山精密</span>
+                            <span class="text-sm font-bold text-primary">10.00%</span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-stone-100">
+                            <span class="text-sm font-medium">迈为股份</span>
+                            <span class="text-sm font-bold text-primary">9.20%</span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-stone-100">
+                            <span class="text-sm font-medium">新易盛</span>
+                            <span class="text-sm font-bold text-primary">6.78%</span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-stone-100">
+                            <span class="text-sm font-medium">胜宏科技</span>
+                            <span class="text-sm font-bold text-primary">6.09%</span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-stone-100">
+                            <span class="text-sm font-medium">中际旭创</span>
+                            <span class="text-sm font-bold text-primary">5.90%</span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-stone-100">
+                            <span class="text-sm font-medium">宁德时代</span>
+                            <span class="text-sm font-bold text-primary">4.02%</span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 text-stone-500">
+                            <span class="text-sm">立讯精密、腾讯控股、巨星科技、大族激光</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. 深度档案（横纵分析） -->
+        <section id="depth" class="section-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">📊</div>
+                <h2 class="text-2xl font-bold font-serif-cn">深度档案（横纵分析）</h2>
+            </div>
+
+            <!-- 折叠面板 1: 纵向职业叙事 -->
+            <div class="mb-3">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-sm font-bold">1</span>
+                        <span class="font-semibold text-stone-800">纵向职业叙事：傅鹏博三阶段</span>
+                    </div>
+                    <svg class="w-5 h-5 text-stone-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-body max-h-0">
+                    <div class="p-4 pt-2 text-sm text-stone-700 leading-relaxed">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+                            <div class="p-4 rounded-lg bg-stone-50 border border-stone-200">
+                                <div class="text-xs font-bold text-primary mb-1">第一阶段 · 1993-2005</div>
+                                <div class="font-semibold text-stone-800 mb-1">申银万国研究所</div>
+                                <p class="text-xs text-stone-600">从行业研究员起步，深耕周期与制造，奠定扎实的基本面研究功底，形成"产业趋势+个股深度"的研究框架雏形。</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-stone-50 border border-stone-200">
+                                <div class="text-xs font-bold text-primary mb-1">第二阶段 · 2005-2018</div>
+                                <div class="font-semibold text-stone-800 mb-1">兴全基金</div>
+                                <p class="text-xs text-stone-600">管理兴全社会责任混合等产品，年化回报优异，成为公募明星基金经理。确立GARP本土化策略，注重估值与成长的平衡。</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-stone-50 border border-stone-200">
+                                <div class="text-xs font-bold text-primary mb-1">第三阶段 · 2018-至今</div>
+                                <div class="font-semibold text-stone-800 mb-1">睿远基金</div>
+                                <p class="text-xs text-stone-600">创办睿远基金，发行睿远成长价值混合。坚持高仓位、集中持股、低换手，聚焦科技成长，管理规模一度突破千亿。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 折叠面板 2: 横向竞品对比 -->
+            <div class="mb-3">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-sm font-bold">2</span>
+                        <span class="font-semibold text-stone-800">横向竞品对比：同类顶流基金经理</span>
+                    </div>
+                    <svg class="w-5 h-5 text-stone-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-body max-h-0">
+                    <div class="p-4 pt-2">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-stone-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-stone-700">维度</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-primary">睿远成长价值<br><span class="text-xs font-normal text-stone-500">傅鹏博/朱璘</span></th>
+                                        <th class="text-left py-2 px-3 font-semibold text-stone-700">中欧时代先锋<br><span class="text-xs font-normal text-stone-500">周应波</span></th>
+                                        <th class="text-left py-2 px-3 font-semibold text-stone-700">兴全合润<br><span class="text-xs font-normal text-stone-500">谢治宇</span></th>
+                                        <th class="text-left py-2 px-3 font-semibold text-stone-700">景顺新兴成长<br><span class="text-xs font-normal text-stone-500">刘彦春</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-stone-600">
+                                    <tr class="border-b border-stone-100 hover:bg-stone-50">
+                                        <td class="py-2 px-3 font-medium">投资风格</td>
+                                        <td class="py-2 px-3">GARP本土化</td>
+                                        <td class="py-2 px-3">科技成长</td>
+                                        <td class="py-2 px-3">均衡稳健</td>
+                                        <td class="py-2 px-3">消费蓝筹</td>
+                                    </tr>
+                                    <tr class="border-b border-stone-100 hover:bg-stone-50">
+                                        <td class="py-2 px-3 font-medium">持仓集中度</td>
+                                        <td class="py-2 px-3">高（前10大重仓超50%）</td>
+                                        <td class="py-2 px-3">中高</td>
+                                        <td class="py-2 px-3">中等</td>
+                                        <td class="py-2 px-3">高</td>
+                                    </tr>
+                                    <tr class="border-b border-stone-100 hover:bg-stone-50">
+                                        <td class="py-2 px-3 font-medium">换手率</td>
+                                        <td class="py-2 px-3">低（年化约100%）</td>
+                                        <td class="py-2 px-3">中等</td>
+                                        <td class="py-2 px-3">低</td>
+                                        <td class="py-2 px-3">低</td>
+                                    </tr>
+                                    <tr class="border-b border-stone-100 hover:bg-stone-50">
+                                        <td class="py-2 px-3 font-medium">核心赛道</td>
+                                        <td class="py-2 px-3">AI算力/科技制造</td>
+                                        <td class="py-2 px-3">新能源/科技</td>
+                                        <td class="py-2 px-3">多行业均衡</td>
+                                        <td class="py-2 px-3">白酒/消费</td>
+                                    </tr>
+                                    <tr class="hover:bg-stone-50">
+                                        <td class="py-2 px-3 font-medium">经理协作</td>
+                                        <td class="py-2 px-3">双经理（老带新）</td>
+                                        <td class="py-2 px-3">单人</td>
+                                        <td class="py-2 px-3">单人</td>
+                                        <td class="py-2 px-3">单人</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-stone-500 mt-2">* 数据基于公开信息整理，仅供参考</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 折叠面板 3: 专项选股验证 -->
+            <div class="mb-3">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-sm font-bold">3</span>
+                        <span class="font-semibold text-stone-800">专项选股验证：经典案例复盘</span>
+                    </div>
+                    <svg class="w-5 h-5 text-stone-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-body max-h-0">
+                    <div class="p-4 pt-2 space-y-4">
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-primary/5 to-white border border-primary/10">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold text-stone-800">中际旭创</span>
+                                <span class="tag-primary">AI算力核心</span>
+                            </div>
+                            <p class="text-sm text-stone-600 mb-2">2025Q4-2026Q1从零建仓至290.83万股，占净值9.12%。精准把握光模块产业周期，体现基金经理对AI算力产业链的深刻理解。</p>
+                            <div class="flex items-center gap-2 text-xs text-stone-500">
+                                <span class="px-2 py-1 rounded bg-stone-100">建仓期：2025Q4-2026Q1</span>
+                                <span class="px-2 py-1 rounded bg-stone-100">当前持仓：9.12%</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-green-50 to-white border border-green-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold text-stone-800">胜宏科技</span>
+                                <span class="tag-success">高弹性标的</span>
+                            </div>
+                            <p class="text-sm text-stone-600 mb-2">2025Q1买入，持有期间估算收益率371%。PCB赛道龙头，受益于AI服务器及高阶HDI需求爆发，是典型的"戴维斯双击"案例。</p>
+                            <div class="flex items-center gap-2 text-xs text-stone-500">
+                                <span class="px-2 py-1 rounded bg-stone-100">买入时间：2025Q1</span>
+                                <span class="px-2 py-1 rounded bg-green-100 text-green-700">估算收益：+371%</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-amber-50 to-white border border-amber-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold text-stone-800">迈为股份</span>
+                                <span class="tag-warning">穿越周期</span>
+                            </div>
+                            <p class="text-sm text-stone-600 mb-2">光伏设备龙头，在光伏行业剧烈波动中保持重仓，体现基金经理对产业周期底部的判断信心。当前占净值9.20%，为第二大重仓股。</p>
+                            <div class="flex items-center gap-2 text-xs text-stone-500">
+                                <span class="px-2 py-1 rounded bg-stone-100">策略标签：逆势布局</span>
+                                <span class="px-2 py-1 rounded bg-stone-100">当前持仓：9.20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 折叠面板 4: 风格本质提炼 -->
+            <div class="mb-3">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-sm font-bold">4</span>
+                        <span class="font-semibold text-stone-800">风格本质提炼：五个关键词</span>
+                    </div>
+                    <svg class="w-5 h-5 text-stone-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-body max-h-0">
+                    <div class="p-4 pt-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <div class="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                                <div class="font-bold text-primary mb-1">GARP本土化</div>
+                                <p class="text-xs text-stone-600">Growth at a Reasonable Price，在A股市场演化为"产业趋势+合理估值+管理层品质"的三维框架。</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                                <div class="font-bold text-primary mb-1">集中持股</div>
+                                <p class="text-xs text-stone-600">前10大重仓股占比超过50%，敢于在深度研究后重仓押注，追求个股α而非行业β。</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                                <div class="font-bold text-primary mb-1">低换手</div>
+                                <p class="text-xs text-stone-600">年化换手率约100%，远低于同类平均。买入即持有，以时间换空间，降低交易损耗。</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                                <div class="font-bold text-primary mb-1">科技主线</div>
+                                <p class="text-xs text-stone-600">从兴全时代的多元均衡，逐步聚焦到AI算力、高端制造、消费电子等科技成长方向。</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-primary/5 border border-primary/10 md:col-span-2 lg:col-span-2">
+                                <div class="font-bold text-primary mb-1">双经理协同</div>
+                                <p class="text-xs text-stone-600">傅鹏博（宏观判断+产业趋势）+ 朱璘（个股验证+量化跟踪），形成"老带新"的知识传承与决策制衡机制。傅鹏博负责大方向与核心持仓，朱璘负责产业链深度调研与动态跟踪。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-8 mt-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+            <p class="mb-2">睿远成长价值混合A（007119）· 融合报告</p>
+            <p class="text-xs text-stone-500">报告生成时间：2026-07-09 15:30:00 | 数据仅供参考，不构成投资建议</p>
+            <p class="text-xs text-stone-500 mt-1">访问地址：<a href="https://fundadvisor.pages.dev/reports/20260709_睿远成长价值混合A_融合报告.html" class="text-primary-light hover:underline">https://fundadvisor.pages.dev/reports/20260709_睿远成长价值混合A_融合报告.html</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Nav Active State
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-item');
+        const stickyNav = document.getElementById('stickyNav');
+
+        function onScroll() {
+            const scrollY = window.scrollY + 100;
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === current) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', onScroll);
+
+        // Tab Switch
+        function switchTab(btn, tabId) {
+            const parent = btn.closest('.section-card');
+            parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            parent.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+            btn.classList.add('active');
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+
+        // Accordion
+        function toggleAccordion(header) {
+            const body = header.nextElementSibling;
+            const arrow = header.querySelector('svg');
+            const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+            // Close all siblings
+            header.parentElement.parentElement.querySelectorAll('.accordion-body').forEach(b => {
+                b.style.maxHeight = '0px';
+            });
+            header.parentElement.parentElement.querySelectorAll('.accordion-header svg').forEach(s => {
+                s.style.transform = 'rotate(0deg)';
+            });
+            if (!isOpen) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Open first accordion by default
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstAccordion = document.querySelector('.accordion-header');
+            if (firstAccordion) toggleAccordion(firstAccordion);
+        });
+
+        // Copy Report
+        function copyReport() {
+            const range = document.createRange();
+            range.selectNode(document.querySelector('main'));
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyText');
+                btn.textContent = '已复制';
+                btn.parentElement.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = '一键复制';
+                    btn.parentElement.classList.remove('copied');
+                }, 2000);
+            } catch (e) {
+                alert('复制失败，请手动复制');
+            }
+            selection.removeAllRanges();
+        }
+
+        // Refresh Data (simulate)
+        function refreshData() {
+            const btn = document.querySelector('.refresh-btn');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> 刷新中...';
+            setTimeout(() => {
+                btn.innerHTML = original;
+                alert('数据已更新至最新状态');
+            }, 1500);
+        }
+
+        // Chart.js Performance Chart
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['上证指数', '沪深300', '创业板指', '睿远成长价值A'],
+                datasets: [{
+                    label: '上周涨跌幅（%）',
+                    data: [1.65, 2.54, 4.49, 4.77],
+                    backgroundColor: ['#d6d3d1', '#d6d3d1', '#d6d3d1', '#8b0a1a'],
+                    borderRadius: 6,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#e7e5e4' },
+                        ticks: { callback: v => v + '%' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

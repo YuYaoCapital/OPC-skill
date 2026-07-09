@@ -86,8 +86,8 @@
 </head>
 <body>
   <header>
-    <h1>OPC 周度陪伴报告</h1>
-    <div class="subtitle">Portfolio Week Companion Reports</div>
+    <h1>OPC 基金报告中心</h1>
+    <div class="subtitle">周度陪伴 · 周度回顾 · 融合报告</div>
   </header>
 
   <main>
@@ -107,11 +107,11 @@
     <section id="info">
       <div class="section-title">ℹ️ 关于</div>
       <div class="card" style="font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
-        <p>本页面展示 OPC（One Page Companion）周度陪伴报告。</p>
-        <p>报告每周五更新，覆盖全球市场速览、产品表现、回撤修复、后市观点等 15 个模块。</p>
+        <p>本页面展示 OPC（One Page Companion）基金报告中心。</p>
+        <p>报告类型：面向客户的 HTML 周度陪伴报告、面向理财经理的周度回顾报告（PDF+HTML）、融合横纵分析的深度报告（PDF+HTML）。</p>
         <p>实时数据每 5 分钟自动刷新，数据来源：天天基金、东方财富、Yahoo Finance。</p>
         <p style="margin-top: 12px; font-size: 12px; color: #999;">
-          数据来源：{{数据来源列表}} | 制作日期：<span id="make-date"></span>
+          制作日期：<span id="make-date"></span>
         </p>
       </div>
     </section>
@@ -131,8 +131,9 @@
       // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
       // 这里使用静态列表，每次生成报告后更新此数组
       const reports = [
-        { name: '交银臻享多资产FOF A 周度陪伴报告', date: '2026-07-09', file: 'reports/交银臻享多资产FOF_A_周度陪伴.html' },
-        { name: '交银臻享多资产FOF A 周度陪伴报告（日期版）', date: '2026-07-09', file: 'reports/20260709_交银臻享多资产FOF_A_周度陪伴.html' },
+        { name: '睿远成长价值混合A 融合报告（横纵分析）', date: '2026-07-09', file: 'reports/20260709_睿远成长价值混合A_融合报告.html', tag: '融合' },
+        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-09', file: 'reports/20260709_睿远成长价值混合A_周度回顾.html', tag: '回顾' },
+        { name: '交银臻享多资产FOF A 周度陪伴报告', date: '2026-07-09', file: 'reports/交银臻享多资产FOF_A_周度陪伴.html', tag: '陪伴' },
       ];
 
       if (reports.length === 0) {
@@ -150,6 +151,7 @@
             <div class="report-name">
               ${r.name}
               ${i === 0 ? '<span class="badge badge-new">最新</span>' : ''}
+              ${r.tag ? '<span class="badge" style="background:#e3f2fd;color:#1565c0;">' + r.tag + '</span>' : ''}
             </div>
             <div class="report-meta">${r.date}</div>
           </div>
