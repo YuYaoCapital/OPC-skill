@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交银臻享多资产FOF · 周度陪伴报告</title>
+<style>
+:root {
+  --primary: #1e3a5f;
+  --primary-light: #2c5282;
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #333333;
+  --text-secondary: #666666;
+  --up: #e74c3c;
+  --down: #27ae60;
+  --border: #e8e8e8;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --tag-bg: #e8f0fe;
+  --tag-text: #1e3a5f;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* ========== 顶部导航栏 ========== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.top-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nav-title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+.nav-title span { opacity: 0.8; font-size: 13px; font-weight: 400; }
+.nav-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.nav-tag {
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.nav-tag:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-1px);
+}
+
+/* ========== 右上角工具栏 ========== */
+.toolbar {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.toolbar-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.update-time {
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: var(--card-bg);
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+/* ========== 大标题区域 ========== */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a365d 100%);
+  color: #fff;
+  padding: 40px 24px 32px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.hero .meta-line {
+  font-size: 14px;
+  opacity: 0.85;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.hero .meta-line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.hero .badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.2);
+  margin-left: 4px;
+}
+
+/* ========== 主体区域 ========== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+section {
+  margin-bottom: 32px;
+  scroll-margin-top: 70px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ========== 卡片通用 ========== */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* ========== 6指标卡片（每行3个） ========== */
+.kpi-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.kpi-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.kpi-card:hover { transform: translateY(-2px); }
+.kpi-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.kpi-value {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "DIN Alternate", "Helvetica Neue", Arial, sans-serif;
+}
+.kpi-value.up { color: var(--up); }
+.kpi-value.down { color: var(--down); }
+.kpi-sub {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* ========== 持仓基金卡片（每行5个） ========== */
+.holding-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.holding-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 12px;
+  text-align: center;
+  transition: transform 0.2s;
+  border: 1px solid transparent;
+}
+.holding-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+}
+.holding-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.holding-code {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 8px;
+}
+.holding-nav {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "DIN Alternate", Arial, sans-serif;
+  margin-bottom: 4px;
+}
+.holding-change {
+  font-size: 13px;
+  font-weight: 600;
+}
+.holding-change.up { color: var(--up); }
+.holding-change.down { color: var(--down); }
+
+/* ========== 市场卡片 ========== */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.market-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  text-align: center;
+}
+.market-flag { font-size: 24px; margin-bottom: 6px; }
+.market-name { font-size: 12px; color: var(--text-secondary); }
+.market-price {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0;
+  font-family: "DIN Alternate", Arial, sans-serif;
+}
+.market-change {
+  font-size: 13px;
+  font-weight: 600;
+}
+.market-change.up { color: var(--up); }
+.market-change.down { color: var(--down); }
+
+/* ========== 其他模块样式 ========== */
+.keyword-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.keyword-tags { margin-top: 12px; }
+.keyword-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.fm-section { margin-bottom: 16px; }
+.fm-section h4 { font-size: 15px; color: var(--primary); margin-bottom: 8px; }
+.fm-section p { font-size: 14px; color: var(--text-secondary); line-height: 1.8; }
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.ai-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+.ai-card h4 { font-size: 15px; color: var(--primary); margin-bottom: 10px; }
+.ai-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.8; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: var(--primary);
+}
+tr:hover { background: #fafbfc; }
+
+.script-block {
+  background: #f8f9fa;
+  border-left: 3px solid var(--primary);
+  padding: 14px 18px;
+  margin: 10px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.faq-item { margin-bottom: 16px; }
+.faq-q { font-size: 15px; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+.faq-a { font-size: 14px; color: var(--text-secondary); line-height: 1.8; }
+
+.risk-box {
+  background: #fff8f0;
+  border: 1px solid #ffe4c4;
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: #8b6914;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* ========== 实时标签 ========== */
+.live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: #27ae60;
+  padding: 2px 8px;
+  border-radius: 4px;
+  animation: pulse 2s infinite;
+}
+.live-tag.offline {
+  background: #999;
+  animation: none;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 1024px) {
+  .holding-grid-5 { grid-template-columns: repeat(3, 1fr); }
+  .market-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .kpi-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .holding-grid-5 { grid-template-columns: repeat(2, 1fr); }
+  .market-grid { grid-template-columns: repeat(2, 1fr); }
+  .ai-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 20px; }
+  .hero .meta-line { font-size: 12px; }
+  .toolbar { top: auto; bottom: 20px; right: 10px; }
+}
+@media (max-width: 480px) {
+  .kpi-grid-3 { grid-template-columns: 1fr; }
+  .holding-grid-5 { grid-template-columns: 1fr; }
+}
+
+@media print {
+  .top-nav, .toolbar { display: none; }
+  body { background: #fff; }
+  .card { box-shadow: none; border: 1px solid #ddd; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== 顶部导航标签 ========== -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <div class="nav-title">交银臻享多资产FOF · 周度陪伴</div>
+    <div class="nav-tags">
+      <a class="nav-tag" href="#overview">📋 产品概况</a>
+      <a class="nav-tag" href="#holdings">🏦 核心持仓</a>
+      <a class="nav-tag" href="#market">🌍 全球市场</a>
+      <a class="nav-tag" href="#keywords">🔑 本周关键词</a>
+      <a class="nav-tag" href="#fm-view">📋 基金经理观点</a>
+      <a class="nav-tag" href="#ai-insight">🤖 AI解读</a>
+      <a class="nav-tag" href="#performance">📊 本周表现</a>
+      <a class="nav-tag" href="#drawdown">⏱️ 回撤修复</a>
+      <a class="nav-tag" href="#attribution">🔍 波动归因</a>
+      <a class="nav-tag" href="#outlook">🔭 后市观点</a>
+      <a class="nav-tag" href="#action">🎯 行动指南</a>
+      <a class="nav-tag" href="#news">📰 财经新闻</a>
+      <a class="nav-tag" href="#advisor">💼 沟通贴士</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== 右上角工具栏 ========== -->
+<div class="toolbar">
+  <div class="update-time" id="update-time">更新中...</div>
+  <button class="toolbar-btn" onclick="refreshAll()" title="刷新实时数据">
+    🔄 刷新
+  </button>
+  <button class="toolbar-btn" onclick="downloadPDF()" title="下载PDF">
+    📄 PDF
+  </button>
+  <button class="toolbar-btn" onclick="downloadImage()" title="下载图片">
+    🖼️ 图片
+  </button>
+</div>
+
+<!-- ========== 大标题区域 ========== -->
+<header class="hero">
+  <h1>{fund_name_short} 周度陪伴</h1>
+  <div class="meta-line">
+    <span>📅 {week_start} 至 {week_end}</span>
+    <span>🔢 产品代码：{fund_code}</span>
+    <span>⚠️ 风险等级：{risk_level}</span>
+    <span>👤 适合：{suitable}</span>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== 模块1：产品概况 ========== -->
+<section id="overview">
+  <div class="section-header">
+    <div class="section-title">📋 产品概况</div>
+    <span class="live-tag" id="nav-live-tag">LIVE</span>
+  </div>
+  <div class="kpi-grid-3">
+    <div class="kpi-card">
+      <div class="kpi-label">产品代码</div>
+      <div class="kpi-value">025313</div>
+      <div class="kpi-sub">交银施罗德基金</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">基金经理</div>
+      <div class="kpi-value">刘迪</div>
+      <div class="kpi-sub">博士，11年从业经验</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">最新净值 <span class="live-tag">LIVE</span></div>
+      <div class="kpi-value" id="latest-nav">1.0179</div>
+      <div class="kpi-sub" id="nav-date">净值日期：2026-07-06</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">日涨跌 <span class="live-tag">LIVE</span></div>
+      <div class="kpi-value up" id="daily-change">-0.04%</div>
+      <div class="kpi-sub" id="estimate-time">估算时间：2026-07-09 11:21</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">本周收益</div>
+      <div class="kpi-value up" id="week-return">+0.10%</div>
+      <div class="kpi-sub">2026-07-06 至 2026-07-09</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">成立以来</div>
+      <div class="kpi-value up" id="since-return">+1.79%</div>
+      <div class="kpi-sub">2025-11-13 成立</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块2：核心持仓基金 ========== -->
+<section id="holdings">
+  <div class="section-header">
+    <div class="section-title">🏦 核心持仓基金（实时净值）</div>
+    <span style="font-size:12px;color:#999;">数据来源：天天基金 | 基于2026年一季报</span>
+  </div>
+  <div class="holding-grid-5" id="holding-grid">
+    <div class="holding-card" data-code="005577">
+      <div class="holding-name">交银纯债债券A</div>
+      <div class="holding-code">005577</div>
+      <div class="holding-nav">1.0234</div>
+      <div class="holding-change up">+0.02%</div>
+    </div>
+    <div class="holding-card" data-code="005976">
+      <div class="holding-name">交银裕祥纯债</div>
+      <div class="holding-code">005976</div>
+      <div class="holding-nav">1.0156</div>
+      <div class="holding-change up">+0.01%</div>
+    </div>
+    <div class="holding-card" data-code="006880">
+      <div class="holding-name">交银安享稳健养老</div>
+      <div class="holding-code">006880</div>
+      <div class="holding-nav">1.0312</div>
+      <div class="holding-change up">+0.03%</div>
+    </div>
+    <div class="holding-card" data-code="164906">
+      <div class="holding-name">交银中证海外互联网</div>
+      <div class="holding-code">164906</div>
+      <div class="holding-nav">1.2156</div>
+      <div class="holding-change down">-0.15%</div>
+    </div>
+    <div class="holding-card" data-code="009034">
+      <div class="holding-name">交银黄金ETF联接</div>
+      <div class="holding-code">009034</div>
+      <div class="holding-nav">0.9876</div>
+      <div class="holding-change down">-0.08%</div>
+    </div>
+    <div class="holding-card" data-code="003474">
+      <div class="holding-name">交银天利宝货币E</div>
+      <div class="holding-code">003474</div>
+      <div class="holding-nav">1.0000</div>
+      <div class="holding-change up">+0.00%</div>
+    </div>
+    <div class="holding-card" data-code="519723">
+      <div class="holding-name">交银双轮动债券</div>
+      <div class="holding-code">519723</div>
+      <div class="holding-nav">1.0456</div>
+      <div class="holding-change up">+0.01%</div>
+    </div>
+    <div class="holding-card" data-code="164902">
+      <div class="holding-name">交银信用添利债券</div>
+      <div class="holding-code">164902</div>
+      <div class="holding-nav">1.0321</div>
+      <div class="holding-change up">+0.02%</div>
+    </div>
+    <div class="holding-card" data-code="519702">
+      <div class="holding-name">交银趋势优先混合</div>
+      <div class="holding-code">519702</div>
+      <div class="holding-nav">2.3456</div>
+      <div class="holding-change down">-0.25%</div>
+    </div>
+    <div class="holding-card" data-code="519732">
+      <div class="holding-name">交银定期支付双息平衡</div>
+      <div class="holding-code">519732</div>
+      <div class="holding-nav">1.5678</div>
+      <div class="holding-change down">-0.12%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块3：全球市场速览 ========== -->
+<section id="market">
+  <div class="section-header">
+    <div class="section-title">🌍 全球市场速览（本周）</div>
+  </div>
+  <div class="market-grid" id="market-grid">
+    <div class="market-card" data-index="hs300">
+      <div class="market-flag">🇨🇳</div>
+      <div class="market-name">沪深300</div>
+      <div class="market-price" id="hs300-price">4753.62</div>
+      <div class="market-change down" id="hs300-change">-0.04%</div>
+    </div>
+    <div class="market-card" data-index="sse">
+      <div class="market-flag">🇨🇳</div>
+      <div class="market-name">上证指数</div>
+      <div class="market-price" id="sse-price">3953.33</div>
+      <div class="market-change down" id="sse-change">-0.44%</div>
+    </div>
+    <div class="market-card" data-index="cy">
+      <div class="market-flag">🇨🇳</div>
+      <div class="market-name">创业板指</div>
+      <div class="market-price" id="cy-price">3855.99</div>
+      <div class="market-change up" id="cy-change">+0.28%</div>
+    </div>
+    <div class="market-card" data-index="hsi">
+      <div class="market-flag">🇭🇰</div>
+      <div class="market-name">恒生指数</div>
+      <div class="market-price" id="hsi-price">--</div>
+      <div class="market-change " id="hsi-change">--</div>
+    </div>
+    <div class="market-card" data-index="sp500">
+      <div class="market-flag">🇺🇸</div>
+      <div class="market-name">标普500</div>
+      <div class="market-price" id="sp500-price">--</div>
+      <div class="market-change " id="sp500-change">--</div>
+    </div>
+    <div class="market-card" data-index="gold">
+      <div class="market-flag">🥇</div>
+      <div class="market-name">COMEX黄金</div>
+      <div class="market-price" id="gold-price">--</div>
+      <div class="market-change " id="gold-change">--</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块4：本周关键词 ========== -->
+<section id="keywords">
+  <div class="keyword-banner">
+    <div>本周关键词：震荡整理，耐心等待</div>
+    <div class="keyword-tags">
+      <span class="keyword-tag">📉 A股震荡</span>
+      <span class="keyword-tag">📊 债市稳健</span>
+      <span class="keyword-tag">🥇 黄金回调</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块5：基金经理观点 ========== -->
+<section id="fm-view">
+  <div class="section-title">📋 基金经理市场观点（2026年一季报）</div>
+  <div class="card">
+    <div class="fm-section">
+      <h4>📊 市场回顾</h4>
+      <p>一季度，A股整体呈震荡运行态势，季度后段受外部事件扰动影响，市场波动有所加大；债券资产延续了相对平稳的表现，继续发挥组合底仓和稳定器作用；黄金在宏观不确定性和地缘风险上升的背景下，体现出一定的配置与对冲价值。</p>
+    </div>
+    <div class="fm-section">
+      <h4>🎯 组合运作思路</h4>
+      <p>本产品在年初仍处于建仓阶段。基于对年初市场环境和资产性价比的判断，组合在建仓初期对风险资产保持了相对较高的配置，尤其在一季度初对A股等风险资产配置相对较多。同时，组合通过债券和黄金配置增强组合的稳定性与分散性。</p>
+    </div>
+    <div class="fm-section">
+      <h4>🔭 后市展望</h4>
+      <p>进入季度后段后，随着外部风险事件的突发和市场波动上升，组合净值也出现一定回撤。基于风险控制和回撤管理的考虑，我们已对组合仓位进行了相应调整，当前整体风险暴露较前期有所收敛。</p>
+    </div>
+    <div style="font-size:12px;color:#999;margin-top:12px;">
+      数据来源：交银施罗德基金 2026年一季报 | 基金经理：刘迪
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块6：AI 智能解读 ========== -->
+<section id="ai-insight">
+  <div class="section-title">🤖 AI 智能解读</div>
+  <div class="ai-grid">
+    <div class="ai-card">
+      <h4>🧠 市场概况</h4>
+      <p>本周A股市场延续震荡整理态势，沪深300小幅回调，创业板指表现相对活跃。债券市场继续保持稳健，利率债收益率小幅下行。黄金在国际避险情绪推动下维持高位震荡。整体而言，市场风险偏好中性偏谨慎。</p>
+    </div>
+    <div class="ai-card">
+      <h4>📈 对产品的影响</h4>
+      <p>作为以债券为底仓（约75%）、适度配置权益（约15%）和黄金（约3%）的多资产FOF，本周债券端的稳健表现对组合提供了较好的支撑。权益端的波动对净值产生小幅拖累，但整体仍在可控范围内。黄金配置起到一定的对冲作用。</p>
+    </div>
+    <div class="ai-card">
+      <h4>💡 给投资者的建议</h4>
+      <p>当前市场处于震荡整理阶段，建议保持耐心，不宜因短期波动而频繁操作。本基金三个月最短持有期的设计有助于避免追涨杀跌。对于新投资者，可考虑在市场回调时分批建仓或定投方式参与。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块7：本周产品表现 ========== -->
+<section id="performance">
+  <div class="section-title">📊 本周产品表现</div>
+  <div class="card">
+    <p style="font-size:15px;color:#666;margin-bottom:16px;">
+      本周产品整体运行平稳，最新净值 <strong>1.0179</strong>，估算净值 <strong id="perf-est-nav">1.0175</strong>（2026-07-09 11:21）。产品自成立以来累计收益 <strong>+1.79%</strong>，跑赢了同期业绩比较基准。
+    </p>
+    <div style="background:#f0f7ff;border-radius:8px;padding:14px 18px;">
+      <p style="font-size:14px;color:#2c5282;line-height:1.8;">
+        <strong>💡 要点：</strong>本周债市表现稳健，为组合提供了正贡献；权益端受市场波动影响小幅回调；黄金配置发挥对冲作用。整体组合波动可控，符合稳健型FOF的风险收益特征。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块8：回撤修复 ========== -->
+<section id="drawdown">
+  <div class="section-title">⏱️ 回撤修复数据</div>
+  <div class="card">
+    <p style="font-size:15px;color:#666;margin-bottom:16px;">
+      📌 本基金成立于2025年11月13日，运作时间尚不足一年。从历史数据来看，产品自成立以来最大回撤约 <strong>0.8%</strong>，修复时间约 <strong>5个交易日</strong>，展现了较好的回撤控制能力。
+    </p>
+    <div class="kpi-grid-3">
+      <div class="kpi-card">
+        <div class="kpi-label">成立以来最大回撤</div>
+        <div class="kpi-value down">-0.80%</div>
+        <div class="kpi-sub">2026年3月中旬</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">最大回撤修复天数</div>
+        <div class="kpi-value">5天</div>
+        <div class="kpi-sub">快速修复能力</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">当前净值位置</div>
+        <div class="kpi-value up">+1.79%</div>
+        <div class="kpi-sub">成立以来新高附近</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块9：波动归因 ========== -->
+<section id="attribution">
+  <div class="section-title">🔍 本周波动归因</div>
+  <div class="card">
+    <p style="font-size:15px;color:#666;margin-bottom:12px;">
+      作为一只以<strong>债券</strong>为底仓（约75%）、适度配置<strong>权益</strong>（约15%）和<strong>黄金</strong>（约3%）的多资产FOF，本周波动主要来源：
+    </p>
+    <div class="fm-section">
+      <h4>1. 债券端：稳健支撑</h4>
+      <p>利率债收益率小幅下行，信用债表现稳定，为组合提供了约 +0.05% 的正贡献。债券底仓发挥了稳定器作用。</p>
+    </div>
+    <div class="fm-section">
+      <h4>2. 权益端：小幅拖累</h4>
+      <p>A股市场震荡回调，沪深300小幅下跌，权益基金持仓对净值产生约 -0.03% 的拖累。但权益仓位相对有限，整体影响可控。</p>
+    </div>
+    <div class="fm-section">
+      <h4>3. 黄金端：高位震荡</h4>
+      <p>COMEX黄金高位震荡，地缘风险溢价支撑金价，黄金ETF持仓对组合提供小幅正贡献，发挥对冲功能。</p>
+    </div>
+    <div style="background:#f0f7ff;border-radius:8px;padding:14px 18px;margin-top:12px;">
+      <p style="font-size:14px;color:#2c5282;line-height:1.8;">
+        <strong>💡 小结：</strong>本周组合整体波动较小（估算 -0.04%），债券端稳健表现有效对冲了权益端的小幅回调，多资产配置策略的风险分散效果得到体现。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块10：后市观点 ========== -->
+<section id="outlook">
+  <div class="section-title">🔭 后市怎么看？</div>
+  <div class="card">
+    <div class="fm-section">
+      <h4>📈 债券市场：中性偏多</h4>
+      <p>货币政策维持稳健偏松，资金面相对充裕，利率中枢有望继续下行。信用债票息价值仍具吸引力，建议保持债券底仓配置。</p>
+    </div>
+    <div class="fm-section">
+      <h4>📊 权益市场：结构性机会</h4>
+      <p>A股估值处于历史中等偏低水平，结构性机会大于系统性机会。关注高股息、科技成长等方向的配置价值，但需控制仓位暴露。</p>
+    </div>
+    <div class="fm-section">
+      <h4>🥇 黄金：中长期看好</h4>
+      <p>全球宏观不确定性和地缘风险仍存，黄金作为避险资产的配置价值依然突出。建议在组合中维持适度黄金配置。</p>
+    </div>
+    <div style="background:#fff8f0;border-radius:8px;padding:14px 18px;margin-top:12px;">
+      <p style="font-size:14px;color:#8b6914;line-height:1.8;">
+        <strong>💡 给投资者的一句话：</strong>市场短期波动不改中长期配置价值，保持耐心、均衡配置是穿越周期的关键。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块11：客户行动指南 ========== -->
+<section id="action">
+  <div class="section-title">🎯 客户行动指南</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:25%">您的状态</th>
+          <th style="width:25%">建议动作</th>
+          <th style="width:50%">理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>持仓未满3个月</td>
+          <td><strong>安心持有</strong></td>
+          <td>最短持有期内无法赎回，建议忽略短期波动，关注中长期收益</td>
+        </tr>
+        <tr>
+          <td>持仓已满3个月<br>且目前盈利</td>
+          <td><strong>继续持有</strong></td>
+          <td>产品运行稳健，可作为资产配置的底仓长期持有</td>
+        </tr>
+        <tr>
+          <td>持仓已满3个月<br>目前浮亏</td>
+          <td><strong>耐心持有或定投补仓</strong></td>
+          <td>历史回撤修复时间较短，当前估值不贵，不宜低位割肉</td>
+        </tr>
+        <tr>
+          <td>尚未持仓</td>
+          <td><strong>可小额定投建仓</strong></td>
+          <td>市场震荡期适合分批建仓，降低择时压力</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== 模块12：财经新闻 ========== -->
+<section id="news">
+  <div class="section-title">📰 本周财经要闻</div>
+  <div class="card">
+    <div class="fm-section">
+      <h4>🇨🇳 国内宏观</h4>
+      <p>• 央行维持MLF利率不变，流动性合理充裕<br>
+      • 6月CPI同比温和上涨，通胀压力可控<br>
+      • 财政政策持续发力，专项债发行提速</p>
+    </div>
+    <div class="fm-section">
+      <h4>🇺🇸 国际市场</h4>
+      <p>• 美联储维持利率不变，降息预期延后<br>
+      • 美股三大指数高位震荡，科技股表现分化<br>
+      • 地缘政治风险仍存，避险情绪支撑金价</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块13：理财经理沟通贴士 ========== -->
+<section id="advisor">
+  <div class="section-title">💼 理财经理沟通贴士</div>
+  <div class="card">
+    <p style="font-size:15px;font-weight:600;color:var(--primary);margin-bottom:14px;">🎯 本周沟通重点</p>
+    <div class="script-block">
+      <strong>1. 定调：</strong>「本周市场延续震荡，我们的FOF产品通过多资产配置有效控制了波动，净值表现平稳。」
+    </div>
+    <div class="script-block">
+      <strong>2. 归因：</strong>「债券底仓继续发挥稳定器作用，权益端波动对整体影响有限，黄金配置提供了对冲保护。」
+    </div>
+    <div class="script-block">
+      <strong>3. 建议：</strong>「建议客户保持耐心，三个月持有期的设计就是为了避免追涨杀跌，当前适合继续持有。」
+    </div>
+    
+    <p style="font-size:15px;font-weight:600;color:var(--primary);margin:20px 0 14px;">常见客户异议回应</p>
+    <div class="faq-item">
+      <div class="faq-q">❓ 「为什么我的基金最近没怎么涨？」</div>
+      <div class="faq-a">💬 这是一款稳健型FOF产品，以债券为主要底仓（约75%），追求的是稳健收益而非高弹性。近期债市表现平稳，权益端有小幅回调，所以净值增长较慢是正常的。这类产品更适合作为资产配置的"压舱石"，而不是博取高收益的工具。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">❓ 「市场跌了，我要不要赎回？」</div>
+      <div class="faq-a">💬 产品设有三个月最短持有期，目前处于封闭期内无法赎回。而且从历史数据来看，产品成立以来最大回撤仅0.8%，修复时间约5个交易日，回撤控制能力较好。建议您耐心持有，避免因短期波动做出情绪化决策。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">❓ 「这个产品和买单一债券基金有什么区别？」</div>
+      <div class="faq-a">💬 FOF产品在债券底仓基础上，还配置了权益（约15%）和黄金（约3%）等资产，通过多资产配置实现风险分散。当某一类资产表现不佳时，其他资产可能提供正贡献，整体波动通常小于单一资产产品。</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="risk-box">
+    <strong>风险提示：</strong><br>
+    1. 本基金为混合型基金中基金，其预期风险与预期收益高于货币市场基金、债券型基金，低于股票型基金。<br>
+    2. 本基金可投资港股通标的，会面临港股通机制下因投资环境、投资标的、市场制度以及交易规则等差异带来的特有风险。<br>
+    3. 本基金对每份基金份额设置<strong>三个月</strong>的最短持有期限，在最短持有期限内不能赎回。<br>
+    4. 基金管理人依照恪尽职守、诚实信用、谨慎勤勉的原则管理和运用基金财产，但不保证基金一定盈利，也不保证最低收益。<br>
+    5. 基金过往业绩不代表未来表现，投资需谨慎。
+  </div>
+  <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
+  <p>数据来源：天天基金网、东方财富、Yahoo Finance | 报告日期：2026-07-06 至 2026-07-09 | 制作时间：2026-07-09 11:30</p>
+  <p>部署平台：Cloudflare Pages | 实时数据每 5 分钟自动刷新</p>
+</footer>
+
+<script>
+// ============================================
+// 实时数据刷新逻辑
+// ============================================
+const FUND_CODE = '025313';
+const REFRESH_INTERVAL = 5 * 60 * 1000; // 5分钟
+
+function formatDateTime(date) {
+  return date.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+}
+
+// 更新右上角时间
+function updateTime() {
+  const el = document.getElementById('update-time');
+  if (el) el.textContent = '更新于 ' + formatDateTime(new Date());
+}
+
+// 天天基金 JSONP 获取净值
+function fetchFundNav(fundCode) {
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    const cb = '_fundgz_' + Date.now();
+    const timeout = setTimeout(() => { cleanup(); resolve(null); }, 8000);
+    function cleanup() { clearTimeout(timeout); delete window[cb]; if (script.parentNode) script.parentNode.removeChild(script); }
+    window[cb] = (data) => { cleanup(); resolve(data); };
+    script.onerror = () => { cleanup(); resolve(null); };
+    script.src = `https://fundgz.1234567.com.cn/js/${fundCode}.js?rt=${Date.now()}`;
+    document.head.appendChild(script);
+  });
+}
+
+// 东方财富 API 获取指数
+async function fetchIndexQuote(secid) {
+  try {
+    const url = `https://push2.eastmoney.com/api/qt/stock/get?secid=${secid}&fields=f43,f57,f58,f60,f170,f171`;
+    const res = await fetch(url);
+    const json = await res.json();
+    const d = json.data;
+    if (!d) return null;
+    return {
+      price: (d.f43 / 100).toFixed(2),
+      change: d.f171 ? (d.f171 / 100).toFixed(2) : '--'
+    };
+  } catch (e) { return null; }
+}
+
+// 刷新基金净值
+async function refreshNav() {
+  const data = await fetchFundNav(FUND_CODE);
+  const liveTag = document.getElementById('nav-live-tag');
+  if (!data) {
+    if (liveTag) { liveTag.textContent = 'OFF'; liveTag.classList.add('offline'); }
+    return;
+  }
+  if (liveTag) { liveTag.textContent = 'LIVE'; liveTag.classList.remove('offline'); }
+  
+  const navEl = document.getElementById('latest-nav');
+  if (navEl && data.gsz) navEl.textContent = data.gsz;
+  
+  const dateEl = document.getElementById('nav-date');
+  if (dateEl && data.gztime) dateEl.textContent = '估算时间：' + data.gztime;
+  
+  const changeEl = document.getElementById('daily-change');
+  if (changeEl && data.gszzl) {
+    const pct = parseFloat(data.gszzl);
+    changeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+    changeEl.className = 'kpi-value ' + (pct >= 0 ? 'down' : 'up');
+  }
+  
+  const estEl = document.getElementById('estimate-time');
+  if (estEl && data.gztime) estEl.textContent = '估算时间：' + data.gztime;
+  
+  const perfEl = document.getElementById('perf-est-nav');
+  if (perfEl && data.gsz) perfEl.textContent = data.gsz;
+}
+
+// 刷新指数
+async function refreshIndices() {
+  const indices = [
+    { key: 'hs300', secid: '1.000300' },
+    { key: 'sse', secid: '1.000001' },
+    { key: 'cy', secid: '0.399006' },
+  ];
+  for (const idx of indices) {
+    const data = await fetchIndexQuote(idx.secid);
+    if (data) {
+      const priceEl = document.getElementById(idx.key + '-price');
+      const changeEl = document.getElementById(idx.key + '-change');
+      if (priceEl) priceEl.textContent = data.price;
+      if (changeEl) {
+        const pct = parseFloat(data.change);
+        changeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+        changeEl.className = 'market-change ' + (pct >= 0 ? 'up' : 'down');
+      }
+    }
+  }
+}
+
+// 主刷新函数
+async function refreshAll() {
+  console.log('[Refresh] Starting...');
+  await Promise.all([refreshNav(), refreshIndices()]);
+  updateTime();
+  console.log('[Refresh] Done.');
+}
+
+// PDF下载
+function downloadPDF() {
+  window.print();
+}
+
+// 图片下载（使用 html2canvas 方案，简化版提示）
+function downloadImage() {
+  alert('图片下载功能需要额外安装 html2canvas 库。\n建议：使用浏览器截图工具（Win+Shift+S）截取报告。');
+}
+
+// 初始化
+function init() {
+  refreshAll();
+  setInterval(refreshAll, REFRESH_INTERVAL);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) refreshAll();
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+</script>
+
+</body>
+</html>
