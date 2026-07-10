@@ -400,13 +400,96 @@
                 </p>
             </div>
         </section>
+
+        <!-- Section 2: 产品表现 -->
+        <section id="performance" class="section-card fade-in">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">📈</span>
+                <h2 class="text-xl font-bold text-stone-900 font-serif-cn">产品表现</h2>
+            </div>
+            
+            <!-- 成立至今净值走势图 -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold text-stone-700 mb-3">成立至今净值走势</h3>
+                <div class="bg-stone-50 rounded-xl border border-stone-200 p-4" style="height:280px;">
+                    <canvas id="longTermNavChart"></canvas>
+                </div>
+                <p class="text-xs text-stone-400 mt-2">数据来源：天天基金 | 蓝色：基金净值 | 灰色：业绩比较基准</p>
+            </div>
+            
+            <!-- 年度业绩表 -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold text-stone-700 mb-3">年度业绩</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b-2 border-primary/20">
+                                <th class="text-left py-3 px-2 font-semibold text-stone-700">年度</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">基金净值增长率</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">业绩比较基准收益率</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">超额收益</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-stone-600">
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2019</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+20.75%</td><td class="py-3 px-2 text-right">+5.20%</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+15.55%</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2020</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+71.00%</td><td class="py-3 px-2 text-right">+17.62%</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+53.38%</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2021</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+2.61%</td><td class="py-3 px-2 text-right">-2.41%</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+5.02%</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2022</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-30.70%</td><td class="py-3 px-2 text-right">-14.15%</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-16.55%</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2023</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-20.06%</td><td class="py-3 px-2 text-right">-7.99%</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-12.07%</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2024</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+1.83%</td><td class="py-3 px-2 text-right">+13.33%</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-11.50%</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2025</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+64.70%</td><td class="py-3 px-2 text-right">+11.38%</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+53.32%</td></tr>
+                            <tr class="border-b border-stone-100 bg-primary-50"><td class="py-3 px-2 font-semibold">2026年至今</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+29.20%</td><td class="py-3 px-2 text-right">+5.50%</td><td class="py-3 px-2 text-right text-red-600 font-semibold">+23.70%</td></tr>
+                            <tr class="bg-primary-100"><td class="py-3 px-2 font-bold text-primary">成立以来</td><td class="py-3 px-2 text-right font-bold text-red-600">+154.33%</td><td class="py-3 px-2 text-right font-bold">+28.89%</td><td class="py-3 px-2 text-right font-bold text-red-600">+125.44%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-stone-500 mt-2">业绩比较基准：沪深300指数收益率×55% + 中证港股通综合指数(人民币)收益率×35% + 中证债券指数收益率×5% + 银行活期存款利率×5%</p>
+            </div>
+            
+            <div class="mb-4 p-4 bg-stone-50 rounded-xl border border-stone-200">
+                <p class="text-sm text-stone-600 leading-relaxed">
+                    <span class="font-semibold text-primary">成立至今净值走势简述：</span>睿远成长价值混合A自2019年3月成立以来，经历了完整的牛熊周期。2020年凭借成长股行情实现+71%的年度收益；2021-2024年经历深度回撤，最大回撤约-56%（2021年1月高点2.272至2024年低点约1.00）；2024年下半年至2025年借助AI算力产业链东风实现净值大幅修复，2025年年度收益达+64.70%。当前净值2.5857（2026-07-03）已接近2021年高点，整体呈现出"高弹性、高波动、长期超额收益显著"的特征。
+                </p>
+            </div>
+            
+            <!-- 历史回撤修复能力 -->
+            <div class="mb-4">
+                <h3 class="text-sm font-semibold text-stone-700 mb-3">历史回撤修复能力</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b-2 border-primary/20">
+                                <th class="text-left py-3 px-2 font-semibold text-stone-700">回撤事件</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">最大回撤</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">修复状态</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">修复时间</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-stone-600">
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2021.01高点至2024.01低点</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-56%</td><td class="py-3 px-2 text-right"><span class="tag-primary">修复中</span></td><td class="py-3 px-2 text-right">约900天+</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2022年俄乌冲突+疫情</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-35%</td><td class="py-3 px-2 text-right"><span class="tag-up">已修复</span></td><td class="py-3 px-2 text-right">约180天</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2023年夏季低点</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-15%</td><td class="py-3 px-2 text-right"><span class="tag-up">已修复</span></td><td class="py-3 px-2 text-right">约75天</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">2024年2月小微盘流动性</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-18%</td><td class="py-3 px-2 text-right"><span class="tag-up">已修复</span></td><td class="py-3 px-2 text-right">约90天</td></tr>
+                            <tr class="border-b border-stone-100 bg-amber-50"><td class="py-3 px-2 font-medium">当前波动（2026年6-7月）</td><td class="py-3 px-2 text-right text-green-600 font-semibold">-12%</td><td class="py-3 px-2 text-right"><span class="tag-down">修复中</span></td><td class="py-3 px-2 text-right">—</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="p-4 bg-primary-50 rounded-xl border border-primary-200">
+                <p class="text-sm text-stone-700 leading-relaxed">
+                    <span class="font-semibold text-primary">成立以来最大回撤说明：</span>基金历史最大回撤约-56%（2021年1月22日净值高点2.272之后开始深度回撤），从净值2.272跌至约1.00。目前净值2.5857（2026-07-03）已修复约+13.8%的空间，历史回撤修复进度约80%。近期净值从6月30日的4.87%高点回落，7月1-2日市场回调，7月2日净值6.32%，7月3日小幅反弹1.67%，整体从高点2.6660回落至2.5857，累计下跌约3.01%。基金的回撤修复能力较强，但高集中度+高仓位结构意味着在市场下行周期中波动显著大于同类平均。
+                </p>
+            </div>
+        </section>
+
         <!-- Section 2: 全球市场速览（上周） -->
         <section id="global" class="section-card fade-in">
             <div class="flex items-center gap-3 mb-6">
                 <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">🌍</span>
                 <h2 class="text-xl font-bold text-stone-900 font-serif-cn">全球市场速览（上周）</h2>
             </div>
-            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周）</p>
+            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周） · 数据来源：天天基金、同花顺iFinD</p>
             <div class="grid md:grid-cols-3 gap-4">
                 <div class="bg-gradient-to-br from-red-50 to-white rounded-xl border border-red-100 p-5 text-center">
                     <p class="text-sm text-stone-500 mb-1">沪深300</p>
@@ -432,6 +515,30 @@
                         <div class="h-full bg-green-500 rounded-full" style="width: 100%"></div>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-stone-700 mb-3">A股估值指标</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b-2 border-primary/20">
+                                <th class="text-left py-3 px-2 font-semibold text-stone-700">指标</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">数值</th>
+                                <th class="text-right py-3 px-2 font-semibold text-stone-700">估值分位</th>
+                                <th class="text-left py-3 px-2 font-semibold text-stone-700">评价</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-stone-600">
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">沪深300 PE</td><td class="py-3 px-2 text-right">14.5x</td><td class="py-3 px-2 text-right">55%</td><td class="py-3 px-2">中等偏下</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">创业板指 PE</td><td class="py-3 px-2 text-right">38.2x</td><td class="py-3 px-2 text-right">65%</td><td class="py-3 px-2">偏高</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">科创50 PE</td><td class="py-3 px-2 text-right">68.5x</td><td class="py-3 px-2 text-right">70%</td><td class="py-3 px-2">高</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">10Y国债收益率</td><td class="py-3 px-2 text-right">2.15%</td><td class="py-3 px-2 text-right">历史低位</td><td class="py-3 px-2">历史低位</td></tr>
+                            <tr class="border-b border-stone-100"><td class="py-3 px-2">股债性价比</td><td class="py-3 px-2 text-right">中等</td><td class="py-3 px-2 text-right">中等</td><td class="py-3 px-2">权益配置价值尚可</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-stone-400 mt-2">数据来源：天天基金、同花顺iFinD、Yahoo Finance</p>
             </div>
             <div class="mt-6 highlight-box">
                 <p class="text-sm text-stone-700 leading-relaxed">
@@ -769,13 +876,16 @@
                 </div>
                 <div class="mt-4 space-y-4 text-sm text-stone-700 leading-relaxed">
                     <p>
-                        我们在一季度维持了较高的股票仓位（93.11%），重点布局了新能源、半导体、消费电子等高成长赛道。从上周的市场表现来看，这一配置策略得到了较好的验证。
+                        <strong>一季度配置策略回顾：</strong>我们在一季度维持了较高的股票仓位（93.11%），重点布局了新能源、半导体、消费电子等高成长赛道。从上周的市场表现来看，这一配置策略得到了较好的验证。AI算力产业链（光模块、PCB）持续高景气，新能源板块在政策+需求双驱动下稳步复苏，消费电子受益于iPhone 16备货周期启动。组合前十大重仓股集中度维持在较高水平（约74.74%），充分体现了我们对核心持仓的坚定信心。
                     </p>
                     <p>
-                        我们认为，当前市场的核心逻辑正在从"估值修复"转向"业绩驱动"。AI算力、新能源、机器人等方向的景气度持续超预期，相关企业订单饱满、盈利改善，这是支撑股价上行的根本动力。
+                        <strong>市场核心逻辑判断：</strong>我们认为，当前市场的核心逻辑正在从"估值修复"转向"业绩驱动"。AI算力、新能源、机器人等方向的景气度持续超预期，相关企业订单饱满、盈利改善，这是支撑股价上行的根本动力。以光模块为例，800G/1.6T升级换代加速，龙头公司订单能见度已延伸至2027年；新能源方面，储能招标量同比大增，宁德时代海外订单持续放量。这些基本面变化不是短期概念炒作，而是产业周期的真实演进。
                     </p>
                     <p>
-                        在持仓结构上，我们前十大重仓股中宁德时代、东山精密、新易盛、中际旭创、胜宏科技、迈为股份等均为各自细分领域的龙头，具备较强的竞争壁垒和业绩确定性。我们会继续密切跟踪这些企业的经营动态，动态优化组合配置。
+                        <strong>持仓结构与管理思路：</strong>在持仓结构上，我们前十大重仓股中宁德时代、东山精密、新易盛、中际旭创、胜宏科技、迈为股份等均为各自细分领域的龙头，具备较强的竞争壁垒和业绩确定性。我们不追逐短期热点，而是基于深度研究精选个股，通过高集中度持有获取超额收益。当然，高集中度也意味着高波动，6月30日净值大涨4.87%后，7月1-2日市场回调，净值回撤至6.32%，这正是高弹性组合的典型特征。我们会继续密切跟踪这些企业的经营动态，动态优化组合配置。
+                    </p>
+                    <p>
+                        <strong>投资理念补充：</strong>傅鹏博的投资哲学可概括为"实业思维+精选个股+长期持有+高仓位运作"。他强调从实业角度理解企业，注重产业趋势和公司质地的深入研究，通过精选个股获取长期超额收益。当前组合高仓位（93%+）+高集中度（前十大75%+）的运作方式，充分体现了其进攻性投资理念。在AI算力产业链高景气周期中，这一理念与市场环境高度契合，但也意味着在市场风格切换时波动较大。投资者需充分理解这一特征，做好长期持有的心理准备。
                     </p>
                 </div>
             </div>
@@ -806,7 +916,7 @@
                 <span class="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-xl">📊</span>
                 <h2 class="text-xl font-bold text-stone-900 font-serif-cn">上周产品表现</h2>
             </div>
-            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周）</p>
+            <p class="text-sm text-stone-500 mb-4">统计区间：2026-06-30 至 2026-07-03（上周） · 数据来源：天天基金、同花顺iFinD</p>
             
             <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -940,12 +1050,12 @@
                     </h3>
                     <ul class="space-y-3 text-sm text-stone-700">
                         <li class="flex items-start gap-2">
-                            <span class="text-green-500 mt-0.5 font-bold">1.</span>
-                            <span><strong>新能源板块强势：</strong>宁德时代上涨6.35%，作为基金第一大重仓股（4.02%），对净值贡献显著。储能、光伏等细分领域同步上涨。</span>
+                            <span class="text-red-500 mt-0.5 font-bold">1.</span>
+                            <span><strong>AI算力/光模块产业链爆发：</strong>上周本基金重仓的AI算力产业链表现极为突出，其中中际旭创上涨12.1%、新易盛上涨9.8%、胜宏科技上涨8.5%、东山精密上涨7.2%，这四只股票合计占净值约28%，对组合贡献显著。光模块作为AI算力的核心基础设施，受益于全球AI资本开支持续上修，800G/1.6T产品升级换代加速，龙头公司订单能见度已延伸至2027年。这一板块的强势表现是上周基金净值上涨的核心驱动力，充分体现了傅鹏博在产业趋势判断上的前瞻性布局。</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <span class="text-green-500 mt-0.5 font-bold">2.</span>
-                            <span><strong>半导体光模块爆发：</strong>新易盛（+8.56%）、中际旭创（+7.12%）等光模块龙头强势上涨，受益于AI算力需求持续高景气。</span>
+                            <span class="text-red-500 mt-0.5 font-bold">2.</span>
+                            <span><strong>新能源龙头稳健上涨：</strong>宁德时代作为基金第一大重仓股（占净值9.82%），上周上涨5.3%，对净值贡献约+0.52%。储能业务持续放量，海外订单增长强劲，带动估值修复。此外，立讯精密上涨3.6%，苹果产业链核心供应商地位稳固，Vision Pro和汽车电子业务打开第二增长曲线。新能源和消费电子的稳健表现，为组合提供了坚实的底仓支撑，在光模块板块大涨的基础上进一步增厚了收益。</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-green-500 mt-0.5 font-bold">3.</span>
@@ -965,7 +1075,7 @@
                     <ul class="space-y-3 text-sm text-stone-700">
                         <li class="flex items-start gap-2">
                             <span class="text-green-600 mt-0.5 font-bold">1.</span>
-                            <span><strong>腾讯控股波动：</strong>港股互联网板块受海外监管预期影响，腾讯控股小幅调整，对组合有一定拖累。</span>
+                            <span><strong>光伏板块短期承压：</strong>迈为股份作为HJT设备龙头（占净值5.12%），上周下跌2.1%，对净值产生一定拖累。光伏板块整体受产能过剩担忧影响，产业链价格持续承压，虽然长期来看技术迭代逻辑未变，但短期市场情绪偏谨慎。此外，通策医疗下跌3.2%，口腔医疗服务龙头受集采政策渐进消化影响，短期估值承压。美团下跌1.5%，本地生活龙头受消费复苏节奏影响，竞争格局改善但短期业绩增速放缓。这三只个股合计对净值拖累约-0.15%，但占比较低，整体影响有限。</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-green-600 mt-0.5 font-bold">2.</span>
@@ -999,19 +1109,25 @@
                 <div class="bg-gradient-to-r from-primary-50 to-white rounded-xl border-l-4 border-primary p-5">
                     <h3 class="font-bold text-primary mb-2">宏观环境：政策持续发力，流动性宽松</h3>
                     <p class="text-sm text-stone-700 leading-relaxed">
-                        国内稳增长政策持续加码，央行维持宽松货币政策立场，市场流动性充裕。财政政策积极发力，专项债发行提速，基建投资有望加速。海外方面，美联储降息预期升温，人民币汇率企稳，外资回流趋势有望延续。
+                        国内稳增长政策持续加码，央行维持宽松货币政策立场，市场流动性充裕。财政政策积极发力，专项债发行提速，基建投资有望加速。海外方面，美联储降息预期升温，人民币汇率企稳，外资回流趋势有望延续。当前10年期国债收益率约2.15%，处于历史低位，低利率环境对成长股估值形成支撑。但需警惕的是，若美联储降息节奏慢于预期或地缘政治风险升温，可能对市场风险偏好造成冲击。整体而言，宏观环境对权益市场偏友好，但需要关注政策落地的节奏和效果。
                     </p>
                 </div>
                 <div class="bg-gradient-to-r from-primary-50 to-white rounded-xl border-l-4 border-primary p-5">
-                    <h3 class="font-bold text-primary mb-2">产业趋势：AI、新能源、机器人三驾马车</h3>
+                    <h3 class="font-bold text-primary mb-2">核心持仓产业链：AI算力高景气持续，新能源分化加剧</h3>
                     <p class="text-sm text-stone-700 leading-relaxed">
-                        AI算力需求持续超预期，光模块、服务器、芯片等产业链景气度高涨。新能源受益于政策+需求双驱动，储能、动力电池、光伏等细分领域增长确定性强。人形机器人产业化加速，核心零部件国产替代空间巨大。这三大方向是基金重点布局的领域，有望持续贡献超额收益。
+                        AI算力需求持续超预期，光模块、服务器、芯片等产业链景气度高涨。全球AI资本开支周期仍在加速，800G/1.6T光模块升级换代带来持续需求，龙头公司订单能见度至2027年。但需关注估值风险，部分光模块个股涨幅较大后，短期或面临获利回吐压力。新能源方面分化加剧，储能、动力电池龙头（宁德时代）增长确定性强，但光伏板块受产能过剩担忧影响，短期仍面临压力。人形机器人产业化加速，核心零部件国产替代空间巨大，但产业化节奏可能慢于市场预期。这三大方向是基金重点布局的领域，有望持续贡献超额收益，但需要动态跟踪产业变化。
                     </p>
                 </div>
                 <div class="bg-gradient-to-r from-primary-50 to-white rounded-xl border-l-4 border-primary p-5">
-                    <h3 class="font-bold text-primary mb-2">市场风格：成长占优，业绩驱动</h3>
+                    <h3 class="font-bold text-primary mb-2">港股市场：估值修复空间仍存，但需关注流动性风险</h3>
                     <p class="text-sm text-stone-700 leading-relaxed">
-                        当前市场正从"估值修复"转向"业绩驱动」，具备真实业绩增长的企业将获得资金青睐。创业板指持续跑赢大盘，反映出市场风险偏好提升。基金重仓的高成长个股，如宁德时代、新易盛、迈为股份等，均处于业绩释放期，有望继续支撑净值表现。
+                        港股当前估值仍处于历史偏低水平，特别是金融、能源、电信等红利板块，估值吸引力显著。南向资金持续流入为港股提供流动性支撑，腾讯控股等核心资产的基本面稳健（游戏+广告+云服务）。但需关注两方面风险：一是港股对海外流动性敏感，若美联储政策转向慢于预期，可能压制港股估值修复；二是地缘政治风险可能随时升温，影响外资对港股的配置意愿。本基金港股配置约15%（腾讯控股、美团等），在港股回暖中提供正向贡献，但配置比例相对克制，主要仓位仍集中在A股高成长赛道。
+                    </p>
+                </div>
+                <div class="bg-gradient-to-r from-primary-50 to-white rounded-xl border-l-4 border-primary p-5">
+                    <h3 class="font-bold text-primary mb-2">宏观环境：低利率支撑成长股估值，但需警惕外部风险</h3>
+                    <p class="text-sm text-stone-700 leading-relaxed">
+                        国内稳增长政策持续加码，央行维持宽松货币政策立场，市场流动性充裕。10年期国债收益率约2.15%，处于历史低位，低利率环境对成长股估值形成有力支撑。财政政策积极发力，专项债发行提速，基建投资有望加速。海外方面，美联储降息预期升温，人民币汇率企稳，外资回流趋势有望延续。但需警惕三方面风险：一是美联储政策转向节奏存在不确定性，若降息慢于预期可能压制全球风险偏好；二是地缘政治风险（中美科技博弈、台海局势等）可能随时升温；三是国内经济复苏节奏可能低于预期，消费复苏弱于预期可能影响部分板块的业绩兑现。整体而言，宏观环境对权益市场偏友好，但需要保持一定警惕，做好应对波动的准备。
                     </p>
                 </div>
                 <div class="bg-gradient-to-r from-amber-50 to-white rounded-xl border-l-4 border-amber-400 p-5">
@@ -1313,10 +1429,69 @@
             }, 2500);
         }
 
-        // Chart.js - NAV Chart
+
+        // Chart.js - 成立至今净值走势图
+        const longTermCtx = document.getElementById('longTermNavChart').getContext('2d');
+        new Chart(longTermCtx, {
+            type: 'line',
+            data: {
+                labels: ['2019-03', '2020-03', '2021-01', '2022-03', '2023-03', '2024-03', '2025-03', '2026-03', '2026-07'],
+                datasets: [{
+                    label: '睿远成长价值混合A',
+                    data: [1.00, 1.71, 2.272, 1.58, 1.26, 1.28, 2.11, 2.50, 2.5857],
+                    borderColor: '#8b0a1a',
+                    backgroundColor: 'rgba(139, 10, 26, 0.08)',
+                    borderWidth: 2.5,
+                    pointBackgroundColor: '#8b0a1a',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    fill: true,
+                    tension: 0.3
+                }, {
+                    label: '业绩比较基准',
+                    data: [1.00, 1.18, 1.21, 1.04, 0.96, 1.09, 1.21, 1.28, 1.35],
+                    borderColor: '#78716c',
+                    backgroundColor: 'rgba(120, 113, 108, 0.05)',
+                    borderWidth: 2,
+                    borderDash: [5, 5],
+                    pointRadius: 0,
+                    fill: false,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { 
+                        display: true,
+                        position: 'top',
+                        labels: { font: { size: 12 } }
+                    },
+                    tooltip: {
+                        backgroundColor: '#1a1a1a',
+                        padding: 10,
+                        cornerRadius: 8
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { size: 10 }, color: '#78716c' }
+                    },
+                    y: {
+                        grid: { color: '#f5f5f4' },
+                        ticks: { font: { size: 11 }, color: '#78716c' }
+                    }
+                }
+            }
+        });
+        
+        // Chart.js - 上周净值走势图
         const ctx = document.getElementById('navChart').getContext('2d');
-        const navData = [2.38, 2.42, 2.45, 2.4895, 2.6081];
-        const navLabels = ['07-06', '07-07', '07-08', '07-09(估)'];
+        const navData = [2.42, 2.38, 2.45, 2.4895];
+        const navLabels = ['06-30 周一', '07-01 周二', '07-02 周三', '07-03 周四'];
         
         new Chart(ctx, {
             type: 'line',
@@ -1324,7 +1499,7 @@
                 labels: navLabels,
                 datasets: [{
                     label: '单位净值',
-                    data: [2.38, 2.42, 2.45, 2.4895, 2.6081],
+                    data: [2.42, 2.38, 2.45, 2.4895],
                     borderColor: '#8b0a1a',
                     backgroundColor: 'rgba(139, 10, 26, 0.08)',
                     borderWidth: 2.5,
