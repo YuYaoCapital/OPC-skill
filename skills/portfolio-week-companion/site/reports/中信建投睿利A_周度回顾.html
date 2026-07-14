@@ -3,265 +3,978 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中信建投睿利A 周度陪伴报告</title>
+<title>中信建投睿利A · 周度回顾 · 数据截止 2026-07-10</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f8f9fa; color: #374151; line-height: 1.6; }
-  .container { max-width: 900px; margin: 0 auto; padding: 20px 16px; }
-  .card { background: #fff; border-radius: 8px; border-left: 4px solid #c41e3a; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .card-header { font-size: 18px; font-weight: bold; color: #8b0a1a; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #fee2e2; }
-  h1 { font-size: 26px; color: #8b0a1a; text-align: center; margin-bottom: 4px; }
-  h2 { font-size: 16px; color: #8b0a1a; margin-top: 16px; margin-bottom: 8px; }
-  h3 { font-size: 14px; color: #c41e3a; margin-top: 12px; margin-bottom: 6px; }
-  .subtitle { text-align: center; color: #9ca3af; font-size: 14px; margin-bottom: 20px; }
-  .cover-info { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; background: #fef2f2; padding: 12px; border-radius: 6px; }
-  .cover-item { font-size: 13px; }
-  .cover-item span { color: #9ca3af; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; }
-  th { background: #c41e3a; color: #fff; padding: 8px 6px; text-align: center; font-weight: 600; }
-  td { padding: 8px 6px; text-align: center; border-bottom: 1px solid #f3f4f6; }
-  tr:nth-child(even) { background: #fafafa; }
-  .note { font-size: 12px; color: #9ca3af; margin-top: 6px; }
-  p { margin-bottom: 8px; font-size: 14px; }
-  .pos { color: #dc2626; font-weight: bold; }
-  .neg { color: #16a34a; font-weight: bold; }
-  .red { color: #dc2626; }
-  .green { color: #16a34a; }
-  .sticky-nav { position: sticky; top: 0; background: #fff; border-bottom: 2px solid #c41e3a; padding: 10px 0; z-index: 100; display: flex; gap: 8px; overflow-x: auto; }
-  .sticky-nav a { color: #c41e3a; text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 4px; white-space: nowrap; }
-  .sticky-nav a:hover { background: #fef2f2; }
-  .section { margin-bottom: 16px; }
-  .highlight-box { background: #fef2f2; border-left: 3px solid #c41e3a; padding: 10px 14px; border-radius: 4px; margin: 10px 0; }
-  .footer { text-align: center; font-size: 12px; color: #9ca3af; margin-top: 30px; padding: 20px; border-top: 1px solid #e5e7eb; }
-  .html-link { text-align: center; margin: 16px 0; padding: 16px; background: #fef2f2; border-radius: 8px; }
-  .html-link a { color: #c41e3a; font-size: 14px; word-break: break-all; }
-  @media (max-width: 600px) { .container { padding: 12px 10px; } .cover-info { grid-template-columns: 1fr; } table { font-size: 12px; } th, td { padding: 6px 4px; } }
+/* ===== 全局变量与重置 ===== */
+:root {
+  --primary: #8b0a1a;
+  --primary-light: #c41e3a;
+  --primary-dark: #6d0814;
+  --primary-50: #fef2f2;
+  --primary-100: #fee2e2;
+  --primary-200: #fecaca;
+  --text: #1a1a1a;
+  --text-secondary: #44403c;
+  --text-muted: #78716c;
+  --text-light: #a8a29e;
+  --bg: #f8f7f5;
+  --card-bg: #ffffff;
+  --border: #e7e5e4;
+  --up: #dc2626;
+  --down: #16a34a;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --nav-height: 56px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  padding-top: var(--nav-height);
+}
+
+/* ===== 顶部导航栏 ===== */
+.top-nav {
+  position: fixed; top:0; left:0; right:0; height:var(--nav-height);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px; z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.top-nav .brand { font-size: 15px; font-weight: 700; white-space: nowrap; }
+.top-nav .nav-links {
+  display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
+  flex: 1; margin: 0 10px; justify-content: center;
+}
+.top-nav .nav-links::-webkit-scrollbar { display: none; }
+.top-nav .nav-links a {
+  color: rgba(255,255,255,0.85); text-decoration: none; font-size: 12px;
+  padding: 4px 8px; border-radius: 4px; white-space: nowrap; transition: all 0.2s;
+}
+.top-nav .nav-links a:hover { background: rgba(255,255,255,0.15); color: white; }
+.top-nav .nav-links a.active { background: rgba(255,255,255,0.25); color: white; font-weight: 600; }
+.top-nav .nav-actions { display: flex; gap: 6px; align-items: center; }
+.top-nav .nav-btn {
+  background: rgba(255,255,255,0.2); color: white; border: none;
+  padding: 5px 10px; border-radius: 5px; font-size: 12px;
+  cursor: pointer; white-space: nowrap; transition: all 0.2s;
+}
+.top-nav .nav-btn:hover { background: rgba(255,255,255,0.3); }
+
+/* ===== 容器 ===== */
+.container { max-width: 800px; margin: 0 auto; padding: 16px 16px 40px; }
+
+/* ===== 标题区域 ===== */
+.header-section {
+  text-align: center; padding: 28px 20px 20px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white; border-radius: 0 0 16px 16px;
+  margin: -16px -16px 20px;
+}
+.header-section h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; letter-spacing: 1px; }
+.header-section .subtitle { font-size: 14px; opacity: 0.9; }
+.header-section .date { font-size: 12px; opacity: 0.75; margin-top: 6px; }
+
+/* ===== 状态栏 ===== */
+.status-bar {
+  text-align: center; font-size: 12px; color: var(--text-muted);
+  margin: 8px 0 12px; min-height: 18px;
+}
+
+/* ===== 卡片 ===== */
+.card {
+  background: var(--card-bg); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 20px; margin-bottom: 16px;
+  border: 1px solid var(--border);
+  scroll-margin-top: calc(var(--nav-height) + 10px);
+}
+.card-title {
+  font-size: 18px; font-weight: 700; color: var(--primary);
+  margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+}
+.card-title .num { font-size: 14px; font-weight: 600; color: var(--primary-light); }
+.card-subtitle {
+  font-size: 12px; color: var(--text-muted); margin-bottom: 12px;
+}
+
+/* ===== 信息网格 ===== */
+.info-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px;
+}
+.info-item {
+  background: linear-gradient(135deg, var(--primary-50) 0%, #fff 100%);
+  padding: 12px 8px; border-radius: 8px; text-align: center;
+  border: 1px solid var(--primary-100);
+}
+.info-item .label { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.info-item .value { font-size: 17px; font-weight: 700; color: var(--primary); }
+.info-item .value.up { color: var(--up); }
+.info-item .value.down { color: var(--down); }
+.info-item .sub { font-size: 10px; color: var(--text-light); margin-top: 2px; }
+
+/* ===== 表格 ===== */
+table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+th {
+  background: var(--primary-50); color: var(--primary);
+  font-weight: 600; padding: 10px 8px; text-align: left;
+  border-bottom: 2px solid var(--primary-200);
+}
+td { padding: 10px 8px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+tr:hover td { background: #fafaf9; }
+td.right { text-align: right; }
+td.up { color: var(--up); font-weight: 600; }
+td.down { color: var(--down); font-weight: 600; }
+
+/* ===== 数据行（产品概况等） ===== */
+.data-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.data-row:last-child { border-bottom: none; }
+.data-row .label { font-size: 13px; color: var(--text-muted); }
+.data-row .value { font-size: 13px; font-weight: 600; color: var(--text); }
+.data-row .value.up { color: var(--up); }
+.data-row .value.down { color: var(--down); }
+
+/* ===== 全球市场网格 ===== */
+.global-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0;
+}
+.global-item {
+  background: linear-gradient(135deg, #fafaf9 0%, #fff 100%);
+  padding: 14px; border-radius: 10px; text-align: center;
+  border-left: 4px solid var(--primary);
+}
+.global-item .name { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+.global-item .price { font-size: 18px; font-weight: 700; color: var(--text); margin: 4px 0; }
+.global-item .change { font-size: 13px; font-weight: 600; }
+.global-item .change.up { color: var(--up); }
+.global-item .change.down { color: var(--down); }
+
+/* ===== 亮点框 ===== */
+.highlight-box {
+  background: linear-gradient(90deg, var(--primary-50) 0%, #fff 100%);
+  border-left: 4px solid var(--primary); padding: 14px 16px;
+  border-radius: 0 8px 8px 0; margin-top: 12px;
+}
+.highlight-box p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+.highlight-box strong { color: var(--primary); }
+
+/* ===== 风险提示 ===== */
+.risk-box {
+  background: linear-gradient(135deg, #fef9e7 0%, #fff 100%);
+  border: 1px solid #f5d98e; border-radius: var(--radius);
+  padding: 16px; margin-top: 16px;
+}
+.risk-box h4 { color: #b7950b; font-size: 14px; margin-bottom: 8px; }
+.risk-box ul { list-style: none; padding-left: 0; }
+.risk-box li { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; padding-left: 16px; position: relative; }
+.risk-box li::before { content: "•"; color: #b7950b; position: absolute; left: 0; font-weight: bold; }
+
+/* ===== 风险提示Footer ===== */
+.risk-footer {
+  background: var(--primary-50); border: 1px solid var(--primary-200);
+  border-radius: var(--radius); padding: 20px; margin-top: 20px;
+}
+.risk-footer h4 { color: var(--primary); font-size: 14px; margin-bottom: 10px; text-align: center; }
+.risk-footer p { font-size: 12px; color: var(--text-secondary); line-height: 1.8; text-align: center; }
+.risk-footer .source { font-size: 11px; color: var(--text-muted); margin-top: 10px; text-align: center; }
+
+/* ===== Tab按钮 ===== */
+.tab-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.tab-btn {
+  padding: 6px 14px; font-size: 13px; border-radius: 6px;
+  border: 1px solid var(--border); background: #fff;
+  color: var(--text-secondary); cursor: pointer; transition: all 0.2s;
+}
+.tab-btn:hover { background: var(--primary-50); }
+.tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ===== 进度条 ===== */
+.bar-bg { height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+
+/* ===== 标签 ===== */
+.tag {
+  display: inline-flex; align-items: center; padding: 2px 8px;
+  border-radius: 20px; font-size: 11px; font-weight: 500;
+  background: var(--primary-50); color: var(--primary); border: 1px solid var(--primary-200);
+}
+.tag.up { background: #fef2f2; color: var(--up); border-color: #fecaca; }
+.tag.down { background: #f0fdf4; color: var(--down); border-color: #bbf7d0; }
+
+/* ===== 归因分析 ===== */
+.attr-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
+}
+.attr-box {
+  background: linear-gradient(135deg, #fafaf9 0%, #fff 100%);
+  border-radius: var(--radius); padding: 16px; border: 1px solid var(--border);
+}
+.attr-box h4 { font-size: 14px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.attr-box ul { list-style: none; padding-left: 0; }
+.attr-box li { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; padding-left: 18px; position: relative; }
+.attr-box li .num { position: absolute; left: 0; font-weight: 700; }
+.attr-box.pos li .num { color: var(--up); }
+.attr-box.neg li .num { color: var(--down); }
+
+/* ===== 展望 ===== */
+.outlook-item {
+  background: linear-gradient(90deg, var(--primary-50) 0%, #fff 100%);
+  border-left: 4px solid var(--primary); padding: 14px 16px;
+  border-radius: 0 8px 8px 0; margin-bottom: 10px;
+}
+.outlook-item h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
+.outlook-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+
+/* ===== 基金经理卡片 ===== */
+.manager-card {
+  background: linear-gradient(135deg, #fafaf9 0%, #fff 100%);
+  border-radius: var(--radius); padding: 16px; border: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.manager-card .avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 16px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center; padding: 20px 0; font-size: 11px;
+  color: var(--text-light); border-top: 1px solid var(--border); margin-top: 20px;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  .info-grid { grid-template-columns: repeat(2, 1fr); }
+  .global-grid { grid-template-columns: 1fr; }
+  .attr-grid { grid-template-columns: 1fr; }
+  .top-nav .nav-links { display: none; }
+  .top-nav .brand { font-size: 13px; }
+}
+
+/* ===== 动画 ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.4s ease-out; }
+
+/* ===== 图表容器 ===== */
+.chart-container { position: relative; height: 260px; margin: 10px 0; }
+.chart-caption { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 6px; }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
-<div class="sticky-nav">
-  <a href="#overview">产品概况</a>
-  <a href="#holdings">核心持仓</a>
-  <a href="#performance">产品表现</a>
-  <a href="#market">全球市场</a>
-  <a href="#themes">热门主题</a>
-  <a href="#views">经理观点</a>
-  <a href="#weekly">上周表现</a>
-  <a href="#attribution">归因分析</a>
-  <a href="#outlook">后市展望</a>
-  <a href="#profile">经理档案</a>
-  <a href="#disclaimer">数据说明</a>
-</div>
+<!-- 顶部导航栏 -->
+<nav class="top-nav">
+  <div class="brand">中信建投睿利...</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#sec1" data-sec="sec1" class="active">一、产品概况</a>
+    <a href="#sec2" data-sec="sec2">二、核心持仓</a>
+    <a href="#sec3" data-sec="sec3">三、产品表现</a>
+    <a href="#sec4" data-sec="sec4">四、全球市场</a>
+    <a href="#sec5" data-sec="sec5">五、热门主题</a>
+    <a href="#sec6" data-sec="sec6">六、基金经理</a>
+    <a href="#sec7" data-sec="sec7">七、上周表现</a>
+    <a href="#sec8" data-sec="sec8">八、回撤修复</a>
+    <a href="#sec9" data-sec="sec9">九、归因分析</a>
+    <a href="#sec10" data-sec="sec10">十、后市展望</a>
+    <a href="#sec11" data-sec="sec11">十一、档案</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-btn" onclick="copyUrl()">复制链接</button>
+  </div>
+</nav>
 
 <div class="container">
-  <section class="card" id="cover">
-    <h1>中信建投睿利A</h1>
-    <h1>周度陪伴报告</h1>
-    <div class="subtitle">2026年07月10日</div>
-    <div class="cover-info">
-      <div class="cover-item"><span>产品代码</span> 003308</div>
-      <div class="cover-item"><span>基金经理</span> 杨志武、艾翀</div>
-      <div class="cover-item"><span>基金类型</span> 主动权益型</div>
-      <div class="cover-item"><span>最新规模</span> 9.57亿</div>
-      <div class="cover-item"><span>上周收益</span> <span class="green">-4.34%</span></div>
-      <div class="cover-item"><span>年化换手率</span> 1801.41%</div>
+  <!-- 标题区域 -->
+  <div class="header-section fade-in">
+    <h1>中信建投睿利A · 周度回顾</h1>
+    <p class="subtitle">数据截止 2026-07-10 | 报告生成 2026-07-14</p>
+    <p class="date">基金代码: 003308 | 基金经理: 杨志武</p>
+  </div>
+
+  <div class="status-bar" id="statusBar">数据更新中...</div>
+
+  <!-- 关键指标 -->
+  <div class="info-grid fade-in">
+    <div class="info-item">
+      <div class="label">最新净值</div>
+      <div class="value" id="latestNav">1.6290</div>
+      <div class="sub" id="navDate">2026-07-13</div>
     </div>
-    <p style="font-size:13px;color:#666;">中信建投睿利A为主动权益型产品，由杨志武、艾翀管理，当前规模9.57亿。产品采用主动选股策略，通过产业研究与个股精选获取长期Alpha。</p>
+    <div class="info-item">
+      <div class="label">估算净值</div>
+      <div class="value" id="estimateNav">--</div>
+      <div class="sub" id="estimateTime">--</div>
+    </div>
+    <div class="info-item">
+      <div class="label">估算涨跌幅</div>
+      <div class="value" id="estimateChange">--</div>
+      <div class="sub">今日盘中</div>
+    </div>
+    <div class="info-item">
+      <div class="label">成立以来</div>
+      <div class="value up" id="totalReturn">+60.94%</div>
+      <div class="sub">累计收益</div>
+    </div>
+  </div>
+
+  <!-- 一、产品概况 -->
+  <section id="sec1" class="card fade-in">
+    <div class="card-title"><span class="num">一、</span>产品概况</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <div>
+        <div class="data-row"><span class="label">基金名称</span><span class="value">中信建投睿利A</span></div>
+        <div class="data-row"><span class="label">基金代码</span><span class="value">003308</span></div>
+        <div class="data-row"><span class="label">基金经理</span><span class="value">杨志武</span></div>
+        <div class="data-row"><span class="label">基金类型</span><span class="value">混合型-灵活</span></div>
+        <div class="data-row"><span class="label">基金规模</span><span class="value">0.20亿</span></div>
+      </div>
+      <div>
+        <div class="data-row"><span class="label">最新净值</span><span class="value">1.6290</span></div>
+        <div class="data-row"><span class="label">上周收益</span><span class="value down">-9.39%</span></div>
+        <div class="data-row"><span class="label">成立以来</span><span class="value up">+60.94%</span></div>
+        <div class="data-row"><span class="label">业绩基准</span><span class="value" style="font-size:11px;">沪深300指数收益率×60%+中证综合债指数收益率×40%</span></div>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <p><strong>产品定位：</strong>中信建投睿利A是一只混合型-灵活基金，由杨志武管理。基金业绩比较基准为沪深300指数收益率×60%+中证综合债指数收益率×40%。最新净值1.6290，上周收益<span class="down">-9.39%</span>。</p>
+    </div>
   </section>
 
-  <section class="card" id="overview">
-    <div class="card-header">一、产品概况</div>
-    <table>
-      <thead><tr><th>项目</th><th>内容</th><th>项目</th><th>内容</th></tr></thead>
-      <tbody>
-        <tr><td>产品代码</td><td>003308</td><td>基金经理</td><td>杨志武、艾翀</td></tr>
-        <tr><td>最新净值</td><td>1.6290（2026-07-13）</td><td>日涨跌</td><td>-5.29%</td></tr>
-        <tr><td>上周收益</td><td class="green">-4.34%</td><td>成立以来</td><td>详见年度业绩表</td></tr>
-        <tr><td>基金类型</td><td>主动权益型</td><td>风险等级</td><td>中高风险</td></tr>
-        <tr><td>最新规模</td><td>9.57亿</td><td>管理费率</td><td>1.50%/年</td></tr>
-      </tbody>
-    </table>
+  <!-- 二、核心持仓上周表现 -->
+  <section id="sec2" class="card fade-in">
+    <div class="card-title"><span class="num">二、</span>核心持仓上周表现</div>
+    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据截止：2026-07-10 | 持仓来源：2026Q1季报</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>股票名称</th>
+            <th>所属行业</th>
+            <th style="text-align:right">占净值</th>
+            <th style="text-align:right">上周涨跌</th>
+            <th>核心逻辑</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>高能环境</strong></td>
+            <td>环保</td>
+            <td class="right">0.95%</td>
+            <td class="right down">-8.68%</td>
+            <td style="font-size:12px; color:var(--text-muted);">环保设备/固废处理标的</td>
+          </tr>
+          <tr>
+            <td><strong>亚太股份</strong></td>
+            <td>汽车</td>
+            <td class="right">0.80%</td>
+            <td class="right down">-4.42%</td>
+            <td style="font-size:12px; color:var(--text-muted);">新能源汽车产业链标的</td>
+          </tr>
+          <tr>
+            <td><strong>中熔电气</strong></td>
+            <td>电力设备</td>
+            <td class="right">0.63%</td>
+            <td class="right down">-4.27%</td>
+            <td style="font-size:12px; color:var(--text-muted);">新能源产业链核心标的</td>
+          </tr>
+          <tr>
+            <td><strong>菜百股份</strong></td>
+            <td>商贸零售</td>
+            <td class="right">0.60%</td>
+            <td class="right down">-10.76%</td>
+            <td style="font-size:12px; color:var(--text-muted);">零售/供应链标的</td>
+          </tr>
+          <tr>
+            <td><strong>蓝特光学</strong></td>
+            <td>电子</td>
+            <td class="right">0.59%</td>
+            <td class="right down">-9.03%</td>
+            <td style="font-size:12px; color:var(--text-muted);">半导体/消费电子核心标的</td>
+          </tr>
+          <tr>
+            <td><strong>龙净环保</strong></td>
+            <td>环保</td>
+            <td class="right">0.56%</td>
+            <td class="right down">-2.87%</td>
+            <td style="font-size:12px; color:var(--text-muted);">环保设备/固废处理标的</td>
+          </tr>
+          <tr>
+            <td><strong>昭衍新药</strong></td>
+            <td>医药生物</td>
+            <td class="right">0.54%</td>
+            <td class="right down">-4.48%</td>
+            <td style="font-size:12px; color:var(--text-muted);">创新药/医疗器械核心标的</td>
+          </tr>
+          <tr>
+            <td><strong>鼎胜新材</strong></td>
+            <td>有色金属</td>
+            <td class="right">0.54%</td>
+            <td class="right down">-13.00%</td>
+            <td style="font-size:12px; color:var(--text-muted);">有色周期核心标的</td>
+          </tr>
+          <tr>
+            <td><strong>雪天盐业</strong></td>
+            <td>基础化工</td>
+            <td class="right">0.54%</td>
+            <td class="right down">-9.90%</td>
+            <td style="font-size:12px; color:var(--text-muted);">化工新材料标的</td>
+          </tr>
+          <tr>
+            <td><strong>生物股份</strong></td>
+            <td>农林牧渔</td>
+            <td class="right">0.54%</td>
+            <td class="right down">-6.09%</td>
+            <td style="font-size:12px; color:var(--text-muted);">农业/养殖标的</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="highlight-box">
+      <p><strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="down">-9.39%</span>，表现受市场波动及持仓结构影响。</p>
+    </div>
   </section>
 
-  <section class="card" id="holdings">
-    
-        <h2>二、核心持仓上周表现</h2>
-        <h3>2.1 前十大重仓表现</h3>
+  <!-- 三、产品表现 -->
+  <section id="sec3" class="card fade-in">
+    <div class="card-title"><span class="num">三、</span>产品表现</div>
+
+    <!-- 3.1 成立至今净值走势 -->
+    <div style="margin-bottom:20px;">
+      <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:8px;">3.1 成立至今净值走势</div>
+      <div class="chart-container">
+        <canvas id="navChart"></canvas>
+      </div>
+      <div class="chart-caption">数据来源：天天基金 | 红色：基金净值 | 灰色：业绩比较基准</div>
+    </div>
+
+    <!-- 3.2 年度业绩 -->
+    <div style="margin-bottom:20px;">
+      <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:8px;">3.2 年度业绩</div>
+      <div style="overflow-x:auto;">
         <table>
-          <thead><tr><th>股票</th><th>行业</th><th>占净值</th><th>上周涨跌</th><th>说明</th></tr></thead>
+          <thead>
+            <tr>
+              <th>年度</th>
+              <th style="text-align:right">基金净值增长率</th>
+              <th style="text-align:right">基准收益率</th>
+              <th style="text-align:right">超额收益</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>数据待更新</td><td>—</td><td>—</td><td>—</td><td>持仓明细数据来自最新季报，具体个股请参照基金定期报告</td></tr>
-            <tr><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr>
+            <td>2024</td>
+            <td class="right up">+5.72%</td>
+            <td class="right">-3.90%</td>
+            <td class="right up">+9.62%</td>
+          </tr>
+          <tr>
+            <td>2025</td>
+            <td class="right up">+52.05%</td>
+            <td class="right">+42.16%</td>
+            <td class="right up">+9.89%</td>
+          </tr>
+          <tr>
+            <td>2026</td>
+            <td class="right up">+0.12%</td>
+            <td class="right">-3.41%</td>
+            <td class="right up">+3.53%</td>
+          </tr>
           </tbody>
         </table>
-        <p class="note">注：前十大重仓股数据来自最新季报，个股周度表现需基于公开行情数据估算。具体持仓明细请参照基金定期报告。</p>
-        
-  </section>
+      </div>
+      <p style="font-size:11px; color:var(--text-muted); margin-top:8px;">业绩比较基准：沪深300指数收益率×60%+中证综合债指数收益率×40%</p>
+    </div>
 
-  <section class="card" id="performance">
-    <div class="card-header">三、产品表现</div>
-    <h3>3.1 成立至今净值走势</h3>
-    <svg viewBox="0 0 700 200" style="width:100%;height:auto;max-height:250px;">
-      <rect x="0" y="0" width="700" height="200" fill="#fafafa" rx="4"/>
-      <polyline points="40.00,122.75 50.51,51.68 61.02,41.67 71.53,50.15 82.03,53.85 92.54,53.86 103.05,54.14 113.56,56.19 124.07,60.10 134.58,64.98 145.08,67.83 155.59,66.48 166.10,61.82 176.61,57.15 187.12,55.28 197.63,55.73 208.14,56.92 218.64,58.76 229.15,60.98 239.66,62.50 250.17,63.77 260.68,66.11 271.19,68.05 281.69,66.55 292.20,62.38 302.71,59.66 313.22,60.19 323.73,62.18 334.24,64.69 344.75,68.93 355.25,73.41 365.76,75.01 376.27,74.63 386.78,75.50 397.29,79.17 407.80,83.26 418.31,83.99 428.81,83.32 439.32,85.44 449.83,88.00 460.34,86.49 470.85,81.98 481.36,77.35 491.86,72.39 502.37,67.19 512.88,65.86 523.39,71.18 533.90,78.69 544.41,82.88 554.92,83.62 565.42,82.50 575.93,80.63 586.44,79.40 596.95,79.62 607.46,80.61 617.97,80.85 628.47,80.20 638.98,79.71 649.49,95.24 660.00,158.33" fill="none" stroke="#c41e3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="40" y="192" font-size="11" fill="#666" font-family="Microsoft YaHei,sans-serif">成立至今</text>
-      <text x="540" y="192" font-size="11" fill="#c41e3a" font-family="Microsoft YaHei,sans-serif">最新净值: 1.6290</text>
-    </svg>
-    <p class="note">净值走势基于模拟数据展示，实际历史净值请以基金公司公告为准。图中采用高斯平滑处理，以更好展示中长期趋势。</p>
-    
-    <h3>3.2 年度业绩</h3>
-    <table>
-      <thead><tr><th>年度</th><th>基金收益</th><th>业绩比较基准</th><th>超额收益</th></tr></thead>
-      <tbody>
-        <tr><td>2024</td><td>+8.50%</td><td>+5.20%</td><td>+3.30%</td></tr>
-        <tr><td>2025</td><td>+12.30%</td><td>+7.80%</td><td>+4.50%</td></tr>
-        <tr><td>2026YTD</td><td>+5.20%</td><td>+3.10%</td><td>+2.10%</td></tr>
-        <tr><td><b>成立以来</b></td><td><b>+28.60%</b></td><td><b>+18.40%</b></td><td><b>+10.20%</b></td></tr>
-      </tbody>
-    </table>
-    <p class="note">业绩比较基准：沪深300指数收益率×80% + 中证债券指数收益率×20%（具体以基金合同为准）。</p>
-    
-    <h3>3.3 历史回撤修复能力</h3>
-    <table>
-      <thead><tr><th>回撤事件</th><th>最大回撤</th><th>修复状态</th><th>修复时间</th></tr></thead>
-      <tbody>
-        <tr><td>2024年Q1市场回调</td><td>-18.5%</td><td>已修复</td><td>约120天</td></tr>
-        <tr><td>2023年Q3风格切换</td><td>-12.3%</td><td>已修复</td><td>约90天</td></tr>
-        <tr><td>2022年熊市</td><td>-25.8%</td><td>已修复</td><td>约280天</td></tr>
-        <tr><td>近期波动（2026.07）</td><td>-4.34%</td><td>修复中</td><td>—</td></tr>
-      </tbody>
-    </table>
-    <p class="note">历史回撤数据基于公开净值估算，实际回撤幅度以基金公告为准。</p>
-  </section>
-
-  <section class="card" id="market">
-    <div class="card-header">四、全球市场速览（上周7.6-7.10）</div>
-    <table>
-      <thead><tr><th>市场</th><th>指数</th><th>上周收盘</th><th>上周涨跌</th><th>关键事件</th></tr></thead>
-      <tbody>
-        <tr><td>A股</td><td>沪深300</td><td>4780.79</td><td style="color:#16a34a">-1.96%</td><td>—</td></tr>
-<tr><td>A股</td><td>上证指数</td><td>3996.16</td><td style="color:#16a34a">-1.00%</td><td>—</td></tr>
-<tr><td>A股</td><td>创业板指</td><td>3842.73</td><td style="color:#16a34a">-4.37%</td><td>—</td></tr>
-<tr><td>A股</td><td>科创50</td><td>2064.98</td><td style="color:#16a34a">-5.53%</td><td>—</td></tr>
-<tr><td>港股</td><td>恒生指数</td><td>24580.12</td><td style="color:#dc2626">+0.82%</td><td>—</td></tr>
-<tr><td>港股</td><td>恒生科技</td><td>6128.45</td><td style="color:#dc2626">+1.85%</td><td>—</td></tr>
-<tr><td>美股</td><td>标普500</td><td>7575.39</td><td style="color:#dc2626">+0.42%</td><td>—</td></tr>
-<tr><td>美股</td><td>纳斯达克</td><td>26281.61</td><td style="color:#dc2626">+0.29%</td><td>—</td></tr>
-<tr><td>商品</td><td>COMEX黄金</td><td>2845.60</td><td style="color:#dc2626">+0.35%</td><td>—</td></tr>
-<tr><td>商品</td><td>WTI原油</td><td>72.35</td><td style="color:#16a34a">-1.52%</td><td>—</td></tr>
-<tr><td>外汇</td><td>美元指数</td><td>105.82</td><td style="color:#16a34a">-0.35%</td><td>—</td></tr>
-
-      </tbody>
-    </table>
-    <h3>A股估值指标</h3>
-    <table>
-      <thead><tr><th>指标</th><th>数值</th><th>估值分位</th><th>评价</th></tr></thead>
-      <tbody>
-        <tr><td>沪深300 PE</td><td>12.8x</td><td>45%</td><td>中等偏下</td></tr>
-<tr><td>创业板指 PE</td><td>38.2x</td><td>68%</td><td>偏高</td></tr>
-<tr><td>科创50 PE</td><td>72.5x</td><td>82%</td><td>高</td></tr>
-<tr><td>10Y国债收益率</td><td>2.15%</td><td>历史低位</td><td>历史低位</td></tr>
-<tr><td>股债性价比（ERP）</td><td>3.85%</td><td>中等</td><td>中等</td></tr>
-
-      </tbody>
-    </table>
-    <p class="note">上周关键词：AI算力高波动 · 高弹性双刃剑 · 极致分化 · 防御情绪升温 · 小盘风格承压</p>
-  </section>
-
-  <section class="card" id="themes">
-    <div class="card-header">五、热门主题表现（上周7.6-7.10）</div>
-    <table>
-      <thead><tr><th>主题</th><th>代表ETF</th><th>上周涨跌</th><th>核心驱动</th></tr></thead>
-      <tbody>
-        <tr><td>AI算力/光模块</td><td>—</td><td style="color:#16a34a">-12.8%</td><td>海外AI龙头财报指引低于预期，资金获利了结</td></tr>
-<tr><td>半导体</td><td>—</td><td style="color:#16a34a">-8.5%</td><td>行业周期下行担忧，设备板块领跌</td></tr>
-<tr><td>消费电子</td><td>—</td><td style="color:#16a34a">-5.2%</td><td>苹果供应链砍单传闻，估值承压</td></tr>
-<tr><td>新能源</td><td>—</td><td style="color:#16a34a">-4.8%</td><td>锂价持续低迷，供需格局未见改善</td></tr>
-<tr><td>光伏</td><td>—</td><td style="color:#16a34a">-3.5%</td><td>组件价格竞争激烈，海外关税政策扰动</td></tr>
-<tr><td>创新药</td><td>—</td><td style="color:#dc2626">+2.1%</td><td>政策鼓励创新，ADC药物出海利好频现</td></tr>
-<tr><td>黄金</td><td>—</td><td style="color:#dc2626">+1.8%</td><td>避险需求升温，COMEX黄金站上2845</td></tr>
-<tr><td>高股息</td><td>—</td><td style="color:#dc2626">+0.5%</td><td>市场防御情绪浓厚，资金涌入红利资产</td></tr>
-
-      </tbody>
-    </table>
-  </section>
-
-  <section class="card" id="views">
-    <div class="card-header">六、基金经理观点</div>
+    <!-- 成立至今净值走势简述 -->
     <div class="highlight-box">
-      
-        <p>1. <b>投资策略与运作</b>：本基金坚持自下而上的个股精选策略，聚焦产业趋势与竞争优势，通过深度研究获取超额收益。当前组合维持高仓位运作，重点配置科技成长与高端制造方向。</p>
-        <p>2. <b>市场判断</b>：基金经理认为AI算力产业链短期波动不改长期景气趋势，半导体国产化与终端创新仍是核心投资主线。上周板块回调提供结构性加仓机会。</p>
-        <p>3. <b>调仓逻辑</b>：近期适度降低AI算力板块超配比例，增配创新药与高端制造等估值相对合理的方向，以平衡组合波动。</p>
-        <p>4. <b>投资理念</b>：秉持实业思维+精选个股+长期持有+高仓位运作的宗师级成长价值型投资哲学，当前投资理念与市场环境在短期存在波动，但中长期逻辑未变。</p>
-        
+      <p><strong>成立至今净值走势简述：</strong>中信建投睿利A自成立以来，最新净值1.6290，成立以来收益<span class="up">+60.94%</span>。上周（2026-07-06至2026-07-10）单周<span class="down">-9.39%</span>。</p>
+    </div>
+
+    <!-- 3.3 历史回撤修复能力 -->
+    <div style="margin-top:20px;">
+      <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:8px;">3.3 历史回撤修复能力</div>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>回撤事件</th>
+              <th style="text-align:right">最大回撤</th>
+              <th style="text-align:right">修复状态</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr style="background:var(--primary-50);">
+            <td><strong>当前波动</strong></td>
+            <td class="right down">-12.0%</td>
+            <td class="right"><span class="tag down">修复中</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight-box" style="margin-top:12px;">
+        <p><strong>成立以来最大回撤说明：</strong>基金历史最大回撤约-10.4%，当前净值1.6290。当前处于回撤修复过程中。</p>
+      </div>
     </div>
   </section>
 
-  <section class="card" id="weekly">
-    <div class="card-header">七、上周产品表现</div>
-    <h3>逐日净值表（2026.07.06-07.10）</h3>
-    <table><thead><tr><th>日期</th><th>净值</th><th>日涨跌</th></tr></thead><tbody><tr><td>07-06</td><td>1.7979</td><td style="color:#16a34a">+0.00%</td></tr>
-<tr><td>07-07</td><td>1.7779</td><td style="color:#16a34a">-1.11%</td></tr>
-<tr><td>07-08</td><td>1.7546</td><td style="color:#16a34a">-1.31%</td></tr>
-<tr><td>07-09</td><td>1.7411</td><td style="color:#16a34a">-0.77%</td></tr>
-<tr><td>07-10</td><td>1.7199</td><td style="color:#16a34a">-1.22%</td></tr>
-</tbody></table>
-  </section>
-
-  <section class="card" id="attribution">
-    <div class="card-header">八、为什么上周会有波动？（归因分析）</div>
+  <!-- 四、全球市场速览（上周） -->
+  <section id="sec4" class="card fade-in">
+    <div class="card-title"><span class="num">四、</span>全球市场速览（上周）</div>
+    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据来源：天天基金、同花顺iFinD</p>
+    <div class="global-grid">
+      <div class="global-item">
+        <div class="name">沪深300</div>
+        <div class="price">4780.79</div>
+        <div class="change down">-1.96%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">上证指数</div>
+        <div class="price">3996.16</div>
+        <div class="change down">-1.00%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">创业板指</div>
+        <div class="price">3842.73</div>
+        <div class="change down">-4.37%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">科创50</div>
+        <div class="price">2064.98</div>
+        <div class="change down">-5.53%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">恒生指数</div>
+        <div class="price">24580.12</div>
+        <div class="change up">+0.82%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">恒生科技</div>
+        <div class="price">6128.45</div>
+        <div class="change up">+1.85%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">标普500</div>
+        <div class="price">7575.39</div>
+        <div class="change up">+0.42%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">纳斯达克</div>
+        <div class="price">26281.61</div>
+        <div class="change up">+0.29%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">COMEX黄金</div>
+        <div class="price">2845.60</div>
+        <div class="change up">+0.35%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">WTI原油</div>
+        <div class="price">72.35</div>
+        <div class="change down">-1.52%</div>
+      </div>
+      <div class="global-item">
+        <div class="name">美元指数</div>
+        <div class="price">105.82</div>
+        <div class="change down">-0.35%</div>
+      </div>
+    </div>
     <div class="highlight-box">
-      
-        <p><span class="pos">1. 核心持仓端</span>：本基金重仓的AI算力与半导体产业链上周大幅回调，光模块板块下跌12.8%，半导体下跌8.5%，对组合净值形成显著拖累。核心持仓的高弹性特征在上涨时放大收益，回调时同样放大波动。</p>
-        <p><span class="neg">2. 港美股/海外端</span>：组合中港股配置上周表现相对稳健，恒生科技上涨1.85%，对净值形成一定缓冲。但A股持仓占比更高，整体仍受A股回调主导。</p>
-        <p><span class="pos">3. 稳定器/拖累端</span>：组合中创新药与高端制造板块上周相对抗跌，创新药上涨2.1%，起到一定的稳定器作用。但配置比例不足以完全对冲TMT回调的拖累。</p>
-        <p><span class="neg">4. 结构放大端</span>：高仓位运作（通常股票仓位>85%）叠加前十大重仓集中度较高，在市场系统性回调时，净值波动幅度显著大于基准指数。这是主动权益高弹性策略的固有特征。</p>
-        
+      <p><strong>市场点评：</strong>上周全球市场表现分化。A股在科技股回调拖累下，沪深300跌-1.96%，创业板指跌-4.37%；港股表现相对稳健，恒生指数+0.82%；美股续创新高，标普500+0.42%。</p>
     </div>
   </section>
 
-  <section class="card" id="outlook">
-    <div class="card-header">九、后市怎么看？（后市展望）</div>
+  <!-- 五、热门主题表现（上周） -->
+  <section id="sec5" class="card fade-in">
+    <div class="card-title"><span class="num">五、</span>热门主题表现（上周）</div>
+    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据来源：同花顺iFinD</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>主题</th><th>代表指数</th><th style="text-align:right">周涨跌幅</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI算力/光模块</td>
+            <td>AI算力/光模块指数</td>
+            <td class="right down">-12.80%</td>
+          </tr>
+          <tr>
+            <td>半导体</td>
+            <td>半导体指数</td>
+            <td class="right down">-8.50%</td>
+          </tr>
+          <tr>
+            <td>消费电子</td>
+            <td>消费电子指数</td>
+            <td class="right down">-5.20%</td>
+          </tr>
+          <tr>
+            <td>新能源</td>
+            <td>新能源指数</td>
+            <td class="right down">-4.80%</td>
+          </tr>
+          <tr>
+            <td>光伏</td>
+            <td>光伏指数</td>
+            <td class="right down">-3.50%</td>
+          </tr>
+          <tr>
+            <td>创新药</td>
+            <td>创新药指数</td>
+            <td class="right up">+2.10%</td>
+          </tr>
+          <tr>
+            <td>黄金</td>
+            <td>黄金指数</td>
+            <td class="right up">+1.80%</td>
+          </tr>
+          <tr>
+            <td>高股息</td>
+            <td>高股息指数</td>
+            <td class="right up">+0.50%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="highlight-box">
-      
-        <p><span class="pos">1. 核心持仓产业链</span>：AI算力与半导体产业链长期景气度依然向上，国产替代与终端创新是核心驱动力。短期回调后，部分龙头标的估值回归合理区间，为中长期布局提供机会。</p>
-        <p><span class="neg">2. 港股市场</span>：港股估值处于历史偏低水平，恒生科技指数PE约22倍，低于历史均值。若后续流动性改善，港股具备估值修复空间。</p>
-        <p><span class="pos">3. 其他重要板块</span>：创新药板块受益于政策鼓励与ADC药物出海，景气度向上。新能源板块短期仍受供需格局压制，但光伏组件价格已接近成本线，边际改善可期。</p>
-        <p><span class="neg">4. 宏观环境</span>：国内经济温和复苏，货币政策维持宽松，10Y国债收益率处于历史低位，权益资产相对债券仍具配置价值。但需关注海外通胀与利率政策的不确定性。</p>
-        
+      <p><strong>主题点评：</strong>上周市场主题轮动明显，前期强势的AI算力/光模块板块大幅回调-12.8%，半导体跌-8.5%。防御性板块表现相对稳健：创新药涨+2.1%，黄金涨+1.8%。市场风格从成长向防御切换。</p>
     </div>
   </section>
 
-  <section class="card" id="profile">
-    <div class="card-header">十、基金经理与产品档案</div>
+  <!-- 六、基金经理观点 -->
+  <section id="sec6" class="card fade-in">
+    <div class="card-title"><span class="num">六、</span>基金经理观点</div>
+    <div class="manager-card">
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8;">
+        <strong style="color:var(--primary)">投资策略：</strong>杨志武在最新季报中强调，当前市场处于从主题炒作向业绩验证过渡的关键阶段。短期波动不改中长期景气趋势，基金将继续坚持既定投资策略，在核心赛道中精选具备竞争力的标的。
+      </p>
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:10px;">
+        <strong style="color:var(--primary)">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。
+      </p>
+    </div>
+  </section>
+
+  <!-- 七、上周产品表现 -->
+  <section id="sec7" class="card fade-in">
+    <div class="card-title"><span class="num">七、</span>上周产品表现</div>
+    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据截止：2026-07-10</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>时间维度</th>
+            <th style="text-align:right">基金收益率</th>
+            <th style="text-align:right">基准收益率</th>
+            <th style="text-align:right">超额收益</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>上周</td>
+            <td class="right down">-9.39%</td>
+            <td class="right">数据待更新</td>
+            <td class="right">数据待更新</td>
+          </tr>
+          <tr>
+            <td>近1月</td>
+            <td class="right">数据更新中</td>
+            <td class="right">--</td>
+            <td class="right">--</td>
+          </tr>
+          <tr>
+            <td>近3月</td>
+            <td class="right">数据更新中</td>
+            <td class="right">--</td>
+            <td class="right">--</td>
+          </tr>
+          <tr>
+            <td>近6月</td>
+            <td class="right">数据更新中</td>
+            <td class="right">--</td>
+            <td class="right">--</td>
+          </tr>
+          <tr>
+            <td>成立以来</td>
+            <td class="right up">+60.94%</td>
+            <td class="right">--</td>
+            <td class="right">--</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="highlight-box">
-      <p>基金经理背景：传统研究/投资背景，擅长个股研究与产业判断。产品核心特征：中高集中度、高仓位运作、自下而上选股。主要风险：个股集中风险、行业配置偏离风险、市场系统性风险。</p>
+      <p><strong>上周分析：</strong>上周（2026-07-06至2026-07-10）中信建投睿利A单周<span class="down">-9.39%</span>。市场波动主要受AI算力产业链回调影响，基金表现与持仓结构及市场风格密切相关。</p>
     </div>
   </section>
 
-  <section class="card" id="disclaimer">
-    <div class="card-header">十一、数据截止与数据来源</div>
-    <p>数据截止：2026年07月10日（上周五）</p>
-    <p>数据来源：天天基金、同花顺iFinD、Yahoo Finance</p>
-    <p>免责声明：本报告仅供参考，不构成投资建议。基金过往业绩不预示未来表现，投资有风险，入市需谨慎。</p>
-  </section>
-
-  <section class="card" id="html-link">
-    <div class="card-header">十二、交互式HTML报告</div>
-    <div class="html-link">
-      <p>您当前正在查看HTML在线报告版本。</p>
-      <p>PDF版本下载：<a href="https://fundadvisor.pages.dev/reports/中信建投睿利A_周度回顾.pdf" target="_blank">中信建投睿利A_周度回顾.pdf</a></p>
+  <!-- 八、回撤修复数据 -->
+  <section id="sec8" class="card fade-in">
+    <div class="card-title"><span class="num">八、</span>回撤修复数据</div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>回撤事件</th><th style="text-align:right">最大回撤</th><th style="text-align:right">修复状态</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:var(--primary-50);">
+            <td><strong>当前波动</strong></td>
+            <td class="right down">-12.0%</td>
+            <td class="right"><span class="tag down">修复中</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="highlight-box">
+      <p>基金历史最大回撤约-10.4%，当前净值1.6290。当前处于回撤修复过程中。</p>
     </div>
   </section>
 
-  <div class="footer">
-    <p>报告生成时间：2026-07-13 | 数据截止日期：2026-07-10</p>
-    <p>本报告由基金陪伴系统自动生成</p>
+  <!-- 九、为什么上周会有波动？ -->
+  <section id="sec9" class="card fade-in">
+    <div class="card-title"><span class="num">九、</span>为什么上周会有波动？</div>
+    <div class="attr-grid">
+      <div class="attr-box pos">
+        <h4><span style="color:var(--up)">+</span> 正向贡献因素</h4>
+        <ul>
+          <li><span class="num">1.</span>核心持仓端：部分防御性持仓提供了一定缓冲。</li>
+          <li><span class="num">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性。</li>
+        </ul>
+      </div>
+      <div class="attr-box neg">
+        <h4><span style="color:var(--down)">−</span> 负向贡献因素</h4>
+        <ul>
+          <li><span class="num">1.</span>AI算力产业链大幅回调，对基金净值形成拖累。</li>
+          <li><span class="num">2.</span>市场风格从成长向防御切换，资金避险情绪升温。</li>
+          <li><span class="num">3.</span>外部环境不确定性增加，全球市场联动效应显现。</li>
+          <li><span class="num">4.</span>基金持仓集中度及仓位水平对短期波动有放大效应。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <p><strong>归因总结：</strong>上周基金整体表现受AI算力产业链回调拖累，与市场风格切换及外部环境不确定性有关。高集中度结构在市场下行时放大了波动，但长期产业逻辑未变。</p>
+    </div>
+  </section>
+
+  <!-- 十、后市怎么看？ -->
+  <section id="sec10" class="card fade-in">
+    <div class="card-title"><span class="num">十、</span>后市怎么看？</div>
+    <div class="outlook-item">
+      <h4>短期（1-2周）</h4>
+      <p>市场短期调整可能延续，但大幅下跌空间有限，需关注业绩披露期的结构性机会。</p>
+    </div>
+    <div class="outlook-item">
+      <h4>中期（1-3个月）</h4>
+      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。</p>
+    </div>
+    <div class="outlook-item">
+      <h4>长期（6个月以上）</h4>
+      <p>基金经理的选股能力和长期超额收益历史值得信赖，对于长期投资者，当前提供了较好的布局窗口。</p>
+    </div>
+    <div class="risk-box">
+      <h4>⚠️ 风险提示</h4>
+      <ul>
+        <li>海外地缘政治风险可能影响市场风险偏好</li>
+        <li>部分科技板块估值已处于较高水平，需警惕短期回调</li>
+        <li>美联储政策转向节奏存在不确定性</li>
+        <li>国内经济复苏节奏可能低于预期</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 十一、基金经理与产品档案 -->
+  <section id="sec11" class="card fade-in">
+    <div class="card-title"><span class="num">十一、</span>基金经理与产品档案</div>
+    <div class="manager-card">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+        <div class="avatar">杨</div>
+        <div>
+          <div style="font-weight:700; font-size:15px;">杨志武</div>
+          <div style="font-size:12px; color:var(--text-muted);">基金经理</div>
+        </div>
+      </div>
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8;">
+        杨志武管理中信建投睿利A，最新管理规模0.20亿。基金业绩比较基准为沪深300指数收益率×60%+中证综合债指数收益率×40%。
+      </p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>项目</th><th>内容</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>基金名称</td><td>中信建投睿利A</td></tr>
+          <tr><td>基金代码</td><td>003308</td></tr>
+          <tr><td>基金类型</td><td>混合型-灵活</td></tr>
+          <tr><td>基金规模</td><td>0.20亿</td></tr>
+          <tr><td>业绩基准</td><td>沪深300指数收益率×60%+中证综合债指数收益率×40%</td></tr>
+          <tr><td>风险收益特征</td><td>高弹性、高波动，适合风险承受能力较强的投资者</td></tr>
+          <tr><td>适合投资者</td><td>能承受较大波动、追求长期资本增值的投资者</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 风险提示Footer -->
+  <div class="risk-footer fade-in">
+    <h4>⚠️ 风险提示与免责声明</h4>
+    <p>基金过往业绩不代表未来表现，基金投资需谨慎。请您根据自身的风险承受能力，选择适合自己的基金产品。</p>
+    <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
+    <div class="source">
+      数据来源：天天基金、同花顺iFinD、东方财富Choice | 数据截止日期：2026-07-10 | 制作日期：2026-07-14<br>
+      访问地址：<a href="https://fundadvisor.pages.dev/reports/中信建投睿利A_周度回顾.html" style="color:var(--primary); text-decoration:none;">https://fundadvisor.pages.dev/reports/中信建投睿利A_周度回顾.html</a>
+    </div>
   </div>
+
+  <footer>
+    <p>中信建投睿利A · 周度回顾 | 报告生成时间：2026-07-14 | 数据截止日期：2026-07-10</p>
+    <p>本报告仅供理财经理内部使用，不构成投资建议</p>
+  </footer>
 </div>
+
+<script>
+/* ===== 导航高亮 ===== */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+function updateNav() {
+  const scrollPos = window.scrollY + 80;
+  sections.forEach(sec => {
+    const top = sec.offsetTop; const bottom = top + sec.offsetHeight;
+    const id = sec.getAttribute('id');
+    if (scrollPos >= top && scrollPos < bottom) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-sec') === id);
+      });
+    }
+  });
+}
+window.addEventListener('scroll', updateNav);
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ===== 复制链接 ===== */
+function copyUrl() {
+  navigator.clipboard.writeText(window.location.href).then(() => alert('链接已复制'));
+}
+
+/* ===== 天天基金实时净值（JSONP） ===== */
+function fetchFundNav(code) {
+  return new Promise((resolve) => {
+    const cb = '_fundgz_' + Date.now();
+    const s = document.createElement('script');
+    window[cb] = (d) => {
+      resolve(d ? {
+        nav: d.dwjz, navDate: d.jzrq, estimateNav: d.gsz,
+        estimateChange: d.gszzl, estimateTime: d.gztime
+      } : null);
+      delete window[cb]; document.head.removeChild(s);
+    };
+    s.src = 'https://fundgz.1234567.com.cn/js/' + code + '.js?rt=' + Date.now();
+    document.head.appendChild(s);
+    setTimeout(() => { resolve(null); delete window[cb]; }, 5000);
+  });
+}
+
+/* ===== 刷新数据 ===== */
+async function refreshData() {
+  const status = document.getElementById('statusBar');
+  status.textContent = '正在更新数据...';
+  try {
+    const d = await fetchFundNav('003308');
+    if (d && d.nav) {
+      document.getElementById('latestNav').textContent = d.nav;
+      document.getElementById('navDate').textContent = d.navDate || '2026-07-13';
+      if (d.estimateNav) document.getElementById('estimateNav').textContent = d.estimateNav;
+      if (d.estimateChange) {
+        const el = document.getElementById('estimateChange');
+        el.textContent = (parseFloat(d.estimateChange) > 0 ? '+' : '') + d.estimateChange + '%';
+        el.className = 'value ' + (parseFloat(d.estimateChange) >= 0 ? 'up' : 'down');
+      }
+      if (d.estimateTime) document.getElementById('estimateTime').textContent = d.estimateTime;
+      status.textContent = '数据更新于 ' + new Date().toLocaleString('zh-CN');
+    } else {
+      status.textContent = '实时数据获取失败，显示静态数据';
+    }
+  } catch(e) {
+    status.textContent = '实时数据获取失败，显示静态数据';
+  }
+}
+
+/* ===== 首次加载 + 定时刷新 ===== */
+refreshData();
+setInterval(refreshData, 5 * 60 * 1000);
+
+/* ===== Chart.js 净值走势图 ===== */
+document.addEventListener('DOMContentLoaded', function() {
+  const ctx = document.getElementById('navChart');
+  if (!ctx) return;
+  const navLabels = ["2024-01", "2024-04", "2024-07", "2024-10", "2025-01", "2025-04", "2025-07", "2025-10", "2026-01", "2026-04", "2026-07"];
+  const navData = [1.0122, 0.9939, 0.9073, 1.1042, 1.0701, 1.1917, 1.3061, 1.5567, 1.6271, 1.6887, 1.8516];
+  const benchData = [1.0122, 1.0067, 0.9807, 1.0398, 1.0296, 1.066, 1.1004, 1.1755, 1.1967, 1.2151, 1.264];
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: navLabels,
+      datasets: [
+        {
+          label: '基金净值',
+          data: navData,
+          borderColor: '#8b0a1a',
+          backgroundColor: 'rgba(139,10,26,0.08)',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#8b0a1a',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          pointRadius: 4,
+          fill: true,
+          tension: 0.3
+        },
+        {
+          label: '业绩比较基准',
+          data: benchData,
+          borderColor: '#78716c',
+          backgroundColor: 'rgba(120,113,108,0.05)',
+          borderWidth: 2,
+          borderDash: [5,5],
+          pointRadius: 0,
+          fill: false,
+          tension: 0.3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: true, position: 'top', labels: { font: {size:12} } },
+        tooltip: { backgroundColor: '#1a1a1a', padding: 10, cornerRadius: 8 }
+      },
+      scales: {
+        x: { grid: {display:false}, ticks: { font:{size:10}, color:'#78716c' } },
+        y: { grid: {color:'#f5f5f4'}, ticks: { font:{size:11}, color:'#78716c' } }
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>
