@@ -33,7 +33,7 @@ outputs:
 - **独立分发能力**：不生成报告内容，只负责把已生成的报告文件/链接推送到企微群。
 - **可被其他 skill 调用**：如 `fund-weekly-review`、`fund-weekly-hybrid`、`portfolio-week-companion` 等生成报告的 skill，在输出 PDF + HTML 后可调用本 skill 完成推送。
 - **支持两种消息**：
-  1. **Markdown 消息**：报告标题、基金代码/名称、报告日期、HTML 在线链接。
+  1. **Markdown 消息**：报告标题、基金代码/名称、报告日期、摘要、HTML 在线链接。
   2. **文件消息**：通过企业微信 `upload_media` 接口上传 PDF（或 HTML），再作为文件附件发送到群里。
 
 ## 触发条件

@@ -81,8 +81,8 @@ outputs:
 |------|------|------|
 | `product_code` | 产品代码（如 025313） | 用户输入 / 产品信息库 |
 | `product_name` | 产品全称 | 用户输入 / 产品信息库 |
-| `report_period_start` | 报告期起始日 | 默认上周五 |
-| `report_period_end` | 报告期结束日 | 默认本周五 |
+| `report_period_start` | 报告期起始日 | 默认上周一 |
+| `report_period_end` | 报告期结束日 | 默认上周五 |
 
 ### 3.2 推荐输入（影响报告质量）
 
@@ -132,8 +132,8 @@ function getWeekRange(today = new Date()) {
 ```
 
 **规则**：
-- 周一至周四查询：报告期为「本周一 — 今天」，标注「数据截至X月X日，本周尚未结束」
-- 周五至周日查询：报告期为完整周「本周一 — 本周五」
+- 周一至周五查询：报告期为「上周一 — 上周五」，标注「数据截至X月X日」
+- 周六至周日查询：报告期为完整周「本周一 — 本周五」
 - 节假日自动顺延（通过交易日历库判断）
 - 净值日期取产品最新公布的净值日（通常T-1或T-2）
 
@@ -401,7 +401,7 @@ function getWeekRange(today = new Date()) {
 | **P6** | **Baostock** | 个股行情、指数成分股 | `baostock` | ❌ 跨域 | ✅ Python SDK |
 | **P7** | **天天基金网 (Eastmoney Fund)** | **基金实时净值、估算净值、涨跌幅、规模** | **JSONP API (`fundgz.1234567.com.cn/js/{code}.js`)** | ✅ **JSONP 无跨域** | ✅ Python + `requests` |
 | **P8** | **巨潮资讯网 (cninfo)** | 政策公告、监管文件、上市公司公告 | 网页抓取/官方API | ✅ 可直抓 | ✅ Python SDK |
-| **P9** | **盈米 (Yingmi)** | 基金净值、组合诊断、资产配置 | MCP SSE `https://stargate.yingmi.com/mcp/sse?apiKey=...` | ❌ 需代理 | ✅ SSE 流式 |
+| **P9** | **盈米 (Yingmi)** | 基金净值、组合诊断、资产配置 | MCP SSE `https://stargate.yingmi.com/mcp/sse?apiKey=FHCFwZCh5gQ4AqAdAnuwGw` | ❌ 需代理 | ✅ SSE 流式 |
 
 ### 5.2 浏览器端实时数据获取（前端 JS）
 
