@@ -45,7 +45,7 @@ outputs:
 
 报告由 Xueqi（产品中心）主笔，投研策略部（Atlas/Helios/Terra/Mercury/Orion）提供研究输入，投顾服务部（Mira/Belle/Dylan）负责客户化润色与分发，Sage（合规风控部）审核合规与话术。
 
-> **参考样例**：`https://fof-weekly-report.pages.dev/`
+> **参考样例**：`https://fundadvisor.pages.dev/`
 
 > **能力矩阵（互补关系）**：
 > | Skill | 输出格式 | 面向对象 | 使用场景 |
@@ -330,7 +330,7 @@ function getWeekRange(today = new Date()) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OPC · {{产品名称}} 周度陪伴报告</title>
+  <title>公募基金周度报告 · {{产品名称}}</title>
   <style> /* 内联样式，详见 templates/companion-report-template.html */ </style>
 </head>
 <body>
@@ -480,30 +480,9 @@ async function fetchYahooQuote(symbol) {
 }
 ```
 
-### 5.3 自动刷新机制（每 5 分钟）
+### 5.3 数据获取说明
 
-```javascript
-// 页面加载后启动定时刷新
-const REFRESH_INTERVAL = 5 * 60 * 1000; // 5分钟
-
-async function refreshData() {
-  const fundData = await fetchFundNav('025313');
-  if (fundData) updateFundDOM(fundData);
-  
-  const indices = ['1.000300', '0.399006', '1.000001'];
-  for (const secid of indices) {
-    const quote = await fetchIndexQuote(secid);
-    if (quote) updateIndexDOM(secid, quote);
-  }
-  
-  document.getElementById('last-update').textContent = 
-    '数据更新：' + new Date().toLocaleString('zh-CN');
-}
-
-// 首次加载 + 定时刷新
-refreshData();
-setInterval(refreshData, REFRESH_INTERVAL);
-```
+静态 HTML 报告中的数据为生成时的快照数据，非实时刷新。如需实时数据，可在页面中嵌入 JS 数据获取逻辑（参见 5.2 节）。
 
 ### 5.4 异常降级策略
 
@@ -678,7 +657,7 @@ jobs:
 
 - **HTTPS 强制**：所有部署平台默认开启 HTTPS
 - **SEO 控制**：在 `<head>` 中加入 `<meta name="robots" content="noindex, nofollow">`
-- **数据缓存**：静态 HTML 缓存 5 分钟，实时数据通过 JS 单独刷新
+- **数据缓存**：静态 HTML 由 CDN 缓存，报告数据以生成时快照为准
 
 ## 十、合规要求
 
@@ -689,7 +668,7 @@ jobs:
 - 所有话术须经 Sage 审核后方可对外发布
 - 网页报告中须在页脚显著位置展示风险提示与免责声明
 - 基金经理观点须注明来源（季报日期），不得断章取义或过度解读
-- 数据须注明来源（天天基金、东方财富、Wind 等），不得使用未经验证的第三方数据
+- 数据须注明来源（天天基金、同花顺iFinD、东方财富Choice 等），不得使用未经验证的第三方数据
 
 ---
 
