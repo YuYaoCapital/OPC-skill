@@ -475,6 +475,152 @@ description: 生成单只基金的纯周度陪伴/回顾报告（不含横纵分
 > - 理财经理需要打印存档、正式分发、紧凑排版 → 选 PDF
 > - 最佳实践：同时生成两种格式，PDF 用于存档，HTML 用于线上分发
 
+---
+
+## 五、实时数据获取与多源降级机制
+
+### 5.1 数据源优先级与分工
+
+采用**多源优先级 + 自动降级**机制，任一数据源失效时自动切换至备用源。浏览器端通过 JavaScript 异步请求实现，服务端通过 Python 脚本轮询实现。
+
+| 优先级 | 数据源 | 用途 | 接入方式 | 浏览器端可用性 | 服务端可用性 |
+|--------|--------|------|----------|--------------|--------------|
+| **P1** | **Wind (万得)** | 主力数据源：ETF净值、板块资金流向、北向资金、融资余额 | Wind API (`WindPy`) | ❌ 跨域 | ✅ Python SDK |
+| **P2** | **iFinD (同花顺)** | 行情、板块资金流向、龙虎榜 | iFinD API (`iFinDPy`) | ❌ 跨域 | ✅ Python SDK |
+| **P3** | **Tushare Pro** | ETF日线/实时行情、资金流向、龙虎榜 | Tushare Pro API (`tushare`) | ❌ 跨域 | ✅ Python SDK |
+| **P4** | **东方财富 Choice** | ETF实时净值、资金流向、融资融券、北向资金 | Choice API / 网页 | ⚠️ 需代理 | ✅ Python SDK |
+| **P5** | **AKShare** | ETF实时行情、板块资金、北向资金、融资融券 | `akshare` | ⚠️ 部分可用 | ✅ Python SDK |
+| **P6** | **Baostock** | 个股行情、指数成分股 | `baostock` | ❌ 跨域 | ✅ Python SDK |
+| **P7** | **天天基金网 (Eastmoney Fund)** | **基金实时净值、估算净值、涨跌幅、规模** | **JSONP API (`fundgz.1234567.com.cn/js/{code}.js`)** | ✅ **JSONP 无跨域** | ✅ Python + `requests` |
+| **P8** | **巨潮资讯网 (cninfo)** | 政策公告、监管文件、上市公司公告 | 网页抓取/官方API | ✅ 可直抓 | ✅ Python SDK |
+| **P9** | **盈米 (Yingmi)** | 基金净值、组合诊断、资产配置 | MCP SSE `https://stargate.yingmi.com/mcp/sse?apiKey=FHCFwZCh5gQ4AqAdAnuwGw` | ❌ 需代理 | ✅ SSE 流式 |
+
+### 5.2 浏览器端实时数据获取（前端 JS）
+
+对于部署到互联网（pages.dev）的静态 HTML，**浏览器端**通过以下方式获取实时数据：
+
+#### 基金净值（天天基金 JSONP — P7）
+
+```javascript
+// 天天基金实时净值 JSONP（无跨域限制，最可靠）
+function fetchFundNav(fundCode) {
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    const callbackName = '_fundgz_' + Date.now();
+    window[callbackName] = (data) => {
+      resolve({
+        fundCode: data.fundcode,
+        name: data.name,
+        nav: data.dwjz,           // 单位净值（最新公布）
+        navDate: data.jzrq,       // 净值日期
+        estimateNav: data.gsz,    // 估算净值（实时）
+        estimateChange: data.gszzl, // 估算涨跌幅%
+        estimateTime: data.gztime // 估算时间
+      });
+      delete window[callbackName];
+      document.head.removeChild(script);
+    };
+    script.src = `https://fundgz.1234567.com.cn/js/${fundCode}.js?rt=${Date.now()}`;
+    document.head.appendChild(script);
+    setTimeout(() => { resolve(null); delete window[callbackName]; }, 5000);
+  });
+}
+```
+
+#### 指数行情（东方财富 API — P4/P7）
+
+```javascript
+// 东方财富开放 API（支持 CORS，可直接 fetch）
+async function fetchIndexQuote(secid) {
+  // secid 格式：1.000300(沪深300), 0.399006(创业板), 116.HSI(恒生)等
+  const url = `https://push2.eastmoney.com/api/qt/stock/get?secid=${secid}&fields=f43,f44,f45,f46,f57,f58,f60,f170,f171`;
+  const res = await fetch(url);
+  const json = await res.json();
+  const d = json.data;
+  return {
+    code: d.f57, name: d.f58,
+    price: (d.f43 / 100).toFixed(2),      // 当前价（分→元）
+    open: (d.f46 / 100).toFixed(2),
+    high: (d.f44 / 100).toFixed(2),
+    low: (d.f45 / 100).toFixed(2),
+    prevClose: (d.f60 / 100).toFixed(2),
+    changePct: (d.f171 / 100).toFixed(2) + '%'  // 涨跌%
+  };
+}
+```
+
+**常用 secid 映射**：
+| 指数 | secid |
+|------|-------|
+| 沪深300 | `1.000300` 或 `0.399300` |
+| 上证指数 | `1.000001` |
+| 创业板指 | `0.399006` |
+| 恒生指数 | `116.HSI`（可能不可用）→ 降级至 `hkHSI`（新浪）或手动输入 |
+| 标普500 | 需通过 Yahoo Finance 或后端代理获取 |
+| 黄金(COMEX) | 需通过 Yahoo Finance 或后端代理获取 |
+
+#### 美股/黄金（Yahoo Finance — 降级方案）
+
+```javascript
+// 通过 CORS 代理或后端服务获取 Yahoo Finance 数据
+// 推荐部署 Cloudflare Worker 做数据转发
+async function fetchYahooQuote(symbol) {
+  // symbol: ^GSPC(标普500), GC=F(COMEX黄金), ^HSI(恒生)
+  const proxyUrl = 'https://your-worker.your-subdomain.workers.dev/quote?symbol=' + symbol;
+  const res = await fetch(proxyUrl);
+  return res.json();
+}
+```
+
+### 5.3 自动刷新机制（每 5 分钟）
+
+```javascript
+// 页面加载后启动定时刷新
+const REFRESH_INTERVAL = 5 * 60 * 1000; // 5分钟
+
+async function refreshData() {
+  const fundData = await fetchFundNav('025313');
+  if (fundData) updateFundDOM(fundData);
+  
+  const indices = ['1.000300', '0.399006', '1.000001'];
+  for (const secid of indices) {
+    const quote = await fetchIndexQuote(secid);
+    if (quote) updateIndexDOM(secid, quote);
+  }
+  
+  document.getElementById('last-update').textContent = 
+    '数据更新：' + new Date().toLocaleString('zh-CN');
+}
+
+// 首次加载 + 定时刷新
+refreshData();
+setInterval(refreshData, REFRESH_INTERVAL);
+```
+
+### 5.4 异常降级策略
+
+```javascript
+// 封装带降级的数据获取函数
+async function fetchWithFallback(fetchers) {
+  for (const fetcher of fetchers) {
+    try {
+      const data = await fetcher();
+      if (data && data.price !== undefined) return data;
+    } catch (e) { console.warn('Source failed:', e.message); }
+  }
+  return null; // 全部降级失败
+}
+
+// 使用示例：获取恒生指数
+const hsi = await fetchWithFallback([
+  () => fetchIndexQuote('116.HSI'),      // P4 东财
+  () => fetchYahooQuote('^HSI'),         // P4 Yahoo（需代理）
+  () => fetchFromCache('hsi')            // P9 本地缓存兜底
+]);
+```
+
+---
+
 ## 数据收集建议
 
 ### 主动权益型额外需要：
