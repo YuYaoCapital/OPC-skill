@@ -62,6 +62,10 @@
       padding: 8px 16px; border-radius: 6px;
       font-size: 13px; text-decoration: none;
       transition: opacity 0.2s;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      min-height: 36px;
     }
     .report-link:hover { opacity: 0.85; }
     .badge {
@@ -123,6 +127,9 @@
   </footer>
 
   <script>
+    // 移动端检测
+try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } catch(e) { var isTouch = false; }
+
     // 扫描 reports 目录下的报告文件
     async function loadReports() {
       const listEl = document.getElementById('report-list');
@@ -131,20 +138,17 @@
       // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
       // 这里使用静态列表，每次生成报告后更新此数组
       const reports = [
-        { name: '中信建投中证500增强A 周度回顾', date: '2026-07-14', file: 'reports/中信建投中证500增强A_周度回顾.html', pdf: 'reports/中信建投中证500增强A_周度回顾.pdf', tag: '回顾' },
-        { name: '兴全合熙A 周度回顾', date: '2026-07-14', file: 'reports/兴全合熙A_周度回顾.html', pdf: 'reports/兴全合熙A_周度回顾.pdf', tag: '回顾' },
-        { name: '中信建投睿利A 周度回顾', date: '2026-07-14', file: 'reports/中信建投睿利A_周度回顾.html', pdf: 'reports/中信建投睿利灵活配置混合型发起式证券投资基金_周度回顾.pdf', tag: '回顾' },
-        { name: '永赢数字经济智选混合发起A 周度回顾', date: '2026-07-14', file: 'reports/永赢数字经济智选混合发起A_周度回顾.html', pdf: 'reports/永赢数字经济智选混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '博道叁佰智航A 周度回顾', date: '2026-07-14', file: 'reports/博道叁佰智航A_周度回顾.html', pdf: 'reports/博道叁佰智航A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧信息科技混合发起A 周度回顾', date: '2026-07-14', file: 'reports/中欧信息科技混合发起A_周度回顾.html', pdf: 'reports/中欧信息科技混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '国金科创创业量化选股A 周度回顾', date: '2026-07-14', file: 'reports/国金科创创业量化选股A_周度回顾.html', pdf: 'reports/国金科创创业量化选股A_周度回顾.pdf', tag: '回顾' },
-        { name: '富国创新科技混合A 周度回顾', date: '2026-07-14', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '创金合信北证50成份指数增强C 周度回顾', date: '2026-07-14', file: 'reports/创金合信北证50成份指数增强C_周度回顾.html', pdf: 'reports/创金合信北证50成份指数增强C_周度回顾.pdf', tag: '回顾' },
-        { name: '易方达战略新兴产业股票A 周度回顾', date: '2026-07-14', file: 'reports/易方达战略新兴产业股票A_周度回顾.html', pdf: 'reports/易方达战略新兴产业股票A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧价值回报混合A 周度回顾', date: '2026-07-09', file: 'reports/中欧价值回报混合A_周度回顾.html', pdf: 'reports/中欧价值回报混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '睿远成长价值混合A 融合报告（横纵分析）', date: '2026-07-09', file: 'reports/睿远成长价值混合A_融合报告.html', tag: '融合' },
-        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-09', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '交银臻享多资产FOF A 周度陪伴报告', date: '2026-07-09', file: 'reports/交银臻享多资产FOF_A_周度陪伴.html', tag: '陪伴' },
+        { name: '中信建投中证500增强A 周度回顾', date: '2026-07-15', file: 'reports/中信建投中证500增强A_周度回顾.html', pdf: 'reports/中信建投中证500增强A_周度回顾.pdf', tag: '回顾' },
+        { name: '兴全合熙A 周度回顾', date: '2026-07-15', file: 'reports/兴全合熙A_周度回顾.html', pdf: 'reports/兴全合熙A_周度回顾.pdf', tag: '回顾' },
+        { name: '中信建投睿利A 周度回顾', date: '2026-07-15', file: 'reports/中信建投睿利A_周度回顾.html', pdf: 'reports/中信建投睿利A_周度回顾.pdf', tag: '回顾' },
+        { name: '永赢数字经济智选混合发起A 周度回顾', date: '2026-07-15', file: 'reports/永赢数字经济智选混合发起A_周度回顾.html', pdf: 'reports/永赢数字经济智选混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '博道叁佰智航A 周度回顾', date: '2026-07-15', file: 'reports/博道叁佰智航A_周度回顾.html', pdf: 'reports/博道叁佰智航A_周度回顾.pdf', tag: '回顾' },
+        { name: '中欧信息科技混合发起A 周度回顾', date: '2026-07-15', file: 'reports/中欧信息科技混合发起A_周度回顾.html', pdf: 'reports/中欧信息科技混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '国金科创创业量化选股A 周度回顾', date: '2026-07-15', file: 'reports/国金科创创业量化选股A_周度回顾.html', pdf: 'reports/国金科创创业量化选股A_周度回顾.pdf', tag: '回顾' },
+        { name: '富国创新科技混合A 周度回顾', date: '2026-07-15', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '创金合信北证50成份指数增强C 周度回顾', date: '2026-07-15', file: 'reports/创金合信北证50成份指数增强C_周度回顾.html', pdf: 'reports/创金合信北证50成份指数增强C_周度回顾.pdf', tag: '回顾' },
+        { name: '易方达战略新兴产业股票A 周度回顾', date: '2026-07-15', file: 'reports/易方达战略新兴产业股票A_周度回顾.html', pdf: 'reports/易方达战略新兴产业股票A_周度回顾.pdf', tag: '回顾' },
+        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-15', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
       ];
 
       if (reports.length === 0) {
@@ -156,7 +160,12 @@
       // 按日期倒序
       reports.sort((a, b) => b.date.localeCompare(a.date));
 
-      listEl.innerHTML = reports.map((r, i) => `
+      listEl.innerHTML = reports.map((r, i) => {
+        // 移动端：使用 window.open 替代 target="_blank"，避免部分浏览器/企微中不跳转
+        var linkAttr = isTouch ? '' : 'target="_blank"';
+        var htmlLink = '<a class="report-link" href="' + r.file + '"' + (linkAttr ? ' ' + linkAttr : '') + '>查看 HTML →</a>';
+        var pdfLink = r.pdf ? '<a class="report-link" href="' + r.pdf + '"' + (linkAttr ? ' ' + linkAttr : '') + ' style="background:#6d0814;">查看 PDF →</a>' : '';
+        return `
         <li class="report-item">
           <div class="report-info">
             <div class="report-name">
@@ -166,12 +175,20 @@
             </div>
             <div class="report-meta">${r.date}</div>
           </div>
-          <div style="display:flex;gap:8px;flex-shrink:0;">
-            <a class="report-link" href="${r.file}" target="_blank">查看 HTML →</a>
-            ${r.pdf ? '<a class="report-link" href="' + r.pdf + '" target="_blank" style="background:#6d0814;">下载 PDF →</a>' : ''}
+          <div class="report-actions" style="display:flex;gap:8px;flex-shrink:0;">
+            ${htmlLink}
+            ${pdfLink}
           </div>
         </li>
-      `).join('');
+      `}).join('');
+
+      // 移动端点击事件委托：确保 window.open 可靠跳转
+      if (isTouch) {
+        listEl.addEventListener('click', function(e) {
+          var a = e.target.closest('a.report-link');
+          if (a) { e.preventDefault(); window.open(a.href); }
+        });
+      }
     }
 
     // 设置制作日期

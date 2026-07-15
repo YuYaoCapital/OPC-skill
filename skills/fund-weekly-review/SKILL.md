@@ -501,9 +501,11 @@ JSON 必须包含以下字段：
 
 > **样式锁定指令**：执行时**不得**修改 `fund_weekly_pdf.py` 中的任何颜色、字号、边距常量。所有样式参数在脚本顶部硬编码，LLM 只负责填充 `funds_data.json` 数据。
 
-### 3. HTML（红色主调，在线访问，CSS全内联）
+### 3. HTML（红色主调，在线访问，CSS全内联）——**样式已锁定**
 
-同时调用固定 HTML 模板生成器 `D:\OPC-skill\skills\portfolio-week-companion\site\reports\generate_htmls.py` 生成单页 HTML 文件，部署至 Cloudflare Pages：
+> **样式锁定声明**：`generate_htmls.py` 中的 `HTML_TEMPLATE` 字符串为**唯一可信源**，所有 CSS 变量、颜色、字号、间距、卡片布局、导航栏交互均已硬编码。本 skill 执行时**只注入数据变量**，不得修改模板中的任何样式定义。如需调整样式，必须直接修改 `generate_htmls.py` 源文件，并在 SKILL.md 中同步更新版本号。
+
+调用固定 HTML 模板生成器 `D:\OPC-skill\skills\portfolio-week-companion\site\reports\generate_htmls.py` 生成单页 HTML 文件，部署至 Cloudflare Pages：
 
 **模板特性**：
 - **CSS全部内联**：所有样式写在 `<style>` 标签中，不依赖 Tailwind CSS 或任何外部 CDN（除 Chart.js 和 html2canvas 外）
@@ -533,6 +535,7 @@ JSON 必须包含以下字段：
 > - 客户需要实时数据、手机浏览、一键复制话术 → 选 HTML
 > - 理财经理需要打印存档、正式分发、紧凑排版 → 选 PDF
 > - 最佳实践：同时生成两种格式，PDF 用于存档，HTML 用于线上分发
+
 
 ---
 
