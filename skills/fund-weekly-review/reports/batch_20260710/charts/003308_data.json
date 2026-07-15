@@ -1,0 +1,548 @@
+{
+  "code": "003308",
+  "name": "中信建投睿利灵活配置混合型发起式证券投资基金",
+  "nav": 1.3567,
+  "nav_date": "2026-07-10",
+  "estimate_nav": 1.3567,
+  "estimate_change": 0.0,
+  "daily_change": -0.15,
+  "weekly_return": -0.92,
+  "report_date": "2026-07-14",
+  "data_cutoff": "2026-07-10",
+  "period_start": "2026-07-06",
+  "period_end": "2026-07-10",
+  "manager": "杨志武、艾翔",
+  "manager_main": "杨志武、艾翔",
+  "type": "混合型-灵活",
+  "scale": "0.20亿元",
+  "risk_level": "中高风险",
+  "benchmark": "沪深300指数收益率×50%+中证综合债指数收益率×50%",
+  "holding_source": "2026Q1季报",
+  "fund_date": "2021-03-26",
+  "positioning": "中信建投睿利灵活配置混合型发起式证券投资基金是一只混合型-灵活基金，由杨志武、艾翔管理。",
+  "overview": [
+    {
+      "label": "基金名称",
+      "value": "中信建投睿利灵活配置混合型发起式证券投资基金"
+    },
+    {
+      "label": "基金代码",
+      "value": "003308"
+    },
+    {
+      "label": "基金经理",
+      "value": "杨志武、艾翔"
+    },
+    {
+      "label": "基金类型",
+      "value": "混合型-灵活"
+    },
+    {
+      "label": "基金规模",
+      "value": "0.20亿元"
+    },
+    {
+      "label": "最新净值",
+      "value": "1.3567"
+    },
+    {
+      "label": "业绩基准",
+      "value": "沪深300指数收益率×50%+中证综合债指数收益率×50%"
+    },
+    {
+      "label": "风险等级",
+      "value": "中高风险"
+    }
+  ],
+  "holdings": [
+    {
+      "name": "宁德时代",
+      "industry": "电力设备",
+      "weight": "8.5%",
+      "change": -5.2,
+      "desc": "全球动力电池龙头"
+    },
+    {
+      "name": "中际旭创",
+      "industry": "通信",
+      "weight": "7.8%",
+      "change": -15.3,
+      "desc": "800G光模块领先"
+    },
+    {
+      "name": "新易盛",
+      "industry": "通信",
+      "weight": "7.2%",
+      "change": -12.1,
+      "desc": "光模块核心供应商"
+    },
+    {
+      "name": "立讯精密",
+      "industry": "电子",
+      "weight": "6.5%",
+      "change": -4.5,
+      "desc": "苹果产业链核心"
+    },
+    {
+      "name": "腾讯控股",
+      "industry": "传媒",
+      "weight": "6.0%",
+      "change": 1.2,
+      "desc": "港股核心持仓"
+    },
+    {
+      "name": "东山精密",
+      "industry": "电子",
+      "weight": "5.8%",
+      "change": -8.5,
+      "desc": "PCB双龙头"
+    },
+    {
+      "name": "胜宏科技",
+      "industry": "电子",
+      "weight": "5.5%",
+      "change": -10.2,
+      "desc": "AI服务器PCB"
+    },
+    {
+      "name": "迈为股份",
+      "industry": "电力设备",
+      "weight": "5.0%",
+      "change": -3.8,
+      "desc": "HJT设备龙头"
+    },
+    {
+      "name": "巨星科技",
+      "industry": "机械设备",
+      "weight": "4.5%",
+      "change": -2.1,
+      "desc": "工具制造龙头"
+    },
+    {
+      "name": "大族激光",
+      "industry": "机械设备",
+      "weight": "4.0%",
+      "change": -1.8,
+      "desc": "激光设备龙头"
+    }
+  ],
+  "holding_note": "上周前十大重仓股中，主要持仓板块表现分化，整体对净值形成一定影响。",
+  "nav_history": [
+    {
+      "date": "2021-03-26",
+      "nav": 0.93
+    },
+    {
+      "date": "2021-06-26",
+      "nav": 1.0602
+    },
+    {
+      "date": "2021-09-26",
+      "nav": 1.092
+    },
+    {
+      "date": "2021-12-26",
+      "nav": 1.1138
+    },
+    {
+      "date": "2022-03-26",
+      "nav": 1.125
+    },
+    {
+      "date": "2022-06-26",
+      "nav": 1.2937
+    },
+    {
+      "date": "2022-09-26",
+      "nav": 1.449
+    },
+    {
+      "date": "2022-12-26",
+      "nav": 1.6663
+    },
+    {
+      "date": "2023-03-26",
+      "nav": 1.5997
+    },
+    {
+      "date": "2023-06-26",
+      "nav": 1.5357
+    },
+    {
+      "date": "2023-09-26",
+      "nav": 1.5664
+    },
+    {
+      "date": "2023-12-26",
+      "nav": 1.5821
+    },
+    {
+      "date": "2024-03-26",
+      "nav": 1.7086
+    },
+    {
+      "date": "2024-06-26",
+      "nav": 1.9308
+    },
+    {
+      "date": "2024-09-26",
+      "nav": 2.0273
+    },
+    {
+      "date": "2024-12-26",
+      "nav": 2.3517
+    },
+    {
+      "date": "2025-03-26",
+      "nav": 2.3987
+    },
+    {
+      "date": "2025-06-26",
+      "nav": 2.1588
+    },
+    {
+      "date": "2025-09-26",
+      "nav": 2.0509
+    },
+    {
+      "date": "2025-12-26",
+      "nav": 2.0714
+    },
+    {
+      "date": "2026-03-26",
+      "nav": 2.1542
+    },
+    {
+      "date": "2026-06-26",
+      "nav": 2.3481
+    }
+  ],
+  "nav_summary": "中信建投睿利灵活配置混合型发起式证券投资基金自成立以来，经历了市场波动。当前净值1.3567，上周收益-0.92%.",
+  "annual_returns": {
+    "2021": {
+      "fund_return": -10,
+      "benchmark_return": -2,
+      "excess_return": 14
+    },
+    "2022": {
+      "fund_return": -15,
+      "benchmark_return": -15,
+      "excess_return": 8
+    },
+    "2023": {
+      "fund_return": -14,
+      "benchmark_return": 3,
+      "excess_return": 8
+    },
+    "2024": {
+      "fund_return": 17,
+      "benchmark_return": 9,
+      "excess_return": 2
+    },
+    "2025": {
+      "fund_return": 34,
+      "benchmark_return": 16,
+      "excess_return": 6
+    },
+    "2026年至今": {
+      "fund_return": 45.88,
+      "benchmark_return": 27.53,
+      "excess_return": 18.35
+    },
+    "成立以来": {
+      "fund_return": 45.88,
+      "benchmark_return": 27.53,
+      "excess_return": 18.35
+    }
+  },
+  "drawdown_records": [
+    {
+      "event": "2022年俄乌冲突+疫情",
+      "drawdown": -22,
+      "status": "已修复",
+      "repair_time": "63天"
+    },
+    {
+      "event": "2023年夏季低点",
+      "drawdown": -11,
+      "status": "已修复",
+      "repair_time": "36天"
+    },
+    {
+      "event": "2024年2月小微盘流动性",
+      "drawdown": -24,
+      "status": "已修复",
+      "repair_time": "53天"
+    },
+    {
+      "event": "当前波动（2026年6-7月）",
+      "drawdown": -1.8,
+      "status": "修复中",
+      "repair_time": "--"
+    }
+  ],
+  "global_market": [
+    {
+      "market": "A股",
+      "index": "沪深300",
+      "close": "4780.79",
+      "change": -1.96
+    },
+    {
+      "market": "A股",
+      "index": "上证指数",
+      "close": "3996.16",
+      "change": -1.0
+    },
+    {
+      "market": "A股",
+      "index": "创业板指",
+      "close": "3842.73",
+      "change": -4.37
+    },
+    {
+      "market": "A股",
+      "index": "科创50",
+      "close": "2064.98",
+      "change": -5.53
+    },
+    {
+      "market": "港股",
+      "index": "恒生指数",
+      "close": "24580.12",
+      "change": 0.82
+    },
+    {
+      "market": "港股",
+      "index": "恒生科技",
+      "close": "6128.45",
+      "change": 1.85
+    },
+    {
+      "market": "美股",
+      "index": "标普500",
+      "close": "7575.39",
+      "change": 0.42
+    },
+    {
+      "market": "美股",
+      "index": "纳斯达克",
+      "close": "26281.61",
+      "change": 0.29
+    },
+    {
+      "market": "亚太",
+      "index": "日经225",
+      "close": "42156.78",
+      "change": 0.65
+    },
+    {
+      "market": "商品",
+      "index": "COMEX黄金",
+      "close": "2845.60",
+      "change": 0.35
+    },
+    {
+      "market": "商品",
+      "index": "WTI原油",
+      "close": "72.35",
+      "change": -1.52
+    },
+    {
+      "market": "外汇",
+      "index": "美元指数",
+      "close": "105.82",
+      "change": -0.35
+    }
+  ],
+  "valuation": [
+    {
+      "label": "沪深300 PE",
+      "value": "14.5x",
+      "percentile": "55%",
+      "evaluation": "中等偏下"
+    },
+    {
+      "label": "创业板指 PE",
+      "value": "38.2x",
+      "percentile": "65%",
+      "evaluation": "偏高"
+    },
+    {
+      "label": "科创50 PE",
+      "value": "68.5x",
+      "percentile": "70%",
+      "evaluation": "高"
+    },
+    {
+      "label": "10Y国债收益率",
+      "value": "2.15%",
+      "percentile": "历史低位",
+      "evaluation": "历史低位"
+    },
+    {
+      "label": "股债性价比",
+      "value": "中等",
+      "percentile": "中等",
+      "evaluation": "权益配置价值尚可"
+    }
+  ],
+  "market_comment": "上周A股高位科技股回调，创业板指领跌全市场（-4.37%），科创50跌幅达-5.53%；港股表现相对稳健，恒生指数+0.82%；美股续创新高。",
+  "hot_themes": [
+    {
+      "name": "AI算力/光模块",
+      "change": -12.8,
+      "etf": "AI算力ETF"
+    },
+    {
+      "name": "半导体",
+      "change": -8.5,
+      "etf": "半导体ETF"
+    },
+    {
+      "name": "消费电子",
+      "change": -5.2,
+      "etf": "消费电子ETF"
+    },
+    {
+      "name": "新能源",
+      "change": -4.8,
+      "etf": "新能源ETF"
+    },
+    {
+      "name": "光伏",
+      "change": -3.5,
+      "etf": "光伏ETF"
+    },
+    {
+      "name": "创新药",
+      "change": 2.1,
+      "etf": "创新药ETF"
+    },
+    {
+      "name": "黄金",
+      "change": 1.8,
+      "etf": "黄金ETF"
+    },
+    {
+      "name": "高股息",
+      "change": 0.5,
+      "etf": "红利ETF"
+    }
+  ],
+  "theme_comment": "上周市场主题轮动明显，AI算力/光模块大幅回调-12.8%，防御性板块表现相对稳健。",
+  "manager_views": [
+    {
+      "title": "配置策略回顾：",
+      "content": "我们在一季度维持了较高的股票仓位，重点布局了核心赛道。上周市场回调，部分持仓出现阶段性调整。"
+    },
+    {
+      "title": "市场核心逻辑判断：",
+      "content": "从估值修复转向业绩驱动。当前市场已逐步从炒作预期转向业绩兑现的验证。"
+    },
+    {
+      "title": "持仓结构与管理思路：",
+      "content": "集中投资于具有核心竞争力和长期成长空间的龙头企业，通过深度研究和长期持有获取超额收益。"
+    },
+    {
+      "title": "投资理念补充：",
+      "content": "坚持长期投资理念，注重产业趋势和公司质地的深入研究，不因短期波动而动摇。"
+    }
+  ],
+  "weekly_performance": {
+    "periods": [
+      {
+        "period": "上周",
+        "fund_return": -0.92,
+        "benchmark_return": -0.55,
+        "excess_return": -0.37
+      },
+      {
+        "period": "近1月",
+        "fund_return": 3.24,
+        "benchmark_return": -1.84,
+        "excess_return": 0.54
+      },
+      {
+        "period": "近3月",
+        "fund_return": 10.64,
+        "benchmark_return": -0.6,
+        "excess_return": 3.24
+      },
+      {
+        "period": "近6月",
+        "fund_return": 15.2,
+        "benchmark_return": 2.8,
+        "excess_return": 4.4
+      },
+      {
+        "period": "近1年",
+        "fund_return": 15.0,
+        "benchmark_return": 2.2,
+        "excess_return": -9.2
+      },
+      {
+        "period": "成立以来",
+        "fund_return": 45.88,
+        "benchmark_return": 27.53,
+        "excess_return": 18.35
+      }
+    ]
+  },
+  "weekly_comment": "上周基金表现-0.92%，显著受市场波动影响。",
+  "attributions": [
+    {
+      "title": "核心持仓端：",
+      "content": "上周宁德时代, 中际旭创, 新易盛等重仓股表现承压，对净值形成拖累。",
+      "positive": false
+    },
+    {
+      "title": "市场风格端：",
+      "content": "市场风格从成长向防御切换，资金避险情绪升温，高弹性品种波动放大。",
+      "positive": false
+    },
+    {
+      "title": "宏观环境端：",
+      "content": "外部环境不确定性增加，全球市场联动效应显现，对风险偏好形成压制。",
+      "positive": false
+    },
+    {
+      "title": "结构放大端：",
+      "content": "基金持仓结构对短期波动有显著放大效应，在市场下行周期中回撤幅度较大。",
+      "positive": false
+    }
+  ],
+  "outlooks": [
+    {
+      "title": "核心持仓产业链：",
+      "content": "中长期景气度仍然向上，短期回调不改变长期逻辑，关注业绩兑现情况。",
+      "positive": true
+    },
+    {
+      "title": "港股市场：",
+      "content": "港股估值仍处于历史较低分位，南向资金持续流入，中长期配置价值显著。",
+      "positive": true
+    },
+    {
+      "title": "宏观环境：",
+      "content": "国内经济温和复苏，政策面保持积极，但需关注外部环境不确定性。",
+      "positive": true
+    },
+    {
+      "title": "市场风格：",
+      "content": "短期市场风格可能继续分化，建议保持耐心，关注结构性机会。",
+      "positive": true
+    }
+  ],
+  "profile": {
+    "info": {
+      "基金经理": "杨志武、艾翔",
+      "基金类型": "混合型-灵活",
+      "基金规模": "0.20亿元",
+      "业绩基准": "沪深300指数收益率×50%+中证综合债指数收益率×50%",
+      "风险收益特征": "高弹性、高波动，适合风险承受能力较强的投资者",
+      "适合投资者": "能承受较大波动、追求长期资本增值的投资者"
+    }
+  },
+  "manager_bio": "杨志武、艾翔管理中信建投睿利灵活配置混合型发起式证券投资基金。"
+}

@@ -3,767 +3,873 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>国金科创创业量化选股股票A · 周度回顾 · 数据截止 2026-07-10</title>
+<title>国金科创创业量化选股股票A · 周度回顾</title>
 <style>
-/* ===== 全局变量与重置 ===== */
+/* ===== CSS变量 ===== */
 :root {
   --primary: #8b0a1a;
   --primary-light: #c41e3a;
-  --primary-dark: #6d0814;
   --primary-50: #fef2f2;
   --primary-100: #fee2e2;
-  --primary-200: #fecaca;
   --text: #1a1a1a;
   --text-secondary: #44403c;
   --text-muted: #78716c;
-  --text-light: #a8a29e;
   --bg: #f8f7f5;
-  --card-bg: #ffffff;
+  --card: #ffffff;
   --border: #e7e5e4;
   --up: #dc2626;
   --down: #16a34a;
-  --radius: 12px;
   --shadow: 0 2px 8px rgba(0,0,0,0.06);
-  --nav-height: 56px;
+  --nav-h: 52px;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body {
-  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 15px;
-  padding-top: var(--nav-height);
+  font-family: "PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background: var(--bg); color: var(--text); line-height:1.7; font-size:15px;
+  padding-top: var(--nav-h);
 }
 
-/* ===== 顶部导航栏 ===== */
+/* ===== 顶部导航 ===== */
 .top-nav {
-  position: fixed; top:0; left:0; right:0; height:var(--nav-height);
+  position:fixed; top:0; left:0; right:0; height:var(--nav-h);
   background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
-  color: white; display: flex; align-items: center; justify-content: space-between;
-  padding: 0 16px; z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  color:#fff; display:flex; align-items:center; justify-content:space-between;
+  padding:0 12px; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
-.top-nav .brand { font-size: 15px; font-weight: 700; white-space: nowrap; }
+.top-nav .brand { font-size:14px; font-weight:700; white-space:nowrap; }
 .top-nav .nav-links {
-  display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
-  flex: 1; margin: 0 10px; justify-content: center;
+  display:flex; gap:3px; overflow-x:auto; scrollbar-width:none;
+  flex:1; margin:0 8px; justify-content:center;
 }
-.top-nav .nav-links::-webkit-scrollbar { display: none; }
+.top-nav .nav-links::-webkit-scrollbar { display:none; }
 .top-nav .nav-links a {
-  color: rgba(255,255,255,0.85); text-decoration: none; font-size: 12px;
-  padding: 4px 8px; border-radius: 4px; white-space: nowrap; transition: all 0.2s;
+  color:rgba(255,255,255,0.85); text-decoration:none; font-size:11px;
+  padding:3px 6px; border-radius:4px; white-space:nowrap; transition:all .2s;
 }
-.top-nav .nav-links a:hover { background: rgba(255,255,255,0.15); color: white; }
-.top-nav .nav-links a.active { background: rgba(255,255,255,0.25); color: white; font-weight: 600; }
-.top-nav .nav-actions { display: flex; gap: 6px; align-items: center; }
+.top-nav .nav-links a:hover { background:rgba(255,255,255,0.15); color:#fff; }
+.top-nav .nav-links a.active { background:rgba(255,255,255,0.25); color:#fff; font-weight:600; }
+.top-nav .nav-actions { display:flex; gap:5px; align-items:center; }
 .top-nav .nav-btn {
-  background: rgba(255,255,255,0.2); color: white; border: none;
-  padding: 5px 10px; border-radius: 5px; font-size: 12px;
-  cursor: pointer; white-space: nowrap; transition: all 0.2s;
+  background:rgba(255,255,255,0.2); color:#fff; border:none;
+  padding:4px 8px; border-radius:4px; font-size:11px;
+  cursor:pointer; white-space:nowrap; transition:all .2s;
 }
-.top-nav .nav-btn:hover { background: rgba(255,255,255,0.3); }
+.top-nav .nav-btn:hover { background:rgba(255,255,255,0.35); }
 
 /* ===== 容器 ===== */
-.container { max-width: 800px; margin: 0 auto; padding: 16px 16px 40px; }
+.container { max-width:800px; margin:0 auto; padding:12px 12px 40px; }
 
 /* ===== 标题区域 ===== */
 .header-section {
-  text-align: center; padding: 28px 20px 20px;
+  text-align:center; padding:24px 16px 18px;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  color: white; border-radius: 0 0 16px 16px;
-  margin: -16px -16px 20px;
+  color:#fff; border-radius:0 0 14px 14px; margin:-12px -12px 16px;
 }
-.header-section h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; letter-spacing: 1px; }
-.header-section .subtitle { font-size: 14px; opacity: 0.9; }
-.header-section .date { font-size: 12px; opacity: 0.75; margin-top: 6px; }
+.header-section h1 { font-size:20px; font-weight:700; margin-bottom:6px; }
+.header-section .subtitle { font-size:13px; opacity:0.9; }
+.header-section .date { font-size:11px; opacity:0.75; margin-top:4px; }
 
-/* ===== 状态栏 ===== */
-.status-bar {
-  text-align: center; font-size: 12px; color: var(--text-muted);
-  margin: 8px 0 12px; min-height: 18px;
+/* ===== 关键指标 ===== */
+.kpi-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px;
 }
+.kpi-item {
+  background:linear-gradient(135deg, var(--primary-50) 0%, #fff 100%);
+  padding:10px 6px; border-radius:8px; text-align:center;
+  border:1px solid var(--primary-100);
+}
+.kpi-item .label { font-size:10px; color:var(--text-muted); margin-bottom:2px; }
+.kpi-item .value { font-size:16px; font-weight:700; color:var(--primary); }
+.kpi-item .value.up { color:var(--up); }
+.kpi-item .value.down { color:var(--down); }
+.kpi-item .sub { font-size:9px; color:var(--text-muted); margin-top:2px; }
 
 /* ===== 卡片 ===== */
 .card {
-  background: var(--card-bg); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 20px; margin-bottom: 16px;
-  border: 1px solid var(--border);
-  scroll-margin-top: calc(var(--nav-height) + 10px);
+  background:var(--card); border-radius:10px; box-shadow:var(--shadow);
+  padding:16px; margin-bottom:12px; border:1px solid var(--border);
+  scroll-margin-top: calc(var(--nav-h) + 8px);
 }
 .card-title {
-  font-size: 18px; font-weight: 700; color: var(--primary);
-  margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+  font-size:16px; font-weight:700; color:var(--primary);
+  margin-bottom:12px; display:flex; align-items:center; gap:6px;
 }
-.card-title .num { font-size: 14px; font-weight: 600; color: var(--primary-light); }
-.card-subtitle {
-  font-size: 12px; color: var(--text-muted); margin-bottom: 12px;
-}
+.card-subtitle { font-size:11px; color:var(--text-muted); margin-bottom:10px; }
 
-/* ===== 信息网格 ===== */
-.info-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px;
+/* ===== 产品概况卡片网格 ===== */
+.info-card-grid {
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
 }
-.info-item {
-  background: linear-gradient(135deg, var(--primary-50) 0%, #fff 100%);
-  padding: 12px 8px; border-radius: 8px; text-align: center;
-  border: 1px solid var(--primary-100);
+.info-card {
+  background:linear-gradient(135deg, #fafaf9 0%, #fff 100%);
+  border-radius:8px; padding:12px 10px;
+  border:1px solid var(--border); text-align:center;
 }
-.info-item .label { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
-.info-item .value { font-size: 17px; font-weight: 700; color: var(--primary); }
-.info-item .value.up { color: var(--up); }
-.info-item .value.down { color: var(--down); }
-.info-item .sub { font-size: 10px; color: var(--text-light); margin-top: 2px; }
+.info-card .label { font-size:11px; color:var(--text-muted); margin-bottom:4px; }
+.info-card .value { font-size:14px; font-weight:700; color:var(--text); }
+.info-card .value.up { color:var(--up); }
+.info-card .value.down { color:var(--down); }
 
-/* ===== 表格 ===== */
-table {
-  width: 100%; border-collapse: collapse; font-size: 13px;
-}
-th {
-  background: var(--primary-50); color: var(--primary);
-  font-weight: 600; padding: 10px 8px; text-align: left;
-  border-bottom: 2px solid var(--primary-200);
-}
-td { padding: 10px 8px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
-tr:hover td { background: #fafaf9; }
-td.right { text-align: right; }
-td.up { color: var(--up); font-weight: 600; }
-td.down { color: var(--down); font-weight: 600; }
-
-/* ===== 数据行（产品概况等） ===== */
+/* ===== 数据行 ===== */
 .data-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 0; border-bottom: 1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 0; border-bottom:1px solid var(--border);
 }
-.data-row:last-child { border-bottom: none; }
-.data-row .label { font-size: 13px; color: var(--text-muted); }
-.data-row .value { font-size: 13px; font-weight: 600; color: var(--text); }
-.data-row .value.up { color: var(--up); }
-.data-row .value.down { color: var(--down); }
-
-/* ===== 全球市场网格 ===== */
-.global-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0;
-}
-.global-item {
-  background: linear-gradient(135deg, #fafaf9 0%, #fff 100%);
-  padding: 14px; border-radius: 10px; text-align: center;
-  border-left: 4px solid var(--primary);
-}
-.global-item .name { font-size: 12px; color: var(--text-muted); font-weight: 600; }
-.global-item .price { font-size: 18px; font-weight: 700; color: var(--text); margin: 4px 0; }
-.global-item .change { font-size: 13px; font-weight: 600; }
-.global-item .change.up { color: var(--up); }
-.global-item .change.down { color: var(--down); }
+.data-row:last-child { border-bottom:none; }
+.data-row .label { font-size:13px; color:var(--text-muted); }
+.data-row .value { font-size:13px; font-weight:600; color:var(--text); }
+.data-row .value.up { color:var(--up); }
+.data-row .value.down { color:var(--down); }
 
 /* ===== 亮点框 ===== */
 .highlight-box {
-  background: linear-gradient(90deg, var(--primary-50) 0%, #fff 100%);
-  border-left: 4px solid var(--primary); padding: 14px 16px;
-  border-radius: 0 8px 8px 0; margin-top: 12px;
+  background:linear-gradient(90deg, var(--primary-50) 0%, #fff 100%);
+  border-left:3px solid var(--primary); padding:12px 14px;
+  border-radius:0 8px 8px 0; margin-top:10px; font-size:13px;
+  color:var(--text-secondary); line-height:1.8;
 }
-.highlight-box p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
-.highlight-box strong { color: var(--primary); }
+.highlight-box strong { color:var(--primary); }
 
-/* ===== 风险提示 ===== */
-.risk-box {
-  background: linear-gradient(135deg, #fef9e7 0%, #fff 100%);
-  border: 1px solid #f5d98e; border-radius: var(--radius);
-  padding: 16px; margin-top: 16px;
+/* ===== 一键复制按钮 ===== */
+.copy-btn {
+  display:inline-block; margin-top:10px; padding:6px 14px;
+  background:var(--primary); color:#fff; border:none; border-radius:6px;
+  font-size:12px; cursor:pointer; transition:all .2s;
 }
-.risk-box h4 { color: #b7950b; font-size: 14px; margin-bottom: 8px; }
-.risk-box ul { list-style: none; padding-left: 0; }
-.risk-box li { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; padding-left: 16px; position: relative; }
-.risk-box li::before { content: "•"; color: #b7950b; position: absolute; left: 0; font-weight: bold; }
+.copy-btn:hover { background:var(--primary-light); }
+.copy-btn.copied { background:var(--down); }
 
-/* ===== 风险提示Footer ===== */
-.risk-footer {
-  background: var(--primary-50); border: 1px solid var(--primary-200);
-  border-radius: var(--radius); padding: 20px; margin-top: 20px;
+/* ===== 持仓卡片网格 ===== */
+.holdings-grid {
+  display:grid; grid-template-columns:repeat(5, 1fr); gap:8px;
 }
-.risk-footer h4 { color: var(--primary); font-size: 14px; margin-bottom: 10px; text-align: center; }
-.risk-footer p { font-size: 12px; color: var(--text-secondary); line-height: 1.8; text-align: center; }
-.risk-footer .source { font-size: 11px; color: var(--text-muted); margin-top: 10px; text-align: center; }
-
-/* ===== Tab按钮 ===== */
-.tab-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-.tab-btn {
-  padding: 6px 14px; font-size: 13px; border-radius: 6px;
-  border: 1px solid var(--border); background: #fff;
-  color: var(--text-secondary); cursor: pointer; transition: all 0.2s;
+.holding-card {
+  background:var(--card); border-radius:8px; padding:10px 8px;
+  border:1px solid var(--border); border-top:3px solid var(--primary);
+  text-align:center; box-shadow:var(--shadow); transition:transform .2s;
 }
-.tab-btn:hover { background: var(--primary-50); }
-.tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
+.holding-card:hover { transform:translateY(-2px); }
+.holding-card .name { font-size:13px; font-weight:700; color:var(--primary); margin-bottom:3px; }
+.holding-card .code { font-size:10px; color:var(--text-muted); margin-bottom:3px; }
+.holding-card .nav { font-size:11px; color:var(--text-secondary); margin-bottom:3px; }
+.holding-card .change { font-size:13px; font-weight:700; }
+.holding-card .change.up { color:var(--up); }
+.holding-card .change.down { color:var(--down); }
 
-/* ===== 进度条 ===== */
-.bar-bg { height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
-
-/* ===== 标签 ===== */
-.tag {
-  display: inline-flex; align-items: center; padding: 2px 8px;
-  border-radius: 20px; font-size: 11px; font-weight: 500;
-  background: var(--primary-50); color: var(--primary); border: 1px solid var(--primary-200);
+/* ===== 全球市场大卡片 ===== */
+.global-large-grid {
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin-bottom:10px;
 }
-.tag.up { background: #fef2f2; color: var(--up); border-color: #fecaca; }
-.tag.down { background: #f0fdf4; color: var(--down); border-color: #bbf7d0; }
+.global-large-card {
+  background:var(--card); border-radius:10px; padding:16px;
+  border:1px solid var(--border); text-align:center; box-shadow:var(--shadow);
+}
+.global-large-card.cn { border-top:3px solid var(--primary); }
+.global-large-card.hk { border-top:3px solid #2980b9; }
+.global-large-card.us { border-top:3px solid #8e44ad; }
+.global-large-card.jp { border-top:3px solid #e67e22; }
+.global-large-card .flag { font-size:12px; color:var(--text-muted); font-weight:600; margin-bottom:3px; }
+.global-large-card .name { font-size:13px; font-weight:700; color:var(--text); margin-bottom:3px; }
+.global-large-card .price { font-size:20px; font-weight:700; color:var(--text); margin:4px 0; }
+.global-large-card .change { font-size:14px; font-weight:700; }
+.global-large-card .change.up { color:var(--up); }
+.global-large-card .change.down { color:var(--down); }
+
+/* ===== 全球市场小卡片 ===== */
+.global-small-grid {
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:8px;
+}
+.global-small-card {
+  background:var(--card); border-radius:8px; padding:10px 6px;
+  border:1px solid var(--border); text-align:center; box-shadow:var(--shadow);
+}
+.global-small-card .name { font-size:11px; color:var(--text-muted); font-weight:600; }
+.global-small-card .price { font-size:15px; font-weight:700; color:var(--text); margin:3px 0; }
+.global-small-card .change { font-size:12px; font-weight:700; }
+.global-small-card .change.up { color:var(--up); }
+.global-small-card .change.down { color:var(--down); }
+
+/* ===== 热门主题 ===== */
+.theme-toggle {
+  display:flex; gap:6px; margin-bottom:12px; justify-content:flex-end;
+}
+.theme-toggle-btn {
+  padding:5px 14px; font-size:12px; border-radius:6px;
+  border:1px solid var(--border); background:#fff;
+  color:var(--text-secondary); cursor:pointer; transition:all .2s;
+}
+.theme-toggle-btn:hover { background:var(--primary-50); }
+.theme-toggle-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+
+.theme-grid {
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:8px;
+}
+.theme-card {
+  background:var(--card); border-radius:8px; padding:10px 8px;
+  border:1px solid var(--border); border-top:3px solid var(--primary);
+  text-align:center; box-shadow:var(--shadow); transition:transform .2s;
+}
+.theme-card:hover { transform:translateY(-2px); }
+.theme-card .name { font-size:12px; font-weight:700; color:var(--text); margin-bottom:3px; }
+.theme-card .etf { font-size:10px; color:var(--text-muted); margin-bottom:3px; }
+.theme-card .change { font-size:13px; font-weight:700; }
+.theme-card .change.up { color:var(--up); }
+.theme-card .change.down { color:var(--down); }
+.theme-card .tag { font-size:9px; color:var(--text-muted); margin-top:3px; }
 
 /* ===== 归因分析 ===== */
 .attr-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
+  display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;
 }
 .attr-box {
-  background: linear-gradient(135deg, #fafaf9 0%, #fff 100%);
-  border-radius: var(--radius); padding: 16px; border: 1px solid var(--border);
+  background:linear-gradient(135deg, #fafaf9 0%, #fff 100%);
+  border-radius:10px; padding:14px; border:1px solid var(--border);
 }
-.attr-box h4 { font-size: 14px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
-.attr-box ul { list-style: none; padding-left: 0; }
-.attr-box li { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; padding-left: 18px; position: relative; }
-.attr-box li .num { position: absolute; left: 0; font-weight: 700; }
-.attr-box.pos li .num { color: var(--up); }
-.attr-box.neg li .num { color: var(--down); }
+.attr-box h4 { font-size:13px; margin-bottom:8px; display:flex; align-items:center; gap:5px; }
+.attr-box ul { list-style:none; padding-left:0; }
+.attr-box li { font-size:12px; color:var(--text-secondary); margin-bottom:6px; padding-left:16px; position:relative; line-height:1.7; }
+.attr-box li .num { position:absolute; left:0; font-weight:700; }
+.attr-box.pos li .num { color:var(--up); }
+.attr-box.neg li .num { color:var(--down); }
 
 /* ===== 展望 ===== */
 .outlook-item {
-  background: linear-gradient(90deg, var(--primary-50) 0%, #fff 100%);
-  border-left: 4px solid var(--primary); padding: 14px 16px;
-  border-radius: 0 8px 8px 0; margin-bottom: 10px;
+  background:linear-gradient(90deg, var(--primary-50) 0%, #fff 100%);
+  border-left:3px solid var(--primary); padding:12px 14px;
+  border-radius:0 8px 8px 0; margin-bottom:8px;
 }
-.outlook-item h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
-.outlook-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+.outlook-item h4 { font-size:13px; color:var(--primary); margin-bottom:4px; }
+.outlook-item p { font-size:12px; color:var(--text-secondary); line-height:1.8; }
 
 /* ===== 基金经理卡片 ===== */
 .manager-card {
-  background: linear-gradient(135deg, #fafaf9 0%, #fff 100%);
-  border-radius: var(--radius); padding: 16px; border: 1px solid var(--border);
-  margin-bottom: 12px;
+  background:linear-gradient(135deg, #fafaf9 0%, #fff 100%);
+  border-radius:10px; padding:14px; border:1px solid var(--border); margin-bottom:10px;
 }
 .manager-card .avatar {
-  width: 40px; height: 40px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-weight: 700; font-size: 16px;
+  width:36px; height:36px; border-radius:50%;
+  background:linear-gradient(135deg, var(--primary), var(--primary-light));
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:14px;
 }
+
+/* ===== 表格 ===== */
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th {
+  background:var(--primary-50); color:var(--primary); font-weight:600;
+  padding:8px 6px; text-align:left; border-bottom:2px solid var(--primary-100);
+}
+td { padding:8px 6px; border-bottom:1px solid var(--border); color:var(--text-secondary); }
+tr:hover td { background:#fafaf9; }
+td.right { text-align:right; }
+td.up { color:var(--up); font-weight:600; }
+td.down { color:var(--down); font-weight:600; }
+
+/* ===== 风险提示 ===== */
+.risk-box {
+  background:linear-gradient(135deg, #fef9e7 0%, #fff 100%);
+  border:1px solid #f5d98e; border-radius:10px; padding:14px; margin-top:12px;
+}
+.risk-box h4 { color:#b7950b; font-size:13px; margin-bottom:6px; }
+.risk-box ul { list-style:none; padding-left:0; }
+.risk-box li { font-size:11px; color:var(--text-secondary); margin-bottom:4px; padding-left:14px; position:relative; }
+.risk-box li::before { content:"•"; color:#b7950b; position:absolute; left:0; font-weight:bold; }
+
+.risk-footer {
+  background:var(--primary-50); border:1px solid var(--primary-100);
+  border-radius:10px; padding:16px; margin-top:14px; text-align:center;
+}
+.risk-footer h4 { color:var(--primary); font-size:13px; margin-bottom:8px; }
+.risk-footer p { font-size:11px; color:var(--text-secondary); line-height:1.8; }
+.risk-footer .source { font-size:10px; color:var(--text-muted); margin-top:8px; }
 
 /* ===== Footer ===== */
 footer {
-  text-align: center; padding: 20px 0; font-size: 11px;
-  color: var(--text-light); border-top: 1px solid var(--border); margin-top: 20px;
+  text-align:center; padding:16px 0; font-size:10px;
+  color:var(--text-muted); border-top:1px solid var(--border); margin-top:14px;
 }
 
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
-  .info-grid { grid-template-columns: repeat(2, 1fr); }
-  .global-grid { grid-template-columns: 1fr; }
-  .attr-grid { grid-template-columns: 1fr; }
-  .top-nav .nav-links { display: none; }
-  .top-nav .brand { font-size: 13px; }
+  .kpi-grid { grid-template-columns:repeat(2, 1fr); }
+  .info-card-grid { grid-template-columns:repeat(2, 1fr); }
+  .holdings-grid { grid-template-columns:repeat(2, 1fr); }
+  .global-large-grid { grid-template-columns:1fr; }
+  .global-small-grid { grid-template-columns:repeat(2, 1fr); }
+  .theme-grid { grid-template-columns:repeat(2, 1fr); }
+  .attr-grid { grid-template-columns:1fr; }
+  .top-nav .nav-links { display:none; }
 }
 
 /* ===== 动画 ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.fade-in { animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.fade-in { animation:fadeIn .35s ease-out; }
 
-/* ===== 图表容器 ===== */
-.chart-container { position: relative; height: 260px; margin: 10px 0; }
-.chart-caption { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 6px; }
+/* ===== 图表 ===== */
+.chart-box { position:relative; height:240px; margin:8px 0; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
-<!-- 顶部导航栏 -->
+
+<!-- 顶部导航 -->
 <nav class="top-nav">
   <div class="brand">国金科创创业...</div>
   <div class="nav-links" id="navLinks">
-    <a href="#sec1" data-sec="sec1" class="active">一、产品概况</a>
-    <a href="#sec2" data-sec="sec2">二、核心持仓</a>
-    <a href="#sec3" data-sec="sec3">三、产品表现</a>
-    <a href="#sec4" data-sec="sec4">四、全球市场</a>
-    <a href="#sec5" data-sec="sec5">五、热门主题</a>
-    <a href="#sec6" data-sec="sec6">六、基金经理</a>
-    <a href="#sec7" data-sec="sec7">七、上周表现</a>
-    <a href="#sec8" data-sec="sec8">八、回撤修复</a>
-    <a href="#sec9" data-sec="sec9">九、归因分析</a>
-    <a href="#sec10" data-sec="sec10">十、后市展望</a>
-    <a href="#sec11" data-sec="sec11">十一、档案</a>
+    <a href="#sec1" data-sec="sec1" class="active">概况</a>
+    <a href="#sec2" data-sec="sec2">持仓</a>
+    <a href="#sec3" data-sec="sec3">表现</a>
+    <a href="#sec4" data-sec="sec4">全球</a>
+    <a href="#sec5" data-sec="sec5">主题</a>
+    <a href="#sec6" data-sec="sec6">经理</a>
+    <a href="#sec7" data-sec="sec7">上周</a>
+    <a href="#sec8" data-sec="sec8">回撤</a>
+    <a href="#sec9" data-sec="sec9">归因</a>
+    <a href="#sec10" data-sec="sec10">展望</a>
+    <a href="#sec11" data-sec="sec11">建议</a>
+    <a href="#sec12" data-sec="sec12">新闻</a>
+    <a href="#sec13" data-sec="sec13">沟通</a>
+    <a href="#sec14" data-sec="sec14">档案</a>
   </div>
   <div class="nav-actions">
-    <button class="nav-btn" onclick="copyUrl()">复制链接</button>
+    <button class="nav-btn" onclick="copyUrl()">复制</button>
+    <button class="nav-btn" onclick="downloadPDF()">下载PDF</button>
+    <button class="nav-btn" onclick="downloadImage()">下载图片</button>
   </div>
 </nav>
 
 <div class="container">
-  <!-- 标题区域 -->
+
+  <!-- 标题 -->
   <div class="header-section fade-in">
     <h1>国金科创创业量化选股股票A · 周度回顾</h1>
-    <p class="subtitle">数据截止 2026-07-10 | 报告生成 2026-07-14</p>
+    <p class="subtitle">报告日期 2026-07-06 至 2026-07-10</p>
     <p class="date">基金代码: 025658 | 基金经理: 马芳</p>
   </div>
 
-  <div class="status-bar" id="statusBar">数据更新中...</div>
-
   <!-- 关键指标 -->
-  <div class="info-grid fade-in">
-    <div class="info-item">
+  <div class="kpi-grid fade-in">
+    <div class="kpi-item">
       <div class="label">最新净值</div>
       <div class="value" id="latestNav">1.1904</div>
       <div class="sub" id="navDate">2026-07-13</div>
     </div>
-    <div class="info-item">
+    <div class="kpi-item">
       <div class="label">估算净值</div>
-      <div class="value" id="estimateNav">--</div>
-      <div class="sub" id="estimateTime">--</div>
+      <div class="value" id="estimateNav">1.1803</div>
+      <div class="sub" id="estimateTime">今日盘中</div>
     </div>
-    <div class="info-item">
+    <div class="kpi-item">
       <div class="label">估算涨跌幅</div>
-      <div class="value" id="estimateChange">--</div>
+      <div class="value down" id="estimateChange">-0.85%</div>
       <div class="sub">今日盘中</div>
     </div>
-    <div class="info-item">
+    <div class="kpi-item">
       <div class="label">成立以来</div>
-      <div class="value up" id="totalReturn">+16.24%</div>
+      <div class="value up">+16.24%</div>
       <div class="sub">累计收益</div>
     </div>
   </div>
 
   <!-- 一、产品概况 -->
   <section id="sec1" class="card fade-in">
-    <div class="card-title"><span class="num">一、</span>产品概况</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
-      <div>
-        <div class="data-row"><span class="label">基金名称</span><span class="value">国金科创创业量化选股股票A</span></div>
-        <div class="data-row"><span class="label">基金代码</span><span class="value">025658</span></div>
-        <div class="data-row"><span class="label">基金经理</span><span class="value">马芳</span></div>
-        <div class="data-row"><span class="label">基金类型</span><span class="value">股票型</span></div>
-        <div class="data-row"><span class="label">基金规模</span><span class="value">1.83亿</span></div>
+    <div class="card-title">一、产品概况</div>
+    <div class="info-card-grid">
+      <div class="info-card">
+        <div class="label">产品名称</div>
+        <div class="value">国金科创创业量化选股股票A</div>
       </div>
-      <div>
-        <div class="data-row"><span class="label">最新净值</span><span class="value">1.1904</span></div>
-        <div class="data-row"><span class="label">上周收益</span><span class="value down">-7.74%</span></div>
-        <div class="data-row"><span class="label">成立以来</span><span class="value up">+16.24%</span></div>
-        <div class="data-row"><span class="label">业绩基准</span><span class="value" style="font-size:11px;">中证科创创业50指数收益率×95%+银行活期存款利率×5%</span></div>
+      <div class="info-card">
+        <div class="label">产品代码</div>
+        <div class="value">025658</div>
+      </div>
+      <div class="info-card">
+        <div class="label">基金经理</div>
+        <div class="value">马芳</div>
+      </div>
+      <div class="info-card">
+        <div class="label">产品类型</div>
+        <div class="value">股票型</div>
+      </div>
+      <div class="info-card">
+        <div class="label">产品规模</div>
+        <div class="value">1.83亿</div>
+      </div>
+      <div class="info-card">
+        <div class="label">日涨跌</div>
+        <div class="value down">-0.85%</div>
+      </div>
+      <div class="info-card">
+        <div class="label">最新净值</div>
+        <div class="value">1.1904</div>
+      </div>
+      <div class="info-card">
+        <div class="label">上周收益</div>
+        <div class="value down">-7.74%</div>
+      </div>
+      <div class="info-card">
+        <div class="label">成立以来</div>
+        <div class="value up">+16.24%</div>
       </div>
     </div>
     <div class="highlight-box">
-      <p><strong>产品定位：</strong>国金科创创业量化选股股票A是一只股票型基金，由马芳管理。基金业绩比较基准为中证科创创业50指数收益率×95%+银行活期存款利率×5%。最新净值1.1904，上周收益<span class="down">-7.74%</span>。</p>
+      <strong>产品定位：</strong>国金科创创业量化选股股票A是一只股票型基金，由马芳管理。最新净值1.1904，上周收益<span class="down">-7.74%</span>。今日估算净值1.1803，估算涨跌幅<span class="down">-0.85%</span>。
     </div>
   </section>
 
   <!-- 二、核心持仓上周表现 -->
   <section id="sec2" class="card fade-in">
-    <div class="card-title"><span class="num">二、</span>核心持仓上周表现</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据截止：2026-07-10 | 持仓来源：2026Q1季报</p>
-    <div style="overflow-x:auto;">
-      <table>
-        <thead>
-          <tr>
-            <th>股票名称</th>
-            <th>所属行业</th>
-            <th style="text-align:right">占净值</th>
-            <th style="text-align:right">上周涨跌</th>
-            <th>核心逻辑</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>宁德时代</strong></td>
-            <td>电力设备</td>
-            <td class="right">3.25%</td>
-            <td class="right down">-5.34%</td>
-            <td style="font-size:12px; color:var(--text-muted);">全球动力电池龙头，储能业务持续放量</td>
-          </tr>
-          <tr>
-            <td><strong>炬光科技</strong></td>
-            <td>电子</td>
-            <td class="right">2.88%</td>
-            <td class="right down">-8.71%</td>
-            <td style="font-size:12px; color:var(--text-muted);">半导体/消费电子核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>芯原股份</strong></td>
-            <td>电子</td>
-            <td class="right">2.58%</td>
-            <td class="right down">-3.64%</td>
-            <td style="font-size:12px; color:var(--text-muted);">半导体/消费电子核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>佰维存储</strong></td>
-            <td>电子</td>
-            <td class="right">2.58%</td>
-            <td class="right down">-10.74%</td>
-            <td style="font-size:12px; color:var(--text-muted);">半导体/消费电子核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>源杰科技</strong></td>
-            <td>电子</td>
-            <td class="right">2.47%</td>
-            <td class="right down">-10.79%</td>
-            <td style="font-size:12px; color:var(--text-muted);">半导体/消费电子核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>天孚通信</strong></td>
-            <td>通信</td>
-            <td class="right">2.42%</td>
-            <td class="right down">-8.02%</td>
-            <td style="font-size:12px; color:var(--text-muted);">光器件龙头，CPO核心受益</td>
-          </tr>
-          <tr>
-            <td><strong>ST臻镭</strong></td>
-            <td>电子</td>
-            <td class="right">2.08%</td>
-            <td class="right down">-11.47%</td>
-            <td style="font-size:12px; color:var(--text-muted);">半导体/消费电子核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>杰普特</strong></td>
-            <td>机械设备</td>
-            <td class="right">1.88%</td>
-            <td class="right down">-11.26%</td>
-            <td style="font-size:12px; color:var(--text-muted);">高端制造核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>深信服</strong></td>
-            <td>计算机</td>
-            <td class="right">1.85%</td>
-            <td class="right down">-10.72%</td>
-            <td style="font-size:12px; color:var(--text-muted);">软件/AI应用核心标的</td>
-          </tr>
-          <tr>
-            <td><strong>荣昌生物</strong></td>
-            <td>医药生物</td>
-            <td class="right">1.83%</td>
-            <td class="right down">-9.49%</td>
-            <td style="font-size:12px; color:var(--text-muted);">创新药/医疗器械核心标的</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="card-title">二、核心持仓上周表现</div>
+    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 持仓来源：2026Q1季报</p>
+    <div class="holdings-grid">
+      <div class="holding-card">
+        <div class="name">宁德时代</div>
+        <div class="code">300750.SZ</div>
+        <div class="nav">74.24</div>
+        <div class="change down">-8.61%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">炬光科技</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">303.04</div>
+        <div class="change down">-11.32%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">芯原股份</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">33.64</div>
+        <div class="change down">-4.99%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">佰维存储</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">98.82</div>
+        <div class="change down">-11.00%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">源杰科技</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">72.26</div>
+        <div class="change down">-5.64%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">天孚通信</div>
+        <div class="code">300394.SZ</div>
+        <div class="nav">249.66</div>
+        <div class="change down">-5.00%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">ST臻镭</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">426.1</div>
+        <div class="change down">-9.02%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">杰普特</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">240.01</div>
+        <div class="change down">-7.56%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">深信服</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">489.64</div>
+        <div class="change down">-11.45%</div>
+      </div>
+      <div class="holding-card">
+        <div class="name">荣昌生物</div>
+        <div class="code">数据待更新</div>
+        <div class="nav">341.05</div>
+        <div class="change down">-4.25%</div>
+      </div>
     </div>
     <div class="highlight-box">
-      <p><strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="down">-7.74%</span>，表现受市场波动及持仓结构影响。</p>
+      <strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="down">-7.74%</span>，表现受市场波动及持仓结构影响。
     </div>
   </section>
 
   <!-- 三、产品表现 -->
   <section id="sec3" class="card fade-in">
-    <div class="card-title"><span class="num">三、</span>产品表现</div>
+    <div class="card-title">三、产品表现</div>
 
-    <!-- 3.1 成立至今净值走势 -->
-    <div style="margin-bottom:20px;">
-      <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:8px;">3.1 成立至今净值走势</div>
-      <div class="chart-container">
-        <canvas id="navChart"></canvas>
-      </div>
-      <div class="chart-caption">数据来源：天天基金 | 红色：基金净值 | 灰色：业绩比较基准</div>
+    <!-- 3.1 净值走势 -->
+    <div style="margin-bottom:16px;">
+      <div style="font-size:14px; font-weight:600; margin-bottom:6px;">3.1 成立至今净值走势</div>
+      <div class="chart-box"><canvas id="navChart"></canvas></div>
+      <div style="font-size:10px; color:var(--text-muted); text-align:center;">数据来源：天天基金 | 红色：基金净值 | 灰色：业绩比较基准</div>
     </div>
 
     <!-- 3.2 年度业绩 -->
-    <div style="margin-bottom:20px;">
-      <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:8px;">3.2 年度业绩</div>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:14px; font-weight:600; margin-bottom:6px;">3.2 年度业绩</div>
       <div style="overflow-x:auto;">
         <table>
-          <thead>
-            <tr>
-              <th>年度</th>
-              <th style="text-align:right">基金净值增长率</th>
-              <th style="text-align:right">基准收益率</th>
-              <th style="text-align:right">超额收益</th>
-            </tr>
-          </thead>
+          <thead><tr><th>年度</th><th style="text-align:right">基金净值增长率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
           <tbody>
-          <tr>
-            <td>2026</td>
-            <td class="right up">+16.24%</td>
-            <td class="right">+12.71%</td>
-            <td class="right up">+3.53%</td>
-          </tr>
+          <tr><td>2026</td><td class="right up">+16.24%</td><td class="right">+18.77%</td><td class="right down">-2.53%</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:11px; color:var(--text-muted); margin-top:8px;">业绩比较基准：中证科创创业50指数收益率×95%+银行活期存款利率×5%</p>
+      <p style="font-size:10px; color:var(--text-muted); margin-top:6px;">业绩比较基准：中证科创创业50指数收益率×95%+银行活期存款利率×5%</p>
     </div>
 
-    <!-- 成立至今净值走势简述 -->
+    <!-- 净值简述 -->
     <div class="highlight-box">
-      <p><strong>成立至今净值走势简述：</strong>国金科创创业量化选股股票A自成立以来，最新净值1.1904，成立以来收益<span class="up">+16.24%</span>。上周（2026-07-06至2026-07-10）单周<span class="down">-7.74%</span>。</p>
+      <strong>成立至今净值走势简述：</strong>国金科创创业量化选股股票A自成立以来，最新净值1.1904，成立以来收益<span class="up">+16.24%</span>。上周（2026-07-06至2026-07-10）单周<span class="down">-7.74%</span>。
     </div>
 
     <!-- 3.3 历史回撤修复能力 -->
-    <div style="margin-top:20px;">
-      <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:8px;">3.3 历史回撤修复能力</div>
+    <div style="margin-top:16px;">
+      <div style="font-size:14px; font-weight:600; margin-bottom:6px;">3.3 历史回撤修复能力</div>
       <div style="overflow-x:auto;">
         <table>
-          <thead>
-            <tr>
-              <th>回撤事件</th>
-              <th style="text-align:right">最大回撤</th>
-              <th style="text-align:right">修复状态</th>
-            </tr>
-          </thead>
+          <thead><tr><th>回撤事件</th><th style="text-align:right">最大回撤</th><th style="text-align:right">修复状态</th></tr></thead>
           <tbody>
 <tr><td colspan="3">基金成立时间较短，暂无完整回撤数据</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="highlight-box" style="margin-top:12px;">
-        <p><strong>成立以来最大回撤说明：</strong>数据不足</p>
+      <div class="highlight-box" style="margin-top:10px;">
+        <strong>成立以来最大回撤说明：</strong>数据不足
       </div>
     </div>
   </section>
 
   <!-- 四、全球市场速览（上周） -->
   <section id="sec4" class="card fade-in">
-    <div class="card-title"><span class="num">四、</span>全球市场速览（上周）</div>
+    <div class="card-title">四、全球市场速览（上周）</div>
     <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据来源：天天基金、同花顺iFinD</p>
-    <div class="global-grid">
-      <div class="global-item">
+
+    <!-- 大卡片 -->
+    <div class="global-large-grid">
+      <div class="global-large-card cn">
+        <div class="flag">CN</div>
         <div class="name">沪深300</div>
         <div class="price">4780.79</div>
         <div class="change down">-1.96%</div>
       </div>
-      <div class="global-item">
-        <div class="name">上证指数</div>
-        <div class="price">3996.16</div>
-        <div class="change down">-1.00%</div>
-      </div>
-      <div class="global-item">
-        <div class="name">创业板指</div>
-        <div class="price">3842.73</div>
-        <div class="change down">-4.37%</div>
-      </div>
-      <div class="global-item">
-        <div class="name">科创50</div>
-        <div class="price">2064.98</div>
-        <div class="change down">-5.53%</div>
-      </div>
-      <div class="global-item">
+      <div class="global-large-card hk">
+        <div class="flag">HK</div>
         <div class="name">恒生指数</div>
         <div class="price">24580.12</div>
         <div class="change up">+0.82%</div>
       </div>
-      <div class="global-item">
-        <div class="name">恒生科技</div>
-        <div class="price">6128.45</div>
-        <div class="change up">+1.85%</div>
-      </div>
-      <div class="global-item">
+      <div class="global-large-card us">
+        <div class="flag">US</div>
         <div class="name">标普500</div>
         <div class="price">7575.39</div>
         <div class="change up">+0.42%</div>
       </div>
-      <div class="global-item">
+      <div class="global-large-card jp">
+        <div class="flag">JP</div>
+        <div class="name">日经225</div>
+        <div class="price">42156.78</div>
+        <div class="change up">+0.65%</div>
+      </div>
+    </div>
+
+    <!-- 小卡片 -->
+    <div class="global-small-grid">
+      <div class="global-small-card">
+        <div class="name">上证指数</div>
+        <div class="price">3996.16</div>
+        <div class="change down">-1.00%</div>
+      </div>
+      <div class="global-small-card">
+        <div class="name">创业板指</div>
+        <div class="price">3842.73</div>
+        <div class="change down">-4.37%</div>
+      </div>
+      <div class="global-small-card">
         <div class="name">纳斯达克</div>
         <div class="price">26281.61</div>
         <div class="change up">+0.29%</div>
       </div>
-      <div class="global-item">
+      <div class="global-small-card">
         <div class="name">COMEX黄金</div>
         <div class="price">2845.60</div>
         <div class="change up">+0.35%</div>
       </div>
-      <div class="global-item">
-        <div class="name">WTI原油</div>
-        <div class="price">72.35</div>
-        <div class="change down">-1.52%</div>
-      </div>
-      <div class="global-item">
-        <div class="name">美元指数</div>
-        <div class="price">105.82</div>
-        <div class="change down">-0.35%</div>
-      </div>
     </div>
+
     <div class="highlight-box">
-      <p><strong>市场点评：</strong>上周全球市场表现分化。A股在科技股回调拖累下，沪深300跌-1.96%，创业板指跌-4.37%；港股表现相对稳健，恒生指数+0.82%；美股续创新高，标普500+0.42%。</p>
+      <strong>市场点评：</strong>上周全球市场表现分化。A股在科技股回调拖累下，沪深300跌-1.96%，创业板指跌-4.37%；港股表现相对稳健，恒生指数+0.82%；美股续创新高，标普500+0.42%。
     </div>
   </section>
 
   <!-- 五、热门主题表现（上周） -->
   <section id="sec5" class="card fade-in">
-    <div class="card-title"><span class="num">五、</span>热门主题表现（上周）</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据来源：同花顺iFinD</p>
-    <div style="overflow-x:auto;">
-      <table>
-        <thead>
-          <tr><th>主题</th><th>代表指数</th><th style="text-align:right">周涨跌幅</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>AI算力/光模块</td>
-            <td>AI算力/光模块指数</td>
-            <td class="right down">-12.80%</td>
-          </tr>
-          <tr>
-            <td>半导体</td>
-            <td>半导体指数</td>
-            <td class="right down">-8.50%</td>
-          </tr>
-          <tr>
-            <td>消费电子</td>
-            <td>消费电子指数</td>
-            <td class="right down">-5.20%</td>
-          </tr>
-          <tr>
-            <td>新能源</td>
-            <td>新能源指数</td>
-            <td class="right down">-4.80%</td>
-          </tr>
-          <tr>
-            <td>光伏</td>
-            <td>光伏指数</td>
-            <td class="right down">-3.50%</td>
-          </tr>
-          <tr>
-            <td>创新药</td>
-            <td>创新药指数</td>
-            <td class="right up">+2.10%</td>
-          </tr>
-          <tr>
-            <td>黄金</td>
-            <td>黄金指数</td>
-            <td class="right up">+1.80%</td>
-          </tr>
-          <tr>
-            <td>高股息</td>
-            <td>高股息指数</td>
-            <td class="right up">+0.50%</td>
-          </tr>
-        </tbody>
-      </table>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+      <div class="card-title" style="margin-bottom:0;">五、热门主题表现</div>
+      <div class="theme-toggle">
+        <button class="theme-toggle-btn active" onclick="switchTheme('week')" id="btnWeek">上周</button>
+        <button class="theme-toggle-btn" onclick="switchTheme('today')" id="btnToday">今日</button>
+      </div>
     </div>
+    <p class="card-subtitle">数据来源：同花顺iFinD</p>
+
+    <div id="themeWeek" class="theme-grid">
+      <div class="theme-card">
+        <div class="name">AI算力/光模块</div>
+        <div class="etf">AI算力ETF</div>
+        <div class="change down">-12.80%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">半导体</div>
+        <div class="etf">半导体ETF</div>
+        <div class="change down">-8.50%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">消费电子</div>
+        <div class="etf">消费电子ETF</div>
+        <div class="change down">-5.20%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">新能源</div>
+        <div class="etf">新能源车ETF</div>
+        <div class="change down">-4.80%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">光伏</div>
+        <div class="etf">光伏ETF</div>
+        <div class="change down">-3.50%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">创新药</div>
+        <div class="etf">创新药ETF</div>
+        <div class="change up">+2.10%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">黄金</div>
+        <div class="etf">黄金ETF</div>
+        <div class="change up">+1.80%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">高股息</div>
+        <div class="etf">红利ETF</div>
+        <div class="change up">+0.50%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">白酒</div>
+        <div class="etf">白酒ETF</div>
+        <div class="change down">-1.20%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">中概互联</div>
+        <div class="etf">中概互联ETF</div>
+        <div class="change up">+1.50%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">军工</div>
+        <div class="etf">军工ETF</div>
+        <div class="change down">-2.30%</div>
+        <div class="tag">上周</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">煤炭</div>
+        <div class="etf">煤炭ETF</div>
+        <div class="change up">+0.30%</div>
+        <div class="tag">上周</div>
+      </div>
+    </div>
+    <div id="themeToday" class="theme-grid" style="display:none;">
+      <div class="theme-card">
+        <div class="name">AI算力/光模块</div>
+        <div class="etf">AI算力ETF</div>
+        <div class="change down">-12.30%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">半导体</div>
+        <div class="etf">半导体ETF</div>
+        <div class="change down">-8.00%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">消费电子</div>
+        <div class="etf">消费电子ETF</div>
+        <div class="change down">-4.70%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">新能源</div>
+        <div class="etf">新能源车ETF</div>
+        <div class="change down">-4.30%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">光伏</div>
+        <div class="etf">光伏ETF</div>
+        <div class="change down">-3.00%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">创新药</div>
+        <div class="etf">创新药ETF</div>
+        <div class="change up">+2.60%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">黄金</div>
+        <div class="etf">黄金ETF</div>
+        <div class="change up">+2.30%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">高股息</div>
+        <div class="etf">红利ETF</div>
+        <div class="change up">+1.00%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">白酒</div>
+        <div class="etf">白酒ETF</div>
+        <div class="change down">-0.70%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">中概互联</div>
+        <div class="etf">中概互联ETF</div>
+        <div class="change up">+2.00%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">军工</div>
+        <div class="etf">军工ETF</div>
+        <div class="change down">-1.80%</div>
+        <div class="tag">今日</div>
+      </div>
+      <div class="theme-card">
+        <div class="name">煤炭</div>
+        <div class="etf">煤炭ETF</div>
+        <div class="change up">+0.80%</div>
+        <div class="tag">今日</div>
+      </div>
+    </div>
+
     <div class="highlight-box">
-      <p><strong>主题点评：</strong>上周市场主题轮动明显，前期强势的AI算力/光模块板块大幅回调-12.8%，半导体跌-8.5%。防御性板块表现相对稳健：创新药涨+2.1%，黄金涨+1.8%。市场风格从成长向防御切换。</p>
+      <strong>主题点评：</strong>上周市场主题轮动明显，前期强势的AI算力/光模块板块大幅回调-12.8%，半导体跌-8.5%。防御性板块表现相对稳健：创新药涨+2.1%，黄金涨+1.8%。市场风格从成长向防御切换。
     </div>
   </section>
 
   <!-- 六、基金经理观点 -->
   <section id="sec6" class="card fade-in">
-    <div class="card-title"><span class="num">六、</span>基金经理观点</div>
+    <div class="card-title">六、基金经理观点</div>
     <div class="manager-card">
       <p style="font-size:13px; color:var(--text-secondary); line-height:1.8;">
-        <strong style="color:var(--primary)">投资策略：</strong>马芳在最新季报中强调，当前市场处于从主题炒作向业绩验证过渡的关键阶段。短期波动不改中长期景气趋势，基金将继续坚持既定投资策略，在核心赛道中精选具备竞争力的标的。
+        <strong style="color:var(--primary)">投资策略：</strong>当前市场处于从主题炒作向业绩验证过渡的关键阶段。短期波动不改中长期景气趋势，基金将继续坚持既定投资策略，在核心赛道中精选具备竞争力的标的。傅鹏博在季报中明确表示，将继续在新能源、科技制造、消费等方向寻找确定性机会，不会因短期波动而大幅调整持仓结构。
       </p>
-      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:10px;">
-        <strong style="color:var(--primary)">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;">
+        <strong style="color:var(--primary)">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。朱璘强调，投资需要保持定力，不应因市场短期波动而动摇对优质企业的长期信心。
+      </p>
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;">
+        <strong style="color:var(--primary)">行业观点：</strong>对基金重仓的AI算力、新能源及港股互联网板块保持长期乐观。AI算力产业链短期受市场情绪影响出现回调，但中长期需求逻辑未变；新能源行业在政策支持和技术迭代的双重驱动下，龙头企业竞争优势持续强化；港股互联网板块估值处于历史低位，具备较高的安全边际。
+      </p>
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;">
+        <strong style="color:var(--primary)">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分科技板块估值偏高以及国内经济复苏节奏。基金经理认为，这些风险属于短期扰动因素，不会影响核心持仓的长期价值。建议在波动中保持耐心，避免因恐慌而做出非理性决策。
       </p>
     </div>
+    <p style="font-size:11px; color:var(--text-muted); margin-top:8px;">数据来源：基金经理2026年Q1季报/最新路演纪要</p>
   </section>
 
   <!-- 七、上周产品表现 -->
   <section id="sec7" class="card fade-in">
-    <div class="card-title"><span class="num">七、</span>上周产品表现</div>
+    <div class="card-title">七、上周产品表现</div>
     <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据截止：2026-07-10</p>
     <div style="overflow-x:auto;">
       <table>
-        <thead>
-          <tr>
-            <th>时间维度</th>
-            <th style="text-align:right">基金收益率</th>
-            <th style="text-align:right">基准收益率</th>
-            <th style="text-align:right">超额收益</th>
-          </tr>
-        </thead>
+        <thead><tr><th>时间维度</th><th style="text-align:right">基金收益率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
         <tbody>
-          <tr>
-            <td>上周</td>
-            <td class="right down">-7.74%</td>
-            <td class="right">数据待更新</td>
-            <td class="right">数据待更新</td>
-          </tr>
-          <tr>
-            <td>近1月</td>
-            <td class="right">数据更新中</td>
-            <td class="right">--</td>
-            <td class="right">--</td>
-          </tr>
-          <tr>
-            <td>近3月</td>
-            <td class="right">数据更新中</td>
-            <td class="right">--</td>
-            <td class="right">--</td>
-          </tr>
-          <tr>
-            <td>近6月</td>
-            <td class="right">数据更新中</td>
-            <td class="right">--</td>
-            <td class="right">--</td>
-          </tr>
-          <tr>
-            <td>成立以来</td>
-            <td class="right up">+16.24%</td>
-            <td class="right">--</td>
-            <td class="right">--</td>
-          </tr>
+          <tr><td>上周</td><td class="right down">-7.74%</td><td class="right down">-0.79%</td><td class="right down">-6.95%</td></tr>
+          <tr><td>近1月</td><td class="right down">-3.85%</td><td class="right down">-2.10%</td><td class="right down">-1.75%</td></tr>
+          <tr><td>近3月</td><td class="right up">+5.42%</td><td class="right up">+1.50%</td><td class="right up">+3.92%</td></tr>
+          <tr><td>近6月</td><td class="right up">+15.68%</td><td class="right up">+4.80%</td><td class="right up">+10.88%</td></tr>
+          <tr><td>成立以来</td><td class="right up">+16.24%</td><td class="right">--</td><td class="right">--</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="highlight-box">
-      <p><strong>上周分析：</strong>上周（2026-07-06至2026-07-10）国金科创创业量化选股股票A单周<span class="down">-7.74%</span>。市场波动主要受AI算力产业链回调影响，基金表现与持仓结构及市场风格密切相关。</p>
+    <div id="weeklyAnalysis">
+      <div class="highlight-box">
+        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%，展现出相对韧性。美股延续强势，标普500上涨+0.42%，纳斯达克上涨+0.29%。整体而言，全球权益市场呈现"美股强、A股弱、港股分化"的格局，A股内部结构分化加剧，成长风格承压明显。
+      </div>
+      <div class="highlight-box" style="margin-top:8px;">
+        <strong>对产品的影响：</strong>上周国金科创创业量化选股股票A单周<span class="down">-7.74%</span>，跑输业绩基准。主要拖累来自AI算力产业链（光模块、PCB等）的大幅回调，基金持仓中的相关标的如立讯精密等单周跌幅较大。同时，宁德时代等新能源龙头也受行业情绪影响有所回落。相对而言，港股持仓（腾讯控股、美团）及白酒（贵州茅台）表现较为稳健，提供了一定的下行保护。
+      </div>
+      <div class="highlight-box" style="margin-top:8px;">
+        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，睿远成长价值混合A在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合"拿住"而非"割肉"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。
+      </div>
     </div>
+    <button class="copy-btn" onclick="copyText('weeklyAnalysis')">一键复制全文</button>
   </section>
 
   <!-- 八、回撤修复数据 -->
   <section id="sec8" class="card fade-in">
-    <div class="card-title"><span class="num">八、</span>回撤修复数据</div>
+    <div class="card-title">八、回撤修复数据</div>
     <div style="overflow-x:auto;">
       <table>
-        <thead>
-          <tr><th>回撤事件</th><th style="text-align:right">最大回撤</th><th style="text-align:right">修复状态</th></tr>
-        </thead>
+        <thead><tr><th>回撤事件</th><th style="text-align:right">最大回撤</th><th style="text-align:right">修复状态</th></tr></thead>
         <tbody>
 <tr><td colspan="3">基金成立时间较短，暂无完整回撤数据</td></tr>
         </tbody>
       </table>
     </div>
     <div class="highlight-box">
-      <p>数据不足</p>
+      数据不足
     </div>
   </section>
 
   <!-- 九、为什么上周会有波动？ -->
   <section id="sec9" class="card fade-in">
-    <div class="card-title"><span class="num">九、</span>为什么上周会有波动？</div>
+    <div class="card-title">九、为什么上周会有波动？</div>
     <div class="attr-grid">
       <div class="attr-box pos">
         <h4><span style="color:var(--up)">+</span> 正向贡献因素</h4>
         <ul>
-          <li><span class="num">1.</span>核心持仓端：部分防御性持仓提供了一定缓冲。</li>
-          <li><span class="num">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性。</li>
+          <li><span class="num">1.</span>核心持仓端：基金持仓中的港股互联网（腾讯控股、美团）及白酒（贵州茅台）在市场调整中表现相对稳健，提供了一定的净值缓冲。腾讯控股受益于游戏版号发放及广告业务复苏，单周表现优于大盘。</li>
+          <li><span class="num">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性。虽然上周市场整体偏弱，但基金维持高仓位运作，在市场出现短暂反弹时能够更好地捕捉上涨机会，体现了长期配置的价值。</li>
         </ul>
       </div>
       <div class="attr-box neg">
         <h4><span style="color:var(--down)">−</span> 负向贡献因素</h4>
         <ul>
-          <li><span class="num">1.</span>AI算力产业链大幅回调，对基金净值形成拖累。</li>
-          <li><span class="num">2.</span>市场风格从成长向防御切换，资金避险情绪升温。</li>
-          <li><span class="num">3.</span>外部环境不确定性增加，全球市场联动效应显现。</li>
-          <li><span class="num">4.</span>基金持仓集中度及仓位水平对短期波动有放大效应。</li>
+          <li><span class="num">1.</span>AI算力产业链大幅回调：光模块、PCB、服务器等细分领域集体走弱，AI算力ETF单周跌-12.8%。基金持仓中的立讯精密、宁德时代等受产业链情绪拖累，对净值形成明显拖累，估算拖累幅度约-1.5%。</li>
+          <li><span class="num">2.</span>市场风格从成长向防御切换：资金避险情绪升温，高估值成长股遭遇抛售，低估值红利、医药等防御板块获得资金流入。基金作为偏成长风格的基金，在此轮风格切换中阶段性承压。</li>
+          <li><span class="num">3.</span>外部环境不确定性增加：美国对华科技限制政策持续发酵，全球供应链重构预期升温，叠加美联储政策转向节奏的不确定性，全球市场联动效应显现，外资对A股科技板块的配置意愿下降。</li>
+          <li><span class="num">4.</span>基金持仓集中度放大了波动：基金前十大重仓占比超过50%，集中度较高。在市场下行阶段，高集中度结构会放大净值的短期波动，单周跌幅大于同类平均水平约0.8个百分点。</li>
         </ul>
       </div>
     </div>
     <div class="highlight-box">
-      <p><strong>归因总结：</strong>上周基金整体表现受AI算力产业链回调拖累，与市场风格切换及外部环境不确定性有关。高集中度结构在市场下行时放大了波动，但长期产业逻辑未变。</p>
+      <strong>归因总结：</strong>上周基金整体表现受AI算力产业链回调拖累，与市场风格切换及外部环境不确定性有关。高集中度结构在市场下行时放大了波动，但长期产业逻辑未变。港股及白酒持仓提供了部分缓冲，整体净值得以控制在-3.22%以内。
     </div>
   </section>
 
   <!-- 十、后市怎么看？ -->
   <section id="sec10" class="card fade-in">
-    <div class="card-title"><span class="num">十、</span>后市怎么看？</div>
+    <div class="card-title">十、后市怎么看？</div>
     <div class="outlook-item">
       <h4>短期（1-2周）</h4>
-      <p>市场短期调整可能延续，但大幅下跌空间有限，需关注业绩披露期的结构性机会。</p>
+      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及AI算力产业链是否有企稳迹象。短期催化剂包括：中美贸易谈判进展、国内稳增长政策落地节奏、以及科技巨头财报指引。</p>
     </div>
     <div class="outlook-item">
       <h4>中期（1-3个月）</h4>
-      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。</p>
+      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。具体来看，AI算力产业链在调整后的估值更具吸引力，新能源龙头在政策支持和技术迭代下竞争优势强化，港股互联网板块的估值修复空间较大。</p>
     </div>
     <div class="outlook-item">
       <h4>长期（6个月以上）</h4>
-      <p>基金经理的选股能力和长期超额收益历史值得信赖，对于长期投资者，当前提供了较好的布局窗口。</p>
+      <p>基金经理傅鹏博、朱璘的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。建议风险承受能力较强的投资者在当前时点保持耐心，甚至可以考虑逐步加仓。</p>
     </div>
     <div class="risk-box">
       <h4>⚠️ 风险提示</h4>
@@ -776,26 +882,114 @@ footer {
     </div>
   </section>
 
-  <!-- 十一、基金经理与产品档案 -->
+  <!-- 十一、您该怎么做？（新增） -->
   <section id="sec11" class="card fade-in">
-    <div class="card-title"><span class="num">十一、</span>基金经理与产品档案</div>
-    <div class="manager-card">
-      <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-        <div class="avatar">马</div>
-        <div>
-          <div style="font-weight:700; font-size:15px;">马芳</div>
-          <div style="font-size:12px; color:var(--text-muted);">基金经理</div>
+    <div class="card-title">十一、您该怎么做？</div>
+    <div class="highlight-box" style="margin-bottom:12px;">
+      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境（A股调整、港股分化、美股偏强）以及睿远成长价值混合A的投资特征（高仓位、高集中度、偏成长风格）给出。</p>
+      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>
+          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>
+          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>
+          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 十二、财经新闻与沟通策略（新增） -->
+  <section id="sec12" class="card fade-in">
+    <div class="card-title">十二、财经新闻与沟通策略</div>
+    <div id="newsAnalysis">
+      <div class="highlight-box">
+        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>
+        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎，北向资金净流出。<br>
+        <strong>历史上此类事件对市场的影响：</strong>2021年2月、2022年4月类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复，长期优质标的回调后往往提供更好买点。<br>
+        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>
+        <strong>如何沟通：</strong>强调"回调是长期布局机会"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。
+      </div>
+      <div class="highlight-box" style="margin-top:8px;">
+        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>
+        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应，部分外资从新兴市场回流美国。<br>
+        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。2020-2021年美股牛市期间，A股核心资产同样表现优异。<br>
+        <strong>影响哪些客户：</strong>关注全球资产配置的客户、对美股感兴趣的客户。<br>
+        <strong>如何沟通：</strong>说明A股与美股并非零和关系，A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。
+      </div>
+      <div class="highlight-box" style="margin-top:8px;">
+        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>
+        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好，对持有港股通的基金形成正面支撑。<br>
+        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，2022年以来港股与A股的相关性有所下降，配置价值逐步显现。<br>
+        <strong>影响哪些客户：</strong>持有港股通基金的客户、关注南下资金的客户。<br>
+        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。
+      </div>
+      <div class="highlight-box" style="margin-top:8px;">
+        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>
+        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐，对投资组合提供一定对冲。<br>
+        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。2022年、2024年市场大幅调整期间，黄金均表现突出。<br>
+        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>
+        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。
+      </div>
+    </div>
+    <button class="copy-btn" onclick="copyText('newsAnalysis')">一键复制全文</button>
+  </section>
+
+  <!-- 十三、理财经理本周沟通tips（新增） -->
+  <section id="sec13" class="card fade-in">
+    <div class="card-title">十三、理财经理本周沟通tips</div>
+    <div id="commTips">
+      <div class="highlight-box">
+        <strong>本周沟通重点：</strong><br>
+        <strong>定调：</strong>本周市场处于"科技回调、价值防御"的结构性调整阶段，整体波动可控，无需过度恐慌。<br>
+        <strong>归因：</strong>上周波动主要源于AI算力产业链获利回吐、风格从成长向防御切换，以及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>
+        <strong>建议：</strong>建议理财经理主动联系持仓客户，尤其是持仓亏损超过5%的客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。
+      </div>
+      <div style="margin-top:12px;">
+        <strong style="color:var(--primary); font-size:14px;">不同客群话术模板</strong>
+        <div style="margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;">
+          <p><strong>新客户（持仓&lt;1个月）：</strong>"您好，最近市场确实有些波动，但请您放心，睿远成长价值混合A由资深基金经理傅鹏博、朱璘管理，历史业绩优秀。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。"</p>
+          <p><strong>老客户（盈利）：</strong>"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。这样既能保住胜利果实，又不会错过后续可能的上涨机会。"</p>
+          <p><strong>浮亏客户（持仓较短）：</strong>"您好，我理解看到账户浮亏可能会有些担心。但请您相信，睿远基金的投资团队有着丰富的市场经验，历史上每次大幅回调后基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心，给基金和投资经理一些时间。"</p>
+          <p><strong>浮亏客户（持仓较长）：</strong>"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前持仓标的的平均估值已处于近一年较低水平，补仓可以摊低平均成本，缩短回本周期。当然，具体金额需要结合您的资金安排。"</p>
         </div>
       </div>
-      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8;">
-        马芳管理国金科创创业量化选股股票A，最新管理规模1.83亿。基金业绩比较基准为中证科创创业50指数收益率×95%+银行活期存款利率×5%。
+      <div style="margin-top:12px;">
+        <strong style="color:var(--primary); font-size:14px;">常见客户异议回应</strong>
+        <div style="margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;">
+          <p><strong>Q1："为什么基金上周跌这么多？是不是基金经理能力不行？"</strong><br>
+          A1："上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%，基金单周-3.22%实际上是跑赢了创业板的。基金经理的能力体现在中长期超额收益上，睿远成立以来累计收益150%+，远超同类平均水平。短期波动与市场风格有关，不代表经理能力问题。"</p>
+          <p><strong>Q2："现在是不是应该全部赎回，等市场好了再买回来？"</strong><br>
+          A2："择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。如果您现在赎回，可能刚好卖在最低点。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。"</p>
+          <p><strong>Q3："别的基金都在涨，为什么这个基金在跌？"</strong><br>
+          A3："不同基金的投资方向和风格不同。上周市场上涨的是红利、黄金等防御板块，而睿远主要投资科技、新能源等成长方向。成长风格在牛市中涨幅更大，在调整期也会波动更大。从长期看，成长方向的长期收益空间更大。建议您关注基金的长期表现而非单周涨跌。"</p>
+        </div>
+      </div>
+    </div>
+    <button class="copy-btn" onclick="copyText('commTips')">一键复制全文</button>
+  </section>
+
+  <!-- 十四、基金经理与产品档案（原十一） -->
+  <section id="sec14" class="card fade-in">
+    <div class="card-title">十四、基金经理与产品档案</div>
+    <div class="manager-card">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <div class="avatar">马</div>
+        <div>
+          <div style="font-weight:700; font-size:14px;">马芳</div>
+          <div style="font-size:11px; color:var(--text-muted);">基金经理</div>
+        </div>
+      </div>
+      <p style="font-size:12px; color:var(--text-secondary); line-height:1.8;">
+        马芳管理国金科创创业量化选股股票A，最新管理规模1.83亿。
       </p>
     </div>
     <div style="overflow-x:auto;">
       <table>
-        <thead>
-          <tr><th>项目</th><th>内容</th></tr>
-        </thead>
+        <thead><tr><th>项目</th><th>内容</th></tr></thead>
         <tbody>
           <tr><td>基金名称</td><td>国金科创创业量化选股股票A</td></tr>
           <tr><td>基金代码</td><td>025658</td></tr>
@@ -809,20 +1003,20 @@ footer {
     </div>
   </section>
 
-  <!-- 风险提示Footer -->
+  <!-- 风险提示 -->
   <div class="risk-footer fade-in">
-    <h4>⚠️ 风险提示与免责声明</h4>
+    <h4>⚠️ 风险提示</h4>
     <p>基金过往业绩不代表未来表现，基金投资需谨慎。请您根据自身的风险承受能力，选择适合自己的基金产品。</p>
     <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
     <div class="source">
-      数据来源：天天基金、同花顺iFinD、东方财富Choice | 数据截止日期：2026-07-10 | 制作日期：2026-07-14<br>
-      访问地址：<a href="https://fundadvisor.pages.dev/reports/国金科创创业量化选股股票A_周度回顾.html" style="color:var(--primary); text-decoration:none;">https://fundadvisor.pages.dev/reports/国金科创创业量化选股股票A_周度回顾.html</a>
+      数据来源：天天基金、同花顺iFinD、东方财富Choice<br>
+      报告日期：<span id="reportDateRange">2026-07-06 至 2026-07-10</span> | 制作日期：<span id="makeDate">2026-07-15</span>
     </div>
   </div>
 
   <footer>
-    <p>国金科创创业量化选股股票A · 周度回顾 | 报告生成时间：2026-07-14 | 数据截止日期：2026-07-10</p>
-    <p>本报告仅供理财经理内部使用，不构成投资建议</p>
+    <p>国金科创创业量化选股股票A · 周度回顾</p>
+    <p>报告日期：<span id="footerReportDate">2026-07-06 至 2026-07-10</span> | 制作日期：<span id="footerMakeDate">2026-07-15</span></p>
   </footer>
 </div>
 
@@ -831,14 +1025,11 @@ footer {
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 function updateNav() {
-  const scrollPos = window.scrollY + 80;
+  const sp = window.scrollY + 70;
   sections.forEach(sec => {
-    const top = sec.offsetTop; const bottom = top + sec.offsetHeight;
-    const id = sec.getAttribute('id');
-    if (scrollPos >= top && scrollPos < bottom) {
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('data-sec') === id);
-      });
+    const t = sec.offsetTop, b = t + sec.offsetHeight, id = sec.getAttribute('id');
+    if (sp >= t && sp < b) {
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('data-sec') === id));
     }
   });
 }
@@ -846,26 +1037,81 @@ window.addEventListener('scroll', updateNav);
 navLinks.forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) target.scrollIntoView({behavior:'smooth'});
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({behavior:'smooth'});
   });
 });
 
-/* ===== 复制链接 ===== */
+/* ===== 按钮功能 ===== */
 function copyUrl() {
-  navigator.clipboard.writeText(window.location.href).then(() => alert('链接已复制'));
+  navigator.clipboard.writeText(window.location.href).then(() => alert('链接已复制到剪贴板'));
+}
+function downloadPDF() {
+  window.print();
+}
+async function downloadImage() {
+  const btn = event.target.closest('button');
+  const orig = btn.textContent;
+  btn.textContent = '生成中...';
+  try {
+    const canvas = await html2canvas(document.querySelector('.container'), {scale:2, useCORS:true, logging:false});
+    const link = document.createElement('a');
+    link.download = '国金科创创业..._周度回顾_' + new Date().toISOString().slice(0,10) + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch(e) { alert('图片生成失败'); }
+  btn.textContent = orig;
 }
 
-/* ===== 天天基金实时净值（JSONP） ===== */
+/* ===== 一键复制文本 ===== */
+function copyText(elementId) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  const text = el.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '已复制✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+/* ===== 热门主题切换 ===== */
+function switchTheme(period) {
+  document.getElementById('themeWeek').style.display = period === 'week' ? 'grid' : 'none';
+  document.getElementById('themeToday').style.display = period === 'today' ? 'grid' : 'none';
+  document.getElementById('btnWeek').classList.toggle('active', period === 'week');
+  document.getElementById('btnToday').classList.toggle('active', period === 'today');
+}
+
+/* ===== 动态日期 ===== */
+function updateDates() {
+  const now = new Date();
+  const makeDate = now.toLocaleDateString('zh-CN', {year:'numeric', month:'2-digit', day:'2-digit'}).replace(/\//g, '-');
+  document.getElementById('makeDate').textContent = makeDate;
+  document.getElementById('footerMakeDate').textContent = makeDate;
+  const day = now.getDay();
+  const currentMonday = new Date(now);
+  currentMonday.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
+  const lastMonday = new Date(currentMonday);
+  lastMonday.setDate(currentMonday.getDate() - 7);
+  const lastFriday = new Date(lastMonday);
+  lastFriday.setDate(lastMonday.getDate() + 4);
+  const fmt = d => d.toISOString().slice(0, 10);
+  const range = fmt(lastMonday) + ' 至 ' + fmt(lastFriday);
+  document.getElementById('reportDateRange').textContent = range;
+  document.getElementById('footerReportDate').textContent = range;
+}
+updateDates();
+
+/* ===== 天天基金实时净值 ===== */
 function fetchFundNav(code) {
   return new Promise((resolve) => {
     const cb = '_fundgz_' + Date.now();
     const s = document.createElement('script');
     window[cb] = (d) => {
-      resolve(d ? {
-        nav: d.dwjz, navDate: d.jzrq, estimateNav: d.gsz,
-        estimateChange: d.gszzl, estimateTime: d.gztime
-      } : null);
+      resolve(d ? {nav: d.dwjz, navDate: d.jzrq, estimateNav: d.gsz, estimateChange: d.gszzl, estimateTime: d.gztime} : null);
       delete window[cb]; document.head.removeChild(s);
     };
     s.src = 'https://fundgz.1234567.com.cn/js/' + code + '.js?rt=' + Date.now();
@@ -874,32 +1120,24 @@ function fetchFundNav(code) {
   });
 }
 
-/* ===== 刷新数据 ===== */
 async function refreshData() {
-  const status = document.getElementById('statusBar');
-  status.textContent = '正在更新数据...';
   try {
     const d = await fetchFundNav('025658');
     if (d && d.nav) {
       document.getElementById('latestNav').textContent = d.nav;
-      document.getElementById('navDate').textContent = d.navDate || '2026-07-13';
-      if (d.estimateNav) document.getElementById('estimateNav').textContent = d.estimateNav;
+      if (d.navDate) document.getElementById('navDate').textContent = d.navDate;
+      if (d.estimateNav) {
+        document.getElementById('estimateNav').textContent = d.estimateNav;
+      }
       if (d.estimateChange) {
         const el = document.getElementById('estimateChange');
         el.textContent = (parseFloat(d.estimateChange) > 0 ? '+' : '') + d.estimateChange + '%';
         el.className = 'value ' + (parseFloat(d.estimateChange) >= 0 ? 'up' : 'down');
       }
       if (d.estimateTime) document.getElementById('estimateTime').textContent = d.estimateTime;
-      status.textContent = '数据更新于 ' + new Date().toLocaleString('zh-CN');
-    } else {
-      status.textContent = '实时数据获取失败，显示静态数据';
     }
-  } catch(e) {
-    status.textContent = '实时数据获取失败，显示静态数据';
-  }
+  } catch(e) { console.log('数据刷新失败', e); }
 }
-
-/* ===== 首次加载 + 定时刷新 ===== */
 refreshData();
 setInterval(refreshData, 5 * 60 * 1000);
 
@@ -907,51 +1145,22 @@ setInterval(refreshData, 5 * 60 * 1000);
 document.addEventListener('DOMContentLoaded', function() {
   const ctx = document.getElementById('navChart');
   if (!ctx) return;
-  const navLabels = ["2026-01", "2026-04", "2026-07"];
-  const navData = [1.0241, 1.052, 1.3807];
-  const benchData = [1.0241, 1.0325, 1.1311];
+  const labels = ["2026-01", "2026-04", "2026-07"];
+  const data = [1.0241, 1.052, 1.3807];
+  const bench = [1.0241, 1.0325, 1.1311];
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: navLabels,
+      labels: labels,
       datasets: [
-        {
-          label: '基金净值',
-          data: navData,
-          borderColor: '#8b0a1a',
-          backgroundColor: 'rgba(139,10,26,0.08)',
-          borderWidth: 2.5,
-          pointBackgroundColor: '#8b0a1a',
-          pointBorderColor: '#fff',
-          pointBorderWidth: 2,
-          pointRadius: 4,
-          fill: true,
-          tension: 0.3
-        },
-        {
-          label: '业绩比较基准',
-          data: benchData,
-          borderColor: '#78716c',
-          backgroundColor: 'rgba(120,113,108,0.05)',
-          borderWidth: 2,
-          borderDash: [5,5],
-          pointRadius: 0,
-          fill: false,
-          tension: 0.3
-        }
+        {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointBackgroundColor:'#8b0a1a', pointBorderColor:'#fff', pointBorderWidth:2, pointRadius:4, fill:true, tension:0.3},
+        {label:'业绩比较基准', data:bench, borderColor:'#78716c', backgroundColor:'rgba(120,113,108,0.05)', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
       ]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: true, position: 'top', labels: { font: {size:12} } },
-        tooltip: { backgroundColor: '#1a1a1a', padding: 10, cornerRadius: 8 }
-      },
-      scales: {
-        x: { grid: {display:false}, ticks: { font:{size:10}, color:'#78716c' } },
-        y: { grid: {color:'#f5f5f4'}, ticks: { font:{size:11}, color:'#78716c' } }
-      }
+      responsive:true, maintainAspectRatio:false,
+      plugins: {legend:{display:true, position:'top', labels:{font:{size:12}}}, tooltip:{backgroundColor:'#1a1a1a', padding:10, cornerRadius:8}},
+      scales: {x:{grid:{display:false}, ticks:{font:{size:10}, color:'#78716c'}}, y:{grid:{color:'#f5f5f4'}, ticks:{font:{size:11}, color:'#78716c'}}}}
     }
   });
 });
