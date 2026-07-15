@@ -505,7 +505,7 @@ JSON 必须包含以下字段：
 
 > **样式锁定声明**：`generate_htmls.py` 中的 `HTML_TEMPLATE` 字符串为**唯一可信源**，所有 CSS 变量、颜色、字号、间距、卡片布局、导航栏交互均已硬编码。本 skill 执行时**只注入数据变量**，不得修改模板中的任何样式定义。如需调整样式，必须直接修改 `generate_htmls.py` 源文件，并在 SKILL.md 中同步更新版本号。
 
-调用固定 HTML 模板生成器 `D:\OPC-skill\skills\portfolio-week-companion\site\reports\generate_htmls.py` 生成单页 HTML 文件，部署至 Cloudflare Pages：
+调用本 skill 自有 HTML 模板生成器 `D:\OPC-skill\skills\fund-weekly-review\templates\generate_htmls.py` 生成单页 HTML 文件，部署至 Cloudflare Pages：
 
 **模板特性**：
 - **CSS全部内联**：所有样式写在 `<style>` 标签中，不依赖 Tailwind CSS 或任何外部 CDN（除 Chart.js 和 html2canvas 外）
