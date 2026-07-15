@@ -427,62 +427,62 @@ footer {
       <div class="holding-card">
         <div class="name">高能环境</div>
         <div class="code">数据待更新</div>
-        <div class="nav">310.42</div>
-        <div class="change down">-8.85%</div>
+        <div class="nav">40.9</div>
+        <div class="change down">-9.71%</div>
       </div>
       <div class="holding-card">
         <div class="name">亚太股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">208.7</div>
-        <div class="change down">-11.39%</div>
+        <div class="nav">310.6</div>
+        <div class="change down">-13.02%</div>
       </div>
       <div class="holding-card">
         <div class="name">中熔电气</div>
         <div class="code">数据待更新</div>
-        <div class="nav">434.37</div>
-        <div class="change down">-5.16%</div>
+        <div class="nav">452.51</div>
+        <div class="change down">-12.54%</div>
       </div>
       <div class="holding-card">
         <div class="name">菜百股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">451.19</div>
-        <div class="change down">-3.63%</div>
+        <div class="nav">223.75</div>
+        <div class="change down">-12.98%</div>
       </div>
       <div class="holding-card">
         <div class="name">蓝特光学</div>
         <div class="code">数据待更新</div>
-        <div class="nav">206.79</div>
-        <div class="change down">-3.90%</div>
+        <div class="nav">90.98</div>
+        <div class="change down">-8.89%</div>
       </div>
       <div class="holding-card">
         <div class="name">龙净环保</div>
         <div class="code">数据待更新</div>
-        <div class="nav">317.06</div>
-        <div class="change down">-12.62%</div>
+        <div class="nav">407.94</div>
+        <div class="change down">-7.12%</div>
       </div>
       <div class="holding-card">
         <div class="name">昭衍新药</div>
         <div class="code">数据待更新</div>
-        <div class="nav">209.88</div>
-        <div class="change down">-12.16%</div>
+        <div class="nav">475.41</div>
+        <div class="change down">-4.63%</div>
       </div>
       <div class="holding-card">
         <div class="name">鼎胜新材</div>
         <div class="code">数据待更新</div>
-        <div class="nav">58.97</div>
-        <div class="change down">-4.37%</div>
+        <div class="nav">479.09</div>
+        <div class="change down">-3.40%</div>
       </div>
       <div class="holding-card">
         <div class="name">雪天盐业</div>
         <div class="code">数据待更新</div>
-        <div class="nav">90.09</div>
-        <div class="change down">-11.13%</div>
+        <div class="nav">374.17</div>
+        <div class="change down">-4.54%</div>
       </div>
       <div class="holding-card">
         <div class="name">生物股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">109.65</div>
-        <div class="change down">-11.49%</div>
+        <div class="nav">257.29</div>
+        <div class="change down">-3.80%</div>
       </div>
     </div>
     <div class="highlight-box">
@@ -508,9 +508,9 @@ footer {
         <table>
           <thead><tr><th>年度</th><th style="text-align:right">基金净值增长率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
           <tbody>
-          <tr><td>2024</td><td class="right up">+5.72%</td><td class="right">+8.98%</td><td class="right down">-3.26%</td></tr>
-          <tr><td>2025</td><td class="right up">+52.05%</td><td class="right">+44.92%</td><td class="right up">+7.13%</td></tr>
-          <tr><td>2026</td><td class="right up">+0.12%</td><td class="right">+2.65%</td><td class="right down">-2.53%</td></tr>
+          <tr><td>2024</td><td class="right up">+5.72%</td><td class="right">-2.29%</td><td class="right up">+8.01%</td></tr>
+          <tr><td>2025</td><td class="right up">+52.05%</td><td class="right">+46.77%</td><td class="right up">+5.28%</td></tr>
+          <tr><td>2026</td><td class="right up">+0.12%</td><td class="right">-1.16%</td><td class="right up">+1.28%</td></tr>
           </tbody>
         </table>
       </div>
@@ -1144,28 +1144,36 @@ refreshData();
 setInterval(refreshData, 5 * 60 * 1000);
 
 /* ===== Chart.js 净值走势图 ===== */
-document.addEventListener('DOMContentLoaded', function() {
-  const ctx = document.getElementById('navChart');
-  if (!ctx) return;
-  const labels = ["2024-01", "2024-04", "2024-07", "2024-10", "2025-01", "2025-04", "2025-07", "2025-10", "2026-01", "2026-04", "2026-07"];
-  const data = [1.0122, 0.9939, 0.9073, 1.1042, 1.0701, 1.1917, 1.3061, 1.5567, 1.6271, 1.6887, 1.8516];
-  const bench = [1.0122, 1.0067, 0.9807, 1.0398, 1.0296, 1.066, 1.1004, 1.1755, 1.1967, 1.2151, 1.264];
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [
-        {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointBackgroundColor:'#8b0a1a', pointBorderColor:'#fff', pointBorderWidth:2, pointRadius:4, fill:true, tension:0.3},
-        {label:'业绩比较基准', data:bench, borderColor:'#78716c', backgroundColor:'rgba(120,113,108,0.05)', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      plugins: {legend:{display:true, position:'top', labels:{font:{size:12}}}, tooltip:{backgroundColor:'#1a1a1a', padding:10, cornerRadius:8}},
-      scales: {x:{grid:{display:false}, ticks:{font:{size:10}, color:'#78716c'}}, y:{grid:{color:'#f5f5f4'}, ticks:{font:{size:11}, color:'#78716c'}}}}
-    }
-  });
-});
+(function() {
+  try {
+    var ctx = document.getElementById('navChart');
+    if (!ctx) { console.error('canvas not found'); return; }
+    if (typeof Chart === 'undefined') { console.error('Chart.js not loaded'); return; }
+    var labels = ["2024-01", "2024-04", "2024-07", "2024-10", "2025-01", "2025-04", "2025-07", "2025-10", "2026-01", "2026-04", "2026-07"];
+    var data = [1.0122, 0.9939, 0.9073, 1.1042, 1.0701, 1.1917, 1.3061, 1.5567, 1.6271, 1.6887, 1.8516];
+    var bench = [1.0122, 1.0067, 0.9807, 1.0398, 1.0296, 1.066, 1.1004, 1.1755, 1.1967, 1.2151, 1.264];
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointRadius:3, fill:true, tension:0.3},
+          {label:'业绩比较基准', data:bench, borderColor:'#78716c', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: {display:true, position:'top'} }
+      }
+    });
+    console.log('Chart initialized');
+  } catch(e) {
+    console.error('Chart init error:', e);
+    var box = document.querySelector('.chart-box');
+    if (box) box.innerHTML += '<div style="color:#8b0a1a;padding:20px;text-align:center;font-size:14px;">图表加载失败，请刷新页面重试</div>';
+  }
+})();
 </script>
 </body>
 </html>

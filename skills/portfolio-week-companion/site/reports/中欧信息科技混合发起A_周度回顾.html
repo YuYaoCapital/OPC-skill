@@ -427,62 +427,62 @@ footer {
       <div class="holding-card">
         <div class="name">新易盛</div>
         <div class="code">300502.SZ</div>
-        <div class="nav">286.28</div>
-        <div class="change down">-3.13%</div>
+        <div class="nav">167.76</div>
+        <div class="change down">-11.51%</div>
       </div>
       <div class="holding-card">
         <div class="name">中际旭创</div>
         <div class="code">300308.SZ</div>
-        <div class="nav">420.47</div>
-        <div class="change down">-5.23%</div>
+        <div class="nav">31.16</div>
+        <div class="change down">-8.22%</div>
       </div>
       <div class="holding-card">
         <div class="name">长飞光纤光缆</div>
         <div class="code">数据待更新</div>
-        <div class="nav">312.68</div>
-        <div class="change down">-10.61%</div>
+        <div class="nav">255.91</div>
+        <div class="change down">-6.79%</div>
       </div>
       <div class="holding-card">
         <div class="name">天孚通信</div>
         <div class="code">300394.SZ</div>
-        <div class="nav">249.66</div>
-        <div class="change down">-5.19%</div>
+        <div class="nav">175.65</div>
+        <div class="change down">-5.89%</div>
       </div>
       <div class="holding-card">
         <div class="name">亨通光电</div>
         <div class="code">600487.SH</div>
-        <div class="nav">493.54</div>
-        <div class="change down">-2.54%</div>
+        <div class="nav">343.59</div>
+        <div class="change down">-5.50%</div>
       </div>
       <div class="holding-card">
         <div class="name">工业富联</div>
         <div class="code">数据待更新</div>
-        <div class="nav">410.35</div>
-        <div class="change down">-5.18%</div>
+        <div class="nav">152.95</div>
+        <div class="change down">-7.58%</div>
       </div>
       <div class="holding-card">
         <div class="name">强瑞技术</div>
         <div class="code">数据待更新</div>
-        <div class="nav">234.66</div>
-        <div class="change down">-10.66%</div>
+        <div class="nav">369.5</div>
+        <div class="change down">-6.83%</div>
       </div>
       <div class="holding-card">
         <div class="name">中天科技</div>
         <div class="code">600522.SH</div>
-        <div class="nav">417.62</div>
-        <div class="change down">-5.49%</div>
+        <div class="nav">122.4</div>
+        <div class="change down">-10.64%</div>
       </div>
       <div class="holding-card">
         <div class="name">兆易创新</div>
         <div class="code">数据待更新</div>
-        <div class="nav">427.98</div>
-        <div class="change down">-11.40%</div>
+        <div class="nav">465.63</div>
+        <div class="change down">-6.84%</div>
       </div>
       <div class="holding-card">
         <div class="name">腾讯控股</div>
         <div class="code">00700.HK</div>
-        <div class="nav">67.92</div>
-        <div class="change down">-5.03%</div>
+        <div class="nav">114.74</div>
+        <div class="change down">-11.52%</div>
       </div>
     </div>
     <div class="highlight-box">
@@ -508,8 +508,8 @@ footer {
         <table>
           <thead><tr><th>年度</th><th style="text-align:right">基金净值增长率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
           <tbody>
-          <tr><td>2025</td><td class="right up">+110.38%</td><td class="right">+103.25%</td><td class="right up">+7.13%</td></tr>
-          <tr><td>2026</td><td class="right up">+56.13%</td><td class="right">+58.66%</td><td class="right down">-2.53%</td></tr>
+          <tr><td>2025</td><td class="right up">+110.38%</td><td class="right">+105.10%</td><td class="right up">+5.28%</td></tr>
+          <tr><td>2026</td><td class="right up">+56.13%</td><td class="right">+54.85%</td><td class="right up">+1.28%</td></tr>
           </tbody>
         </table>
       </div>
@@ -1143,28 +1143,36 @@ refreshData();
 setInterval(refreshData, 5 * 60 * 1000);
 
 /* ===== Chart.js 净值走势图 ===== */
-document.addEventListener('DOMContentLoaded', function() {
-  const ctx = document.getElementById('navChart');
-  if (!ctx) return;
-  const labels = ["2025-04", "2025-07", "2025-10", "2026-01", "2026-04", "2026-07"];
-  const data = [0.9801, 1.0833, 1.9928, 2.0619, 2.2192, 3.967];
-  const bench = [0.9801, 1.0111, 1.2839, 1.3046, 1.3518, 1.8762];
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [
-        {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointBackgroundColor:'#8b0a1a', pointBorderColor:'#fff', pointBorderWidth:2, pointRadius:4, fill:true, tension:0.3},
-        {label:'业绩比较基准', data:bench, borderColor:'#78716c', backgroundColor:'rgba(120,113,108,0.05)', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      plugins: {legend:{display:true, position:'top', labels:{font:{size:12}}}, tooltip:{backgroundColor:'#1a1a1a', padding:10, cornerRadius:8}},
-      scales: {x:{grid:{display:false}, ticks:{font:{size:10}, color:'#78716c'}}, y:{grid:{color:'#f5f5f4'}, ticks:{font:{size:11}, color:'#78716c'}}}}
-    }
-  });
-});
+(function() {
+  try {
+    var ctx = document.getElementById('navChart');
+    if (!ctx) { console.error('canvas not found'); return; }
+    if (typeof Chart === 'undefined') { console.error('Chart.js not loaded'); return; }
+    var labels = ["2025-04", "2025-07", "2025-10", "2026-01", "2026-04", "2026-07"];
+    var data = [0.9801, 1.0833, 1.9928, 2.0619, 2.2192, 3.967];
+    var bench = [0.9801, 1.0111, 1.2839, 1.3046, 1.3518, 1.8762];
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointRadius:3, fill:true, tension:0.3},
+          {label:'业绩比较基准', data:bench, borderColor:'#78716c', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: {display:true, position:'top'} }
+      }
+    });
+    console.log('Chart initialized');
+  } catch(e) {
+    console.error('Chart init error:', e);
+    var box = document.querySelector('.chart-box');
+    if (box) box.innerHTML += '<div style="color:#8b0a1a;padding:20px;text-align:center;font-size:14px;">图表加载失败，请刷新页面重试</div>';
+  }
+})();
 </script>
 </body>
 </html>

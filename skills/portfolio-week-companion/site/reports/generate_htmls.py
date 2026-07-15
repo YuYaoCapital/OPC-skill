@@ -1061,49 +1061,35 @@ setInterval(refreshData, 5 * 60 * 1000);
 
 /* ===== Chart.js 净值走势图 ===== */
 (function() {
-  const ctx = document.getElementById('navChart');
-  if (!ctx) return;
-  const labels = {nav_labels_json};
-  const data = {nav_data_json};
-  const bench = {benchmark_data_json};
-  new Chart(ctx, {{
-    type: 'line',
-    data: {{
-      labels: labels,
-      datasets: [
-        {{label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointBackgroundColor:'#8b0a1a', pointBorderColor:'#fff', pointBorderWidth:2, pointRadius:4, fill:true, tension:0.3}},
-        {{label:'业绩比较基准', data:bench, borderColor:'#78716c', backgroundColor:'rgba(120,113,108,0.05)', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}}
-      ]
-    }},
-    options: {{
-      responsive:true, maintainAspectRatio:false,
-      plugins: {{legend:{{display:true, position:'top', labels:{{font:{{size:12}}}}}}, tooltip:{{backgroundColor:'#1a1a1a', padding:10, cornerRadius:8}}}},
-      scales: {{x:{{grid:{{display:false}}, ticks:{{font:{{size:10}}, color:'#78716c'}}}}, y:{{grid:{{color:'#f5f5f4'}}, ticks:{{font:{{size:11}}, color:'#78716c'}}}}}}
-    }}
-  }});
+  try {
+    var ctx = document.getElementById('navChart');
+    if (!ctx) { console.error('canvas not found'); return; }
+    if (typeof Chart === 'undefined') { console.error('Chart.js not loaded'); return; }
+    var labels = {nav_labels_json};
+    var data = {nav_data_json};
+    var bench = {benchmark_data_json};
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointRadius:3, fill:true, tension:0.3},
+          {label:'业绩比较基准', data:bench, borderColor:'#78716c', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: {display:true, position:'top'} }
+      }
+    });
+    console.log('Chart initialized');
+  } catch(e) {
+    console.error('Chart init error:', e);
+    var box = document.querySelector('.chart-box');
+    if (box) box.innerHTML += '<div style="color:#8b0a1a;padding:20px;text-align:center;font-size:14px;">图表加载失败，请刷新页面重试</div>';
+  }
 })();
-document.addEventListener('DOMContentLoaded', function() {
-  const ctx = document.getElementById('navChart');
-  if (!ctx) return;
-  const labels = {nav_labels_json};
-  const data = {nav_data_json};
-  const bench = {benchmark_data_json};
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [
-        {label:'基金净值', data:data, borderColor:'#8b0a1a', backgroundColor:'rgba(139,10,26,0.08)', borderWidth:2.5, pointBackgroundColor:'#8b0a1a', pointBorderColor:'#fff', pointBorderWidth:2, pointRadius:4, fill:true, tension:0.3},
-        {label:'业绩比较基准', data:bench, borderColor:'#78716c', backgroundColor:'rgba(120,113,108,0.05)', borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, tension:0.3}
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      plugins: {legend:{display:true, position:'top', labels:{font:{size:12}}}, tooltip:{backgroundColor:'#1a1a1a', padding:10, cornerRadius:8}},
-      scales: {x:{grid:{display:false}, ticks:{font:{size:10}, color:'#78716c'}}, y:{grid:{color:'#f5f5f4'}, ticks:{font:{size:11}, color:'#78716c'}}}}
-    }
-  });
-});
 </script>
 </body>
 </html>
