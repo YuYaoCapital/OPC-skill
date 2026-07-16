@@ -563,7 +563,6 @@ def generate_report(data, output_path, chart_dir):
     story.append(Spacer(1, 3*mm))
     story.append(P(fund.get('theme_comment', ''), body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    story.append(PageBreak())
     
     # --- 九、为什么上周会有波动？（归因分析） ---
     story.append(P('九、为什么上周会有波动？（归因分析）', header_style))
@@ -580,7 +579,6 @@ def generate_report(data, output_path, chart_dir):
         color_fn = red if ol.get('positive', True) else green
         story.append(P(f'{color_fn(f"<b>{idx}. {ol.get('title', '')}</b>")}{ol.get("content", "")}', body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    story.append(PageBreak())
     
     # --- 十一、基金经理与产品档案 ---
     story.append(P('十一、基金经理与产品档案', header_style))
