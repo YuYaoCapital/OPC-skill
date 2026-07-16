@@ -185,8 +185,8 @@ def create_nav_chart(nav_history, benchmark_line, output_path):
     navs = [p['nav'] for p in nav_history]
     x_raw = np.arange(len(dates))
     
-    x_smooth_fund, y_smooth_fund = gaussian_smooth(x_raw, navs)
-    x_smooth_bench, y_smooth_bench = gaussian_smooth(x_raw, benchmark_line)
+    x_smooth_fund, y_smooth_fund = gaussian_smooth(x_raw, navs, sigma=6)
+    x_smooth_bench, y_smooth_bench = gaussian_smooth(x_raw, benchmark_line, sigma=6)
     
     ax.plot(x_smooth_fund, y_smooth_fund, '-', color='#8b0a1a', linewidth=2.5, label='基金净值')
     ax.plot(x_smooth_bench, y_smooth_bench, '--', color='#78716c', linewidth=1.8, label='业绩比较基准')
@@ -287,8 +287,8 @@ def generate_report(data, output_path, chart_dir):
     else:
         total_return = 0
     
-    report_date = fund.get('report_date', '2026-07-10')
-    data_cutoff = fund.get('data_cutoff', report_date)
+    report_date = fund.get('report_date', '2026-07-16')
+    data_cutoff = fund.get('data_cutoff', '2026-07-10')
     period_start = fund.get('period_start', '2026-07-06')
     period_end = fund.get('period_end', '2026-07-10')
     
@@ -296,18 +296,19 @@ def generate_report(data, output_path, chart_dir):
     story.append(Spacer(1, 16*mm))
     story.append(P(name, title_style))
     story.append(P(f"{code} · 周度回顾", subtitle_style))
-    story.append(P(f'数据截止 {data_cutoff} | 报告生成 {report_date}', footer_style))
+    story.append(P(f'报告日期 {period_start} 至 {period_end} | 制作日期 {report_date}', footer_style))
     story.append(Spacer(1, 8*mm))
     
     # 顶部关键指标（4列）
+    ytd_return = float(fund.get('ytd_return', 0) or 0)
     metric_data = [
-        [P('最新净值', caption_style), P('估算净值', caption_style), P('估算涨跌幅', caption_style), P('成立以来', caption_style)],
+        [P('最新净值', caption_style), P('近一周', caption_style), P('今年以来', caption_style), P('成立以来', caption_style)],
         [P(primary(f"{nav:.4f}"), title_style), 
-         P(primary(f"{nav:.4f}"), title_style),
-         P(colored_pct(daily_change), title_style),
+         P(colored_pct(weekly_return), title_style),
+         P(colored_pct(ytd_return), title_style),
          P(colored_pct(total_return), title_style)],
     ]
-    metric_table = Table(metric_data, colWidths=[40*mm]*4, rowHeights=[8*mm, 12*mm])
+    metric_table = Table(metric_data, colWidths=[35*mm, 48*mm, 35*mm, 48*mm], rowHeights=[8*mm, 12*mm])
     metric_table.setStyle(TableStyle([
         ('ALIGN', (0,0), (-1,-1), 'CENTER'),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
@@ -318,19 +319,29 @@ def generate_report(data, output_path, chart_dir):
         ('BOTTOMPADDING', (0,0), (-1,-1), 4),
     ]))
     story.append(metric_table)
+    story.append(P(f'<font size="7" color="{C_TEXT_SEC.hexval()}">最新净值日期：{data_cutoff}</font>', caption_style))
     story.append(Spacer(1, 4*mm))
-    
-    story.append(P(
-        '<b>风险提示：</b>本报告仅为理财经理服务工具，不构成任何投资建议。基金过往业绩不代表未来表现。',
-        small_style
-    ))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
     
     # --- 一、产品概况 ---
     story.append(P('一、产品概况', header_style))
     overview_rows = []
+    # 标签映射：旧标签 → 新标签
+    label_map = {
+        '估算净值': '近一周收益',
+        '估算涨跌幅': '近一年收益',
+        '近1年收益': '机构持仓占比',
+    }
     for item in fund.get('overview', []):
-        overview_rows.append([P(item['label']), P(item['value'])])
+        label = item.get('label', '')
+        label = label_map.get(label, label)  # 应用映射
+        value = item.get('value', '')
+        # 近一周收益/近一年收益：从fund实际字段获取并着色
+        if label == '近一周收益':
+            value = colored_pct(float(fund.get('weekly_return', 0) or 0))
+        elif label == '近一年收益':
+            value = colored_pct(float(fund.get('ytd_return', 0) or 0))
+        overview_rows.append([P(label), P(value)])
     
     if overview_rows:
         overview_table = Table(overview_rows, colWidths=[35*mm, 145*mm])
@@ -452,16 +463,56 @@ def generate_report(data, output_path, chart_dir):
     story.append(Spacer(1, 3*mm))
     if max_dd is not None:
         story.append(P(
-            f'{primary("<b>成立以来最大回撤说明：</b>")}基金历史最大回撤约{green(f"{max_dd:.1f}%")}。'
-            f'当前净值{nav:.4f}（{data_cutoff}）。'
-            f'{"当前处于回撤修复过程中。" if curr_dd < 0 else "当前净值已修复历史回撤。"}',
+            f'{primary("<b>成立以来最大回撤说明：</b>")}{fund.get("drawdown_summary", "")}',
             body_style
         ))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    story.append(PageBreak())
+
     
-    # --- 四、全球市场速览 ---
-    story.append(P('四、全球市场速览（上周）', header_style))
+    # --- 四、基金经理观点 ---
+    story.append(P('四、基金经理观点', header_style))
+    manager_views = fund.get('manager_views', [])
+    for mv in manager_views:
+        mv_title = mv.get('title', '')
+        mv_content = mv.get('content', '')
+        story.append(P(f'{primary(f"<b>{mv_title}</b>")}{mv_content}', body_style))
+    story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
+    
+    # --- 五、上周产品表现 ---
+    story.append(P('五、上周产品表现', header_style))
+    story.append(P(f'统计区间：{period_start} 至 {period_end} | 数据截止：{data_cutoff}', small_style))
+    story.append(Spacer(1, 2*mm))
+    
+    weekly_perf = fund.get('weekly_performance', {})
+    if weekly_perf:
+        w_data = [[P(bold('时间维度')), P(bold('基金收益率')), P(bold('基准收益率')), P(bold('超额收益'))]]
+        for wp in weekly_perf.get('periods', []):
+            if isinstance(wp.get('return'), (int, float)):
+                w_data.append([P(wp['period']), P(colored_pct(float(wp['return']))), P('--'), P('--')])
+            else:
+                fund_ret = wp.get('fund_return', 0)
+                bench_ret = wp.get('benchmark_return', 0)
+                excess_ret = wp.get('excess_return', 0)
+                w_data.append([
+                    P(wp['period']),
+                    P(colored_pct(fund_ret)),
+                    P(colored_pct(bench_ret)),
+                    P(colored_pct(excess_ret))
+                ])
+        w_table = Table(w_data, colWidths=[35*mm, 48*mm, 48*mm, 48*mm])
+        w_table.setStyle(make_table_style_centered(True))
+        story.append(w_table)
+    
+    story.append(Spacer(1, 3*mm))
+    story.append(P(f'{primary("<b>表现点评：</b>")}{fund.get("weekly_comment", "")}', body_style))
+    story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
+    
+    # --- 六、回撤修复数据 ---
+    story.append(P('六、回撤修复数据', header_style))
+    story.append(P(fund.get('drawdown_repair_summary', ''), body_style))
+    story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
+    # --- 七、全球市场速览 ---
+    story.append(P('七、全球市场速览（上周）', header_style))
     story.append(P(f'统计区间：{period_start} 至 {period_end} | 数据来源：天天基金、同花顺iFinD', small_style))
     story.append(Spacer(1, 2*mm))
     
@@ -491,8 +542,8 @@ def generate_report(data, output_path, chart_dir):
     story.append(P(f'{primary("<b>市场点评：</b>")}{fund.get("market_comment", "")}', body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
     
-    # --- 五、热门主题表现 ---
-    story.append(P('五、热门主题表现（上周）', header_style))
+    # --- 八、热门主题表现 ---
+    story.append(P('八、热门主题表现（上周）', header_style))
     story.append(P(f'统计区间：{period_start} 至 {period_end} | 数据来源：同花顺iFinD', small_style))
     story.append(Spacer(1, 2*mm))
     
@@ -508,62 +559,18 @@ def generate_report(data, output_path, chart_dir):
     story.append(Spacer(1, 3*mm))
     story.append(P(fund.get('theme_comment', ''), body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    story.append(PageBreak())
+
     
-    # --- 六、基金经理观点 ---
-    story.append(P('六、基金经理观点', header_style))
-    manager_views = fund.get('manager_views', [])
-    for mv in manager_views:
-        story.append(P(f'{primary(f"<b>{mv.get('title', '')}</b>")}{mv.get("content", "")}', body_style))
-    story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    
-    # --- 七、上周产品表现 ---
-    story.append(P('七、上周产品表现', header_style))
-    story.append(P(f'统计区间：{period_start} 至 {period_end} | 数据截止：{data_cutoff}', small_style))
-    story.append(Spacer(1, 2*mm))
-    
-    weekly_perf = fund.get('weekly_performance', {})
-    if weekly_perf:
-        w_data = [[P(bold('时间维度')), P(bold('基金收益率')), P(bold('基准收益率')), P(bold('超额收益'))]]
-        for wp in weekly_perf.get('periods', []):
-            if isinstance(wp.get('return'), (int, float)):
-                w_data.append([P(wp['period']), P(colored_pct(float(wp['return']))), P('--'), P('--')])
-            else:
-                fund_ret = wp.get('fund_return', 0)
-                bench_ret = wp.get('benchmark_return', 0)
-                excess_ret = wp.get('excess_return', 0)
-                w_data.append([
-                    P(wp['period']),
-                    P(colored_pct(fund_ret)),
-                    P(colored_pct(bench_ret)),
-                    P(colored_pct(excess_ret))
-                ])
-        w_table = Table(w_data, colWidths=[35*mm, 48*mm, 48*mm, 48*mm])
-        w_table.setStyle(make_table_style_centered(True))
-        story.append(w_table)
-    
-    story.append(Spacer(1, 3*mm))
-    story.append(P(f'{primary("<b>表现点评：</b>")}{fund.get("weekly_comment", "")}', body_style))
-    story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    
-    # --- 八、回撤修复数据 ---
-    story.append(P('八、回撤修复数据', header_style))
-    if max_dd is not None:
-        story.append(P(
-            f'当前净值{nav:.4f}，历史最大回撤{green(f"{max_dd:.1f}%")}。'
-            f'{"当前处于回撤修复过程中。" if curr_dd < 0 else "当前净值已修复历史回撤。"}',
-            body_style
-        ))
-    else:
-        story.append(P('基金成立时间较短，暂无完整回撤修复数据。', body_style))
-    story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
+
     
     # --- 九、为什么上周会有波动？（归因分析） ---
     story.append(P('九、为什么上周会有波动？（归因分析）', header_style))
     attributions = fund.get('attributions', [])
     for idx, attr in enumerate(attributions, 1):
         color_fn = red if attr.get('positive', True) else green
-        story.append(P(f'{color_fn(f"<b>{idx}. {attr.get('title', '')}</b>")}{attr.get("content", "")}', body_style))
+        attr_title = attr.get('title', '')
+        attr_content = attr.get('content', '')
+        story.append(P(f'{color_fn(f"<b>{idx}. {attr_title}</b>")}{attr_content}', body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
     
     # --- 十、后市怎么看？ ---
@@ -571,9 +578,11 @@ def generate_report(data, output_path, chart_dir):
     outlooks = fund.get('outlooks', [])
     for idx, ol in enumerate(outlooks, 1):
         color_fn = red if ol.get('positive', True) else green
-        story.append(P(f'{color_fn(f"<b>{idx}. {ol.get('title', '')}</b>")}{ol.get("content", "")}', body_style))
+        ol_title = ol.get('title', '')
+        ol_content = ol.get('content', '')
+        story.append(P(f'{color_fn(f"<b>{idx}. {ol_title}</b>")}{ol_content}', body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-    story.append(PageBreak())
+
     
     # --- 十一、基金经理与产品档案 ---
     story.append(P('十一、基金经理与产品档案', header_style))
@@ -610,12 +619,12 @@ def generate_report(data, output_path, chart_dir):
     # --- Footer ---
     story.append(Spacer(1, 6*mm))
     story.append(P(
-        f'报告生成时间：{report_date} | 数据截止日期：{data_cutoff} | 本报告仅供理财经理内部使用，不构成投资建议',
+        '<b>风险提示：</b>',
         footer_style
     ))
     story.append(P(
-        '数据来源：天天基金、同花顺iFinD、东方财富Choice | 持仓数据来自最新季报',
-        small_style
+        '基金过往业绩不代表未来表现，基金投资需谨慎。请您根据自身的风险承受能力，选择适合自己的基金产品。本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。',
+        footer_style
     ))
     
     doc.build(story)
@@ -634,6 +643,19 @@ if __name__ == '__main__':
     
     with open(data_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
+    
+    # 适配多只基金字典格式：选择有 overview 字段的基金，否则取第一只
+    if isinstance(data, dict) and data and isinstance(next(iter(data.values())), dict):
+        selected_fund = None
+        for code_key, fund_data in data.items():
+            if fund_data.get('overview'):
+                selected_fund = fund_data
+                selected_fund['code'] = selected_fund.get('code', code_key)
+                break
+        if selected_fund is None:
+            code_key, selected_fund = next(iter(data.items()))
+            selected_fund['code'] = selected_fund.get('code', code_key)
+        data = selected_fund
     
     result = generate_report(data, output_path, chart_dir)
     print(f"Generated: {result}")
