@@ -1,0 +1,3402 @@
+{
+  "002692": {
+    "name": "富国创新科技混合A",
+    "manager": "罗擎",
+    "type": "混合型-偏股",
+    "scale": "45.78亿",
+    "benchmark": "中证TMT产业主题指数收益率×60%+中证全债指数收益率×40%",
+    "nav": 5.179,
+    "nav_date": "2026-07-10",
+    "weekly_return": -1.31,
+    "ytd_return": 72.59,
+    "total_return_since_inception": 393.1,
+    "daily_change": -0.26,
+    "monthly_return": -3.62,
+    "quarterly_return": -13.0,
+    "halfyear_return": 73.95,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 2.7202
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 2.6421
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 2.5007
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 2.4486
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 2.4578
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 2.739
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 2.7082
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 2.6919
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 2.9405
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 3.2116
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 3.2016
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 3.2753
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 3.5924
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 3.7438
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 3.8325
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 3.9961
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 4.2643
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 4.6874
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 4.8035
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 4.5618
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 4.7441
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 4.9867
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 5.2283
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 5.3313
+      }
+    ],
+    "holdings": [
+      {
+        "name": "东山精密",
+        "industry": "电子元件",
+        "weight": "9.53%",
+        "change": 0.15
+      },
+      {
+        "name": "中际旭创",
+        "industry": "通信设备",
+        "weight": "9.42%",
+        "change": -4.58
+      },
+      {
+        "name": "新易盛",
+        "industry": "通信设备",
+        "weight": "9.30%",
+        "change": -4.22
+      },
+      {
+        "name": "亨通光电",
+        "industry": "通信设备",
+        "weight": "8.04%",
+        "change": -2.58
+      },
+      {
+        "name": "沪电股份",
+        "industry": "电子元件",
+        "weight": "7.25%",
+        "change": -3.27
+      },
+      {
+        "name": "长飞光纤",
+        "industry": "通信设备",
+        "weight": "6.69%",
+        "change": 0.41
+      },
+      {
+        "name": "长芯博创",
+        "industry": "通信设备",
+        "weight": "5.16%",
+        "change": -2.36
+      },
+      {
+        "name": "烽火通信",
+        "industry": "通信设备",
+        "weight": "3.85%",
+        "change": 1.32
+      },
+      {
+        "name": "中天科技",
+        "industry": "通信设备",
+        "weight": "3.83%",
+        "change": -4.51
+      },
+      {
+        "name": "世嘉科技",
+        "industry": "通信设备",
+        "weight": "3.20%",
+        "change": 2.16
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 72.59,
+        "benchmark_return": 68.26,
+        "excess_return": 3.06
+      },
+      "2025": {
+        "fund_return": 23.73,
+        "benchmark_return": 24.87,
+        "excess_return": -1.14
+      },
+      "2024": {
+        "fund_return": 13.38,
+        "benchmark_return": 10.0,
+        "excess_return": 3.38
+      },
+      "2023": {
+        "fund_return": 9.01,
+        "benchmark_return": 5.63,
+        "excess_return": 3.38
+      },
+      "2022": {
+        "fund_return": -1.71,
+        "benchmark_return": -5.8,
+        "excess_return": 4.09
+      },
+      "2021": {
+        "fund_return": -3.79,
+        "benchmark_return": -2.2,
+        "excess_return": -1.59
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -40.2,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -26.8,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约66.97%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，罗擎坚持在核心赛道中精选具备竞争力的标的。基金在混合型-偏股框架下，重点布局东山精密、中际旭创、新易盛等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：东山精密等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理罗擎的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，富国创新科技混合A由资深基金经理罗擎管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周富国创新科技混合A单周<span class=\"down\">-1.31%</span>。基金持仓中的相关标的如东山精密等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "100055": {
+    "name": "富国全球科技互联网股票(QDII)A",
+    "manager": "赵年珅",
+    "type": "QDII-普通股票",
+    "scale": "12.46亿",
+    "benchmark": "中证海外中国互联网指数(美元)收益率×55%+纳斯达克100指数收益率×30%+中证互联网指数收益率×5%+中债-国债总全价(1-3年)指数收益率×10%",
+    "nav": 5.8339,
+    "nav_date": "2026-07-10",
+    "weekly_return": -0.45,
+    "ytd_return": 72.5,
+    "total_return_since_inception": 350.0,
+    "daily_change": -0.09,
+    "monthly_return": 1.02,
+    "quarterly_return": 0.89,
+    "halfyear_return": 72.3,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 4.0736
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 4.1832
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 4.0639
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 3.7653
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 3.6299
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 4.0065
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 3.7678
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 3.5039
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 3.7668
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 3.6315
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 3.7008
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 4.1214
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 4.178
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 4.4788
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 4.7455
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 4.7716
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 5.1823
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 5.74
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 5.4357
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 5.3527
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 5.3801
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 5.148
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 5.374
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 5.6843
+      }
+    ],
+    "holdings": [
+      {
+        "name": "台积电(TSM)",
+        "industry": "半导体",
+        "weight": "10.06%",
+        "change": -0.14
+      },
+      {
+        "name": "英伟达(NVDA)",
+        "industry": "半导体",
+        "weight": "9.80%",
+        "change": 0.56
+      },
+      {
+        "name": "谷歌-A(GOOGL)",
+        "industry": "互联网/软件",
+        "weight": "8.56%",
+        "change": 1.57
+      },
+      {
+        "name": "网易云音乐",
+        "industry": "互联网/文娱",
+        "weight": "8.17%",
+        "change": 1.8
+      },
+      {
+        "name": "超威半导体(AMD)",
+        "industry": "半导体",
+        "weight": "7.40%",
+        "change": -1.48
+      },
+      {
+        "name": "ASMPT",
+        "industry": "半导体设备",
+        "weight": "6.29%",
+        "change": -0.53
+      },
+      {
+        "name": "SK海力士",
+        "industry": "半导体",
+        "weight": "4.11%",
+        "change": -3.21
+      },
+      {
+        "name": "英特尔(INTC)",
+        "industry": "半导体",
+        "weight": "3.66%",
+        "change": -3.87
+      },
+      {
+        "name": "阿斯麦(ASML)",
+        "industry": "半导体设备",
+        "weight": "3.58%",
+        "change": -3.77
+      },
+      {
+        "name": "三星电子",
+        "industry": "半导体/电子",
+        "weight": "3.33%",
+        "change": 2.73
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 72.5,
+        "benchmark_return": 74.16,
+        "excess_return": -0.63
+      },
+      "2025": {
+        "fund_return": -6.71,
+        "benchmark_return": -6.9,
+        "excess_return": 0.19
+      },
+      "2024": {
+        "fund_return": -11.9,
+        "benchmark_return": -9.63,
+        "excess_return": -2.27
+      },
+      "2023": {
+        "fund_return": 18.06,
+        "benchmark_return": 14.29,
+        "excess_return": 3.77
+      },
+      "2022": {
+        "fund_return": 8.37,
+        "benchmark_return": 10.06,
+        "excess_return": -1.69
+      },
+      "2021": {
+        "fund_return": 22.36,
+        "benchmark_return": 24.27,
+        "excess_return": -1.91
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -31.4,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -20.9,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约52.30%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，赵年珅坚持在核心赛道中精选具备竞争力的标的。基金在QDII-普通股票框架下，重点布局台积电(TSM)、英伟达(NVDA)、谷歌-A(GOOGL)等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：台积电(TSM)等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理赵年珅的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，富国全球科技互联网股票(QDII)A由资深基金经理赵年珅管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周富国全球科技互联网股票(QDII)A单周<span class=\"down\">-0.45%</span>。基金持仓中的相关标的如台积电(TSM)等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "014736": {
+    "name": "创金合信专精特新股票发起A",
+    "manager": "王先伟",
+    "type": "股票型",
+    "scale": "1.0亿",
+    "benchmark": "中证专精特新100指数收益率×85%+中证港股通综合指数收益率(经汇率调整后)×5%+人民币活期存款利率(税后)×10%",
+    "nav": 3.988,
+    "nav_date": "2026-07-10",
+    "weekly_return": 3.15,
+    "ytd_return": 28.35,
+    "total_return_since_inception": 81.38,
+    "daily_change": 0.63,
+    "monthly_return": 10.13,
+    "quarterly_return": 42.42,
+    "halfyear_return": 27.39,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 4.1272
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 3.8476
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 3.9125
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 4.1578
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 3.8893
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 4.2393
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 3.9907
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 3.8549
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 3.5914
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 3.4179
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 3.1817
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 3.1121
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 3.4045
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 3.5354
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 3.8126
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 3.7934
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 3.5016
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 3.3128
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 3.1953
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 3.4206
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 3.45
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 3.8328
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 3.541
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 3.721
+      }
+    ],
+    "holdings": [
+      {
+        "name": "拓荆科技",
+        "industry": "半导体设备",
+        "weight": "9.84%",
+        "change": 0.69
+      },
+      {
+        "name": "芯碁微装",
+        "industry": "半导体设备",
+        "weight": "9.78%",
+        "change": 0.81
+      },
+      {
+        "name": "京仪装备",
+        "industry": "半导体设备",
+        "weight": "8.40%",
+        "change": 0.52
+      },
+      {
+        "name": "安集科技",
+        "industry": "半导体材料",
+        "weight": "5.13%",
+        "change": -4.06
+      },
+      {
+        "name": "华海清科",
+        "industry": "半导体设备",
+        "weight": "5.03%",
+        "change": -1.42
+      },
+      {
+        "name": "富士达",
+        "industry": "通信设备/电子",
+        "weight": "4.97%",
+        "change": 2.02
+      },
+      {
+        "name": "杰华特",
+        "industry": "半导体",
+        "weight": "4.89%",
+        "change": 1.31
+      },
+      {
+        "name": "中科飞测",
+        "industry": "半导体设备",
+        "weight": "4.79%",
+        "change": 0.15
+      },
+      {
+        "name": "精智达",
+        "industry": "半导体设备",
+        "weight": "4.63%",
+        "change": -3.48
+      },
+      {
+        "name": "思瑞浦",
+        "industry": "半导体",
+        "weight": "4.59%",
+        "change": 2.38
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 28.35,
+        "benchmark_return": 24.98,
+        "excess_return": 2.47
+      },
+      "2025": {
+        "fund_return": 13.41,
+        "benchmark_return": 13.64,
+        "excess_return": -0.23
+      },
+      "2024": {
+        "fund_return": 12.37,
+        "benchmark_return": 9.45,
+        "excess_return": 2.92
+      },
+      "2023": {
+        "fund_return": 24.26,
+        "benchmark_return": 22.71,
+        "excess_return": 1.55
+      },
+      "2022": {
+        "fund_return": 1.2,
+        "benchmark_return": 1.73,
+        "excess_return": -0.53
+      },
+      "2021": {
+        "fund_return": -3.04,
+        "benchmark_return": -5.53,
+        "excess_return": 2.49
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -29.4,
+        "status": "修复中"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -19.6,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约49.00%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，王先伟坚持在核心赛道中精选具备竞争力的标的。基金在股票型框架下，重点布局拓荆科技、芯碁微装、京仪装备等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：拓荆科技等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理王先伟的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，创金合信专精特新股票发起A由资深基金经理王先伟管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周创金合信专精特新股票发起A单周<span class=\"up\">+3.15%</span>。基金持仓中的相关标的如拓荆科技等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "005550": {
+    "name": "汇安成长优选混合A",
+    "manager": "单柏霖",
+    "type": "混合型-灵活",
+    "scale": "8.21亿",
+    "benchmark": "沪深300指数收益率×60%+上证国债指数收益率×40%",
+    "nav": 4.5201,
+    "nav_date": "2026-07-10",
+    "weekly_return": 2.44,
+    "ytd_return": 55.47,
+    "total_return_since_inception": 284.97,
+    "daily_change": 0.49,
+    "monthly_return": 9.09,
+    "quarterly_return": 36.43,
+    "halfyear_return": 55.96,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 1.6384
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 1.6995
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 1.7731
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 1.9228
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 1.97
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 2.0249
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 2.2314
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 2.4019
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 2.4389
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 2.6375
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 2.8205
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 2.9267
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 2.8602
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 3.1158
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 3.3415
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 3.1033
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 3.4095
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 3.2804
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 3.046
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 3.2395
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 3.1999
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 3.5149
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 3.9293
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 4.2418
+      }
+    ],
+    "holdings": [
+      {
+        "name": "新易盛",
+        "industry": "通信设备",
+        "weight": "9.30%",
+        "change": -3.48
+      },
+      {
+        "name": "华海清科",
+        "industry": "半导体设备",
+        "weight": "8.87%",
+        "change": -3.19
+      },
+      {
+        "name": "中际旭创",
+        "industry": "通信设备",
+        "weight": "8.79%",
+        "change": 1.42
+      },
+      {
+        "name": "强一股份",
+        "industry": "电子/半导体",
+        "weight": "7.35%",
+        "change": 0.24
+      },
+      {
+        "name": "北方华创",
+        "industry": "半导体设备",
+        "weight": "4.65%",
+        "change": 2.36
+      },
+      {
+        "name": "沪电股份",
+        "industry": "电子元件",
+        "weight": "4.25%",
+        "change": -1.84
+      },
+      {
+        "name": "江丰电子",
+        "industry": "半导体材料",
+        "weight": "4.10%",
+        "change": -0.55
+      },
+      {
+        "name": "伟测科技",
+        "industry": "半导体设备",
+        "weight": "3.69%",
+        "change": -2.48
+      },
+      {
+        "name": "天孚通信",
+        "industry": "通信设备",
+        "weight": "3.60%",
+        "change": 2.91
+      },
+      {
+        "name": "华丰科技",
+        "industry": "电子元件",
+        "weight": "3.51%",
+        "change": -0.99
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 55.47,
+        "benchmark_return": 53.95,
+        "excess_return": -1.61
+      },
+      "2025": {
+        "fund_return": 0.47,
+        "benchmark_return": 2.26,
+        "excess_return": -1.79
+      },
+      "2024": {
+        "fund_return": 21.41,
+        "benchmark_return": 24.09,
+        "excess_return": -2.68
+      },
+      "2023": {
+        "fund_return": 2.53,
+        "benchmark_return": 7.27,
+        "excess_return": -4.74
+      },
+      "2022": {
+        "fund_return": 4.08,
+        "benchmark_return": 1.2,
+        "excess_return": 2.88
+      },
+      "2021": {
+        "fund_return": 14.72,
+        "benchmark_return": 19.5,
+        "excess_return": -4.78
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -25.4,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -16.9,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约42.30%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，单柏霖坚持在核心赛道中精选具备竞争力的标的。基金在混合型-灵活框架下，重点布局新易盛、华海清科、中际旭创等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：新易盛等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理单柏霖的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，汇安成长优选混合A由资深基金经理单柏霖管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周汇安成长优选混合A单周<span class=\"up\">+2.44%</span>。基金持仓中的相关标的如新易盛等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "001816": {
+    "name": "汇添富新睿精选混合A",
+    "manager": "花秀宁",
+    "type": "混合型-灵活",
+    "scale": "31.58亿",
+    "benchmark": "沪深300指数收益率×50%+中债综合指数收益率×50%",
+    "nav": 1.746,
+    "nav_date": "2026-07-10",
+    "weekly_return": -5.57,
+    "ytd_return": 19.19,
+    "total_return_since_inception": 113.2,
+    "daily_change": -1.11,
+    "monthly_return": -25.0,
+    "quarterly_return": -68.99,
+    "halfyear_return": 17.44,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 1.0068
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 1.0115
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 0.9326
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 0.969
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 0.9091
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 0.843
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 0.9053
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 0.9617
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 1.001
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 1.0358
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 1.1464
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 1.1182
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 1.2238
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 1.3488
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 1.4868
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 1.4645
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 1.431
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 1.334
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 1.4322
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 1.3334
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 1.3933
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 1.4951
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 1.6395
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 1.7843
+      }
+    ],
+    "holdings": [
+      {
+        "name": "应流股份",
+        "industry": "机械设备",
+        "weight": "9.55%",
+        "change": -3.42
+      },
+      {
+        "name": "思源电气",
+        "industry": "电力设备",
+        "weight": "8.40%",
+        "change": -0.32
+      },
+      {
+        "name": "麦格米特",
+        "industry": "电力设备",
+        "weight": "6.43%",
+        "change": -0.37
+      },
+      {
+        "name": "英维克",
+        "industry": "机械设备/电力设备",
+        "weight": "5.83%",
+        "change": 1.51
+      },
+      {
+        "name": "东方电气",
+        "industry": "电力设备",
+        "weight": "5.29%",
+        "change": 1.25
+      },
+      {
+        "name": "金盘科技",
+        "industry": "电力设备",
+        "weight": "4.80%",
+        "change": -2.97
+      },
+      {
+        "name": "欧陆通",
+        "industry": "电力设备",
+        "weight": "4.56%",
+        "change": 2.08
+      },
+      {
+        "name": "冰轮环境",
+        "industry": "机械设备",
+        "weight": "4.19%",
+        "change": 0.69
+      },
+      {
+        "name": "科士达",
+        "industry": "电力设备",
+        "weight": "3.69%",
+        "change": -5.0
+      },
+      {
+        "name": "汽轮科技",
+        "industry": "机械设备",
+        "weight": "3.16%",
+        "change": -2.8
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 19.19,
+        "benchmark_return": 19.68,
+        "excess_return": -1.65
+      },
+      "2025": {
+        "fund_return": -8.68,
+        "benchmark_return": -8.78,
+        "excess_return": 0.1
+      },
+      "2024": {
+        "fund_return": 2.31,
+        "benchmark_return": -1.99,
+        "excess_return": 4.3
+      },
+      "2023": {
+        "fund_return": 2.92,
+        "benchmark_return": 1.89,
+        "excess_return": 1.03
+      },
+      "2022": {
+        "fund_return": 8.92,
+        "benchmark_return": 4.34,
+        "excess_return": 4.58
+      },
+      "2021": {
+        "fund_return": -9.01,
+        "benchmark_return": -16.82,
+        "excess_return": 7.81
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -12.1,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -8.0,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约20.12%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，花秀宁坚持在核心赛道中精选具备竞争力的标的。基金在混合型-灵活框架下，重点布局应流股份、思源电气、麦格米特等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：应流股份等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理花秀宁的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，汇添富新睿精选混合A由资深基金经理花秀宁管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周汇添富新睿精选混合A单周<span class=\"down\">-5.57%</span>。基金持仓中的相关标的如应流股份等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "025702": {
+    "name": "惠升均衡回报混合发起A",
+    "manager": "钱睿南",
+    "type": "混合型-偏股",
+    "scale": "0.87亿",
+    "benchmark": "中证A500指数收益率×70%+中证港股通综合指数(人民币)收益率×10%+银行活期存款利率(税后)×20%",
+    "nav": 1.0479,
+    "nav_date": "2026-07-10",
+    "weekly_return": -2.76,
+    "ytd_return": 6.2,
+    "total_return_since_inception": 10.62,
+    "daily_change": -0.55,
+    "monthly_return": -10.91,
+    "quarterly_return": -31.71,
+    "halfyear_return": 5.29,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 1.0214
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 1.1026
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 1.1542
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 1.1542
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 1.0984
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 1.1373
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 1.0501
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 1.0275
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 1.0073
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 1.0315
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 0.9868
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 0.9288
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 0.9361
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 0.8832
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 0.9598
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 0.9263
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 0.8801
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 0.831
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 0.8897
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 0.8672
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 0.8271
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 0.9067
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 0.9627
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 1.0133
+      }
+    ],
+    "holdings": [
+      {
+        "name": "鼎胜新材",
+        "industry": "有色金属",
+        "weight": "6.24%",
+        "change": -0.93
+      },
+      {
+        "name": "新和成",
+        "industry": "化工",
+        "weight": "4.41%",
+        "change": 1.73
+      },
+      {
+        "name": "睿创微纳",
+        "industry": "半导体/电子",
+        "weight": "4.04%",
+        "change": 1.74
+      },
+      {
+        "name": "宁德时代",
+        "industry": "电力设备/电池",
+        "weight": "3.89%",
+        "change": -2.62
+      },
+      {
+        "name": "伟测科技",
+        "industry": "半导体设备",
+        "weight": "3.38%",
+        "change": -3.37
+      },
+      {
+        "name": "中联重科",
+        "industry": "机械设备",
+        "weight": "3.17%",
+        "change": 0.26
+      },
+      {
+        "name": "思源电气",
+        "industry": "电力设备",
+        "weight": "3.00%",
+        "change": 1.26
+      },
+      {
+        "name": "鼎龙股份",
+        "industry": "化工/电子",
+        "weight": "2.93%",
+        "change": 0.98
+      },
+      {
+        "name": "中国太保",
+        "industry": "非银金融/保险",
+        "weight": "2.80%",
+        "change": -0.31
+      },
+      {
+        "name": "贵州茅台",
+        "industry": "食品饮料",
+        "weight": "2.45%",
+        "change": -1.71
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 6.2,
+        "benchmark_return": 2.77,
+        "excess_return": -2.49
+      },
+      "2025": {
+        "fund_return": 24.5,
+        "benchmark_return": 26.94,
+        "excess_return": -2.44
+      },
+      "2024": {
+        "fund_return": 6.55,
+        "benchmark_return": 3.32,
+        "excess_return": 3.23
+      },
+      "2023": {
+        "fund_return": 8.47,
+        "benchmark_return": 6.29,
+        "excess_return": 2.18
+      },
+      "2022": {
+        "fund_return": -12.56,
+        "benchmark_return": -18.6,
+        "excess_return": 6.04
+      },
+      "2021": {
+        "fund_return": 22.43,
+        "benchmark_return": 21.54,
+        "excess_return": 0.89
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -5.1,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -3.4,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约8.50%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，钱睿南坚持在核心赛道中精选具备竞争力的标的。基金在混合型-偏股框架下，重点布局鼎胜新材、新和成、睿创微纳等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：鼎胜新材等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理钱睿南的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，惠升均衡回报混合发起A由资深基金经理钱睿南管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周惠升均衡回报混合发起A单周<span class=\"down\">-2.76%</span>。基金持仓中的相关标的如鼎胜新材等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "110029": {
+    "name": "易方达科讯混合",
+    "manager": "刘健维",
+    "type": "混合型-偏股",
+    "scale": "77.39亿",
+    "benchmark": "沪深300指数收益率×80%+中债总指数收益率×20%",
+    "nav": 4.4385,
+    "nav_date": "2026-07-10",
+    "weekly_return": 0.41,
+    "ytd_return": 44.96,
+    "total_return_since_inception": 639.12,
+    "daily_change": 0.08,
+    "monthly_return": 1.08,
+    "quarterly_return": 2.32,
+    "halfyear_return": 46.56,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 1.8949
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 2.1163
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 2.1913
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 2.3654
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 2.6091
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 2.67
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 2.9234
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 2.9718
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 3.1345
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 3.1222
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 2.9991
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 3.1022
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 3.0547
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 3.158
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 3.2146
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 3.3253
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 3.4541
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 3.5138
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 3.7941
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 3.6879
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 4.0194
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 4.4147
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 4.4936
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 4.6308
+      }
+    ],
+    "holdings": [
+      {
+        "name": "新易盛",
+        "industry": "通信设备",
+        "weight": "9.55%",
+        "change": 0.14
+      },
+      {
+        "name": "中际旭创",
+        "industry": "通信设备",
+        "weight": "8.66%",
+        "change": -0.11
+      },
+      {
+        "name": "中天科技",
+        "industry": "电力设备/通信",
+        "weight": "6.41%",
+        "change": -2.92
+      },
+      {
+        "name": "宁德时代",
+        "industry": "电力设备/电池",
+        "weight": "5.78%",
+        "change": -0.67
+      },
+      {
+        "name": "工业富联",
+        "industry": "电子/消费电子",
+        "weight": "5.37%",
+        "change": 1.43
+      },
+      {
+        "name": "亨通光电",
+        "industry": "通信设备",
+        "weight": "3.83%",
+        "change": -0.23
+      },
+      {
+        "name": "东山精密",
+        "industry": "电子元件",
+        "weight": "2.67%",
+        "change": 2.83
+      },
+      {
+        "name": "国泰海通",
+        "industry": "非银金融/证券",
+        "weight": "2.55%",
+        "change": 0.28
+      },
+      {
+        "name": "华泰证券",
+        "industry": "非银金融/证券",
+        "weight": "2.10%",
+        "change": -0.9
+      },
+      {
+        "name": "奕瑞科技",
+        "industry": "医疗器械",
+        "weight": "2.05%",
+        "change": -4.82
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 44.96,
+        "benchmark_return": 45.64,
+        "excess_return": 4.17
+      },
+      "2025": {
+        "fund_return": -2.9,
+        "benchmark_return": -7.82,
+        "excess_return": 4.92
+      },
+      "2024": {
+        "fund_return": 5.42,
+        "benchmark_return": 5.19,
+        "excess_return": 0.23
+      },
+      "2023": {
+        "fund_return": -3.06,
+        "benchmark_return": -5.24,
+        "excess_return": 2.18
+      },
+      "2022": {
+        "fund_return": 4.23,
+        "benchmark_return": 8.1,
+        "excess_return": -3.87
+      },
+      "2021": {
+        "fund_return": 15.54,
+        "benchmark_return": 15.4,
+        "excess_return": 0.14
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -42.2,
+        "status": "修复中"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -28.1,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约70.32%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，刘健维坚持在核心赛道中精选具备竞争力的标的。基金在混合型-偏股框架下，重点布局新易盛、中际旭创、中天科技等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：新易盛等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理刘健维的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，易方达科讯混合由资深基金经理刘健维管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周易方达科讯混合单周<span class=\"up\">+0.41%</span>。基金持仓中的相关标的如新易盛等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "025208": {
+    "name": "永赢先锋半导体智选混合发起A",
+    "manager": "张海啸",
+    "type": "混合型-偏股",
+    "scale": "14.45亿",
+    "benchmark": "中证全指半导体产品与设备指数收益率×70%+恒生指数收益率(按估值汇率折算)×10%+中债-综合指数(全价)收益率×20%",
+    "nav": 2.982,
+    "nav_date": "2026-07-10",
+    "weekly_return": -5.7,
+    "ytd_return": 132.52,
+    "total_return_since_inception": 187.6,
+    "daily_change": -1.14,
+    "monthly_return": -24.79,
+    "quarterly_return": -71.3,
+    "halfyear_return": 134.4,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 1.8855
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 1.8985
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 2.0709
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 2.0245
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 2.168
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 2.2171
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 2.2633
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 2.2406
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 2.0743
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 2.0175
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 1.915
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 1.7979
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 1.9135
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 2.1024
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 2.3469
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 2.4863
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 2.677
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 2.5526
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 2.5384
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 2.7502
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 2.8008
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 2.8702
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 3.0277
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 3.1668
+      }
+    ],
+    "holdings": [
+      {
+        "name": "德明利",
+        "industry": "半导体/存储",
+        "weight": "9.51%",
+        "change": -3.77
+      },
+      {
+        "name": "江波龙",
+        "industry": "半导体/存储",
+        "weight": "8.25%",
+        "change": 1.96
+      },
+      {
+        "name": "佰维存储",
+        "industry": "半导体/存储",
+        "weight": "8.25%",
+        "change": -4.92
+      },
+      {
+        "name": "兆易创新",
+        "industry": "半导体",
+        "weight": "7.68%",
+        "change": -0.23
+      },
+      {
+        "name": "香农芯创",
+        "industry": "半导体/电子",
+        "weight": "6.35%",
+        "change": 0.75
+      },
+      {
+        "name": "北京君正",
+        "industry": "半导体",
+        "weight": "5.80%",
+        "change": -0.78
+      },
+      {
+        "name": "澜起科技",
+        "industry": "半导体",
+        "weight": "4.73%",
+        "change": 0.91
+      },
+      {
+        "name": "普冉股份",
+        "industry": "半导体",
+        "weight": "4.38%",
+        "change": -0.91
+      },
+      {
+        "name": "神工股份",
+        "industry": "半导体材料",
+        "weight": "2.92%",
+        "change": -4.18
+      },
+      {
+        "name": "聚辰股份",
+        "industry": "半导体",
+        "weight": "2.58%",
+        "change": -4.21
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 132.52,
+        "benchmark_return": 129.45,
+        "excess_return": 0.71
+      },
+      "2025": {
+        "fund_return": 10.94,
+        "benchmark_return": 9.76,
+        "excess_return": 1.18
+      },
+      "2024": {
+        "fund_return": -2.05,
+        "benchmark_return": -8.8,
+        "excess_return": 6.75
+      },
+      "2023": {
+        "fund_return": 8.44,
+        "benchmark_return": 8.47,
+        "excess_return": -0.03
+      },
+      "2022": {
+        "fund_return": -2.91,
+        "benchmark_return": -2.55,
+        "excess_return": -0.36
+      },
+      "2021": {
+        "fund_return": -2.15,
+        "benchmark_return": -1.31,
+        "excess_return": -0.84
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -23.2,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -15.5,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约38.70%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，张海啸坚持在核心赛道中精选具备竞争力的标的。基金在混合型-偏股框架下，重点布局德明利、江波龙、佰维存储等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：德明利等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理张海啸的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，永赢先锋半导体智选混合发起A由资深基金经理张海啸管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周永赢先锋半导体智选混合发起A单周<span class=\"down\">-5.70%</span>。基金持仓中的相关标的如德明利等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "020876": {
+    "name": "中欧景气精选混合A",
+    "manager": "张学明",
+    "type": "混合型-偏股",
+    "scale": "16.75亿",
+    "benchmark": "中证800成长指数收益率×80%+中证港股通综合指数(人民币)收益率×10%+银行活期存款利率(税后)×10%",
+    "nav": 1.7953,
+    "nav_date": "2026-07-10",
+    "weekly_return": -6.04,
+    "ytd_return": 36.9,
+    "total_return_since_inception": 81.38,
+    "daily_change": -1.21,
+    "monthly_return": -26.1,
+    "quarterly_return": -73.1,
+    "halfyear_return": 38.8,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 1.268
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 1.2661
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 1.2404
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 1.1961
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 1.1586
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 1.1274
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 1.1978
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 1.2914
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 1.3419
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 1.3791
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 1.4636
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 1.5103
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 1.6286
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 1.6957
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 1.6682
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 1.5369
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 1.4307
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 1.4701
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 1.6044
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 1.6225
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 1.5809
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 1.7041
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 1.6333
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 1.7059
+      }
+    ],
+    "holdings": [
+      {
+        "name": "中钨高新",
+        "industry": "有色金属",
+        "weight": "2.31%",
+        "change": 0.58
+      },
+      {
+        "name": "天赐材料",
+        "industry": "化工/电池材料",
+        "weight": "2.20%",
+        "change": 2.96
+      },
+      {
+        "name": "思源电气",
+        "industry": "电力设备",
+        "weight": "2.16%",
+        "change": 1.59
+      },
+      {
+        "name": "海通发展",
+        "industry": "交通运输",
+        "weight": "2.15%",
+        "change": -3.5
+      },
+      {
+        "name": "若羽臣",
+        "industry": "商贸零售",
+        "weight": "2.08%",
+        "change": -3.7
+      },
+      {
+        "name": "盐湖股份",
+        "industry": "化工/有色金属",
+        "weight": "2.05%",
+        "change": 0.17
+      },
+      {
+        "name": "菜百股份",
+        "industry": "商贸零售",
+        "weight": "2.02%",
+        "change": 2.21
+      },
+      {
+        "name": "厦门象屿",
+        "industry": "交通运输/物流",
+        "weight": "1.90%",
+        "change": -1.04
+      },
+      {
+        "name": "小商品城",
+        "industry": "商贸零售",
+        "weight": "1.87%",
+        "change": -1.04
+      },
+      {
+        "name": "同花顺",
+        "industry": "计算机/金融软件",
+        "weight": "1.87%",
+        "change": 1.42
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 36.9,
+        "benchmark_return": 40.95,
+        "excess_return": -1.16
+      },
+      "2025": {
+        "fund_return": 6.17,
+        "benchmark_return": 2.42,
+        "excess_return": 3.75
+      },
+      "2024": {
+        "fund_return": 17.29,
+        "benchmark_return": 13.74,
+        "excess_return": 3.55
+      },
+      "2023": {
+        "fund_return": 8.32,
+        "benchmark_return": 12.07,
+        "excess_return": -3.75
+      },
+      "2022": {
+        "fund_return": 8.98,
+        "benchmark_return": 3.94,
+        "excess_return": 5.04
+      },
+      "2021": {
+        "fund_return": 1.08,
+        "benchmark_return": 1.05,
+        "excess_return": 0.03
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -9.8,
+        "status": "修复中"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -6.5,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约16.26%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，张学明坚持在核心赛道中精选具备竞争力的标的。基金在混合型-偏股框架下，重点布局中钨高新、天赐材料、思源电气等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：中钨高新等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理张学明的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，中欧景气精选混合A由资深基金经理张学明管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周中欧景气精选混合A单周<span class=\"down\">-6.04%</span>。基金持仓中的相关标的如中钨高新等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  },
+  "024836": {
+    "name": "中欧港股通科技混合发起A",
+    "manager": "杜厚良",
+    "type": "混合型-偏股",
+    "scale": "7.41亿",
+    "benchmark": "中证港股通科技指数(人民币)收益率×80%+银行活期存款利率(税后)×20%",
+    "nav": 1.0527,
+    "nav_date": "2026-07-10",
+    "weekly_return": -0.94,
+    "ytd_return": 9.98,
+    "total_return_since_inception": 14.01,
+    "daily_change": -0.19,
+    "monthly_return": -1.06,
+    "quarterly_return": -8.14,
+    "halfyear_return": 10.51,
+    "nav_history": [
+      {
+        "date": "2024-07-20",
+        "nav": 0.8934
+      },
+      {
+        "date": "2024-08-19",
+        "nav": 0.9351
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 0.8786
+      },
+      {
+        "date": "2024-10-18",
+        "nav": 0.9391
+      },
+      {
+        "date": "2024-11-17",
+        "nav": 0.905
+      },
+      {
+        "date": "2024-12-17",
+        "nav": 0.9549
+      },
+      {
+        "date": "2025-01-16",
+        "nav": 0.9084
+      },
+      {
+        "date": "2025-02-15",
+        "nav": 0.9942
+      },
+      {
+        "date": "2025-03-17",
+        "nav": 1.0124
+      },
+      {
+        "date": "2025-04-16",
+        "nav": 0.9628
+      },
+      {
+        "date": "2025-05-16",
+        "nav": 0.9501
+      },
+      {
+        "date": "2025-06-15",
+        "nav": 0.953
+      },
+      {
+        "date": "2025-07-15",
+        "nav": 1.0623
+      },
+      {
+        "date": "2025-08-14",
+        "nav": 1.1397
+      },
+      {
+        "date": "2025-09-13",
+        "nav": 1.2233
+      },
+      {
+        "date": "2025-10-13",
+        "nav": 1.3448
+      },
+      {
+        "date": "2025-11-12",
+        "nav": 1.2883
+      },
+      {
+        "date": "2025-12-12",
+        "nav": 1.1882
+      },
+      {
+        "date": "2026-01-11",
+        "nav": 1.2134
+      },
+      {
+        "date": "2026-02-10",
+        "nav": 1.2096
+      },
+      {
+        "date": "2026-03-12",
+        "nav": 1.1542
+      },
+      {
+        "date": "2026-04-11",
+        "nav": 1.0856
+      },
+      {
+        "date": "2026-05-11",
+        "nav": 1.1074
+      },
+      {
+        "date": "2026-06-10",
+        "nav": 1.0996
+      }
+    ],
+    "holdings": [
+      {
+        "name": "阿里巴巴-W",
+        "industry": "互联网/电商",
+        "weight": "9.46%",
+        "change": -4.79
+      },
+      {
+        "name": "长飞光纤光缆",
+        "industry": "通信设备",
+        "weight": "9.19%",
+        "change": 2.53
+      },
+      {
+        "name": "腾讯控股",
+        "industry": "互联网/游戏",
+        "weight": "9.14%",
+        "change": -4.4
+      },
+      {
+        "name": "心动公司",
+        "industry": "互联网/游戏",
+        "weight": "7.25%",
+        "change": -2.56
+      },
+      {
+        "name": "新易盛",
+        "industry": "通信设备",
+        "weight": "6.76%",
+        "change": 2.34
+      },
+      {
+        "name": "中际旭创",
+        "industry": "通信设备",
+        "weight": "6.27%",
+        "change": -4.91
+      },
+      {
+        "name": "FIT HON TENG",
+        "industry": "电子/制造",
+        "weight": "6.00%",
+        "change": -2.26
+      },
+      {
+        "name": "阜博集团",
+        "industry": "互联网/软件",
+        "weight": "5.73%",
+        "change": -4.35
+      },
+      {
+        "name": "哔哩哔哩-W",
+        "industry": "互联网/文娱",
+        "weight": "5.36%",
+        "change": -0.14
+      },
+      {
+        "name": "阅文集团",
+        "industry": "互联网/文娱",
+        "weight": "4.34%",
+        "change": 0.99
+      }
+    ],
+    "annual_returns": {
+      "2026": {
+        "fund_return": 9.98,
+        "benchmark_return": 11.8,
+        "excess_return": -2.23
+      },
+      "2025": {
+        "fund_return": 4.0,
+        "benchmark_return": 5.4,
+        "excess_return": -1.4
+      },
+      "2024": {
+        "fund_return": 11.48,
+        "benchmark_return": 9.12,
+        "excess_return": 2.36
+      },
+      "2023": {
+        "fund_return": 13.2,
+        "benchmark_return": 16.04,
+        "excess_return": -2.84
+      },
+      "2022": {
+        "fund_return": 10.25,
+        "benchmark_return": 8.76,
+        "excess_return": 1.49
+      },
+      "2021": {
+        "fund_return": 24.04,
+        "benchmark_return": 20.27,
+        "excess_return": 3.77
+      }
+    },
+    "drawdown_records": [
+      {
+        "event": "2024年1月高点后回撤",
+        "drawdown": -15.2,
+        "status": "已修复"
+      },
+      {
+        "event": "2023年6月高点后回撤",
+        "drawdown": -10.1,
+        "status": "已修复"
+      }
+    ],
+    "drawdown_summary": "成立以来最大回撤约25.30%，基金在回撤期间坚持既定投资策略，通过精选个股和适度调仓控制下行风险。",
+    "global_market": [
+      {
+        "market": "A股",
+        "index": "沪深300",
+        "close": "4780.79",
+        "change": -1.96
+      },
+      {
+        "market": "港股",
+        "index": "恒生指数",
+        "close": "24580.12",
+        "change": 0.82
+      },
+      {
+        "market": "美股",
+        "index": "标普500",
+        "close": "7575.39",
+        "change": 0.42
+      },
+      {
+        "market": "亚太",
+        "index": "日经225",
+        "close": "42156.78",
+        "change": 0.65
+      },
+      {
+        "market": "A股",
+        "index": "上证指数",
+        "close": "3996.16",
+        "change": -1.0
+      },
+      {
+        "market": "A股",
+        "index": "创业板指",
+        "close": "3842.73",
+        "change": -4.37
+      },
+      {
+        "market": "美股",
+        "index": "纳斯达克",
+        "close": "26281.61",
+        "change": 0.29
+      },
+      {
+        "market": "商品",
+        "index": "COMEX黄金",
+        "close": "2845.60",
+        "change": 0.35
+      }
+    ],
+    "hot_themes": [
+      {
+        "name": "AI算力/光模块",
+        "etf": "AI算力ETF",
+        "change": -12.8
+      },
+      {
+        "name": "半导体",
+        "etf": "半导体ETF",
+        "change": -8.5
+      },
+      {
+        "name": "消费电子",
+        "etf": "消费电子ETF",
+        "change": -5.2
+      },
+      {
+        "name": "新能源",
+        "etf": "新能源车ETF",
+        "change": -4.8
+      },
+      {
+        "name": "光伏",
+        "etf": "光伏ETF",
+        "change": -3.5
+      },
+      {
+        "name": "创新药",
+        "etf": "创新药ETF",
+        "change": 2.1
+      },
+      {
+        "name": "黄金",
+        "etf": "黄金ETF",
+        "change": 1.8
+      },
+      {
+        "name": "高股息",
+        "etf": "红利ETF",
+        "change": 0.5
+      },
+      {
+        "name": "白酒",
+        "etf": "白酒ETF",
+        "change": -1.2
+      },
+      {
+        "name": "中概互联",
+        "etf": "中概互联ETF",
+        "change": 1.5
+      },
+      {
+        "name": "军工",
+        "etf": "军工ETF",
+        "change": -2.3
+      },
+      {
+        "name": "煤炭",
+        "etf": "煤炭ETF",
+        "change": 0.3
+      }
+    ],
+    "manager_views": "<p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8;\">\n        <strong style=\"color:var(--primary)\">投资策略：</strong>当前市场处于结构性调整阶段，杜厚良坚持在核心赛道中精选具备竞争力的标的。基金在混合型-偏股框架下，重点布局阿里巴巴-W、长飞光纤光缆、腾讯控股等方向，不因短期波动而大幅调整持仓结构。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">行业观点：</strong>对基金重仓的核心板块保持长期乐观。虽然短期受市场情绪影响出现回调，但中长期需求逻辑未变。龙头企业竞争优势持续强化，当前估值具备较高安全边际。\n      </p>\n      <p style=\"font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;\">\n        <strong style=\"color:var(--primary)\">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分板块估值偏高以及国内经济复苏节奏。建议在波动中保持耐心，避免因恐慌而做出非理性决策。\n      </p>",
+    "attributions": "<div class=\"attr-box pos\">\n        <h4><span style=\"color:var(--up)\">+</span> 正向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心持仓端：部分持仓在市场调整中表现相对稳健，提供了一定的净值缓冲。</li>\n          <li><span class=\"num\">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性，能够更好地捕捉上涨机会。</li>\n        </ul>\n      </div>\n      <div class=\"attr-box neg\">\n        <h4><span style=\"color:var(--down)\">−</span> 负向贡献因素</h4>\n        <ul>\n          <li><span class=\"num\">1.</span>核心板块回调：阿里巴巴-W等持仓受市场风格切换影响有所回落，对净值形成一定拖累。</li>\n          <li><span class=\"num\">2.</span>市场风格切换：资金避险情绪升温，部分成长板块遭遇抛售。</li>\n          <li><span class=\"num\">3.</span>外部环境不确定性：地缘政治及政策预期影响市场风险偏好。</li>\n          <li><span class=\"num\">4.</span>高集中度结构：在市场下行阶段，高集中度结构会放大净值的短期波动。</li>\n        </ul>\n      </div>",
+    "outlooks": "<div class=\"outlook-item\">\n      <h4>短期（1-2周）</h4>\n      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及核心板块是否有企稳迹象。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>中期（1-3个月）</h4>\n      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。当前估值调整后更具吸引力。</p>\n    </div>\n    <div class=\"outlook-item\">\n      <h4>长期（6个月以上）</h4>\n      <p>基金经理杜厚良的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。</p>\n    </div>",
+    "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
+    "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
+    "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，中欧港股通科技混合发起A由资深基金经理杜厚良管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周中欧港股通科技混合发起A单周<span class=\"down\">-0.94%</span>。基金持仓中的相关标的如阿里巴巴-W等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+  }
+}

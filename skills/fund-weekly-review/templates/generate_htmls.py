@@ -686,18 +686,7 @@ footer {
   <section id="sec6" class="card fade-in">
     <div class="card-title">六、基金经理观点</div>
     <div class="manager-card">
-      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8;">
-        <strong style="color:var(--primary)">投资策略：</strong>当前市场处于从主题炒作向业绩验证过渡的关键阶段。短期波动不改中长期景气趋势，基金将继续坚持既定投资策略，在核心赛道中精选具备竞争力的标的。傅鹏博在季报中明确表示，将继续在新能源、科技制造、消费等方向寻找确定性机会，不会因短期波动而大幅调整持仓结构。
-      </p>
-      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;">
-        <strong style="color:var(--primary)">投资理念：</strong>以合理价格买入优质企业，长期持有，分享企业成长红利。当前投资理念与市场环境的契合度较高，短期回调反而提供了更好的布局窗口。朱璘强调，投资需要保持定力，不应因市场短期波动而动摇对优质企业的长期信心。
-      </p>
-      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;">
-        <strong style="color:var(--primary)">行业观点：</strong>对基金重仓的AI算力、新能源及港股互联网板块保持长期乐观。AI算力产业链短期受市场情绪影响出现回调，但中长期需求逻辑未变；新能源行业在政策支持和技术迭代的双重驱动下，龙头企业竞争优势持续强化；港股互联网板块估值处于历史低位，具备较高的安全边际。
-      </p>
-      <p style="font-size:13px; color:var(--text-secondary); line-height:1.8; margin-top:8px;">
-        <strong style="color:var(--primary)">风险提示：</strong>当前市场主要风险在于外部地缘政治不确定性、部分科技板块估值偏高以及国内经济复苏节奏。基金经理认为，这些风险属于短期扰动因素，不会影响核心持仓的长期价值。建议在波动中保持耐心，避免因恐慌而做出非理性决策。
-      </p>
+{manager_views}
     </div>
     <p style="font-size:11px; color:var(--text-muted); margin-top:8px;">数据来源：基金经理2026年Q1季报/最新路演纪要</p>
   </section>
@@ -719,15 +708,7 @@ footer {
       </table>
     </div>
     <div id="weeklyAnalysis">
-      <div class="highlight-box">
-        <strong>市场概括：</strong>上周（{report_start}至{report_end}）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%，展现出相对韧性。美股延续强势，标普500上涨+0.42%，纳斯达克上涨+0.29%。整体而言，全球权益市场呈现"美股强、A股弱、港股分化"的格局，A股内部结构分化加剧，成长风格承压明显。
-      </div>
-      <div class="highlight-box" style="margin-top:8px;">
-        <strong>对产品的影响：</strong>上周{fund_name}单周<span class="{weekly_color}">{weekly_return_str}</span>，跑输业绩基准。主要拖累来自AI算力产业链（光模块、PCB等）的大幅回调，基金持仓中的相关标的如立讯精密等单周跌幅较大。同时，宁德时代等新能源龙头也受行业情绪影响有所回落。相对而言，港股持仓（腾讯控股、美团）及白酒（贵州茅台）表现较为稳健，提供了一定的下行保护。
-      </div>
-      <div class="highlight-box" style="margin-top:8px;">
-        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，睿远成长价值混合A在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合"拿住"而非"割肉"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。
-      </div>
+{weekly_analysis}
     </div>
     <button class="copy-btn" onclick="copyText('weeklyAnalysis')">一键复制全文</button>
   </section>
@@ -752,48 +733,22 @@ footer {
   <section id="sec9" class="card fade-in">
     <div class="card-title">九、为什么上周会有波动？</div>
     <div class="attr-grid">
-      <div class="attr-box pos">
-        <h4><span style="color:var(--up)">+</span> 正向贡献因素</h4>
-        <ul>
-          <li><span class="num">1.</span>核心持仓端：基金持仓中的港股互联网（腾讯控股、美团）及白酒（贵州茅台）在市场调整中表现相对稳健，提供了一定的净值缓冲。腾讯控股受益于游戏版号发放及广告业务复苏，单周表现优于大盘。</li>
-          <li><span class="num">2.</span>市场风格端：高仓位策略在市场反弹时具有进攻性。虽然上周市场整体偏弱，但基金维持高仓位运作，在市场出现短暂反弹时能够更好地捕捉上涨机会，体现了长期配置的价值。</li>
-        </ul>
-      </div>
-      <div class="attr-box neg">
-        <h4><span style="color:var(--down)">−</span> 负向贡献因素</h4>
-        <ul>
-          <li><span class="num">1.</span>AI算力产业链大幅回调：光模块、PCB、服务器等细分领域集体走弱，AI算力ETF单周跌-12.8%。基金持仓中的立讯精密、宁德时代等受产业链情绪拖累，对净值形成明显拖累，估算拖累幅度约-1.5%。</li>
-          <li><span class="num">2.</span>市场风格从成长向防御切换：资金避险情绪升温，高估值成长股遭遇抛售，低估值红利、医药等防御板块获得资金流入。基金作为偏成长风格的基金，在此轮风格切换中阶段性承压。</li>
-          <li><span class="num">3.</span>外部环境不确定性增加：美国对华科技限制政策持续发酵，全球供应链重构预期升温，叠加美联储政策转向节奏的不确定性，全球市场联动效应显现，外资对A股科技板块的配置意愿下降。</li>
-          <li><span class="num">4.</span>基金持仓集中度放大了波动：基金前十大重仓占比超过50%，集中度较高。在市场下行阶段，高集中度结构会放大净值的短期波动，单周跌幅大于同类平均水平约0.8个百分点。</li>
-        </ul>
-      </div>
+{attributions}
     </div>
     <div class="highlight-box">
-      <strong>归因总结：</strong>上周基金整体表现受AI算力产业链回调拖累，与市场风格切换及外部环境不确定性有关。高集中度结构在市场下行时放大了波动，但长期产业逻辑未变。港股及白酒持仓提供了部分缓冲，整体净值得以控制在-3.22%以内。
+      <strong>归因总结：</strong>上周基金整体表现受市场风格切换及部分持仓回调影响，与外部环境不确定性有关。高集中度结构在市场下行时放大了波动，但长期产业逻辑未变。整体净值波动在可控范围内。
     </div>
   </section>
 
   <!-- 十、后市怎么看？ -->
   <section id="sec10" class="card fade-in">
     <div class="card-title">十、后市怎么看？</div>
-    <div class="outlook-item">
-      <h4>短期（1-2周）</h4>
-      <p>市场短期调整可能延续，但大幅下跌空间有限。需关注业绩披露期的结构性机会，以及AI算力产业链是否有企稳迹象。短期催化剂包括：中美贸易谈判进展、国内稳增长政策落地节奏、以及科技巨头财报指引。</p>
-    </div>
-    <div class="outlook-item">
-      <h4>中期（1-3个月）</h4>
-      <p>基金重仓的核心赛道中长期景气度仍然向上，业绩确定性强的标的有望率先修复。具体来看，AI算力产业链在调整后的估值更具吸引力，新能源龙头在政策支持和技术迭代下竞争优势强化，港股互联网板块的估值修复空间较大。</p>
-    </div>
-    <div class="outlook-item">
-      <h4>长期（6个月以上）</h4>
-      <p>基金经理傅鹏博、朱璘的选股能力和长期超额收益历史值得信赖。当前市场估值处于历史中位水平，对于长期投资者，当前提供了较好的布局窗口。建议风险承受能力较强的投资者在当前时点保持耐心，甚至可以考虑逐步加仓。</p>
-    </div>
+{outlooks}
     <div class="risk-box">
       <h4>⚠️ 风险提示</h4>
       <ul>
         <li>海外地缘政治风险可能影响市场风险偏好</li>
-        <li>部分科技板块估值已处于较高水平，需警惕短期回调</li>
+        <li>部分板块估值已处于较高水平，需警惕短期回调</li>
         <li>美联储政策转向节奏存在不确定性</li>
         <li>国内经济复苏节奏可能低于预期</li>
       </ul>
@@ -803,55 +758,14 @@ footer {
   <!-- 十一、您该怎么做？（新增） -->
   <section id="sec11" class="card fade-in">
     <div class="card-title">十一、您该怎么做？</div>
-    <div class="highlight-box" style="margin-bottom:12px;">
-      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境（A股调整、港股分化、美股偏强）以及睿远成长价值混合A的投资特征（高仓位、高集中度、偏成长风格）给出。</p>
-      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>
-    </div>
-    <div style="overflow-x:auto;">
-      <table>
-        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>
-        <tbody>
-          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>
-          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>
-          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>
-          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>
-        </tbody>
-      </table>
-    </div>
+{advice}
   </section>
 
   <!-- 十二、财经新闻与沟通策略（新增） -->
   <section id="sec12" class="card fade-in">
     <div class="card-title">十二、财经新闻与沟通策略</div>
     <div id="newsAnalysis">
-      <div class="highlight-box">
-        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>
-        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎，北向资金净流出。<br>
-        <strong>历史上此类事件对市场的影响：</strong>2021年2月、2022年4月类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复，长期优质标的回调后往往提供更好买点。<br>
-        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>
-        <strong>如何沟通：</strong>强调"回调是长期布局机会"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。
-      </div>
-      <div class="highlight-box" style="margin-top:8px;">
-        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>
-        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应，部分外资从新兴市场回流美国。<br>
-        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。2020-2021年美股牛市期间，A股核心资产同样表现优异。<br>
-        <strong>影响哪些客户：</strong>关注全球资产配置的客户、对美股感兴趣的客户。<br>
-        <strong>如何沟通：</strong>说明A股与美股并非零和关系，A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。
-      </div>
-      <div class="highlight-box" style="margin-top:8px;">
-        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>
-        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好，对持有港股通的基金形成正面支撑。<br>
-        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，2022年以来港股与A股的相关性有所下降，配置价值逐步显现。<br>
-        <strong>影响哪些客户：</strong>持有港股通基金的客户、关注南下资金的客户。<br>
-        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。
-      </div>
-      <div class="highlight-box" style="margin-top:8px;">
-        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>
-        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐，对投资组合提供一定对冲。<br>
-        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。2022年、2024年市场大幅调整期间，黄金均表现突出。<br>
-        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>
-        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。
-      </div>
+{news}
     </div>
     <button class="copy-btn" onclick="copyText('newsAnalysis')">一键复制全文</button>
   </section>
@@ -860,32 +774,7 @@ footer {
   <section id="sec13" class="card fade-in">
     <div class="card-title">十三、理财经理本周沟通tips</div>
     <div id="commTips">
-      <div class="highlight-box">
-        <strong>本周沟通重点：</strong><br>
-        <strong>定调：</strong>本周市场处于"科技回调、价值防御"的结构性调整阶段，整体波动可控，无需过度恐慌。<br>
-        <strong>归因：</strong>上周波动主要源于AI算力产业链获利回吐、风格从成长向防御切换，以及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>
-        <strong>建议：</strong>建议理财经理主动联系持仓客户，尤其是持仓亏损超过5%的客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。
-      </div>
-      <div style="margin-top:12px;">
-        <strong style="color:var(--primary); font-size:14px;">不同客群话术模板</strong>
-        <div style="margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;">
-          <p><strong>新客户（持仓&lt;1个月）：</strong>"您好，最近市场确实有些波动，但请您放心，睿远成长价值混合A由资深基金经理傅鹏博、朱璘管理，历史业绩优秀。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。"</p>
-          <p><strong>老客户（盈利）：</strong>"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。这样既能保住胜利果实，又不会错过后续可能的上涨机会。"</p>
-          <p><strong>浮亏客户（持仓较短）：</strong>"您好，我理解看到账户浮亏可能会有些担心。但请您相信，睿远基金的投资团队有着丰富的市场经验，历史上每次大幅回调后基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心，给基金和投资经理一些时间。"</p>
-          <p><strong>浮亏客户（持仓较长）：</strong>"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前持仓标的的平均估值已处于近一年较低水平，补仓可以摊低平均成本，缩短回本周期。当然，具体金额需要结合您的资金安排。"</p>
-        </div>
-      </div>
-      <div style="margin-top:12px;">
-        <strong style="color:var(--primary); font-size:14px;">常见客户异议回应</strong>
-        <div style="margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;">
-          <p><strong>Q1："为什么基金上周跌这么多？是不是基金经理能力不行？"</strong><br>
-          A1："上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%，基金单周-3.22%实际上是跑赢了创业板的。基金经理的能力体现在中长期超额收益上，睿远成立以来累计收益150%+，远超同类平均水平。短期波动与市场风格有关，不代表经理能力问题。"</p>
-          <p><strong>Q2："现在是不是应该全部赎回，等市场好了再买回来？"</strong><br>
-          A2："择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。如果您现在赎回，可能刚好卖在最低点。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。"</p>
-          <p><strong>Q3："别的基金都在涨，为什么这个基金在跌？"</strong><br>
-          A3："不同基金的投资方向和风格不同。上周市场上涨的是红利、黄金等防御板块，而睿远主要投资科技、新能源等成长方向。成长风格在牛市中涨幅更大，在调整期也会波动更大。从长期看，成长方向的长期收益空间更大。建议您关注基金的长期表现而非单周涨跌。"</p>
-        </div>
-      </div>
+{comm_tips}
     </div>
     <button class="copy-btn" onclick="copyText('commTips')">一键复制全文</button>
   </section>
@@ -1412,6 +1301,13 @@ def generate_fund_html(fund, code, pdf_filename):
         excess_halfyear_str=pct_fmt(excess_halfyear),
         excess_halfyear_color=color_cls(excess_halfyear),
         pdf_filename=pdf_filename,
+        manager_views=fund.get('manager_views', ''),
+        attributions=fund.get('attributions', ''),
+        outlooks=fund.get('outlooks', ''),
+        advice=fund.get('advice', ''),
+        news=fund.get('news', ''),
+        comm_tips=fund.get('comm_tips', ''),
+        weekly_analysis=fund.get('weekly_analysis', ''),
     )
     
     return html
