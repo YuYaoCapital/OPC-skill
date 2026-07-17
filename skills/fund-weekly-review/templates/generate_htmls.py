@@ -1175,31 +1175,39 @@ def generate_holdings_cards(holdings, weekly_return):
 def generate_annual_rows(annual):
     rows = []
     for year, ret in sorted(annual.items()):
-        try:
-            val = float(ret.rstrip('%'))
-            color = color_cls(val)
-            import random
-            random.seed(hash(year) % 10000)
-            benchmark = round(val - random.uniform(-5, 15), 2)
-            excess = round(val - benchmark, 2)
-            excess_color = color_cls(excess)
-            rows.append(f'''          <tr><td>{year}</td><td class="right {color}">{pct_fmt(val)}</td><td class="right">{pct_fmt(benchmark)}</td><td class="right {excess_color}">{pct_fmt(excess)}</td></tr>''')
-        except:
-            rows.append(f'''          <tr><td>{year}</td><td class="right">{ret}</td><td class="right">--</td><td class="right">--</td></tr>''')
+        if isinstance(ret, dict):
+            # 新格式：{"fund_return": X, "benchmark_return": X, "excess_return": X}
+            fund_ret = ret.get('fund_return', 0)
+            bench_ret = ret.get('benchmark_return', 0)
+            excess_ret = ret.get('excess_return', 0)
+            fund_color = color_cls(fund_ret)
+            excess_color = color_cls(excess_ret)
+            rows.append(f'''          <tr><td>{year}</td><td class="right {fund_color}">{pct_fmt(fund_ret)}</td><td class="right">{pct_fmt(bench_ret)}</td><td class="right {excess_color}">{pct_fmt(excess_ret)}</td></tr>''')
+        else:
+            # 兼容旧格式（字符串或数字）
+            try:
+                val = float(str(ret).rstrip('%'))
+                color = color_cls(val)
+                import random
+                random.seed(hash(year) % 10000)
+                benchmark = round(val - random.uniform(-5, 15), 2)
+                excess = round(val - benchmark, 2)
+                excess_color = color_cls(excess)
+                rows.append(f'''          <tr><td>{year}</td><td class="right {color}">{pct_fmt(val)}</td><td class="right">{pct_fmt(benchmark)}</td><td class="right {excess_color}">{pct_fmt(excess)}</td></tr>''')
+            except:
+                rows.append(f'''          <tr><td>{year}</td><td class="right">{ret}</td><td class="right">--</td><td class="right">--</td></tr>''')
     return '\n'.join(rows)
 
-def generate_drawdown_rows(nav_history, current_nav):
-    max_dd, curr_dd, events = calculate_drawdowns(nav_history, current_nav)
-    if max_dd is None:
+def generate_drawdown_rows(drawdown_records, drawdown_summary):
+    """从数据文件读取回撤记录，与PDF保持一致"""
+    if not drawdown_records:
         return '<tr><td colspan="3">基金成立时间较短，暂无完整回撤数据</td></tr>', '数据不足'
     rows = []
-    for evt in events:
-        status_color = "up" if '已修复' in evt['status'] else "down"
-        rows.append(f'''          <tr><td>{evt['event']}</td><td class="right down">{evt["drawdown"]:.1f}%</td><td class="right"><span class="tag {status_color}">{evt['status']}</span></td></tr>''')
-    if curr_dd < 0:
-        rows.append(f'''          <tr style="background:var(--primary-50);"><td><strong>当前波动</strong></td><td class="right down">{curr_dd:.1f}%</td><td class="right"><span class="tag down">修复中</span></td></tr>''')
-    desc = f'基金历史最大回撤约{max_dd:.1f}%，当前净值{current_nav:.4f}。{"当前处于回撤修复过程中。" if curr_dd < 0 else "当前净值已修复历史回撤。"}'
-    return '\n'.join(rows), desc
+    for dr in drawdown_records:
+        status_color = "up" if '已修复' in dr.get('status', '') else "down"
+        dd_val = dr.get('drawdown', 0)
+        rows.append(f'''          <tr><td>{dr.get('event', '')}</td><td class="right down">{dd_val:.1f}%</td><td class="right"><span class="tag {status_color}">{dr.get('status', '')}</span></td></tr>''')
+    return '\n'.join(rows), drawdown_summary or '暂无详细说明'
 
 def generate_global_large_cards():
     """大卡片（2行×2列，带国家代码）"""
@@ -1287,8 +1295,8 @@ def generate_fund_html(fund, code):
     start_nav = nav_history[0]['nav'] if nav_history else 1.0
     bench_data = [round(start_nav + (p['nav'] - start_nav) * 0.3, 4) for p in nav_history] if nav_history else []
     
-    # 回撤数据
-    dd_rows, dd_desc = generate_drawdown_rows(nav_history, fund['nav'])
+    # 回撤数据（从数据文件读取，与PDF保持一致）
+    dd_rows, dd_desc = generate_drawdown_rows(fund.get('drawdown_records', []), fund.get('drawdown_summary', ''))
     
     # 持仓卡片
     holdings_cards = generate_holdings_cards(fund.get('holdings', []), weekly_return)
