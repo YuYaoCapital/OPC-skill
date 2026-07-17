@@ -560,7 +560,7 @@ footer {
       </div>
       <div class="info-card">
         <div class="label">日涨跌</div>
-        <div class="value {estimate_color}">{estimate_return_str}</div>
+        <div class="value {daily_color}">{daily_change_str}</div>
       </div>
       <div class="info-card">
         <div class="label">最新净值</div>
@@ -576,7 +576,7 @@ footer {
       </div>
     </div>
     <div class="highlight-box">
-      <strong>产品定位：</strong>{fund_name}是一只{fund_type}基金，由{manager}管理。最新净值{nav:.4f}，上周收益<span class="{weekly_color}">{weekly_return_str}</span>。今日估算净值{estimate_nav:.4f}，估算涨跌幅<span class="{estimate_color}">{estimate_return_str}</span>。
+      <strong>产品定位：</strong>{fund_name}是一只{fund_type}基金，由{manager}管理。最新净值{nav:.4f}，上周收益<span class="{weekly_color}">{weekly_return_str}</span>。今日日涨跌<span class="{daily_color}">{daily_change_str}</span>。
     </div>
   </section>
 
@@ -1160,8 +1160,7 @@ def generate_holdings_cards(holdings, weekly_return):
     for h in holdings:
         name = h['name']
         code = get_stock_code(name)
-        random.seed(hash(name) % 10000)
-        stock_change = round(random.uniform(weekly_return * 1.5, weekly_return * 0.3), 2)
+        stock_change = float(h.get('change', 0))
         change_color = color_cls(stock_change)
         stock_nav = round(random.uniform(20, 500), 2)
         cards.append(f'''      <div class="holding-card">
@@ -1209,41 +1208,47 @@ def generate_drawdown_rows(drawdown_records, drawdown_summary):
         rows.append(f'''          <tr><td>{dr.get('event', '')}</td><td class="right down">{dd_val:.1f}%</td><td class="right"><span class="tag {status_color}">{dr.get('status', '')}</span></td></tr>''')
     return '\n'.join(rows), drawdown_summary or '暂无详细说明'
 
-def generate_global_large_cards():
-    """大卡片（2行×2列，带国家代码）"""
-    large_items = GLOBAL_MARKET[:4]
+def generate_global_large_cards(global_market):
+    """大卡片（2行×2列，带国家代码）- 从数据文件读取"""
+    large_items = global_market[:4] if len(global_market) >= 4 else global_market
     cards = []
-    region_class = {"CN": "cn", "HK": "hk", "US": "us", "JP": "jp"}
-    for flag, region, name, price, change in large_items:
+    region_class = {"A股": "cn", "港股": "hk", "美股": "us", "亚太": "jp", "商品": "cn"}
+    for item in large_items:
+        change = float(item['change'])
         color = color_cls(change)
-        rc = region_class.get(flag, "cn")
+        rc = region_class.get(item['market'], "cn")
+        flag = item['market'][:1] if item['market'] != '亚太' else 'JP'
         cards.append(f'''      <div class="global-large-card {rc}">
         <div class="flag">{flag}</div>
-        <div class="name">{name}</div>
-        <div class="price">{price}</div>
+        <div class="name">{item['index']}</div>
+        <div class="price">{item['close']}</div>
         <div class="change {color}">{pct_fmt(change)}</div>
       </div>''')
     return '\n'.join(cards)
 
-def generate_global_small_cards():
-    """小卡片（1行×4列，不带国家代码）"""
-    small_items = GLOBAL_MARKET[4:]
+def generate_global_small_cards(global_market):
+    """小卡片（1行×4列，不带国家代码）- 从数据文件读取"""
+    small_items = global_market[4:] if len(global_market) > 4 else []
     cards = []
-    for _, name, price, change in small_items:
+    for item in small_items:
+        change = float(item['change'])
         color = color_cls(change)
         cards.append(f'''      <div class="global-small-card">
-        <div class="name">{name}</div>
-        <div class="price">{price}</div>
+        <div class="name">{item['index']}</div>
+        <div class="price">{item['close']}</div>
         <div class="change {color}">{pct_fmt(change)}</div>
       </div>''')
     return '\n'.join(cards)
 
 def generate_theme_cards(themes, period_label):
+    """热门主题卡片 - 从数据文件读取"""
     cards = []
-    for name, etf, change in themes:
+    for t in themes:
+        change = float(t['change'])
         color = color_cls(change)
+        etf = t.get('etf', f"{t['name']}ETF")
         cards.append(f'''      <div class="theme-card">
-        <div class="name">{name}</div>
+        <div class="name">{t['name']}</div>
         <div class="etf">{etf}</div>
         <div class="change {color}">{pct_fmt(change)}</div>
         <div class="tag">{period_label}</div>
@@ -1257,6 +1262,7 @@ def generate_fund_html(fund, code):
     nav_history = fund.get('nav_history', [])
     weekly_return = fund.get('weekly_return', 0) or 0
     ytd_return = fund.get('ytd_return', 0) or 0
+    daily_change = fund.get('daily_change', 0) or 0
     
     if nav_history:
         first_nav = nav_history[0]['nav']
@@ -1305,12 +1311,12 @@ def generate_fund_html(fund, code):
     annual_rows = generate_annual_rows(fund.get('annual_returns', {}))
     
     # 全球市场卡片
-    global_large = generate_global_large_cards()
-    global_small = generate_global_small_cards()
+    global_large = generate_global_large_cards(fund.get("global_market", []))
+    global_small = generate_global_small_cards(fund.get("global_market", []))
     
     # 热门主题卡片
-    theme_week = generate_theme_cards(HOT_THEMES_WEEK, "上周")
-    theme_today = generate_theme_cards(HOT_THEMES_TODAY, "今日")
+    theme_week = generate_theme_cards(fund.get("hot_themes", []), "上周")
+    theme_today = generate_theme_cards(fund.get("hot_themes", []), "今日")
     
     # 基金经理首字母
     manager_initial = fund['manager'][0] if fund['manager'] else '基'
@@ -1337,6 +1343,9 @@ def generate_fund_html(fund, code):
         ytd_return=ytd_return,
         ytd_return_str=pct_fmt(ytd_return),
         ytd_color=color_cls(ytd_return),
+        daily_change=daily_change,
+        daily_change_str=pct_fmt(daily_change),
+        daily_color=color_cls(daily_change),
         total_return=total_return,
         total_return_str=pct_fmt(total_return),
         total_return_color=color_cls(total_return),
