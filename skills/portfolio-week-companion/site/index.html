@@ -138,17 +138,17 @@ try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } 
       // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
       // 这里使用静态列表，每次生成报告后更新此数组
       const reports = [
-        { name: '富国创新科技混合A 周度回顾', date: '2026-07-14', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '富国全球科技互联网股票(QDII)A 周度回顾', date: '2026-07-14', file: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.html', pdf: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.pdf', tag: '回顾' },
-        { name: '创金合信专精特新股票发起A 周度回顾', date: '2026-07-14', file: 'reports/创金合信专精特新股票发起A_周度回顾.html', pdf: 'reports/创金合信专精特新股票发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '汇安成长优选混合A 周度回顾', date: '2026-07-14', file: 'reports/汇安成长优选混合A_周度回顾.html', pdf: 'reports/汇安成长优选混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '汇添富新睿精选混合A 周度回顾', date: '2026-07-14', file: 'reports/汇添富新睿精选混合A_周度回顾.html', pdf: 'reports/汇添富新睿精选混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '惠升均衡回报混合发起A 周度回顾', date: '2026-07-14', file: 'reports/惠升均衡回报混合发起A_周度回顾.html', pdf: 'reports/惠升均衡回报混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '易方达科讯混合 周度回顾', date: '2026-07-14', file: 'reports/易方达科讯混合_周度回顾.html', pdf: 'reports/易方达科讯混合_周度回顾.pdf', tag: '回顾' },
-        { name: '永赢先锋半导体智选混合发起A 周度回顾', date: '2026-07-14', file: 'reports/永赢先锋半导体智选混合发起A_周度回顾.html', pdf: 'reports/永赢先锋半导体智选混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧景气精选混合A 周度回顾', date: '2026-07-14', file: 'reports/中欧景气精选混合A_周度回顾.html', pdf: 'reports/中欧景气精选混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧港股通科技混合发起A 周度回顾', date: '2026-07-14', file: 'reports/中欧港股通科技混合发起A_周度回顾.html', pdf: 'reports/中欧港股通科技混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-15', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '富国创新科技混合A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '富国全球科技互联网股票(QDII)A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.html', pdf: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.pdf', tag: '回顾' },
+        { name: '创金合信专精特新股票发起A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/创金合信专精特新股票发起A_周度回顾.html', pdf: 'reports/创金合信专精特新股票发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '汇安成长优选混合A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/汇安成长优选混合A_周度回顾.html', pdf: 'reports/汇安成长优选混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '汇添富新睿精选混合A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/汇添富新睿精选混合A_周度回顾.html', pdf: 'reports/汇添富新睿精选混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '惠升均衡回报混合发起A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/惠升均衡回报混合发起A_周度回顾.html', pdf: 'reports/惠升均衡回报混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '易方达科讯混合 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/易方达科讯混合_周度回顾.html', pdf: 'reports/易方达科讯混合_周度回顾.pdf', tag: '回顾' },
+        { name: '永赢先锋半导体智选混合发起A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/永赢先锋半导体智选混合发起A_周度回顾.html', pdf: 'reports/永赢先锋半导体智选混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '中欧景气精选混合A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/中欧景气精选混合A_周度回顾.html', pdf: 'reports/中欧景气精选混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '中欧港股通科技混合发起A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/中欧港股通科技混合发起A_周度回顾.html', pdf: 'reports/中欧港股通科技混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '睿远成长价值混合A 周度回顾', date: '2026-07-06', period: '2026.07.06-07.10', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
       ];
 
       if (reports.length === 0) {
@@ -173,7 +173,7 @@ try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } 
               ${i === 0 ? '<span class="badge badge-new">最新</span>' : ''}
               ${r.tag ? '<span class="badge" style="background:#e3f2fd;color:#1565c0;">' + r.tag + '</span>' : ''}
             </div>
-            <div class="report-meta">${r.date}</div>
+            <div class="report-meta">${r.period || r.date}</div>
           </div>
           <div class="report-actions" style="display:flex;gap:8px;flex-shrink:0;">
             ${htmlLink}

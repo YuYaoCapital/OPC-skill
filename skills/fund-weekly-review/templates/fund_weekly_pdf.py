@@ -284,9 +284,11 @@ def generate_report(data, output_path, chart_dir):
     
     if nav_history:
         first_nav = nav_history[0]['nav']
-        total_return = (nav - first_nav) / first_nav * 100
+        total_return_calc = (nav - first_nav) / first_nav * 100
     else:
-        total_return = 0
+        total_return_calc = 0
+    # 优先使用真实成立以来收益率，否则回退到计算值
+    total_return = float(fund.get('total_return_since_inception', total_return_calc) or total_return_calc)
     
     report_date = datetime.now().strftime('%Y-%m-%d')  # 制作日期 = 生成当天
     data_cutoff = fund.get('data_cutoff', '2026-07-10')
@@ -300,8 +302,9 @@ def generate_report(data, output_path, chart_dir):
     story.append(P(f'报告日期 {period_start} 至 {period_end} | 制作日期 {report_date}', footer_style))
     story.append(Spacer(1, 8*mm))
     
-    # 顶部关键指标（4列）
-    ytd_return = float(fund.get('ytd_return', 0) or 0)
+    # 顶部关键指标（4列）— 使用真实数据
+    ytd_return = float(fund.get('return_ytd', 0) or 0)
+    return_1y = float(fund.get('return_last_1_year', 0) or 0)
     metric_data = [
         [P('最新净值', caption_style), P('近一周', caption_style), P('今年以来', caption_style), P('成立以来', caption_style)],
         [P(primary(f"{nav:.4f}"), title_style), 
@@ -327,22 +330,19 @@ def generate_report(data, output_path, chart_dir):
     # --- 一、产品概况 ---
     story.append(P('一、产品概况', header_style))
     overview_rows = []
-    # 标签映射：旧标签 → 新标签
-    label_map = {
-        '估算净值': '近一周收益',
-        '估算涨跌幅': '近一年收益',
-        '近1年收益': '机构持仓占比',
-    }
+    # 基础信息行
     for item in fund.get('overview', []):
         label = item.get('label', '')
-        label = label_map.get(label, label)  # 应用映射
         value = item.get('value', '')
-        # 近一周收益/近一年收益：从fund实际字段获取并着色
-        if label == '近一周收益':
-            value = colored_pct(float(fund.get('weekly_return', 0) or 0))
-        elif label == '近一年收益':
-            value = colored_pct(float(fund.get('ytd_return', 0) or 0))
         overview_rows.append([P(label), P(value)])
+    # 追加：近一周收益、近一年收益、机构持仓占比
+    overview_rows.append([P('近一周收益'), P(colored_pct(weekly_return))])
+    overview_rows.append([P('近一年收益'), P(colored_pct(return_1y))])
+    inst_ratio = fund.get('institutional_holding_ratio')
+    if inst_ratio is not None:
+        overview_rows.append([P('机构持仓占比'), P(f'{inst_ratio:.2f}%')])
+    else:
+        overview_rows.append([P('机构持仓占比'), P('--')])
     
     if overview_rows:
         overview_table = Table(overview_rows, colWidths=[35*mm, 145*mm])
@@ -510,7 +510,37 @@ def generate_report(data, output_path, chart_dir):
     
     # --- 六、回撤修复数据 ---
     story.append(P('六、回撤修复数据', header_style))
-    story.append(P(fund.get('drawdown_repair_summary', ''), body_style))
+    
+    max_drawdown = fund.get('max_drawdown')
+    if max_drawdown is not None:
+        dd_val = float(max_drawdown)
+        dd_text = f'{primary("<b>成立以来最大回撤：</b>")}从历史高点到最低点，基金最大回撤约 {green(f"{dd_val:.1f}%")}。'
+        story.append(P(dd_text, body_style))
+        story.append(P('这意味着在最极端的市场下跌中，基金净值从高点回调的幅度。历史数据显示，该基金在经历较大回撤后，均能在合理时间内逐步修复。', body_style))
+    else:
+        story.append(P('该基金成立时间较短，历史回撤数据有限。', body_style))
+    
+    # 历史回撤事件表
+    dd_records = fund.get('drawdown_records', [])
+    if dd_records:
+        dd_data = [[P(bold('回撤事件')), P(bold('最大回撤')), P(bold('修复状态')), P(bold('修复时间'))]]
+        for dr in dd_records:
+            status_color = red if '已修复' in dr.get('status', '') else green
+            dd_val = dr.get('drawdown', 0)
+            if isinstance(dd_val, (int, float)):
+                dd_str = green(f'{dd_val:.1f}%')
+            else:
+                dd_str = green(str(dd_val))
+            dd_data.append([
+                P(dr.get('event', '')),
+                P(dd_str),
+                P(status_color(dr.get('status', ''))),
+                P(dr.get('repair_time', '--'))
+            ])
+        dd_table = Table(dd_data, colWidths=[80*mm, 30*mm, 30*mm, 40*mm])
+        dd_table.setStyle(make_table_style(True))
+        story.append(dd_table)
+    
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
     # --- 七、全球市场速览 ---
     story.append(P('七、全球市场速览（上周）', header_style))
