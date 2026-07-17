@@ -1,168 +1,109 @@
-#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-企业微信群机器人报告推送工具
-
-用法示例:
-    python send_wechat_work.py \
-        --webhook "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_KEY" \
-        --title "007119 周度回顾报告" \
-        --pdf "20260703_007119_周度回顾.pdf" \
-        --html "https://fundadvisor.pages.dev/reports/20260703_007119_周度回顾.html" \
-        --date "2026-07-03"
-
-支持消息类型:
-    - markdown: 发送报告标题、日期、HTML 在线链接等文本信息
-    - file: 上传并发送 PDF 附件（如需发送 HTML 文件，同样走 file 类型）
+企微群机器人报告推送脚本
+用法: python send_wechat_work.py --webhook xxx --title xxx --pdf xxx
 """
-
 import argparse
 import json
 import os
-import sys
-from pathlib import Path
-from urllib.parse import urlparse, parse_qs
-
 import requests
+import sys
+
+# 修复 Windows 终端 GBK 编码问题
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 
-def extract_key_from_webhook(webhook_url: str) -> str:
-    """从 webhook URL 中提取 key 参数。"""
-    parsed = urlparse(webhook_url)
-    query = parse_qs(parsed.query)
-    if "key" not in query or not query["key"]:
-        raise ValueError("webhook URL 中缺少 key 参数")
-    return query["key"][0]
+def send_markdown(webhook, content):
+    """发送 Markdown 消息"""
+    resp = requests.post(
+        webhook,
+        json={
+            "msgtype": "markdown",
+            "markdown": {"content": content}
+        },
+        timeout=30
+    )
+    return resp.json()
 
 
-def send_markdown(webhook_url: str, content: str) -> dict:
-    """发送 markdown 消息到企业微信群。"""
-    payload = {"msgtype": "markdown", "markdown": {"content": content}}
-    resp = requests.post(webhook_url, json=payload, timeout=30)
-    resp.raise_for_status()
-    result = resp.json()
-    if result.get("errcode") != 0:
-        raise RuntimeError(f"发送 markdown 失败: {result}")
-    return result
+def upload_file(webhook, file_path):
+    """上传文件获取 media_id"""
+    upload_url = webhook.replace("/send?", "/upload_media?") + "&type=file"
+    with open(file_path, "rb") as f:
+        resp = requests.post(upload_url, files={"media": f}, timeout=60)
+    data = resp.json()
+    if data.get("errcode") != 0:
+        raise RuntimeError(f"Upload failed: {data}")
+    return data["media_id"]
 
 
-def upload_media(webhook_url: str, file_path: str) -> str:
-    """上传文件到企业微信，返回 media_id。"""
-    key = extract_key_from_webhook(webhook_url)
-    upload_url = f"https://qyapi.weixin.qq.com/cgi-bin/webhook/upload_media?key={key}&type=file"
-
-    path = Path(file_path)
-    if not path.exists():
-        raise FileNotFoundError(f"文件不存在: {file_path}")
-
-    with open(path, "rb") as f:
-        files = {"media": (path.name, f, "application/octet-stream")}
-        resp = requests.post(upload_url, files=files, timeout=60)
-
-    resp.raise_for_status()
-    result = resp.json()
-    if result.get("errcode") != 0:
-        raise RuntimeError(f"上传文件失败: {result}")
-    return result["media_id"]
-
-
-def send_file(webhook_url: str, media_id: str) -> dict:
-    """发送文件消息到企业微信群。"""
-    payload = {"msgtype": "file", "file": {"media_id": media_id}}
-    resp = requests.post(webhook_url, json=payload, timeout=30)
-    resp.raise_for_status()
-    result = resp.json()
-    if result.get("errcode") != 0:
-        raise RuntimeError(f"发送文件失败: {result}")
-    return result
-
-
-def build_markdown(title: str, date: str = None, html_url: str = None,
-                   fund_code: str = None, fund_name: str = None,
-                   extra: str = None) -> str:
-    """构建 markdown 消息内容。"""
-    lines = [f"**{title}**"]
-    if fund_code:
-        lines.append(f"> 基金代码：{fund_code}")
-    if fund_name:
-        lines.append(f"> 基金名称：{fund_name}")
-    if date:
-        lines.append(f"> 报告日期：{date}")
-    if html_url:
-        lines.append(f"> 在线 HTML 报告：[点击访问]({html_url})")
-    if extra:
-        lines.append("")
-        lines.append(extra)
-    lines.append("")
-    lines.append("PDF 报告请见下方附件。")
-    return "\n".join(lines)
+def send_file(webhook, media_id):
+    """发送文件消息"""
+    resp = requests.post(
+        webhook,
+        json={"msgtype": "file", "file": {"media_id": media_id}},
+        timeout=30
+    )
+    return resp.json()
 
 
 def main():
-    parser = argparse.ArgumentParser(description="推送基金报告到企业微信群")
-    parser.add_argument("--webhook", required=True, help="企业微信机器人 webhook URL")
-    parser.add_argument("--title", required=True, help="报告标题")
-    parser.add_argument("--fund-code", help="基金代码")
-    parser.add_argument("--fund-name", help="基金名称")
-    parser.add_argument("--date", help="报告日期")
-    parser.add_argument("--pdf", help="PDF 报告文件路径")
-    parser.add_argument("--html", help="HTML 在线访问地址或本地文件路径")
-    parser.add_argument("--html-as-file", action="store_true",
-                        help="同时将 HTML 文件作为附件上传（默认仅通过链接发送）")
-    parser.add_argument("--extra", help="附加说明文本")
-    parser.add_argument("--dry-run", action="store_true", help="仅打印将要发送的内容，不实际发送")
-
+    parser = argparse.ArgumentParser(description="企微报告推送")
+    parser.add_argument("--webhook", required=True, help="企微机器人 webhook URL")
+    parser.add_argument("--title", default="基金周报", help="消息标题")
+    parser.add_argument("--fund-code", default="", help="基金代码")
+    parser.add_argument("--fund-name", default="", help="基金名称")
+    parser.add_argument("--nav", default="", help="最新净值")
+    parser.add_argument("--weekly-return", default="", help="本周收益")
+    parser.add_argument("--total-return", default="", help="成立以来收益")
+    parser.add_argument("--date", default="", help="报告日期")
+    parser.add_argument("--pdf", default="", help="PDF 文件路径")
+    parser.add_argument("--dry-run", action="store_true", help="仅打印，不推送")
     args = parser.parse_args()
 
-    # 区分 HTML 链接和本地 HTML 文件
-    html_url = None
-    html_file = None
-    if args.html:
-        if args.html.startswith("http://") or args.html.startswith("https://"):
-            html_url = args.html
-        elif os.path.exists(args.html):
-            html_file = args.html
-            if args.html_as_file:
-                html_url = f"（HTML 文件已作为附件发送）"
-        else:
-            print(f"警告：HTML 路径不存在或不是有效链接：{args.html}", file=sys.stderr)
+    # Markdown 消息内容
+    markdown = f"""☕ {args.title}
 
-    content = build_markdown(
-        title=args.title,
-        date=args.date,
-        html_url=html_url,
-        fund_code=args.fund_code,
-        fund_name=args.fund_name,
-        extra=args.extra,
-    )
+📊 最新净值：{args.nav}
+📊 本周收益：{args.weekly_return}
+📊 成立以来：{args.total_return}
+
+PDF 报告请见下方附件。"""
+
+    print("=" * 50)
+    print("企微推送消息预览:")
+    print("=" * 50)
+    print(markdown)
+    print("=" * 50)
 
     if args.dry_run:
-        print("[DRY RUN] 将要发送的 markdown 内容：")
-        print(content)
-        if args.pdf:
-            print(f"[DRY RUN] 将要上传 PDF: {args.pdf}")
-        if html_file and args.html_as_file:
-            print(f"[DRY RUN] 将要上传 HTML: {html_file}")
+        print("\n[Dry Run] 已跳过实际推送")
         return
 
-    print("发送 markdown 消息...")
-    send_markdown(args.webhook, content)
-    print("markdown 消息发送成功")
+    # 1. 发送 Markdown 消息
+    print("\n[1/3] 发送 Markdown 消息...")
+    result = send_markdown(args.webhook, markdown)
+    print(f"Markdown 发送结果: {result}")
 
-    if args.pdf:
-        print(f"上传 PDF: {args.pdf} ...")
-        media_id = upload_media(args.webhook, args.pdf)
-        print(f"发送 PDF 文件...")
-        send_file(args.webhook, media_id)
-        print("PDF 文件发送成功")
+    # 2. 上传 PDF 文件
+    if args.pdf and os.path.exists(args.pdf):
+        print(f"\n[2/3] 上传 PDF 文件: {args.pdf} ({os.path.getsize(args.pdf)} bytes)")
+        media_id = upload_file(args.webhook, args.pdf)
+        print(f"media_id: {media_id}")
 
-    if html_file and args.html_as_file:
-        print(f"上传 HTML: {html_file} ...")
-        media_id = upload_media(args.webhook, html_file)
-        print(f"发送 HTML 文件...")
-        send_file(args.webhook, media_id)
-        print("HTML 文件发送成功")
+        # 3. 发送文件消息
+        print("\n[3/3] 发送文件消息...")
+        result = send_file(args.webhook, media_id)
+        print(f"File 发送结果: {result}")
+    elif args.pdf:
+        print(f"\n[Warning] PDF 文件不存在: {args.pdf}")
+    else:
+        print("\n[Info] 未提供 PDF 文件，跳过文件发送")
 
-    print("全部推送完成")
+    print("\n✅ 推送完成!")
 
 
 if __name__ == "__main__":
