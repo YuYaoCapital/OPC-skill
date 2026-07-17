@@ -182,7 +182,13 @@ try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } 
         </li>
       `}).join('');
 
-      // 移动端点击事件委托：确保 window.open 可靠跳转
+      // 移动端点击事件委托：企微内置浏览器拦截 window.open，改用 location.href 当前页跳转
+      if (isTouch) {
+        listEl.addEventListener('click', function(e) {
+          var a = e.target.closest('a.report-link');
+          if (a) { e.preventDefault(); window.location.href = a.href; }
+        });
+      }
       if (isTouch) {
         listEl.addEventListener('click', function(e) {
           var a = e.target.closest('a.report-link');
