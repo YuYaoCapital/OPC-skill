@@ -1090,6 +1090,17 @@ setInterval(refreshData, 5 * 60 * 1000);
     if (box) box.innerHTML += '<div style="color:#8b0a1a;padding:20px;text-align:center;font-size:14px;">图表加载失败，请刷新页面重试</div>';
   }
 })();
+
+/* ===== PC端自动添加download属性，企微移动端不添加 ===== */
+(function() {
+    var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobile) {
+        var pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+        for (var i = 0; i < pdfLinks.length; i++) {
+            pdfLinks[i].setAttribute('download', '');
+        }
+    }
+})();
 </script>
 </body>
 </html>

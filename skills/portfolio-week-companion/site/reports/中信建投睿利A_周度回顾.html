@@ -427,61 +427,61 @@ footer {
       <div class="holding-card">
         <div class="name">高能环境</div>
         <div class="code">数据待更新</div>
-        <div class="nav">26.48</div>
+        <div class="nav">485.28</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">亚太股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">21.16</div>
+        <div class="nav">224.84</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">中熔电气</div>
         <div class="code">数据待更新</div>
-        <div class="nav">234.94</div>
+        <div class="nav">438.69</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">菜百股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">321.31</div>
+        <div class="nav">112.56</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">蓝特光学</div>
         <div class="code">数据待更新</div>
-        <div class="nav">56.66</div>
+        <div class="nav">87.31</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">龙净环保</div>
         <div class="code">数据待更新</div>
-        <div class="nav">434.67</div>
+        <div class="nav">187.22</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">昭衍新药</div>
         <div class="code">数据待更新</div>
-        <div class="nav">160.32</div>
+        <div class="nav">29.43</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">鼎胜新材</div>
         <div class="code">数据待更新</div>
-        <div class="nav">64.46</div>
+        <div class="nav">234.73</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">雪天盐业</div>
         <div class="code">数据待更新</div>
-        <div class="nav">316.75</div>
+        <div class="nav">213.33</div>
         <div class="change ">+0.00%</div>
       </div>
       <div class="holding-card">
         <div class="name">生物股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">420.4</div>
+        <div class="nav">297.9</div>
         <div class="change ">+0.00%</div>
       </div>
     </div>
@@ -508,9 +508,9 @@ footer {
         <table>
           <thead><tr><th>年度</th><th style="text-align:right">基金净值增长率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
           <tbody>
-          <tr><td>2024</td><td class="right up">+5.72%</td><td class="right">-5.53%</td><td class="right up">+11.25%</td></tr>
-          <tr><td>2025</td><td class="right up">+52.05%</td><td class="right">+47.67%</td><td class="right up">+4.38%</td></tr>
-          <tr><td>2026</td><td class="right up">+0.12%</td><td class="right">+2.53%</td><td class="right down">-2.41%</td></tr>
+          <tr><td>2024</td><td class="right up">+5.72%</td><td class="right">+5.86%</td><td class="right down">-0.14%</td></tr>
+          <tr><td>2025</td><td class="right up">+52.05%</td><td class="right">+48.60%</td><td class="right up">+3.45%</td></tr>
+          <tr><td>2026</td><td class="right up">+0.12%</td><td class="right">-6.17%</td><td class="right up">+6.29%</td></tr>
           </tbody>
         </table>
       </div>
@@ -989,6 +989,17 @@ setInterval(refreshData, 5 * 60 * 1000);
     var box = document.querySelector('.chart-box');
     if (box) box.innerHTML += '<div style="color:#8b0a1a;padding:20px;text-align:center;font-size:14px;">图表加载失败，请刷新页面重试</div>';
   }
+})();
+
+/* ===== PC端自动添加download属性，企微移动端不添加 ===== */
+(function() {
+    var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobile) {
+        var pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+        for (var i = 0; i < pdfLinks.length; i++) {
+            pdfLinks[i].setAttribute('download', '');
+        }
+    }
 })();
 </script>
 </body>
