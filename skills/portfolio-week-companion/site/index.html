@@ -138,16 +138,6 @@ try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } 
       // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
       // 这里使用静态列表，每次生成报告后更新此数组
       const reports = [
-        { name: '中信建投中证500增强A 周度回顾', date: '2026-07-15', file: 'reports/中信建投中证500增强A_周度回顾.html', pdf: 'reports/中信建投中证500增强A_周度回顾.pdf', tag: '回顾' },
-        { name: '兴全合熙A 周度回顾', date: '2026-07-15', file: 'reports/兴全合熙A_周度回顾.html', pdf: 'reports/兴全合熙A_周度回顾.pdf', tag: '回顾' },
-        { name: '中信建投睿利A 周度回顾', date: '2026-07-15', file: 'reports/中信建投睿利A_周度回顾.html', pdf: 'reports/中信建投睿利A_周度回顾.pdf', tag: '回顾' },
-        { name: '永赢数字经济智选混合发起A 周度回顾', date: '2026-07-15', file: 'reports/永赢数字经济智选混合发起A_周度回顾.html', pdf: 'reports/永赢数字经济智选混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '博道叁佰智航A 周度回顾', date: '2026-07-15', file: 'reports/博道叁佰智航A_周度回顾.html', pdf: 'reports/博道叁佰智航A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧信息科技混合发起A 周度回顾', date: '2026-07-15', file: 'reports/中欧信息科技混合发起A_周度回顾.html', pdf: 'reports/中欧信息科技混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '国金科创创业量化选股A 周度回顾', date: '2026-07-15', file: 'reports/国金科创创业量化选股A_周度回顾.html', pdf: 'reports/国金科创创业量化选股A_周度回顾.pdf', tag: '回顾' },
-        { name: '富国创新科技混合A 周度回顾', date: '2026-07-15', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '创金合信北证50成份指数增强C 周度回顾', date: '2026-07-15', file: 'reports/创金合信北证50成份指数增强C_周度回顾.html', pdf: 'reports/创金合信北证50成份指数增强C_周度回顾.pdf', tag: '回顾' },
-        { name: '易方达战略新兴产业股票A 周度回顾', date: '2026-07-15', file: 'reports/易方达战略新兴产业股票A_周度回顾.html', pdf: 'reports/易方达战略新兴产业股票A_周度回顾.pdf', tag: '回顾' },
         { name: '睿远成长价值混合A 周度回顾', date: '2026-07-15', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
       ];
 
