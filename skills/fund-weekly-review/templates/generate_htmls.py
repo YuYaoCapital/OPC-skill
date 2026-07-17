@@ -496,7 +496,7 @@ footer {
   </div>
   <div class="nav-actions">
     <button class="nav-btn" onclick="copyUrl()">复制</button>
-    <button class="nav-btn" onclick="downloadPDF()">下载PDF</button>
+    <a class="nav-btn" href="{pdf_filename}" style="text-decoration:none;display:inline-flex;align-items:center;">下载PDF</a>
     <button class="nav-btn" onclick="downloadImage()">下载图片</button>
   </div>
 </nav>
@@ -1258,7 +1258,7 @@ def generate_theme_cards(themes, period_label):
 # ============================================================
 # 主函数
 # ============================================================
-def generate_fund_html(fund, code):
+def generate_fund_html(fund, code, pdf_filename):
     nav_history = fund.get('nav_history', [])
     weekly_return = fund.get('weekly_return', 0) or 0
     ytd_return = fund.get('ytd_return', 0) or 0
@@ -1400,6 +1400,7 @@ def generate_fund_html(fund, code):
         excess_halfyear=excess_halfyear,
         excess_halfyear_str=pct_fmt(excess_halfyear),
         excess_halfyear_color=color_cls(excess_halfyear),
+        pdf_filename=pdf_filename,
     )
     
     return html
@@ -1410,8 +1411,9 @@ def main():
     
     for code, fund in funds.items():
         output_name = fund['name'].replace(' ', '') + '_周度回顾.html'
+        pdf_name = fund['name'].replace(' ', '') + '_周度回顾.pdf'
         output_path = os.path.join(OUTPUT_DIR, output_name)
-        html = generate_fund_html(fund, code)
+        html = generate_fund_html(fund, code, pdf_name)
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(html)
         print(f"Generated: {output_path}")
