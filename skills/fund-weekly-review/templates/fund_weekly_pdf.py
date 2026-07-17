@@ -5,6 +5,7 @@ Style locked, data-driven. All visual constants are hard-coded.
 DO NOT MODIFY style definitions; only inject data via funds_data.json.
 """
 import json, os, sys, math
+from datetime import datetime
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -287,7 +288,7 @@ def generate_report(data, output_path, chart_dir):
     else:
         total_return = 0
     
-    report_date = fund.get('report_date', '2026-07-16')
+    report_date = datetime.now().strftime('%Y-%m-%d')  # 制作日期 = 生成当天
     data_cutoff = fund.get('data_cutoff', '2026-07-10')
     period_start = fund.get('period_start', '2026-07-06')
     period_end = fund.get('period_end', '2026-07-10')

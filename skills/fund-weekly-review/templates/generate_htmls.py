@@ -518,14 +518,14 @@ footer {
       <div class="sub" id="navDate">{nav_date}</div>
     </div>
     <div class="kpi-item">
-      <div class="label">估算净值</div>
-      <div class="value" id="estimateNav">{estimate_nav:.4f}</div>
-      <div class="sub" id="estimateTime">今日盘中</div>
+      <div class="label">近一周</div>
+      <div class="value {weekly_color}" id="weeklyChange">{weekly_return_str}</div>
+      <div class="sub" id="weeklyPeriod">{report_start} 至 {report_end}</div>
     </div>
     <div class="kpi-item">
-      <div class="label">估算涨跌幅</div>
-      <div class="value {estimate_color}" id="estimateChange">{estimate_return_str}</div>
-      <div class="sub">今日盘中</div>
+      <div class="label">今年以来</div>
+      <div class="value {ytd_color}" id="ytdChange">{ytd_return_str}</div>
+      <div class="sub">累计收益</div>
     </div>
     <div class="kpi-item">
       <div class="label">成立以来</div>
@@ -1248,6 +1248,7 @@ def generate_theme_cards(themes, period_label):
 def generate_fund_html(fund, code):
     nav_history = fund.get('nav_history', [])
     weekly_return = fund.get('weekly_return', 0) or 0
+    ytd_return = fund.get('ytd_return', 0) or 0
     
     if nav_history:
         first_nav = nav_history[0]['nav']
@@ -1325,6 +1326,9 @@ def generate_fund_html(fund, code):
         weekly_return=weekly_return,
         weekly_return_str=pct_fmt(weekly_return),
         weekly_color=color_cls(weekly_return),
+        ytd_return=ytd_return,
+        ytd_return_str=pct_fmt(ytd_return),
+        ytd_color=color_cls(ytd_return),
         total_return=total_return,
         total_return_str=pct_fmt(total_return),
         total_return_color=color_cls(total_return),
