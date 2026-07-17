@@ -157,8 +157,8 @@ try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } 
         return;
       }
 
-      // 按日期倒序
-      reports.sort((a, b) => b.date.localeCompare(a.date));
+      // 按更新日期倒序
+      reports.sort((a, b) => (b.update_date || '').localeCompare(a.update_date || ''));
 
       listEl.innerHTML = reports.map((r, i) => {
         // 移动端：使用 window.open 替代 target="_blank"，避免部分浏览器/企微中不跳转
