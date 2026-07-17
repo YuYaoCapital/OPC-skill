@@ -57,7 +57,9 @@ description: 生成单只基金的纯周度陪伴/回顾报告（不含横纵分
 
 > **模块编号与PDF固定模板对齐**：PDF生成器 `fund_weekly_pdf.py` 中模块顺序已硬编码，数据注入时需确保字段名称与以下模块对应。
 >
-> **样式固化声明**：PDF模板 `fund_weekly_pdf.py` 的样式已完全固化，所有颜色、字号、边距、间距常量均硬编码在脚本顶部。LLM执行时**不得修改**模板中的任何样式参数，仅通过修改 `funds_data.json` 数据文件来更新报告内容。数据计算逻辑（如`colored_pct`正红负绿、`gaussian_smooth` sigma=6）已固化。`overview`标签映射已固化：估算净值→近一周收益、估算涨跌幅→近一年收益、近1年收益→机构持仓占比。顶部4列表格列宽已固化：`[35mm, 48mm, 35mm, 48mm]`。
+> **样式固化声明**：PDF模板 `fund_weekly_pdf.py` 的样式已完全固化，所有颜色、字号、边距、间距常量均硬编码在脚本顶部。LLM执行时**不得修改**模板中的任何样式参数，仅通过修改 `funds_data.json` 数据文件来更新报告内容。数据计算逻辑（如`colored_pct`正红负绿、`gaussian_smooth` sigma=4）已固化。`overview`标签映射已固化：估算净值→近一周收益、估算涨跌幅→近一年收益、近1年收益→机构持仓占比。顶部4列表格列宽已固化：`[35mm, 48mm, 35mm, 48mm]`。
+>
+> **HTML模块差异**：HTML报告在PDF的12个模块基础上，在「十、后市怎么看？」之后额外增加了三个企微专属模块（十一、您该怎么做？；十二、财经新闻与沟通策略；十三、理财经理本周沟通tips），并将「基金经理与产品档案」顺延为第十四模块。PDF中不包含这三个模块。
 
 ### 1. 封面（含4指标表）
 
@@ -433,83 +435,213 @@ description: 生成单只基金的纯周度陪伴/回顾报告（不含横纵分
 ## 输出格式（样式锁定，调用固定模板）
 
 > **重要**：PDF 和 HTML 的生成**不再由 LLM 从零写代码**，而是通过调用**固定模板脚本** + 注入 JSON 数据实现。这确保了每次生成的报告样式**完全一致**，仅数据不同。
+> 
+> **样式锁定声明**：本 Skill 的所有视觉样式参数均硬编码在模板脚本中。LLM 执行时**绝对不得修改**任何颜色、字号、边距、间距定义。仅通过修改 `funds_data.json` 数据文件来更新报告内容。如需调整样式，必须直接修改模板源文件本身，并在本 SKILL.md 中同步更新版本号。
 
 ### 模板文件位置
 
 | 文件 | 路径 | 说明 |
 |------|------|------|
-| **PDF 生成器** | `D:\OPC-skill\skills\fund-weekly-review\templates\fund_weekly_pdf.py` | reportlab 固定脚本，样式写死，仅注入数据 |
-| **数据文件** | `D:\OPC-skill\skills\fund-weekly-review\templates\funds_data.json` | JSON 数据注入，每次生成前更新此文件 |
-| **HTML 模板** | `D:\OPC-skill\skills\fund-weekly-review\templates\fund_weekly_html.html` | Jinja2 模板，样式锁定，红色主调 |
+| **PDF 生成器** | `D:\OPC-skill\skills\fund-weekly-review\templates\fund_weekly_pdf.py` | reportlab 固定脚本，样式全部硬编码 |
+| **HTML 生成器** | `D:\OPC-skill\skills\fund-weekly-review\templates\generate_htmls.py` | HTML 固定模板，CSS 全内联，样式全部硬编码 |
+| **数据文件（输入）** | `D:\OPC-skill\skills\portfolio-week-companion\site\reports\funds_data.json` | JSON 数据注入，每次生成前更新此文件 |
+| **HTML 首页** | `D:\OPC-skill\skills\portfolio-week-companion\site\index.html` | 报告列表页，跳转逻辑已锁定 |
 
 ### 执行流程
 
 ```
 1. 收集基金数据（净值、持仓、市场、观点等）
 2. 将数据写入 funds_data.json
-3. 调用 python fund_weekly_pdf.py funds_data.json output.pdf
-4. 生成 PDF 报告（样式完全一致，仅数据不同）
-5. 同时生成 HTML 报告（部署至 Cloudflare Pages）
+3. 调用 python fund_weekly_pdf.py  funds_data.json  output.pdf
+4. 调用 python generate_htmls.py 生成 HTML（自动从 funds_data.json 读取）
+5. 生成 PDF + HTML 报告（样式完全一致，仅数据不同）
+6. git push 到 GitHub，Cloudflare Pages 自动部署
 ```
 
-### 数据文件结构（funds_data.json）
+---
 
-JSON 必须包含以下字段：
+### PDF 模板 — `fund_weekly_pdf.py`（样式完全固化）
+
+**样式常量（顶部硬编码，绝对锁定）**：
+
+| 常量 | 值 | 说明 |
+|------|-----|------|
+| `FONT_PATH` | `C:/Windows/Fonts/simhei.ttf` | 黑体字体 |
+| `C_PRIMARY` | `#8b0a1a` | 主标题红 |
+| `C_PRIMARY_L` | `#c41e3a` | 二级标题红 |
+| `C_UP` | `#dc2626` | 上涨红 |
+| `C_DOWN` | `#16a34a` | 下跌绿 |
+| `C_BG_LIGHT` | `#fef2f2` | 表头浅红底 |
+| `FS_TITLE` | `18` | 主标题字号 |
+| `FS_BODY` | `9` | 正文字号 |
+| `FS_TABLE` | `9` | 表格字号 |
+| `MARGIN_LEFT` | `25mm` | 左边距 |
+| `MARGIN_RIGHT` | `20mm` | 右边距 |
+| `MARGIN_TOP` | `20mm` | 上边距 |
+| `MARGIN_BOTTOM` | `15mm` | 下边距 |
+
+**模块构建顺序（`generate_report` 函数中硬编码）**：
+
+```
+封面（4指标表：最新净值|近一周|今年以来|成立以来）
+  ↓
+一、产品概况（overview 9项 + 产品定位）
+  ↓
+二、核心持仓上周表现（持仓表 + 持仓观察）
+  ↓
+三、产品表现
+  ├── 3.1 成立至今净值走势（Chart 折线图）
+  ├── 3.2 年度业绩（annual_returns 字典格式）
+  └── 3.3 历史回撤修复能力（drawdown_records）
+  ↓
+四、基金经理观点（manager_views 列表）
+  ↓
+五、上周产品表现（weekly_performance 阶段对比表 + 表现点评）
+  ↓
+六、回撤修复数据（drawdown_repair_summary）
+  ↓
+七、全球市场速览（global_market + valuation 估值指标）
+  ↓
+八、热门主题表现（hot_themes + 主题描述）
+  ↓
+九、为什么上周会有波动？（attributions 归因分析）
+  ↓
+十、后市怎么看？（outlooks 后市展望）
+  ↓
+十一、基金经理与产品档案（profile + manager_bio）
+  ↓
+十二、交互式HTML报告（附录页，含二维码和访问链接）
+  ↓
+Footer 风险提示
+```
+
+**关键固化规则**：
+- `colored_pct` 函数：正红负绿，已固化
+- `gaussian_smooth` 函数：sigma=4，已固化
+- `overview` 标签映射：估算净值→近一周收益、估算涨跌幅→近一年收益、近1年收益→机构持仓占比，已固化
+- 封面4列表格列宽：`[35mm, 48mm, 35mm, 48mm]`，已固化
+- 净值走势图：基金净值蓝色实线 + 基准灰色虚线，已固化
+- 表格样式工厂：`make_table_style` / `make_table_style_centered`，已固化
+
+---
+
+### HTML 模板 — `generate_htmls.py`（样式完全固化）
+
+**CSS 变量（硬编码在 `<style>` 中）**：
+
+| 变量 | 值 | 说明 |
+|------|-----|------|
+| `--primary` | `#8b0a1a` | 主色调 |
+| `--primary-light` | `#c41e3a` | 浅红 |
+| `--up` | `#dc2626` | 上涨红 |
+| `--down` | `#16a34a` | 下跌绿 |
+| `--nav-h` | `52px` | 导航栏高度 |
+
+**模块结构（14个 section，sec1 ~ sec14）**：
+
+| sec | 模块名称 | 对应PDF模块 |
+|-----|---------|------------|
+| sec1 | 一、产品概况 | ✓ 一致 |
+| sec2 | 二、核心持仓上周表现 | ✓ 一致 |
+| sec3 | 三、产品表现 | ✓ 一致 |
+| sec4 | 四、全球市场速览 | PDF中为「七」 |
+| sec5 | 五、热门主题表现 | PDF中为「八」 |
+| sec6 | 六、基金经理观点 | PDF中为「四」 |
+| sec7 | 七、上周产品表现 | PDF中为「五」 |
+| sec8 | 八、回撤修复数据 | PDF中为「六」 |
+| sec9 | 九、为什么上周会有波动？ | ✓ 一致 |
+| sec10 | 十、后市怎么看？ | ✓ 一致 |
+| sec11 | 十一、您该怎么做？ | HTML独有 |
+| sec12 | 十二、财经新闻与沟通策略 | HTML独有 |
+| sec13 | 十三、理财经理本周沟通tips | HTML独有 |
+| sec14 | 十四、基金经理与产品档案 | PDF中为「十一」 |
+
+> **注**：HTML 在「十、后市怎么看？」之后增加了三个企微专属模块（十一~十三），PDF 中不包含。PDF 的「十二、交互式HTML报告」附录页在 HTML 中不出现。
+
+**差异化下载策略（已固化在模板底部）**：
+
+```javascript
+(function() {
+    var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobile) {
+        var pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+        for (var i = 0; i < pdfLinks.length; i++) {
+            pdfLinks[i].setAttribute('download', '');
+        }
+    }
+})();
+```
+
+| 设备 | 点击「下载PDF」行为 | 原因 |
+|------|-------------------|------|
+| **PC端** | 直接下载 PDF 到本地 | JS 自动添加 `download` 属性 |
+| **手机企微** | 打开 PDF 在线预览 | 不添加 `download` 属性，避免企微拦截 |
+
+**导航栏跳转逻辑（首页 index.html 已固化）**：
+- 企微移动端：`window.location.href = a.href`（当前页跳转）
+- PC端：`target="_blank"`（新标签页打开）
+- 原因：企微内置浏览器拦截 `window.open()`
+
+---
+
+### 数据文件结构（`funds_data.json`）
+
+JSON 必须为**字典格式**，顶层 key 为基金代码（如 `"007119"`），值为基金数据字典。生成器会自动遍历所有基金生成对应报告。
+
+**必填字段**：
 
 ```json
 {
-  "code": "007119",
-  "name": "睿远成长价值混合A",
-  "nav": 2.5020,
-  "nav_date": "2026-07-10",
-  "nav_history": [...],
-  "weekly_return": -2.35,
-  "ytd_return": 18.56,
-  "daily_change": -0.52,
-  "report_date": "2026-07-16",
-  "data_cutoff": "2026-07-10",
-  "period_start": "2026-07-06",
-  "period_end": "2026-07-10",
-  "manager": "傅鹏博、朱璘",
-  "type": "混合型-偏股",
-  "scale": "165.00亿",
-  "benchmark": "业绩基准说明",
-  "overview": [{"label":"...","value":"..."}, ...],
-  "positioning": "产品定位说明（不少于80字）",
-  "holdings": [{"name":"...","industry":"...","weight":"...","change":0.0,"desc":"核心逻辑"}, ...],
-  "holding_source": "2026年一季报",
-  "holding_note": "持仓观察（不少于100字）",
-  "nav_summary": "净值走势简述（不少于150字）",
-  "annual_returns": {"2019":{"fund_return":2.35,"benchmark_return":4.12,"excess_return":-1.77}, ...},
-  "drawdown_records": [{"event":"...","drawdown":-23.5,"status":"已修复","repair_time":"..."}, ...],
-  "drawdown_summary": "回撤修复详细说明（不少于150字，与drawdown_records对应）",
-  "drawdown_repair_summary": "回撤修复数据模块内容（与3.3对应）",
-  "manager_views": [{"title":"...","content":"..."}, ...],
-  "weekly_performance": {"periods":[{"period":"近一周","fund_return":-2.35,"benchmark_return":-1.82,"excess_return":-0.53}, ...]},
-  "weekly_comment": "表现点评（不少于80字）",
-  "global_market": [{"market":"A股","index":"上证指数","close":"3256.34","change":-1.25}, ...],
-  "valuation": [{"label":"...","value":"...","percentile":"...","evaluation":"..."}, ...],
-  "market_comment": "市场点评（不少于50字）",
-  "hot_themes": [{"name":"...","change":-3.52}, ...],
-  "theme_comment": "热门主题描述（不少于100字）",
-  "attributions": [{"title":"...","content":"...","positive":false}, ...],
-  "outlooks": [{"title":"...","content":"...","positive":true}, ...],
-  "profile": {"info":{"基金经理":"...","从业年限":"...",...}},
-  "manager_bio": "基金经理简介"
+  "007119": {
+    "code": "007119",
+    "name": "睿远成长价值混合A",
+    "type": "混合型-偏股",
+    "manager": "傅鹏博、朱璘",
+    "nav": 2.5020,
+    "nav_date": "2026-07-10",
+    "nav_history": [{"date": "2019-03-26", "nav": 1.0000}, ...],
+    "weekly_return": -3.22,
+    "ytd_return": 18.56,
+    "daily_change": -3.95,
+    "scale": "165.00亿",
+    "benchmark": "业绩基准说明",
+    "data_cutoff": "2026-07-10",
+    "positioning": "产品定位说明（≥80字）",
+    "holdings": [{"name": "宁德时代", "industry": "电力设备", "weight": "8.5%", "change": -5.2, "desc": "核心逻辑"}, ...],
+    "holding_source": "2026年一季报",
+    "holding_note": "持仓观察（≥100字）",
+    "nav_summary": "净值走势简述（≥150字）",
+    "annual_returns": {"2019": {"fund_return": 2.35, "benchmark_return": 4.12, "excess_return": -1.77}, ...},
+    "drawdown_records": [{"event": "...", "drawdown": -23.5, "status": "已修复", "repair_time": "..."}, ...],
+    "drawdown_summary": "回撤详细说明（≥150字）",
+    "drawdown_repair_summary": "回撤修复数据模块内容",
+    "manager_views": [{"title": "投资策略", "content": "..."}, ...],
+    "weekly_performance": {"periods": [{"period": "近一周", "fund_return": -3.22, "benchmark_return": -0.79, "excess_return": -2.43}, ...]},
+    "weekly_comment": "表现点评（≥80字）",
+    "global_market": [{"market": "A股", "index": "沪深300", "close": "4780.79", "change": -1.96}, ...],
+    "valuation": [{"label": "沪深300 PE", "value": "12.5", "percentile": "45%", "evaluation": "中等"}, ...],
+    "market_comment": "市场点评（≥50字）",
+    "hot_themes": [{"name": "AI算力/光模块", "etf": "AI算力ETF", "change": -12.8}, ...],
+    "theme_comment": "热门主题描述（≥100字）",
+    "attributions": [{"title": "核心持仓端", "content": "...", "positive": true}, ...],
+    "outlooks": [{"title": "短期", "content": "...", "positive": true}, ...],
+    "profile": {"info": {"基金经理": "傅鹏博、朱璘", "从业年限": "30年", ...}},
+    "manager_bio": "基金经理简介"
+  }
 }
 ```
 
 **数据格式规范**：
-- `nav`: 最新净值（float）
-- `ytd_return`: 今年以来收益（float，%）
-- `daily_change`: 最新日涨跌幅（float，%）
-- `annual_returns`: 每年为 `{"fund_return": X, "benchmark_return": X, "excess_return": X}` 对象（非字符串）
-- `weekly_performance.periods`: 每期为 `{"period": "近一周", "fund_return": X, "benchmark_return": X, "excess_return": X}`
-- `drawdown_records`: 每条为 `{"event": "...", "drawdown": X, "status": "...", "repair_time": "..."}`
-- `drawdown_summary` / `drawdown_repair_summary`: 字符串，详细说明回撤修复情况
-- `attributions`/`outlooks`: 每条含 `{"title": "...", "content": "...", "positive": true/false}` 控制编号颜色
-- `holding_source`: 持仓数据来源，如"2026年一季报"
-- `positioning` / `holding_note` / `nav_summary` / `weekly_comment` / `market_comment` / `theme_comment` / `manager_bio`: 字符串，对应各模块文字内容
+- `nav`: float，最新净值
+- `weekly_return` / `ytd_return` / `daily_change`: float，百分比值（如 `-3.22` 表示 -3.22%）
+- `annual_returns`: 每年为 `{"fund_return": X, "benchmark_return": X, "excess_return": X}` 字典（非字符串）
+- `drawdown_records`: 每条含 `{"event": "...", "drawdown": X, "status": "...", "repair_time": "..."}`
+- `attributions` / `outlooks`: 每条含 `{"title": "...", "content": "...", "positive": true/false}`，`positive` 控制编号颜色（true=红，false=绿）
+- `global_market`: 每条含 `{"market": "...", "index": "...", "close": "...", "change": X}`，`change` 为 float
+- `hot_themes`: 每条含 `{"name": "...", "etf": "...", "change": X}`，`change` 为 float，`etf` 可选
+- `holdings`: 每条含 `{"name": "...", "industry": "...", "weight": "...", "change": X, "desc": "..."}`，`change` 为 float
+
+---
 
 ### 1. Markdown（内容初稿，可选）
 
@@ -524,10 +656,10 @@ JSON 必须包含以下字段：
 - **归因编号颜色**：正向因素编号红色；负向因素编号绿色
 - **信息密度**：5页以内，表格紧凑、字体9pt、行高12-14pt、列宽自适应（内容多的列更宽）
 - **页面边距**：左25mm、右20mm、上20mm、下15mm
-- **结构化模块**：封面（含4指标表）、产品概况（9项指标+产品定位）、核心持仓表（含持仓观察）、产品表现（净值走势+年度业绩+历史回撤修复）、基金经理观点、上周产品表现（含表现点评）、回撤修复数据、全球市场速览（含A股估值+市场点评）、热门主题表现（含主题描述）、归因分析（带编号颜色）、后市展望（带编号颜色）、基金经理与产品档案、HTML在线报告附录、Footer风险提示
-- **HTML附录页**：在PDF末尾附上一页「HTML在线报告」，包含二维码和访问链接 `https://fundadvisor.pages.dev/reports/基金简称_周度回顾.html`
+- **结构化模块**：封面（含4指标表）、产品概况（9项指标+产品定位）、核心持仓表（含持仓观察）、产品表现（净值走势+年度业绩+历史回撤修复）、基金经理观点、上周产品表现（含表现点评）、回撤修复数据、全球市场速览（含A股估值+市场点评）、热门主题表现（含主题描述）、归因分析（带编号颜色）、后市展望（带编号颜色）、基金经理与产品档案、交互式HTML报告附录、Footer风险提示
+- **HTML附录页**：在PDF末尾附上一页「HTML在线报告」，包含访问链接 `https://fundadvisor.pages.dev/reports/基金简称_周度回顾.html`
 
-> **样式锁定指令（已固化）**：`fund_weekly_pdf.py` 中所有颜色、字号、边距、间距常量均已硬编码在脚本顶部。LLM执行时**绝对不得修改**模板中的任何样式参数。仅通过修改 `funds_data.json` 数据文件来更新报告内容。数据计算逻辑（如`colored_pct`正红负绿、`gaussian_smooth` sigma=6）已固化，不得调整。
+> **样式锁定指令（已固化）**：`fund_weekly_pdf.py` 中所有颜色、字号、边距、间距常量均已硬编码在脚本顶部。LLM执行时**绝对不得修改**模板中的任何样式参数。仅通过修改 `funds_data.json` 数据文件来更新报告内容。数据计算逻辑（如`colored_pct`正红负绿、`gaussian_smooth` sigma=4）已固化，不得调整。
 
 ### 3. HTML（红色主调，在线访问，CSS全内联）——**样式已锁定**
 
@@ -547,14 +679,14 @@ JSON 必须包含以下字段：
   - 制作日期 = 生成当天（JS 刷新时自动更新）
 - **交互**：一键复制、热门主题切换、天天基金 JSONP 实时净值刷新（每5分钟）
 - **底部风险提示**：不含访问地址，只保留基金说明和数据来源
-- **模块**：12个标准模块（一、产品概况...十一、基金经理与产品档案）+ 交互式HTML报告附录
+- **模块**：14个模块（一~十四），其中十一~十三为 HTML 独有（企微专属）
+- **差异化下载**：PC端自动下载，企微移动端在线预览（已固化）
 
 **文件命名**：`基金简称_周度回顾.html`
 **部署路径**：`skills/portfolio-week-companion/site/reports/基金简称_周度回顾.html`
 **访问地址**：`https://fundadvisor.pages.dev/reports/基金简称_周度回顾.html`
 **部署方式**：Git push 到 GitHub 后，Cloudflare Pages 自动部署
 
-> **样式锁定指令**：`generate_htmls.py` 中的 HTML_TEMPLATE 字符串已硬编码，所有 CSS 变量和组件样式写死。LLM 只负责注入数据变量（`fund` 字典），不得修改模板中的任何颜色、字号、间距定义。如需调整样式，需修改 `generate_htmls.py` 本身。
 > **PDF 与 HTML 的关系**：
 > - PDF 是「正式文档」——用于打印、存档、邮件附件、合规留痕
 > - HTML 是「在线附录」——附在 PDF 末尾，扫码或点击即可访问，用于实时数据查看、手机浏览、一键复制话术
@@ -563,7 +695,7 @@ JSON 必须包含以下字段：
 > - 客户需要实时数据、手机浏览、一键复制话术 → 选 HTML
 > - 理财经理需要打印存档、正式分发、紧凑排版 → 选 PDF
 > - 最佳实践：同时生成两种格式，PDF 用于存档，HTML 用于线上分发
-
+> - **企微场景**：首页 `https://fundadvisor.pages.dev` → 点击「查看 HTML」→ 进入报告页 → 点击「下载PDF」→ PC端直接下载 / 手机端在线预览
 
 ---
 
@@ -746,3 +878,7 @@ const hsi = await fetchWithFallback([
 - 基金经理观点必须引用实际季报/访谈原文，不编造
 - **主动权益与量化分析框架不混淆**：主动权益侧重量化个股，量化侧重量化因子；不强行用个股分析框架套量化产品，也不强行用因子分析框架套主动权益产品
 - 数据截止统一使用 `data_cutoff` 字段，封面显示「报告日期 {period_start} 至 {period_end} | 制作日期 {report_date}」
+- **首页跳转逻辑已锁定**：`index.html` 中企微移动端必须使用 `window.location.href` 跳转，禁止使用 `window.open()`（会被企微拦截）
+- **PDF下载策略已锁定**：HTML模板中 `<a href="xxx.pdf">` 不加 `download` 属性，由页面加载后JS根据UA自动判断（PC端添加download，移动端不添加）
+- **报告链接必须带 .html 后缀**：分享链接格式为 `https://fundadvisor.pages.dev/reports/基金简称_周度回顾.html`，不带后缀会触发Cloudflare Pages目录页，在企微中无法点击
+- **样式锁定**：所有模板文件的样式常量已硬编码，仅通过修改 `funds_data.json` 更新数据。如需修改样式，必须直接编辑模板源文件，禁止通过LLM生成时修改样式
