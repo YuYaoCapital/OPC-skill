@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Fund Weekly Review — Fixed PDF Generator
-Style locked, data-driven. All visual constants are hard-coded.
-DO NOT MODIFY style definitions; only inject data via funds_data.json.
+Fund Weekly Review — PDF Generator v4.0
+读取 funds_data_pdf.json（纯文本格式），样式完全锁定。
 """
 import json, os, sys, math
 from datetime import datetime
@@ -25,30 +24,27 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 # ============================================================
-# 1. 样式常量 — 绝对锁定，任何执行都不允许改动
+# 1. 样式常量 — 绝对锁定
 # ============================================================
 FONT_PATH = "C:/Windows/Fonts/simhei.ttf"
 FONT_PATH_YAHEI = "C:/Windows/Fonts/msyh.ttc"
 
-# 注册字体
 pdfmetrics.registerFont(TTFont('SimHei', FONT_PATH))
 pdfmetrics.registerFont(TTFont('SimHei-Bold', FONT_PATH))
 
-# 颜色常量
-C_PRIMARY      = HexColor('#8b0a1a')   # 主标题红
-C_PRIMARY_L    = HexColor('#c41e3a')   # 二级标题红
-C_UP           = HexColor('#dc2626')   # 上涨红
-C_DOWN         = HexColor('#16a34a')   # 下跌绿
-C_BG_LIGHT     = HexColor('#fef2f2')   # 表头浅红底
-C_BG_GRAY      = HexColor('#fafaf9')   # 浅灰底
-C_BORDER       = HexColor('#e7e5e4')   # 边框灰
-C_TEXT_MAIN    = HexColor('#1a1a1a')   # 正文黑
-C_TEXT_SEC     = HexColor('#78716c')   # 次要文字
-C_TEXT_BODY    = HexColor('#44403c')   # 正文灰
-C_TEXT_LIGHT   = HexColor('#a8a29e')   # 浅灰文字
+C_PRIMARY      = HexColor('#8b0a1a')
+C_PRIMARY_L    = HexColor('#c41e3a')
+C_UP           = HexColor('#dc2626')
+C_DOWN         = HexColor('#16a34a')
+C_BG_LIGHT     = HexColor('#fef2f2')
+C_BG_GRAY      = HexColor('#fafaf9')
+C_BORDER       = HexColor('#e7e5e4')
+C_TEXT_MAIN    = HexColor('#1a1a1a')
+C_TEXT_SEC     = HexColor('#78716c')
+C_TEXT_BODY    = HexColor('#44403c')
+C_TEXT_LIGHT   = HexColor('#a8a29e')
 C_WHITE        = HexColor('#ffffff')
 
-# 字号常量
 FS_TITLE       = 18
 FS_SUBTITLE    = 11
 FS_HEADER      = 13
@@ -59,7 +55,6 @@ FS_FOOTER      = 8
 FS_SMALL       = 7
 FS_TABLE       = 9
 
-# 间距常量
 SA_TITLE       = 6
 SB_TITLE       = 0
 SA_SUBTITLE    = 12
@@ -73,7 +68,6 @@ SB_BODY        = 0
 SA_TABLE       = 3
 SB_TABLE       = 3
 
-# 页面边距
 MARGIN_LEFT    = 25*mm
 MARGIN_RIGHT   = 20*mm
 MARGIN_TOP     = 20*mm
@@ -256,11 +250,11 @@ def calculate_drawdowns(nav_history, current_nav):
     return max_drawdown, current_drawdown, events
 
 # ============================================================
-# 7. 主生成函数 — 样式完全锁定
+# 7. 主生成函数
 # ============================================================
 def generate_report(data, output_path, chart_dir):
     """
-    data: dict 包含所有报告数据
+    data: dict 包含所有报告数据（来自 funds_data_pdf.json）
     output_path: PDF 输出路径
     chart_dir: 图表临时目录
     """
@@ -279,18 +273,17 @@ def generate_report(data, output_path, chart_dir):
     name = fund.get('name', '')
     nav = float(fund.get('nav', 0))
     nav_history = fund.get('nav_history', [])
-    weekly_return = float(fund.get('weekly_return', 0) or 0)
-    daily_change = float(fund.get('daily_change', 0) or 0)
+    weekly_return = float(fund.get('weekly_return', 0))
+    daily_change = float(fund.get('daily_change', 0))
     
     if nav_history:
         first_nav = nav_history[0]['nav']
         total_return_calc = (nav - first_nav) / first_nav * 100
     else:
         total_return_calc = 0
-    # 优先使用真实成立以来收益率，否则回退到计算值
     total_return = float(fund.get('total_return_since_inception', total_return_calc) or total_return_calc)
     
-    report_date = datetime.now().strftime('%Y-%m-%d')  # 制作日期 = 生成当天
+    report_date = fund.get('report_date', datetime.now().strftime('%Y-%m-%d'))
     data_cutoff = fund.get('data_cutoff', '2026-07-10')
     period_start = fund.get('period_start', '2026-07-06')
     period_end = fund.get('period_end', '2026-07-10')
@@ -302,9 +295,9 @@ def generate_report(data, output_path, chart_dir):
     story.append(P(f'报告日期 {period_start} 至 {period_end} | 制作日期 {report_date}', footer_style))
     story.append(Spacer(1, 8*mm))
     
-    # 顶部关键指标（4列）— 使用真实数据
-    ytd_return = float(fund.get('return_ytd', 0) or 0)
-    return_1y = float(fund.get('return_last_1_year', 0) or 0)
+    # 顶部关键指标（4列）
+    ytd_return = float(fund.get('ytd_return', 0))
+    return_1y = float(fund.get('return_last_1_year', 0))
     metric_data = [
         [P('最新净值', caption_style), P('近一周', caption_style), P('今年以来', caption_style), P('成立以来', caption_style)],
         [P(primary(f"{nav:.4f}"), title_style), 
@@ -329,23 +322,28 @@ def generate_report(data, output_path, chart_dir):
     
     # --- 一、产品概况 ---
     story.append(P('一、产品概况', header_style))
-    overview_rows = []
-    # 基础信息行
-    for item in fund.get('overview', []):
-        label = item.get('label', '')
-        value = item.get('value', '')
-        overview_rows.append([P(label), P(value)])
-    # 追加：近一周收益、近一年收益、机构持仓占比
-    overview_rows.append([P('近一周收益'), P(colored_pct(weekly_return))])
-    overview_rows.append([P('近一年收益'), P(colored_pct(return_1y))])
-    inst_ratio = fund.get('institutional_holding_ratio')
-    if inst_ratio is not None:
-        overview_rows.append([P('机构持仓占比'), P(f'{inst_ratio:.2f}%')])
-    else:
-        overview_rows.append([P('机构持仓占比'), P('--')])
     
-    if overview_rows:
-        overview_table = Table(overview_rows, colWidths=[35*mm, 145*mm])
+    overview_items = fund.get('overview', [])
+    if overview_items:
+        overview_rows = []
+        for item in overview_items:
+            label = item["label"]
+            value = item['value']
+            # 近一周收益 / 近一年收益 需要颜色渲染
+            if label in ('近一周收益', '近一年收益'):
+                try:
+                    num = float(str(value).replace('%', '').replace('+', ''))
+                    value = colored_pct(num)
+                except:
+                    value = str(value)
+            else:
+                value = str(value)
+            overview_rows.append([
+                P(f'<b>{label}</b>'),
+                P(value),
+            ])
+        
+        overview_table = Table(overview_rows, colWidths=[40*mm, 140*mm])
         overview_table.setStyle(TableStyle([
             ('FONTNAME', (0,0), (-1,-1), 'SimHei'),
             ('FONTSIZE', (0,0), (-1,-1), FS_TABLE),
@@ -463,12 +461,8 @@ def generate_report(data, output_path, chart_dir):
     
     story.append(Spacer(1, 3*mm))
     if max_dd is not None:
-        story.append(P(
-            f'{primary("<b>成立以来最大回撤说明：</b>")}{fund.get("drawdown_summary", "")}',
-            body_style
-        ))
+        story.append(P(f'{primary("<b>成立以来最大回撤说明：</b>")}{fund.get("drawdown_summary", "")}', body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-
     
     # --- 四、基金经理观点 ---
     story.append(P('四、基金经理观点', header_style))
@@ -488,18 +482,15 @@ def generate_report(data, output_path, chart_dir):
     if weekly_perf:
         w_data = [[P(bold('时间维度')), P(bold('基金收益率')), P(bold('基准收益率')), P(bold('超额收益'))]]
         for wp in weekly_perf.get('periods', []):
-            if isinstance(wp.get('return'), (int, float)):
-                w_data.append([P(wp['period']), P(colored_pct(float(wp['return']))), P('--'), P('--')])
-            else:
-                fund_ret = wp.get('fund_return', 0)
-                bench_ret = wp.get('benchmark_return', 0)
-                excess_ret = wp.get('excess_return', 0)
-                w_data.append([
-                    P(wp['period']),
-                    P(colored_pct(fund_ret)),
-                    P(colored_pct(bench_ret)),
-                    P(colored_pct(excess_ret))
-                ])
+            fund_ret = wp.get('fund_return', 0)
+            bench_ret = wp.get('benchmark_return', 0)
+            excess_ret = wp.get('excess_return', 0)
+            w_data.append([
+                P(wp['period']),
+                P(colored_pct(fund_ret)),
+                P(colored_pct(bench_ret)),
+                P(colored_pct(excess_ret))
+            ])
         w_table = Table(w_data, colWidths=[35*mm, 48*mm, 48*mm, 48*mm])
         w_table.setStyle(make_table_style_centered(True))
         story.append(w_table)
@@ -520,7 +511,6 @@ def generate_report(data, output_path, chart_dir):
     else:
         story.append(P('该基金成立时间较短，历史回撤数据有限。', body_style))
     
-    # 历史回撤事件表
     dd_records = fund.get('drawdown_records', [])
     if dd_records:
         dd_data = [[P(bold('回撤事件')), P(bold('最大回撤')), P(bold('修复状态')), P(bold('修复时间'))]]
@@ -542,6 +532,7 @@ def generate_report(data, output_path, chart_dir):
         story.append(dd_table)
     
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
+    
     # --- 七、全球市场速览 ---
     story.append(P('七、全球市场速览（上周）', header_style))
     story.append(P(f'统计区间：{period_start} 至 {period_end} | 数据来源：天天基金、同花顺iFinD', small_style))
@@ -590,11 +581,8 @@ def generate_report(data, output_path, chart_dir):
     story.append(Spacer(1, 3*mm))
     story.append(P(fund.get('theme_comment', ''), body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-
     
-
-    
-    # --- 九、为什么上周会有波动？（归因分析） ---
+    # --- 九、归因分析 ---
     story.append(P('九、为什么上周会有波动？（归因分析）', header_style))
     attributions = fund.get('attributions', [])
     for idx, attr in enumerate(attributions, 1):
@@ -613,7 +601,6 @@ def generate_report(data, output_path, chart_dir):
         ol_content = ol.get('content', '')
         story.append(P(f'{color_fn(f"<b>{idx}. {ol_title}</b>")}{ol_content}', body_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
-
     
     # --- 十一、基金经理与产品档案 ---
     story.append(P('十一、基金经理与产品档案', header_style))
@@ -639,24 +626,15 @@ def generate_report(data, output_path, chart_dir):
     
     html_name = name.replace(' ', '') + '_周度回顾.html'
     html_url = f'https://fundadvisor.pages.dev/reports/{html_name}'
-    story.append(P(
-        f'交互式报告地址：<a href="{html_url}" color="blue"><u>{html_url}</u></a>',
-        link_style
-    ))
+    story.append(P(f'交互式报告地址：<a href="{html_url}" color="blue"><u>{html_url}</u></a>', link_style))
     story.append(Spacer(1, 2*mm))
     story.append(P('提示：点击链接可在浏览器中打开交互式报告。', small_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=C_BORDER))
     
     # --- Footer ---
     story.append(Spacer(1, 6*mm))
-    story.append(P(
-        '<b>风险提示：</b>',
-        footer_style
-    ))
-    story.append(P(
-        '基金过往业绩不代表未来表现，基金投资需谨慎。请您根据自身的风险承受能力，选择适合自己的基金产品。本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。',
-        footer_style
-    ))
+    story.append(P('<b>风险提示：</b>', footer_style))
+    story.append(P('基金过往业绩不代表未来表现，基金投资需谨慎。请您根据自身的风险承受能力，选择适合自己的基金产品。本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。', footer_style))
     
     doc.build(story)
     return output_path
@@ -675,8 +653,15 @@ if __name__ == '__main__':
     with open(data_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    # 适配多只基金字典格式：选择有 overview 字段的基金，否则取第一只
-    if isinstance(data, dict) and data and isinstance(next(iter(data.values())), dict):
+    # 适配 funds_data_pdf.json 结构 {"report_week": "...", "funds": {"002692": {...}}}
+    if isinstance(data, dict) and 'funds' in data:
+        funds = data['funds']
+        if funds:
+            code_key, selected_fund = next(iter(funds.items()))
+            selected_fund['code'] = selected_fund.get('code', code_key)
+            data = selected_fund
+    elif isinstance(data, dict) and data and isinstance(next(iter(data.values())), dict):
+        # 适配旧格式 {"002692": {...}}
         selected_fund = None
         for code_key, fund_data in data.items():
             if fund_data.get('overview'):

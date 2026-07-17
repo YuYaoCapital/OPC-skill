@@ -12,7 +12,7 @@ import json
 import os
 from datetime import datetime, timedelta
 
-DATA_PATH = r"D:/OPC-skill/skills/portfolio-week-companion/site/reports/funds_data.json"
+DATA_PATH = r"D:/OPC-skill/skills/fund-weekly-review/data/funds_data_html.json"
 OUTPUT_DIR = r"D:/OPC-skill/skills/portfolio-week-companion/site/reports"
 
 # ============================================================
@@ -258,19 +258,17 @@ body {
 }
 .card-subtitle { font-size:11px; color:var(--text-muted); margin-bottom:10px; }
 
-/* ===== 产品概况卡片网格 ===== */
-.info-card-grid {
-  display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+/* ===== 产品概况表格（与PDF对齐：2列垂直布局，9项指标） ===== */
+.overview-table { width:100%; }
+.overview-row {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 0; border-bottom:1px solid var(--border);
 }
-.info-card {
-  background:linear-gradient(135deg, #fafaf9 0%, #fff 100%);
-  border-radius:8px; padding:12px 10px;
-  border:1px solid var(--border); text-align:center;
-}
-.info-card .label { font-size:11px; color:var(--text-muted); margin-bottom:4px; }
-.info-card .value { font-size:14px; font-weight:700; color:var(--text); }
-.info-card .value.up { color:var(--up); }
-.info-card .value.down { color:var(--down); }
+.overview-row:last-child { border-bottom:none; }
+.overview-row .label { font-size:13px; color:var(--text-muted); font-weight:600; min-width:100px; }
+.overview-row .value { font-size:14px; font-weight:700; color:var(--text); text-align:right; flex:1; }
+.overview-row .value.up { color:var(--up); }
+.overview-row .value.down { color:var(--down); }
 
 /* ===== 数据行 ===== */
 .data-row {
@@ -454,7 +452,7 @@ footer {
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
   .kpi-grid { grid-template-columns:repeat(2, 1fr); }
-  .info-card-grid { grid-template-columns:repeat(2, 1fr); }
+  .overview-row { flex-direction:column; align-items:flex-start; gap:4px; }
   .holdings-grid { grid-template-columns:repeat(2, 1fr); }
   .global-large-grid { grid-template-columns:1fr; }
   .global-small-grid { grid-template-columns:repeat(2, 1fr); }
@@ -537,46 +535,11 @@ footer {
   <!-- 一、产品概况 -->
   <section id="sec1" class="card fade-in">
     <div class="card-title">一、产品概况</div>
-    <div class="info-card-grid">
-      <div class="info-card">
-        <div class="label">产品名称</div>
-        <div class="value">{fund_name}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品代码</div>
-        <div class="value">{fund_code}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">基金经理</div>
-        <div class="value">{manager}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品类型</div>
-        <div class="value">{fund_type}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品规模</div>
-        <div class="value">{scale_str}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">日涨跌</div>
-        <div class="value {daily_color}">{daily_change_str}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">最新净值</div>
-        <div class="value">{nav:.4f}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">上周收益</div>
-        <div class="value {weekly_color}">{weekly_return_str}</div>
-      </div>
-      <div class="info-card">
-        <div class="label">成立以来</div>
-        <div class="value {total_return_color}">{total_return_str}</div>
-      </div>
+    <div class="overview-table">
+{overview_rows}
     </div>
     <div class="highlight-box">
-      <strong>产品定位：</strong>{fund_name}是一只{fund_type}基金，由{manager}管理。最新净值{nav:.4f}，上周收益<span class="{weekly_color}">{weekly_return_str}</span>。今日日涨跌<span class="{daily_color}">{daily_change_str}</span>。
+      <strong>产品定位：</strong>{positioning}
     </div>
   </section>
 
@@ -1174,22 +1137,27 @@ def generate_fund_html(fund, code, pdf_filename):
     estimate_return = fund.get('estimate_return', -0.85)
     estimate_nav = fund['nav'] * (1 + estimate_return / 100)
     
-    # 基准估算
-    benchmark_weekly = -0.79
-    excess_weekly = weekly_return - benchmark_weekly
+    # 基准和超额收益 — 从 weekly_performance 数据读取（HTML 数据为字典格式）
+    wp = fund.get('weekly_performance', {})
     
-    # 近1月/3月/6月近似值（基于周收益推算或从nav_history估算）
-    monthly_return = fund.get('monthly_return', -3.85)
-    quarterly_return = fund.get('quarterly_return', 5.42)
-    halfyear_return = fund.get('halfyear_return', 15.68)
+    def get_wp(period, field, default=0):
+        p = wp.get(period, {})
+        return p.get(field, default)
     
-    benchmark_monthly = -2.10
-    benchmark_quarterly = 1.50
-    benchmark_halfyear = 4.80
+    benchmark_weekly = get_wp('近一周', 'benchmark_return')
+    excess_weekly = get_wp('近一周', 'excess_return')
     
-    excess_monthly = monthly_return - benchmark_monthly
-    excess_quarterly = quarterly_return - benchmark_quarterly
-    excess_halfyear = halfyear_return - benchmark_halfyear
+    monthly_return = fund.get('monthly_return', 0)
+    quarterly_return = fund.get('quarterly_return', 0)
+    halfyear_return = fund.get('halfyear_return', 0)
+    
+    benchmark_monthly = get_wp('近1月', 'benchmark_return')
+    benchmark_quarterly = get_wp('近3月', 'benchmark_return')
+    benchmark_halfyear = get_wp('近6月', 'benchmark_return')
+    
+    excess_monthly = get_wp('近1月', 'excess_return')
+    excess_quarterly = get_wp('近3月', 'excess_return')
+    excess_halfyear = get_wp('近6月', 'excess_return')
     
     # 日期计算
     report_start, report_end = get_report_week()
@@ -1218,7 +1186,26 @@ def generate_fund_html(fund, code, pdf_filename):
     theme_week = generate_theme_cards(fund.get("hot_themes", []), "上周")
     theme_today = generate_theme_cards(fund.get("hot_themes", []), "今日")
     
+    # 产品概况行（9项指标，与PDF对齐）
+    overview_items = fund.get('overview', [])
+    overview_rows = ''
+    for item in overview_items:
+        label = item.get('label', '')
+        value = item.get('value', '')
+        # 收益类字段加颜色
+        if label in ('近一周收益', '近一年收益'):
+            try:
+                num = float(str(value).replace('%', '').replace('+', ''))
+                cls = 'up' if num > 0 else 'down' if num < 0 else ''
+                value_html = f'<span class="value {cls}">{value}</span>'
+            except:
+                value_html = f'<span class="value">{value}</span>'
+        else:
+            value_html = f'<span class="value">{value}</span>'
+        overview_rows += f'      <div class="overview-row"><div class="label">{label}</div>{value_html}</div>\n'
+    
     # 基金经理首字母
+    manager_initial = fund['manager'][0] if fund['manager'] else '基'
     manager_initial = fund['manager'][0] if fund['manager'] else '基'
     
     # 填充模板
@@ -1249,6 +1236,10 @@ def generate_fund_html(fund, code, pdf_filename):
         total_return=total_return,
         total_return_str=pct_fmt(total_return),
         total_return_color=color_cls(total_return),
+        return_1y=fund.get('return_last_1_year', 0),
+        return_1y_str=pct_fmt(fund.get('return_last_1_year', 0)),
+        return_1y_color=color_cls(fund.get('return_last_1_year', 0)),
+        institutional_holding_ratio=fund.get('institutional_holding_ratio', 0),
         report_start=report_start,
         report_end=report_end,
         make_date=make_date,
@@ -1308,14 +1299,19 @@ def generate_fund_html(fund, code, pdf_filename):
         news=fund.get('news', ''),
         comm_tips=fund.get('comm_tips', ''),
         weekly_analysis=fund.get('weekly_analysis', ''),
+        overview_rows=overview_rows,
+        positioning=fund.get('positioning', ''),
     )
-    
+
     return html
+
 
 def main():
     with open(DATA_PATH, 'r', encoding='utf-8') as f:
-        funds = json.load(f)
-    
+        all_data = json.load(f)
+
+    funds = all_data.get('funds', all_data)
+
     for code, fund in funds.items():
         output_name = fund['name'].replace(' ', '') + '_周度回顾.html'
         pdf_name = fund['name'].replace(' ', '') + '_周度回顾.pdf'

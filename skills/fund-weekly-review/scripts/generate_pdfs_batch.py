@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 批量生成10只基金PDF报告
-从funds_data.json中读取指定基金数据，逐个生成PDF
+从 funds_data_pdf.json（已补全字段的PDF专用数据）中读取基金数据，逐个生成PDF
 """
 import json, sys, os
 
 sys.path.insert(0, r'D:/OPC-skill/skills/fund-weekly-review/templates')
 from fund_weekly_pdf import generate_report
 
-DATA_PATH = r"D:/OPC-skill/skills/portfolio-week-companion/site/reports/funds_data.json"
+# 使用已补全字段的PDF专用数据（由 generate_funds_data.py 生成）
+DATA_PATH = r"D:/OPC-skill/skills/fund-weekly-review/data/funds_data_pdf.json"
 OUTPUT_DIR = r"D:/OPC-skill/skills/portfolio-week-companion/site/reports"
 
 FUNDS_TO_GENERATE = [
@@ -18,14 +19,17 @@ FUNDS_TO_GENERATE = [
 
 def main():
     with open(DATA_PATH, 'r', encoding='utf-8') as f:
-        all_data = json.load(f)
+        data = json.load(f)
+    
+    # funds_data_pdf.json 格式: {"report_week": "...", "funds": {"002692": {...}}}
+    all_funds = data.get("funds", data)
     
     for code in FUNDS_TO_GENERATE:
-        if code not in all_data:
+        if code not in all_funds:
             print(f"SKIP: {code} not found in data")
             continue
         
-        fund = all_data[code]
+        fund = all_funds[code]
         fund['code'] = code  # 确保code字段存在
         
         output_name = fund['name'].replace(' ', '') + '_周度回顾.pdf'
@@ -37,7 +41,9 @@ def main():
             generate_report(fund, output_path, chart_dir)
             print(f"  OK: {output_path}")
         except Exception as e:
+            import traceback
             print(f"  ERROR: {e}")
+            traceback.print_exc()
     
     print("\nDone!")
 

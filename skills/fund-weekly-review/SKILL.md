@@ -57,7 +57,7 @@ description: 生成单只基金的纯周度陪伴/回顾报告（不含横纵分
 
 > **模块编号与PDF固定模板对齐**：PDF生成器 `fund_weekly_pdf.py` 中模块顺序已硬编码，数据注入时需确保字段名称与以下模块对应。
 >
-> **样式固化声明**：PDF模板 `fund_weekly_pdf.py` 的样式已完全固化，所有颜色、字号、边距、间距常量均硬编码在脚本顶部。LLM执行时**不得修改**模板中的任何样式参数，仅通过修改 `funds_data.json` 数据文件来更新报告内容。数据计算逻辑（如`colored_pct`正红负绿、`gaussian_smooth` sigma=4）已固化。`overview`标签映射已固化：估算净值→近一周收益、估算涨跌幅→近一年收益、近1年收益→机构持仓占比。顶部4列表格列宽已固化：`[35mm, 48mm, 35mm, 48mm]`。
+> **样式固化声明**：PDF模板 `fund_weekly_pdf.py` 的样式已完全固化，所有颜色、字号、边距、间距常量均硬编码在脚本顶部。LLM执行时**不得修改**模板中的任何样式参数，仅通过修改 `funds_data.json` 数据文件来更新报告内容。数据计算逻辑（如`colored_pct`正红负绿、`gaussian_smooth` sigma=4）已固化。`overview` 数据结构已固化：`build_overview()` 输出固定9项字典列表，顺序与标签为：基金名称→基金代码→基金经理→成立日期→基金规模→最新净值→近一周收益→近一年收益→机构持仓占比。`近一周收益`与`近一年收益`由`colored_pct`渲染颜色（正红`#dc2626`负绿`#16a34a`）；`最新净值`格式为`{nav:.4f}`纯数字，**不得附加日期后缀**。顶部4列表格列宽已固化：`[35mm, 48mm, 35mm, 48mm]`。
 >
 > **HTML模块差异**：HTML报告在PDF的12个模块基础上，在「十、后市怎么看？」之后额外增加了三个企微专属模块（十一、您该怎么做？；十二、财经新闻与沟通策略；十三、理财经理本周沟通tips），并将「基金经理与产品档案」顺延为第十四模块。PDF中不包含这三个模块。
 
@@ -80,6 +80,24 @@ description: 生成单只基金的纯周度陪伴/回顾报告（不含横纵分
 ### 2. 一、产品概况（含9项指标+产品定位）
 
 **基本信息表**（主动权益与量化通用，共9项）
+
+| 项目 | 内容 |
+|---|---|
+| 基金名称 | 基金全称 |
+| 基金代码 | 基金代码（A类/C类） |
+| 基金经理 | 核心基金经理姓名 |
+| 成立日期 | 基金成立日期（YYYY-MM-DD） |
+| 基金规模 | 最新资产规模 |
+| 最新净值 | 最新净值（**纯数字，不含日期后缀**） |
+| 近一周收益 | 上周累计涨跌幅（正红负绿） |
+| 近一年收益 | 近一年收益率（正红负绿） |
+| 机构持仓占比 | 机构投资者持有比例 |
+
+**产品定位**（`positioning`）：不少于80字，说明产品策略定位、目标客群、核心特征
+
+**成立至今净值走势简述**：1-2句话概括成立以来净值走势特征
+
+> **产品概况表格已固化**：PDF和HTML均采用**2列垂直布局**（标签列宽40mm/值列宽140mm），**固定9项指标**，顺序如上表，不得增减。`近一周收益`和`近一年收益`值使用`colored_pct`渲染（正数红色`#dc2626`，负数绿色`#16a34a`）。`最新净值`值格式为`{nav:.4f}`纯数字，**不得附加日期后缀**。
 
 | 项目 | 内容 |
 |---|---|
@@ -447,16 +465,44 @@ description: 生成单只基金的纯周度陪伴/回顾报告（不含横纵分
 | **数据文件（输入）** | `D:\OPC-skill\skills\portfolio-week-companion\site\reports\funds_data.json` | JSON 数据注入，每次生成前更新此文件 |
 | **HTML 首页** | `D:\OPC-skill\skills\portfolio-week-companion\site\index.html` | 报告列表页，跳转逻辑已锁定 |
 
+> **数据流（v3.2+）**：
+> ```
+> portfolio-week-companion/site/reports/funds_data.json (源数据，HTML富文本格式)
+>                    ↓
+>         generate_funds_data.py (数据补全器)
+>                    ↓
+>     ┌──────────────┼──────────────┐
+>     ↓              ↓              ↓
+> fund_source.json  funds_data_html.json  funds_data_pdf.json
+> (冻结检查用)     (HTML模板用)         (PDF模板用，字段已转结构化)
+> ```
+> 
+> `generate_funds_data.py` 在 `build_weekly_performance` 之后调用 `enrich_pdf_fields`，自动补全以下15个PDF关键字段：
+> - `overview`：9项基本信息表（**基金名称、基金代码、基金经理、成立日期、基金规模、最新净值、近一周收益、近一年收益、机构持仓占比**）。`最新净值`格式为`{nav:.4f}`纯数字，不含日期后缀；`近一周收益`与`近一年收益`由`colored_pct`渲染颜色（正红`#dc2626`负绿`#16a34a`）
+> - `positioning`：基于基金类型和持仓行业自动推断的产品定位描述
+> - `holding_note`：基于持仓行业分布、权重、涨跌统计自动生成的持仓观察
+> - `nav_summary`：基于净值历史最高点、最低点、近期趋势自动生成的走势简述
+> - `market_comment`：基于全球市场数据自动生成的市场点评
+> - `theme_comment`：基于热门主题数据自动生成的主题描述
+> - `profile`：包含基金经理、从业年限、学历、投资风格、管理规模、专注领域、代表产品的档案表
+> - `manager_bio`：基于基金经理信息自动生成的简介文本
+> - `max_drawdown`：从净值历史动态计算的最大回撤值
+> - `report_date` / `data_cutoff` / `period_start` / `period_end`：基于 `nav_date` 自动推算的日期
+> - `holding_source`：默认"最新季报"
+> - `code`：基金代码
+
 ### 执行流程
 
 ```
 1. 收集基金数据（净值、持仓、市场、观点等）
-2. 将数据写入 funds_data.json
-3. 调用 python fund_weekly_pdf.py  funds_data.json  output.pdf
-4. 调用 python generate_htmls.py 生成 HTML（自动从 funds_data.json 读取）
-5. 生成 PDF + HTML 报告（样式完全一致，仅数据不同）
+2. 将数据写入 portfolio-week-companion/site/reports/funds_data.json
+3. 运行 python generate_funds_data.py → 生成 fund_source.json + funds_data_pdf.json + funds_data_html.json
+4. 调用 python scripts/generate_pdfs_batch.py → 从 funds_data_pdf.json 读取补全后的数据，批量生成 PDF
+5. 调用 python templates/generate_htmls.py → 从 funds_data_html.json 读取数据，生成 HTML
 6. git push 到 GitHub，Cloudflare Pages 自动部署
 ```
+
+> **注意**：`generate_pdfs_batch.py` 必须读取 `funds_data_pdf.json`（而非直接读取 `funds_data.json`），因为前者已包含 `enrich_pdf_fields` 补全的全部字段。直接读取源数据会导致PDF中 15 个关键模块内容缺失。
 
 ---
 
@@ -516,9 +562,17 @@ Footer 风险提示
 ```
 
 **关键固化规则**：
+- `colored_pct` 函数：正红负绿，已固化（正 `#dc2626` / 负 `#16a34a`）
+- `gaussian_smooth` 函数：sigma=4，已固化
+- `overview` 数据结构：`build_overview()` 输出固定9项字典列表（基金名称→基金代码→基金经理→成立日期→基金规模→最新净值→近一周收益→近一年收益→机构持仓占比），PDF列宽 `[40mm, 140mm]` 2列垂直布局，已固化
+- `overview` 颜色渲染：`近一周收益`与`近一年收益`自动调用`colored_pct`着色，其余字段纯文本，已固化
+- `overview` 净值格式：`最新净值`值格式为`{nav:.4f}`纯数字，**严禁附加日期后缀**，已固化
+- 封面4列表格列宽：`[35mm, 48mm, 35mm, 48mm]`，已固化
+- 净值走势图：基金净值蓝色实线 + 基准灰色虚线，已固化
+- 表格样式工厂：`make_table_style` / `make_table_style_centered`，已固化
 - `colored_pct` 函数：正红负绿，已固化
 - `gaussian_smooth` 函数：sigma=4，已固化
-- `overview` 标签映射：估算净值→近一周收益、估算涨跌幅→近一年收益、近1年收益→机构持仓占比，已固化
+- `overview` 数据结构：`build_overview()` 输出固定9项字典列表（基金名称→基金代码→基金经理→成立日期→基金规模→最新净值→近一周收益→近一年收益→机构持仓占比），列宽 `[40mm, 140mm]` 2列垂直布局，已固化
 - 封面4列表格列宽：`[35mm, 48mm, 35mm, 48mm]`，已固化
 - 净值走势图：基金净值蓝色实线 + 基准灰色虚线，已固化
 - 表格样式工厂：`make_table_style` / `make_table_style_centered`，已固化
@@ -917,6 +971,10 @@ const hsi = await fetchWithFallback([
 
 | 版本 | 日期 | 变更内容 |
 |------|------|---------|
+| v3.3 | 2026-07-17 | 固化产品概况数据结构：`overview`固定9项（基金名称/代码/经理/成立日期/规模/最新净值/近一周收益/近一年收益/机构持仓占比），2列垂直布局，列宽`[40mm, 140mm]`；`colored_pct`正红`#dc2626`负绿`#16a34a`渲染收益字段；`最新净值`值纯数字不含日期后缀；同步更新SKILL.md所有相关描述 |
+| v3.2 | 2026-07-17 | 修复PDF报告缺失字段问题：新增 `enrich_pdf_fields` 自动补全15个PDF关键字段（overview/positioning/holding_note/nav_summary/market_comment/theme_comment/profile/manager_bio/max_drawdown/日期字段等）；`generate_pdfs_batch.py` 改为读取 `funds_data_pdf.json` 而非直接读取源数据；更新 SKILL.md 数据流说明 |
+|------|------|---------|
+| v3.2 | 2026-07-17 | 修复PDF报告缺失字段问题：新增 `enrich_pdf_fields` 自动补全15个PDF关键字段（overview/positioning/holding_note/nav_summary/market_comment/theme_comment/profile/manager_bio/max_drawdown/日期字段等）；`generate_pdfs_batch.py` 改为读取 `funds_data_pdf.json` 而非直接读取源数据；更新 SKILL.md 数据流说明 |
 | v3.1 | 2026-07-17 | `generate_htmls.py` 去硬编码：sec6~sec13 改为数据变量注入，每支基金自动生成对应基金经理观点、归因分析、话术模板；`funds_data.json` 数据结构明确为字典格式（顶层key=基金代码）；修复10只基金HTML缺少模块的问题 |
 | v3.0 | 2026-07-10 | 固化 PDF/HTML 模板样式，所有常量硬编码；新增 HTML 14 模块结构（含 sec11~sec13 企微专属模块）；差异化下载策略（PC端下载/移动端预览） |
 | v2.0 | 2026-06-20 | 新增量化型分析框架，支持主动权益与量化双框架切换 |
