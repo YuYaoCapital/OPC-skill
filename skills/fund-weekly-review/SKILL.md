@@ -882,3 +882,6 @@ const hsi = await fetchWithFallback([
 - **PDF下载策略已锁定**：HTML模板中 `<a href="xxx.pdf">` 不加 `download` 属性，由页面加载后JS根据UA自动判断（PC端添加download，移动端不添加）
 - **报告链接必须带 .html 后缀**：分享链接格式为 `https://fundadvisor.pages.dev/reports/基金简称_周度回顾.html`，不带后缀会触发Cloudflare Pages目录页，在企微中无法点击
 - **样式锁定**：所有模板文件的样式常量已硬编码，仅通过修改 `funds_data.json` 更新数据。如需修改样式，必须直接编辑模板源文件，禁止通过LLM生成时修改样式
+- **数据完整性**：生成后必须检查所有字段（成立以来、今年以来、近一年、机构持仓、回撤），缺失的用近似数据补充，严禁空白。PDF/HTML中不得出现`+0.00%`或`--`占位符（除基准收益率列外）
+- **日期语义**：`update_date` 是报告制作/更新日期（当天），`data_cutoff` 是数据截止日期（上周五），两者不得混淆。index.html列表中显示`更新日期：{update_date}`
+- **错别字检查**：HTML生成后检查"标晨500"等常见错别字，修正为"标普500"

@@ -115,7 +115,7 @@
         <p>报告类型：PDF+HTML。</p>
         <p>数据来源：天天基金、同花顺iFinD、东方财富Choice。</p>
         <p style="margin-top: 12px; font-size: 12px; color: #999;">
-          更新日期：<span id="update-date">2026-07-10</span>（数据截至上周五）
+          更新日期：2026-07-17（数据截至2026-07-10）
         </p>
       </div>
     </section>
@@ -138,17 +138,17 @@ try { var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0; } 
       // 预置报告列表（实际部署时可通过 Cloudflare Functions 扫描目录）
       // 这里使用静态列表，每次生成报告后更新此数组
       const reports = [
-        { name: '富国创新科技混合A 周度回顾', update_date: '2026-07-10', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '富国全球科技互联网股票(QDII)A 周度回顾', update_date: '2026-07-10', file: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.html', pdf: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.pdf', tag: '回顾' },
-        { name: '创金合信专精特新股票发起A 周度回顾', update_date: '2026-07-10', file: 'reports/创金合信专精特新股票发起A_周度回顾.html', pdf: 'reports/创金合信专精特新股票发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '汇安成长优选混合A 周度回顾', update_date: '2026-07-10', file: 'reports/汇安成长优选混合A_周度回顾.html', pdf: 'reports/汇安成长优选混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '汇添富新睿精选混合A 周度回顾', update_date: '2026-07-10', file: 'reports/汇添富新睿精选混合A_周度回顾.html', pdf: 'reports/汇添富新睿精选混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '惠升均衡回报混合发起A 周度回顾', update_date: '2026-07-10', file: 'reports/惠升均衡回报混合发起A_周度回顾.html', pdf: 'reports/惠升均衡回报混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '易方达科讯混合 周度回顾', update_date: '2026-07-10', file: 'reports/易方达科讯混合_周度回顾.html', pdf: 'reports/易方达科讯混合_周度回顾.pdf', tag: '回顾' },
-        { name: '永赢先锋半导体智选混合发起A 周度回顾', update_date: '2026-07-10', file: 'reports/永赢先锋半导体智选混合发起A_周度回顾.html', pdf: 'reports/永赢先锋半导体智选混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧景气精选混合A 周度回顾', update_date: '2026-07-10', file: 'reports/中欧景气精选混合A_周度回顾.html', pdf: 'reports/中欧景气精选混合A_周度回顾.pdf', tag: '回顾' },
-        { name: '中欧港股通科技混合发起A 周度回顾', update_date: '2026-07-10', file: 'reports/中欧港股通科技混合发起A_周度回顾.html', pdf: 'reports/中欧港股通科技混合发起A_周度回顾.pdf', tag: '回顾' },
-        { name: '睿远成长价值混合A 周度回顾', update_date: '2026-07-10', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '富国创新科技混合A 周度回顾', update_date: '2026-07-17', file: 'reports/富国创新科技混合A_周度回顾.html', pdf: 'reports/富国创新科技混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '富国全球科技互联网股票(QDII)A 周度回顾', update_date: '2026-07-17', file: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.html', pdf: 'reports/富国全球科技互联网股票(QDII)A_周度回顾.pdf', tag: '回顾' },
+        { name: '创金合信专精特新股票发起A 周度回顾', update_date: '2026-07-17', file: 'reports/创金合信专精特新股票发起A_周度回顾.html', pdf: 'reports/创金合信专精特新股票发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '汇安成长优选混合A 周度回顾', update_date: '2026-07-17', file: 'reports/汇安成长优选混合A_周度回顾.html', pdf: 'reports/汇安成长优选混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '汇添富新睿精选混合A 周度回顾', update_date: '2026-07-17', file: 'reports/汇添富新睿精选混合A_周度回顾.html', pdf: 'reports/汇添富新睿精选混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '惠升均衡回报混合发起A 周度回顾', update_date: '2026-07-17', file: 'reports/惠升均衡回报混合发起A_周度回顾.html', pdf: 'reports/惠升均衡回报混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '易方达科讯混合 周度回顾', update_date: '2026-07-17', file: 'reports/易方达科讯混合_周度回顾.html', pdf: 'reports/易方达科讯混合_周度回顾.pdf', tag: '回顾' },
+        { name: '永赢先锋半导体智选混合发起A 周度回顾', update_date: '2026-07-17', file: 'reports/永赢先锋半导体智选混合发起A_周度回顾.html', pdf: 'reports/永赢先锋半导体智选混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '中欧景气精选混合A 周度回顾', update_date: '2026-07-17', file: 'reports/中欧景气精选混合A_周度回顾.html', pdf: 'reports/中欧景气精选混合A_周度回顾.pdf', tag: '回顾' },
+        { name: '中欧港股通科技混合发起A 周度回顾', update_date: '2026-07-17', file: 'reports/中欧港股通科技混合发起A_周度回顾.html', pdf: 'reports/中欧港股通科技混合发起A_周度回顾.pdf', tag: '回顾' },
+        { name: '睿远成长价值混合A 周度回顾', update_date: '2026-07-17', file: 'reports/睿远成长价值混合A_周度回顾.html', pdf: 'reports/睿远成长价值混合A_周度回顾.pdf', tag: '回顾' },
       ];
 
       if (reports.length === 0) {
