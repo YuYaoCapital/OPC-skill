@@ -97,19 +97,38 @@ body {
 }
 .card-subtitle { font-size:11px; color:var(--text-muted); margin-bottom:10px; }
 
-/* ===== 产品概况卡片网格 ===== */
-.info-card-grid {
-  display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+/* ===== 产品概况：3x3卡片网格 ===== */
+.overview-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-.info-card {
-  background:linear-gradient(135deg, #fafaf9 0%, #fff 100%);
-  border-radius:8px; padding:12px 10px;
-  border:1px solid var(--border); text-align:center;
+.overview-card {
+  background: linear-gradient(135deg, var(--primary-50) 0%, #fff 100%);
+  border: 1px solid var(--primary-100);
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
 }
-.info-card .label { font-size:11px; color:var(--text-muted); margin-bottom:4px; }
-.info-card .value { font-size:14px; font-weight:700; color:var(--text); }
-.info-card .value.up { color:var(--up); }
-.info-card .value.down { color:var(--down); }
+.overview-card .label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.overview-card .value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.overview-card .value.up { color: var(--up); }
+.overview-card .value.down { color: var(--down); }
 
 /* ===== 数据行 ===== */
 .data-row {
@@ -293,7 +312,9 @@ footer {
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
   .kpi-grid { grid-template-columns:repeat(2, 1fr); }
-  .info-card-grid { grid-template-columns:repeat(2, 1fr); }
+  .overview-table { grid-template-columns: repeat(2, 1fr); }
+  .overview-card { padding: 10px 6px; min-height: 60px; }
+  .overview-card .value { font-size: 13px; }
   .holdings-grid { grid-template-columns:repeat(2, 1fr); }
   .global-large-grid { grid-template-columns:1fr; }
   .global-small-grid { grid-template-columns:repeat(2, 1fr); }
@@ -345,7 +366,7 @@ footer {
   <!-- 标题 -->
   <div class="header-section fade-in">
     <h1>汇安成长优选混合A · 周度回顾</h1>
-    <p class="subtitle">报告日期 2026-07-06 至 2026-07-10</p>
+    <p class="subtitle">报告日期 2026-07-13 至 2026-07-17</p>
     <p class="date">基金代码: 005550 | 基金经理: 单柏霖</p>
   </div>
 
@@ -353,22 +374,22 @@ footer {
   <div class="kpi-grid fade-in">
     <div class="kpi-item">
       <div class="label">最新净值</div>
-      <div class="value" id="latestNav">4.5201</div>
-      <div class="sub" id="navDate">2026-07-10</div>
+      <div class="value" id="latestNav">3.6473</div>
+      <div class="sub" id="navDate">2026-07-17)</div>
     </div>
     <div class="kpi-item">
       <div class="label">近一周</div>
-      <div class="value up" id="weeklyChange">+2.44%</div>
-      <div class="sub" id="weeklyPeriod">2026-07-06 至 2026-07-10</div>
+      <div class="value down" id="weeklyChange">-19.31%</div>
+      <div class="sub" id="weeklyPeriod">2026-07-13 至 2026-07-17</div>
     </div>
     <div class="kpi-item">
       <div class="label">今年以来</div>
-      <div class="value up" id="ytdChange">+55.47%</div>
+      <div class="value up" id="ytdChange">+47.28%</div>
       <div class="sub">累计收益</div>
     </div>
     <div class="kpi-item">
       <div class="label">成立以来</div>
-      <div class="value up">+175.89%</div>
+      <div class="value up">+122.61%</div>
       <div class="sub">累计收益</div>
     </div>
   </div>
@@ -376,117 +397,91 @@ footer {
   <!-- 一、产品概况 -->
   <section id="sec1" class="card fade-in">
     <div class="card-title">一、产品概况</div>
-    <div class="info-card-grid">
-      <div class="info-card">
-        <div class="label">产品名称</div>
-        <div class="value">汇安成长优选混合A</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品代码</div>
-        <div class="value">005550</div>
-      </div>
-      <div class="info-card">
-        <div class="label">基金经理</div>
-        <div class="value">单柏霖</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品类型</div>
-        <div class="value">混合型-灵活</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品规模</div>
-        <div class="value">8.21亿</div>
-      </div>
-      <div class="info-card">
-        <div class="label">日涨跌</div>
-        <div class="value up">+0.49%</div>
-      </div>
-      <div class="info-card">
-        <div class="label">最新净值</div>
-        <div class="value">4.5201</div>
-      </div>
-      <div class="info-card">
-        <div class="label">上周收益</div>
-        <div class="value up">+2.44%</div>
-      </div>
-      <div class="info-card">
-        <div class="label">成立以来</div>
-        <div class="value up">+175.89%</div>
-      </div>
+    <div class="overview-table">
+      <div class="overview-card"><div class="label">产品名称</div><div class="value">汇安成长优选混合A</div></div>
+      <div class="overview-card"><div class="label">产品代码</div><div class="value">005550</div></div>
+      <div class="overview-card"><div class="label">基金经理</div><div class="value">单柏霖</div></div>
+      <div class="overview-card"><div class="label">产品类型</div><div class="value">混合型-灵活</div></div>
+      <div class="overview-card"><div class="label">产品规模</div><div class="value">8.21亿</div></div>
+      <div class="overview-card"><div class="label">日涨跌</div><div class="value down">-7.98%</div></div>
+      <div class="overview-card"><div class="label">最新净值</div><div class="value">3.6473</div></div>
+      <div class="overview-card"><div class="label">上周收益</div><div class="value down">-19.31%</div></div>
+      <div class="overview-card"><div class="label">成立以来</div><div class="value up">+284.97%</div></div>
+
     </div>
     <div class="highlight-box">
-      <strong>产品定位：</strong>汇安成长优选混合A是一只混合型-灵活基金，由单柏霖管理。最新净值4.5201，上周收益<span class="up">+2.44%</span>。今日日涨跌<span class="up">+0.49%</span>。
+      <strong>产品定位：</strong>本基金为混合型灵活配置产品，根据市场环境动态调整股债比例，核心布局通信设备、半导体设备方向。适合希望获得稳健回报、风险承受能力中等的投资者。
     </div>
   </section>
 
   <!-- 二、核心持仓上周表现 -->
   <section id="sec2" class="card fade-in">
     <div class="card-title">二、核心持仓上周表现</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 持仓来源：2026Q1季报</p>
+    <p class="card-subtitle">统计区间：2026-07-13 至 2026-07-17 | 持仓来源：2026Q1季报</p>
     <div class="holdings-grid">
       <div class="holding-card">
         <div class="name">新易盛</div>
         <div class="code">300502.SZ</div>
-        <div class="nav">163.63</div>
+        <div class="nav">125.49</div>
         <div class="change down">-3.48%</div>
       </div>
       <div class="holding-card">
         <div class="name">华海清科</div>
         <div class="code">数据待更新</div>
-        <div class="nav">136.95</div>
+        <div class="nav">462.52</div>
         <div class="change down">-3.19%</div>
       </div>
       <div class="holding-card">
         <div class="name">中际旭创</div>
         <div class="code">300308.SZ</div>
-        <div class="nav">414.66</div>
+        <div class="nav">348.21</div>
         <div class="change up">+1.42%</div>
       </div>
       <div class="holding-card">
         <div class="name">强一股份</div>
         <div class="code">数据待更新</div>
-        <div class="nav">478.46</div>
+        <div class="nav">200.96</div>
         <div class="change up">+0.24%</div>
       </div>
       <div class="holding-card">
         <div class="name">北方华创</div>
         <div class="code">数据待更新</div>
-        <div class="nav">279.2</div>
+        <div class="nav">22.64</div>
         <div class="change up">+2.36%</div>
       </div>
       <div class="holding-card">
         <div class="name">沪电股份</div>
         <div class="code">002463.SZ</div>
-        <div class="nav">82.91</div>
+        <div class="nav">55.06</div>
         <div class="change down">-1.84%</div>
       </div>
       <div class="holding-card">
         <div class="name">江丰电子</div>
         <div class="code">数据待更新</div>
-        <div class="nav">292.85</div>
+        <div class="nav">360.39</div>
         <div class="change down">-0.55%</div>
       </div>
       <div class="holding-card">
         <div class="name">伟测科技</div>
         <div class="code">数据待更新</div>
-        <div class="nav">495.11</div>
+        <div class="nav">372.22</div>
         <div class="change down">-2.48%</div>
       </div>
       <div class="holding-card">
         <div class="name">天孚通信</div>
         <div class="code">300394.SZ</div>
-        <div class="nav">449.37</div>
+        <div class="nav">94.96</div>
         <div class="change up">+2.91%</div>
       </div>
       <div class="holding-card">
         <div class="name">华丰科技</div>
         <div class="code">数据待更新</div>
-        <div class="nav">459.2</div>
+        <div class="nav">421.63</div>
         <div class="change down">-0.99%</div>
       </div>
     </div>
     <div class="highlight-box">
-      <strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="up">+2.44%</span>，表现受市场波动及持仓结构影响。
+      <strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="down">-19.31%</span>，表现受市场波动及持仓结构影响。
     </div>
   </section>
 
@@ -522,7 +517,7 @@ footer {
 
     <!-- 净值简述 -->
     <div class="highlight-box">
-      <strong>成立至今净值走势简述：</strong>汇安成长优选混合A自成立以来，最新净值4.5201，成立以来收益<span class="up">+175.89%</span>。上周（2026-07-06至2026-07-10）单周<span class="up">+2.44%</span>。
+      <strong>成立至今净值走势简述：</strong>汇安成长优选混合A自成立以来，最新净值3.6473，成立以来收益<span class="up">+122.61%</span>。上周（2026-07-13至2026-07-17）单周<span class="down">-19.31%</span>。
     </div>
 
     <!-- 3.3 历史回撤修复能力 -->
@@ -546,7 +541,7 @@ footer {
   <!-- 四、全球市场速览（上周） -->
   <section id="sec4" class="card fade-in">
     <div class="card-title">四、全球市场速览（上周）</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据来源：天天基金、同花顺iFinD</p>
+    <p class="card-subtitle">统计区间：2026-07-13 至 2026-07-17 | 数据来源：天天基金、同花顺iFinD</p>
 
     <!-- 大卡片 -->
     <div class="global-large-grid">
@@ -793,16 +788,16 @@ footer {
   <!-- 七、上周产品表现 -->
   <section id="sec7" class="card fade-in">
     <div class="card-title">七、上周产品表现</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据截止：2026-07-10</p>
+    <p class="card-subtitle">统计区间：2026-07-13 至 2026-07-17 | 数据截止：2026-07-17</p>
     <div style="overflow-x:auto;">
       <table>
         <thead><tr><th>时间维度</th><th style="text-align:right">基金收益率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
         <tbody>
-          <tr><td>上周</td><td class="right up">+2.44%</td><td class="right down">-0.79%</td><td class="right up">+3.23%</td></tr>
-          <tr><td>近1月</td><td class="right up">+9.09%</td><td class="right down">-2.10%</td><td class="right up">+11.19%</td></tr>
-          <tr><td>近3月</td><td class="right up">+36.43%</td><td class="right up">+1.50%</td><td class="right up">+34.93%</td></tr>
-          <tr><td>近6月</td><td class="right up">+55.96%</td><td class="right up">+4.80%</td><td class="right up">+51.16%</td></tr>
-          <tr><td>成立以来</td><td class="right up">+175.89%</td><td class="right">--</td><td class="right">--</td></tr>
+          <tr><td>上周</td><td class="right down">-19.31%</td><td class="right up">+2.80%</td><td class="right down">-22.11%</td></tr>
+          <tr><td>近1月</td><td class="right down">-15.82%</td><td class="right up">+8.50%</td><td class="right down">-24.32%</td></tr>
+          <tr><td>近3月</td><td class="right up">+15.99%</td><td class="right up">+35.00%</td><td class="right down">-19.01%</td></tr>
+          <tr><td>近6月</td><td class="right up">+29.08%</td><td class="right up">+25.00%</td><td class="right up">+4.08%</td></tr>
+          <tr><td>成立以来</td><td class="right up">+122.61%</td><td class="right">--</td><td class="right">--</td></tr>
         </tbody>
       </table>
     </div>
@@ -1017,13 +1012,13 @@ footer {
     <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
     <div class="source">
       数据来源：天天基金、同花顺iFinD、东方财富Choice<br>
-      报告日期：<span id="reportDateRange">2026-07-06 至 2026-07-10</span> | 制作日期：<span id="makeDate">2026-07-17</span>
+      报告日期：<span id="reportDateRange">2026-07-13 至 2026-07-17</span> | 制作日期：<span id="makeDate">2026-07-20</span>
     </div>
   </div>
 
   <footer>
     <p>汇安成长优选混合A · 周度回顾</p>
-    <p>报告日期：<span id="footerReportDate">2026-07-06 至 2026-07-10</span> | 制作日期：<span id="footerMakeDate">2026-07-17</span></p>
+    <p>报告日期：<span id="footerReportDate">2026-07-13 至 2026-07-17</span> | 制作日期：<span id="footerMakeDate">2026-07-20</span></p>
   </footer>
 </div>
 

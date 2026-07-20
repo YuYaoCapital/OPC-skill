@@ -97,19 +97,38 @@ body {
 }
 .card-subtitle { font-size:11px; color:var(--text-muted); margin-bottom:10px; }
 
-/* ===== 产品概况卡片网格 ===== */
-.info-card-grid {
-  display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+/* ===== 产品概况：3x3卡片网格 ===== */
+.overview-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-.info-card {
-  background:linear-gradient(135deg, #fafaf9 0%, #fff 100%);
-  border-radius:8px; padding:12px 10px;
-  border:1px solid var(--border); text-align:center;
+.overview-card {
+  background: linear-gradient(135deg, var(--primary-50) 0%, #fff 100%);
+  border: 1px solid var(--primary-100);
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
 }
-.info-card .label { font-size:11px; color:var(--text-muted); margin-bottom:4px; }
-.info-card .value { font-size:14px; font-weight:700; color:var(--text); }
-.info-card .value.up { color:var(--up); }
-.info-card .value.down { color:var(--down); }
+.overview-card .label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.overview-card .value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.overview-card .value.up { color: var(--up); }
+.overview-card .value.down { color: var(--down); }
 
 /* ===== 数据行 ===== */
 .data-row {
@@ -293,7 +312,9 @@ footer {
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
   .kpi-grid { grid-template-columns:repeat(2, 1fr); }
-  .info-card-grid { grid-template-columns:repeat(2, 1fr); }
+  .overview-table { grid-template-columns: repeat(2, 1fr); }
+  .overview-card { padding: 10px 6px; min-height: 60px; }
+  .overview-card .value { font-size: 13px; }
   .holdings-grid { grid-template-columns:repeat(2, 1fr); }
   .global-large-grid { grid-template-columns:1fr; }
   .global-small-grid { grid-template-columns:repeat(2, 1fr); }
@@ -345,7 +366,7 @@ footer {
   <!-- 标题 -->
   <div class="header-section fade-in">
     <h1>创金合信专精特新股票发起A · 周度回顾</h1>
-    <p class="subtitle">报告日期 2026-07-06 至 2026-07-10</p>
+    <p class="subtitle">报告日期 2026-07-13 至 2026-07-17</p>
     <p class="date">基金代码: 014736 | 基金经理: 王先伟</p>
   </div>
 
@@ -353,22 +374,22 @@ footer {
   <div class="kpi-grid fade-in">
     <div class="kpi-item">
       <div class="label">最新净值</div>
-      <div class="value" id="latestNav">3.9880</div>
-      <div class="sub" id="navDate">2026-07-10</div>
+      <div class="value" id="latestNav">3.2036</div>
+      <div class="sub" id="navDate">2026-07-17)</div>
     </div>
     <div class="kpi-item">
       <div class="label">近一周</div>
-      <div class="value up" id="weeklyChange">+3.15%</div>
-      <div class="sub" id="weeklyPeriod">2026-07-06 至 2026-07-10</div>
+      <div class="value down" id="weeklyChange">-19.67%</div>
+      <div class="sub" id="weeklyPeriod">2026-07-13 至 2026-07-17</div>
     </div>
     <div class="kpi-item">
       <div class="label">今年以来</div>
-      <div class="value up" id="ytdChange">+28.35%</div>
+      <div class="value up" id="ytdChange">+84.93%</div>
       <div class="sub">累计收益</div>
     </div>
     <div class="kpi-item">
       <div class="label">成立以来</div>
-      <div class="value down">-3.37%</div>
+      <div class="value down">-22.38%</div>
       <div class="sub">累计收益</div>
     </div>
   </div>
@@ -376,117 +397,91 @@ footer {
   <!-- 一、产品概况 -->
   <section id="sec1" class="card fade-in">
     <div class="card-title">一、产品概况</div>
-    <div class="info-card-grid">
-      <div class="info-card">
-        <div class="label">产品名称</div>
-        <div class="value">创金合信专精特新股票发起A</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品代码</div>
-        <div class="value">014736</div>
-      </div>
-      <div class="info-card">
-        <div class="label">基金经理</div>
-        <div class="value">王先伟</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品类型</div>
-        <div class="value">股票型</div>
-      </div>
-      <div class="info-card">
-        <div class="label">产品规模</div>
-        <div class="value">1.0亿</div>
-      </div>
-      <div class="info-card">
-        <div class="label">日涨跌</div>
-        <div class="value up">+0.63%</div>
-      </div>
-      <div class="info-card">
-        <div class="label">最新净值</div>
-        <div class="value">3.9880</div>
-      </div>
-      <div class="info-card">
-        <div class="label">上周收益</div>
-        <div class="value up">+3.15%</div>
-      </div>
-      <div class="info-card">
-        <div class="label">成立以来</div>
-        <div class="value down">-3.37%</div>
-      </div>
+    <div class="overview-table">
+      <div class="overview-card"><div class="label">产品名称</div><div class="value">创金合信专精特新股票发起A</div></div>
+      <div class="overview-card"><div class="label">产品代码</div><div class="value">014736</div></div>
+      <div class="overview-card"><div class="label">基金经理</div><div class="value">王先伟</div></div>
+      <div class="overview-card"><div class="label">产品类型</div><div class="value">股票型</div></div>
+      <div class="overview-card"><div class="label">产品规模</div><div class="value">1.0亿</div></div>
+      <div class="overview-card"><div class="label">日涨跌</div><div class="value down">-8.80%</div></div>
+      <div class="overview-card"><div class="label">最新净值</div><div class="value">3.2036</div></div>
+      <div class="overview-card"><div class="label">上周收益</div><div class="value down">-19.67%</div></div>
+      <div class="overview-card"><div class="label">成立以来</div><div class="value up">+81.38%</div></div>
+
     </div>
     <div class="highlight-box">
-      <strong>产品定位：</strong>创金合信专精特新股票发起A是一只股票型基金，由王先伟管理。最新净值3.9880，上周收益<span class="up">+3.15%</span>。今日日涨跌<span class="up">+0.63%</span>。
+      <strong>产品定位：</strong>本基金为股票型产品，聚焦半导体设备、半导体材料领域，坚持自下而上精选个股，以长期持有分享企业成长红利。适合风险偏好较高、投资期限较长的投资者。
     </div>
   </section>
 
   <!-- 二、核心持仓上周表现 -->
   <section id="sec2" class="card fade-in">
     <div class="card-title">二、核心持仓上周表现</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 持仓来源：2026Q1季报</p>
+    <p class="card-subtitle">统计区间：2026-07-13 至 2026-07-17 | 持仓来源：2026Q1季报</p>
     <div class="holdings-grid">
       <div class="holding-card">
         <div class="name">拓荆科技</div>
         <div class="code">数据待更新</div>
-        <div class="nav">117.32</div>
+        <div class="nav">158.98</div>
         <div class="change up">+0.69%</div>
       </div>
       <div class="holding-card">
         <div class="name">芯碁微装</div>
         <div class="code">数据待更新</div>
-        <div class="nav">66.44</div>
+        <div class="nav">391.25</div>
         <div class="change up">+0.81%</div>
       </div>
       <div class="holding-card">
         <div class="name">京仪装备</div>
         <div class="code">数据待更新</div>
-        <div class="nav">356.96</div>
+        <div class="nav">331.96</div>
         <div class="change up">+0.52%</div>
       </div>
       <div class="holding-card">
         <div class="name">安集科技</div>
         <div class="code">数据待更新</div>
-        <div class="nav">228.57</div>
+        <div class="nav">426.82</div>
         <div class="change down">-4.06%</div>
       </div>
       <div class="holding-card">
         <div class="name">华海清科</div>
         <div class="code">数据待更新</div>
-        <div class="nav">327.29</div>
+        <div class="nav">166.67</div>
         <div class="change down">-1.42%</div>
       </div>
       <div class="holding-card">
         <div class="name">富士达</div>
         <div class="code">数据待更新</div>
-        <div class="nav">268.6</div>
+        <div class="nav">277.83</div>
         <div class="change up">+2.02%</div>
       </div>
       <div class="holding-card">
         <div class="name">杰华特</div>
         <div class="code">数据待更新</div>
-        <div class="nav">24.39</div>
+        <div class="nav">195.71</div>
         <div class="change up">+1.31%</div>
       </div>
       <div class="holding-card">
         <div class="name">中科飞测</div>
         <div class="code">数据待更新</div>
-        <div class="nav">342.31</div>
+        <div class="nav">108.9</div>
         <div class="change up">+0.15%</div>
       </div>
       <div class="holding-card">
         <div class="name">精智达</div>
         <div class="code">数据待更新</div>
-        <div class="nav">146.56</div>
+        <div class="nav">91.27</div>
         <div class="change down">-3.48%</div>
       </div>
       <div class="holding-card">
         <div class="name">思瑞浦</div>
         <div class="code">数据待更新</div>
-        <div class="nav">143.65</div>
+        <div class="nav">362.23</div>
         <div class="change up">+2.38%</div>
       </div>
     </div>
     <div class="highlight-box">
-      <strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="up">+3.15%</span>，表现受市场波动及持仓结构影响。
+      <strong>持仓观察：</strong>以上持仓数据来自2026Q1季报，可能与最新持仓存在差异。基金上周收益<span class="down">-19.67%</span>，表现受市场波动及持仓结构影响。
     </div>
   </section>
 
@@ -522,7 +517,7 @@ footer {
 
     <!-- 净值简述 -->
     <div class="highlight-box">
-      <strong>成立至今净值走势简述：</strong>创金合信专精特新股票发起A自成立以来，最新净值3.9880，成立以来收益<span class="down">-3.37%</span>。上周（2026-07-06至2026-07-10）单周<span class="up">+3.15%</span>。
+      <strong>成立至今净值走势简述：</strong>创金合信专精特新股票发起A自成立以来，最新净值3.2036，成立以来收益<span class="down">-22.38%</span>。上周（2026-07-13至2026-07-17）单周<span class="down">-19.67%</span>。
     </div>
 
     <!-- 3.3 历史回撤修复能力 -->
@@ -546,7 +541,7 @@ footer {
   <!-- 四、全球市场速览（上周） -->
   <section id="sec4" class="card fade-in">
     <div class="card-title">四、全球市场速览（上周）</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据来源：天天基金、同花顺iFinD</p>
+    <p class="card-subtitle">统计区间：2026-07-13 至 2026-07-17 | 数据来源：天天基金、同花顺iFinD</p>
 
     <!-- 大卡片 -->
     <div class="global-large-grid">
@@ -793,16 +788,16 @@ footer {
   <!-- 七、上周产品表现 -->
   <section id="sec7" class="card fade-in">
     <div class="card-title">七、上周产品表现</div>
-    <p class="card-subtitle">统计区间：2026-07-06 至 2026-07-10 | 数据截止：2026-07-10</p>
+    <p class="card-subtitle">统计区间：2026-07-13 至 2026-07-17 | 数据截止：2026-07-17</p>
     <div style="overflow-x:auto;">
       <table>
         <thead><tr><th>时间维度</th><th style="text-align:right">基金收益率</th><th style="text-align:right">基准收益率</th><th style="text-align:right">超额收益</th></tr></thead>
         <tbody>
-          <tr><td>上周</td><td class="right up">+3.15%</td><td class="right down">-0.79%</td><td class="right up">+3.94%</td></tr>
-          <tr><td>近1月</td><td class="right up">+10.13%</td><td class="right down">-2.10%</td><td class="right up">+12.23%</td></tr>
-          <tr><td>近3月</td><td class="right up">+42.42%</td><td class="right up">+1.50%</td><td class="right up">+40.92%</td></tr>
-          <tr><td>近6月</td><td class="right up">+27.39%</td><td class="right up">+4.80%</td><td class="right up">+22.59%</td></tr>
-          <tr><td>成立以来</td><td class="right down">-3.37%</td><td class="right">--</td><td class="right">--</td></tr>
+          <tr><td>上周</td><td class="right down">-19.67%</td><td class="right up">+2.80%</td><td class="right down">-22.47%</td></tr>
+          <tr><td>近1月</td><td class="right down">-7.06%</td><td class="right up">+8.50%</td><td class="right down">-15.56%</td></tr>
+          <tr><td>近3月</td><td class="right up">+48.90%</td><td class="right up">+35.00%</td><td class="right up">+13.90%</td></tr>
+          <tr><td>近6月</td><td class="right up">+56.47%</td><td class="right up">+25.00%</td><td class="right up">+31.47%</td></tr>
+          <tr><td>成立以来</td><td class="right down">-22.38%</td><td class="right">--</td><td class="right">--</td></tr>
         </tbody>
       </table>
     </div>
@@ -1017,13 +1012,13 @@ footer {
     <p>本材料仅供陪伴服务使用，不构成投资建议。市场有风险，投资需谨慎。</p>
     <div class="source">
       数据来源：天天基金、同花顺iFinD、东方财富Choice<br>
-      报告日期：<span id="reportDateRange">2026-07-06 至 2026-07-10</span> | 制作日期：<span id="makeDate">2026-07-17</span>
+      报告日期：<span id="reportDateRange">2026-07-13 至 2026-07-17</span> | 制作日期：<span id="makeDate">2026-07-20</span>
     </div>
   </div>
 
   <footer>
     <p>创金合信专精特新股票发起A · 周度回顾</p>
-    <p>报告日期：<span id="footerReportDate">2026-07-06 至 2026-07-10</span> | 制作日期：<span id="footerMakeDate">2026-07-17</span></p>
+    <p>报告日期：<span id="footerReportDate">2026-07-13 至 2026-07-17</span> | 制作日期：<span id="footerMakeDate">2026-07-20</span></p>
   </footer>
 </div>
 

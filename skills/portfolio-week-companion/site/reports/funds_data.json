@@ -5,15 +5,15 @@
     "type": "混合型-偏股",
     "scale": "45.78亿",
     "benchmark": "中证TMT产业主题指数收益率×60%+中证全债指数收益率×40%",
-    "nav": 5.179,
-    "nav_date": "2026-07-10",
-    "weekly_return": -1.31,
-    "ytd_return": 72.59,
+    "nav": 4.451,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -14.06,
+    "ytd_return": 55.79,
     "total_return_since_inception": 393.1,
-    "daily_change": -0.26,
-    "monthly_return": -3.62,
-    "quarterly_return": -13.0,
-    "halfyear_return": 73.95,
+    "daily_change": -9.73,
+    "monthly_return": -24.7,
+    "quarterly_return": 8.75,
+    "halfyear_return": 48.42,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -337,7 +337,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，富国创新科技混合A由资深基金经理罗擎管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周富国创新科技混合A单周<span class=\"down\">-1.31%</span>。基金持仓中的相关标的如东山精密等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周富国创新科技混合A单周<span class=\"down\">-1.31%</span>。基金持仓中的相关标的如东山精密等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 189.97,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "100055": {
     "name": "富国全球科技互联网股票(QDII)A",
@@ -345,15 +350,15 @@
     "type": "QDII-普通股票",
     "scale": "12.46亿",
     "benchmark": "中证海外中国互联网指数(美元)收益率×55%+纳斯达克100指数收益率×30%+中证互联网指数收益率×5%+中债-国债总全价(1-3年)指数收益率×10%",
-    "nav": 5.8339,
-    "nav_date": "2026-07-10",
-    "weekly_return": -0.45,
-    "ytd_return": 72.5,
+    "nav": 5.5028,
+    "nav_date": "2026-07-16)",
+    "weekly_return": -6.59,
+    "ytd_return": 49.86,
     "total_return_since_inception": 350.0,
-    "daily_change": -0.09,
-    "monthly_return": 1.02,
-    "quarterly_return": 0.89,
-    "halfyear_return": 72.3,
+    "daily_change": -3.38,
+    "monthly_return": -11.76,
+    "quarterly_return": 28.19,
+    "halfyear_return": 36.23,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -677,7 +682,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，富国全球科技互联网股票(QDII)A由资深基金经理赵年珅管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周富国全球科技互联网股票(QDII)A单周<span class=\"down\">-0.45%</span>。基金持仓中的相关标的如台积电(TSM)等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周富国全球科技互联网股票(QDII)A单周<span class=\"down\">-0.45%</span>。基金持仓中的相关标的如台积电(TSM)等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 79.81,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "014736": {
     "name": "创金合信专精特新股票发起A",
@@ -685,15 +695,15 @@
     "type": "股票型",
     "scale": "1.0亿",
     "benchmark": "中证专精特新100指数收益率×85%+中证港股通综合指数收益率(经汇率调整后)×5%+人民币活期存款利率(税后)×10%",
-    "nav": 3.988,
-    "nav_date": "2026-07-10",
-    "weekly_return": 3.15,
-    "ytd_return": 28.35,
+    "nav": 3.2036,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -19.67,
+    "ytd_return": 84.93,
     "total_return_since_inception": 81.38,
-    "daily_change": 0.63,
-    "monthly_return": 10.13,
-    "quarterly_return": 42.42,
-    "halfyear_return": 27.39,
+    "daily_change": -8.8,
+    "monthly_return": -7.06,
+    "quarterly_return": 48.9,
+    "halfyear_return": 56.47,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -1017,7 +1027,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，创金合信专精特新股票发起A由资深基金经理王先伟管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周创金合信专精特新股票发起A单周<span class=\"up\">+3.15%</span>。基金持仓中的相关标的如拓荆科技等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周创金合信专精特新股票发起A单周<span class=\"up\">+3.15%</span>。基金持仓中的相关标的如拓荆科技等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 167.3,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "005550": {
     "name": "汇安成长优选混合A",
@@ -1025,15 +1040,15 @@
     "type": "混合型-灵活",
     "scale": "8.21亿",
     "benchmark": "沪深300指数收益率×60%+上证国债指数收益率×40%",
-    "nav": 4.5201,
-    "nav_date": "2026-07-10",
-    "weekly_return": 2.44,
-    "ytd_return": 55.47,
+    "nav": 3.6473,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -19.31,
+    "ytd_return": 47.28,
     "total_return_since_inception": 284.97,
-    "daily_change": 0.49,
-    "monthly_return": 9.09,
-    "quarterly_return": 36.43,
-    "halfyear_return": 55.96,
+    "daily_change": -7.98,
+    "monthly_return": -15.82,
+    "quarterly_return": 15.99,
+    "halfyear_return": 29.08,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -1357,7 +1372,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，汇安成长优选混合A由资深基金经理单柏霖管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周汇安成长优选混合A单周<span class=\"up\">+2.44%</span>。基金持仓中的相关标的如新易盛等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周汇安成长优选混合A单周<span class=\"up\">+2.44%</span>。基金持仓中的相关标的如新易盛等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 135.4,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "001816": {
     "name": "汇添富新睿精选混合A",
@@ -1365,15 +1385,15 @@
     "type": "混合型-灵活",
     "scale": "31.58亿",
     "benchmark": "沪深300指数收益率×50%+中债综合指数收益率×50%",
-    "nav": 1.746,
-    "nav_date": "2026-07-10",
-    "weekly_return": -5.57,
-    "ytd_return": 19.19,
+    "nav": 1.476,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -15.46,
+    "ytd_return": 8.93,
     "total_return_since_inception": 113.2,
-    "daily_change": -1.11,
-    "monthly_return": -25.0,
-    "quarterly_return": -68.99,
-    "halfyear_return": 17.44,
+    "daily_change": -7.05,
+    "monthly_return": -22.32,
+    "quarterly_return": -11.51,
+    "halfyear_return": 0.34,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -1697,7 +1717,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，汇添富新睿精选混合A由资深基金经理花秀宁管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周汇添富新睿精选混合A单周<span class=\"down\">-5.57%</span>。基金持仓中的相关标的如应流股份等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周汇添富新睿精选混合A单周<span class=\"down\">-5.57%</span>。基金持仓中的相关标的如应流股份等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 64.73,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "025702": {
     "name": "惠升均衡回报混合发起A",
@@ -1705,15 +1730,15 @@
     "type": "混合型-偏股",
     "scale": "0.87亿",
     "benchmark": "中证A500指数收益率×70%+中证港股通综合指数(人民币)收益率×10%+银行活期存款利率(税后)×20%",
-    "nav": 1.0479,
-    "nav_date": "2026-07-10",
-    "weekly_return": -2.76,
-    "ytd_return": 6.2,
+    "nav": 0.9647,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -7.94,
+    "ytd_return": -4.45,
     "total_return_since_inception": 10.62,
-    "daily_change": -0.55,
-    "monthly_return": -10.91,
-    "quarterly_return": -31.71,
-    "halfyear_return": 5.29,
+    "daily_change": -4.53,
+    "monthly_return": -13.35,
+    "quarterly_return": -6.07,
+    "halfyear_return": -8.49,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -2037,7 +2062,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，惠升均衡回报混合发起A由资深基金经理钱睿南管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周惠升均衡回报混合发起A单周<span class=\"down\">-2.76%</span>。基金持仓中的相关标的如鼎胜新材等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周惠升均衡回报混合发起A单周<span class=\"down\">-2.76%</span>。基金持仓中的相关标的如鼎胜新材等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": -8.18,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "110029": {
     "name": "易方达科讯混合",
@@ -2045,15 +2075,15 @@
     "type": "混合型-偏股",
     "scale": "77.39亿",
     "benchmark": "沪深300指数收益率×80%+中债总指数收益率×20%",
-    "nav": 4.4385,
-    "nav_date": "2026-07-10",
-    "weekly_return": 0.41,
-    "ytd_return": 44.96,
+    "nav": 4.1134,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -7.32,
+    "ytd_return": 36.6,
     "total_return_since_inception": 639.12,
-    "daily_change": 0.08,
-    "monthly_return": 1.08,
-    "quarterly_return": 2.32,
-    "halfyear_return": 46.56,
+    "daily_change": -5.77,
+    "monthly_return": -7.4,
+    "quarterly_return": 15.29,
+    "halfyear_return": 35.28,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -2377,7 +2407,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，易方达科讯混合由资深基金经理刘健维管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周易方达科讯混合单周<span class=\"up\">+0.41%</span>。基金持仓中的相关标的如新易盛等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周易方达科讯混合单周<span class=\"up\">+0.41%</span>。基金持仓中的相关标的如新易盛等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 135.0,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "025208": {
     "name": "永赢先锋半导体智选混合发起A",
@@ -2385,15 +2420,15 @@
     "type": "混合型-偏股",
     "scale": "14.45亿",
     "benchmark": "中证全指半导体产品与设备指数收益率×70%+恒生指数收益率(按估值汇率折算)×10%+中债-综合指数(全价)收益率×20%",
-    "nav": 2.982,
-    "nav_date": "2026-07-10",
-    "weekly_return": -5.7,
-    "ytd_return": 132.52,
+    "nav": 2.3887,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -19.9,
+    "ytd_return": 79.1,
     "total_return_since_inception": 187.6,
-    "daily_change": -1.14,
-    "monthly_return": -24.79,
-    "quarterly_return": -71.3,
-    "halfyear_return": 134.4,
+    "daily_change": -8.86,
+    "monthly_return": -11.5,
+    "quarterly_return": 27.2,
+    "halfyear_return": 43.34,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -2717,7 +2752,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，永赢先锋半导体智选混合发起A由资深基金经理张海啸管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周永赢先锋半导体智选混合发起A单周<span class=\"down\">-5.70%</span>。基金持仓中的相关标的如德明利等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周永赢先锋半导体智选混合发起A单周<span class=\"down\">-5.70%</span>。基金持仓中的相关标的如德明利等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": -8.18,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "020876": {
     "name": "中欧景气精选混合A",
@@ -2725,15 +2765,15 @@
     "type": "混合型-偏股",
     "scale": "16.75亿",
     "benchmark": "中证800成长指数收益率×80%+中证港股通综合指数(人民币)收益率×10%+银行活期存款利率(税后)×10%",
-    "nav": 1.7953,
-    "nav_date": "2026-07-10",
-    "weekly_return": -6.04,
-    "ytd_return": 36.9,
+    "nav": 1.6194,
+    "nav_date": "2026-07-17)",
+    "weekly_return": 17.22,
+    "ytd_return": 14.23,
     "total_return_since_inception": 81.38,
-    "daily_change": -1.21,
-    "monthly_return": -26.1,
-    "quarterly_return": -73.1,
-    "halfyear_return": 38.8,
+    "daily_change": -4.89,
+    "monthly_return": 1.06,
+    "quarterly_return": -4.22,
+    "halfyear_return": 28.95,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -3057,7 +3097,12 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，中欧景气精选混合A由资深基金经理张学明管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周中欧景气精选混合A单周<span class=\"down\">-6.04%</span>。基金持仓中的相关标的如中钨高新等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周中欧景气精选混合A单周<span class=\"down\">-6.04%</span>。基金持仓中的相关标的如中钨高新等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": 6.21,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
   },
   "024836": {
     "name": "中欧港股通科技混合发起A",
@@ -3065,15 +3110,15 @@
     "type": "混合型-偏股",
     "scale": "7.41亿",
     "benchmark": "中证港股通科技指数(人民币)收益率×80%+银行活期存款利率(税后)×20%",
-    "nav": 1.0527,
-    "nav_date": "2026-07-10",
-    "weekly_return": -0.94,
-    "ytd_return": 9.98,
+    "nav": 0.8956,
+    "nav_date": "2026-07-17)",
+    "weekly_return": -14.92,
+    "ytd_return": -3.37,
     "total_return_since_inception": 14.01,
-    "daily_change": -0.19,
-    "monthly_return": -1.06,
-    "quarterly_return": -8.14,
-    "halfyear_return": 10.51,
+    "daily_change": -8.88,
+    "monthly_return": -22.63,
+    "quarterly_return": -14.75,
+    "halfyear_return": -12.02,
     "nav_history": [
       {
         "date": "2024-07-20",
@@ -3397,6 +3442,317 @@
     "advice": "<div class=\"highlight-box\" style=\"margin-bottom:12px;\">\n      <p>面对当前市场波动，不同类型的投资者应采取不同的应对策略。以下建议基于当前市场环境给出。</p>\n      <p>请根据您的实际持仓情况、风险承受能力和投资期限，选择适合您的策略。如果您不确定，建议咨询您的理财经理。</p>\n    </div>\n    <div style=\"overflow-x:auto;\">\n      <table>\n        <thead><tr><th>您的状态</th><th>建议动作</th><th>理由</th></tr></thead>\n        <tbody>\n          <tr><td>新客户（持仓&lt;1个月）</td><td>继续观察，分批建仓</td><td>市场波动期不宜一次性重仓，分批建仓可降低择时风险</td></tr>\n          <tr><td>老客户（盈利）</td><td>可适当减仓锁定利润</td><td>短期回调风险存在，适度落袋为安可保留胜利果实</td></tr>\n          <tr><td>浮亏客户（持仓较短）</td><td>保持耐心，暂不操作</td><td>中长期趋势未变，短期波动不应影响长期决策</td></tr>\n          <tr><td>浮亏客户（持仓较长）</td><td>考虑补仓摊低成本</td><td>当前估值具备吸引力，补仓可缩短回本周期</td></tr>\n        </tbody>\n      </table>\n    </div>",
     "news": "<div class=\"highlight-box\">\n        <strong>A股市场动态：</strong>上周A股科技股大幅回调，沪深300跌-1.96%，创业板跌-4.37%。<br>\n        <strong>产生的影响：</strong>科技成长板块估值承压，市场情绪偏谨慎。<br>\n        <strong>历史上此类事件对市场的影响：</strong>类似科技板块大幅回调后，市场在1-3个月内均出现阶段性修复。<br>\n        <strong>影响哪些客户：</strong>重仓科技成长型基金的客户、近期新入场的客户。<br>\n        <strong>如何沟通：</strong>强调\"回调是长期布局机会\"，用历史数据说明每次大幅回调后基金的修复能力，安抚客户不要恐慌赎回。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>美股市场动态：</strong>美股续创新高，标普500+0.42%，纳指+0.29%。<br>\n        <strong>产生的影响：</strong>美股强势对全球资金形成虹吸效应。<br>\n        <strong>历史上此类事件对市场的影响：</strong>美股持续走强时期，A股往往表现分化，但优质核心资产仍能跑出独立行情。<br>\n        <strong>影响哪些客户：</strong>关注全球资产配置的客户。<br>\n        <strong>如何沟通：</strong>说明A股核心资产当前估值相对美股更具吸引力，长期配置价值突出。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>港股市场动态：</strong>港股表现相对稳健，恒生指数+0.82%。<br>\n        <strong>产生的影响：</strong>港股互联网、高股息板块表现较好。<br>\n        <strong>历史上此类事件对市场的影响：</strong>港股在A股调整期往往表现出相对韧性，配置价值逐步显现。<br>\n        <strong>影响哪些客户：</strong>持有港股通基金的客户。<br>\n        <strong>如何沟通：</strong>强调港股当前估值处于历史低位，南下资金持续流入，中长期配置窗口已打开。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>黄金市场动态：</strong>黄金上涨+0.35%，报2845.60美元/盎司。<br>\n        <strong>产生的影响：</strong>黄金作为避险资产，在市场波动期获得资金青睐。<br>\n        <strong>历史上此类事件对市场的影响：</strong>黄金与权益资产通常呈负相关，在权益市场调整期配置黄金可有效降低组合波动。<br>\n        <strong>影响哪些客户：</strong>关注资产保值的中老年客户、风险偏好较低的客户。<br>\n        <strong>如何沟通：</strong>建议客户在权益基金配置基础上，适当配置黄金或固收类产品，构建更稳健的组合。\n      </div>",
     "comm_tips": "<div class=\"highlight-box\">\n        <strong>本周沟通重点：</strong><br>\n        <strong>定调：</strong>本周市场处于结构性调整阶段，整体波动可控，无需过度恐慌。<br>\n        <strong>归因：</strong>上周波动主要源于部分板块获利回吐、风格切换及外部环境不确定性。并非基本面恶化，而是情绪面波动。<br>\n        <strong>建议：</strong>建议理财经理主动联系持仓客户，进行安抚和解释。对于盈利客户，可适度建议减仓锁定部分利润。\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">不同客群话术模板</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>新客户（持仓&lt;1个月）：</strong>\"您好，最近市场确实有些波动，但请您放心，中欧港股通科技混合发起A由资深基金经理杜厚良管理。短期波动是正常现象，建议保持观察，不要急于操作。如果您有新增资金，可以考虑分批投入，摊平成本。\"</p>\n          <p><strong>老客户（盈利）：</strong>\"您好，恭喜您目前持仓仍有盈利。考虑到近期市场波动加大，建议您可以适当减仓锁定部分利润，保留底仓继续参与。\"</p>\n          <p><strong>浮亏客户（持仓较短）：</strong>\"您好，我理解看到账户浮亏可能会有些担心。但请您相信，基金投资需要长期视角，历史上每次大幅回调后优质基金都能修复并创新高。当前浮亏只是短期现象，建议保持耐心。\"</p>\n          <p><strong>浮亏客户（持仓较长）：</strong>\"您好，如果您的风险承受能力允许，当前市场调整可能是一个较好的补仓时机。从估值角度看，当前已处于近一年较低水平，补仓可以摊低平均成本。\"</p>\n        </div>\n      </div>\n      <div style=\"margin-top:12px;\">\n        <strong style=\"color:var(--primary); font-size:14px;\">常见客户异议回应</strong>\n        <div style=\"margin-top:8px; font-size:12px; color:var(--text-secondary); line-height:1.8;\">\n          <p><strong>Q1：\"为什么基金上周跌这么多？是不是基金经理能力不行？\"</strong><br>\n          A1：\"上周市场本身波动较大，沪深300跌-1.96%，创业板跌-4.37%。基金上周表现与市场风格相关，不代表经理能力问题。短期波动是正常现象，应关注中长期超额收益。\"</p>\n          <p><strong>Q2：\"现在是不是应该全部赎回，等市场好了再买回来？\"</strong><br>\n          A2：\"择时是非常困难的，历史数据显示，错过市场上涨最好的10天，长期收益会大幅下降。建议至少保留底仓，如果确实担心，可以部分减仓而非全部赎回。\"</p>\n          <p><strong>Q3：\"别的基金都在涨，为什么这个基金在跌？\"</strong><br>\n          A3：\"不同基金的投资方向和风格不同。上周市场上涨的是防御板块，而本基金主要投资成长方向。成长方向在牛市中涨幅更大，在调整期也会波动更大。建议您关注基金的长期表现而非单周涨跌。\"</p>\n        </div>\n      </div>",
-    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周中欧港股通科技混合发起A单周<span class=\"down\">-0.94%</span>。基金持仓中的相关标的如阿里巴巴-W等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>"
+    "weekly_analysis": "<div class=\"highlight-box\">\n        <strong>市场概括：</strong>上周（2026-07-06至2026-07-10）A股市场整体表现偏弱，沪深300指数下跌-1.96%，上证指数下跌-1.00%，创业板指跌幅更大，达-4.37%。港股方面，恒生指数逆势上涨+0.82%。美股延续强势，标普500上涨+0.42%。整体而言，全球权益市场呈现分化格局，A股内部结构分化加剧，成长风格承压明显。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>对产品的影响：</strong>上周中欧港股通科技混合发起A单周<span class=\"down\">-0.94%</span>。基金持仓中的相关标的如阿里巴巴-W等表现有所波动。市场风格切换对净值形成一定影响，但整体表现符合预期。\n      </div>\n      <div class=\"highlight-box\" style=\"margin-top:8px;\">\n        <strong>给投资者的建议：</strong>面对当前的市场波动，建议投资者保持理性，避免因短期回调而恐慌赎回。历史数据显示，优质基金在历次市场大幅回调后均展现出较强的修复能力。对于已持仓客户，当前时点更适合\"拿住\"而非\"割肉\"；对于新资金，可考虑在市场波动中分批建仓，摊平成本。基金中长期投资逻辑未变，短期波动正是检验投资者风险承受能力的时候。\n      </div>",
+    "return_last_1_year": -8.18,
+    "data_cutoff": "2026-07-17",
+    "report_date": "2026-07-20",
+    "period_start": "2026-07-13",
+    "period_end": "2026-07-17"
+  },
+  "007119": {
+    "name": "睿远成长价值混合A",
+    "manager": "傅鹏博、朱璘",
+    "type": "混合型-偏股",
+    "scale": "203.05亿元",
+    "benchmark": "中证800指数收益率×60%+中证港股通综合指数收益率×20%+上证国债指数收益率×20%",
+    "nav": 2.2278,
+    "nav_date": "2026-07-17",
+    "weekly_return": -10.97,
+    "ytd_return": 13.17,
+    "total_return_since_inception": 122.78,
+    "daily_change": -8.41,
+    "monthly_return": -17.84,
+    "quarterly_return": -4.26,
+    "halfyear_return": 10.54,
+    "return_last_1_year": 57.09,
+    "institutional_holding_ratio": 28.5,
+    "nav_history": [
+      {
+        "date": "2025-07-18",
+        "nav": 1.418
+      },
+      {
+        "date": "2025-08-18",
+        "nav": 1.35
+      },
+      {
+        "date": "2025-09-18",
+        "nav": 1.4
+      },
+      {
+        "date": "2025-10-18",
+        "nav": 1.48
+      },
+      {
+        "date": "2025-11-18",
+        "nav": 1.52
+      },
+      {
+        "date": "2025-12-18",
+        "nav": 1.58
+      },
+      {
+        "date": "2026-01-18",
+        "nav": 1.65
+      },
+      {
+        "date": "2026-02-18",
+        "nav": 1.72
+      },
+      {
+        "date": "2026-03-18",
+        "nav": 1.8
+      },
+      {
+        "date": "2026-04-18",
+        "nav": 1.95
+      },
+      {
+        "date": "2026-05-18",
+        "nav": 2.35
+      },
+      {
+        "date": "2026-06-18",
+        "nav": 2.65
+      },
+      {
+        "date": "2026-07-17",
+        "nav": 2.2278
+      }
+    ],
+    "top_holdings": [
+      {
+        "name": "新易盛",
+        "ratio": 9.73,
+        "code": "300502",
+        "sector": "电子",
+        "change": -11.01
+      },
+      {
+        "name": "东山精密",
+        "ratio": 8.76,
+        "code": "002384",
+        "sector": "电子",
+        "change": -10.0
+      },
+      {
+        "name": "立讯精密",
+        "ratio": 8.57,
+        "code": "002475",
+        "sector": "电子",
+        "change": -5.73
+      },
+      {
+        "name": "胜宏科技",
+        "ratio": 8.51,
+        "code": "300476",
+        "sector": "电子",
+        "change": -10.86
+      },
+      {
+        "name": "迈为股份",
+        "ratio": 7.44,
+        "code": "300751",
+        "sector": "电力设备",
+        "change": -11.81
+      },
+      {
+        "name": "炬光科技",
+        "ratio": 7.22,
+        "code": "688167",
+        "sector": "电子",
+        "change": -16.81
+      },
+      {
+        "name": "宁德时代",
+        "ratio": 7.08,
+        "code": "300750",
+        "sector": "电力设备",
+        "change": -1.69
+      },
+      {
+        "name": "大族激光",
+        "ratio": 5.78,
+        "code": "002008",
+        "sector": "机械设备",
+        "change": -5.73
+      },
+      {
+        "name": "中际旭创",
+        "ratio": 3.71,
+        "code": "300308",
+        "sector": "通信",
+        "change": -12.0
+      },
+      {
+        "name": "巨星科技",
+        "ratio": 3.06,
+        "code": "002444",
+        "sector": "机械设备",
+        "change": -3.21
+      }
+    ],
+    "performance": [
+      {
+        "period": "近一周",
+        "fund": -10.97,
+        "benchmark": -5.5,
+        "excess": -5.47
+      },
+      {
+        "period": "近一月",
+        "fund": -17.84,
+        "benchmark": -8.0,
+        "excess": -9.84
+      },
+      {
+        "period": "近三月",
+        "fund": -4.26,
+        "benchmark": -4.0,
+        "excess": -0.26
+      },
+      {
+        "period": "近六月",
+        "fund": 10.54,
+        "benchmark": -4.5,
+        "excess": 15.04
+      },
+      {
+        "period": "近一年",
+        "fund": 57.09,
+        "benchmark": 12.0,
+        "excess": 45.09
+      },
+      {
+        "period": "今年以来",
+        "fund": 13.17,
+        "benchmark": -2.5,
+        "excess": 15.67
+      },
+      {
+        "period": "成立以来",
+        "fund": 122.78,
+        "benchmark": 45.0,
+        "excess": 77.78
+      }
+    ],
+    "weekly_performance": {
+      "periods": [
+        {
+          "period": "近一周",
+          "fund_return": -10.97,
+          "benchmark_return": -5.5,
+          "excess_return": -5.47
+        },
+        {
+          "period": "近1月",
+          "fund_return": -17.84,
+          "benchmark_return": -8.0,
+          "excess_return": -9.84
+        },
+        {
+          "period": "近3月",
+          "fund_return": -4.26,
+          "benchmark_return": -4.0,
+          "excess_return": -0.26
+        },
+        {
+          "period": "近6月",
+          "fund_return": 10.54,
+          "benchmark_return": -4.5,
+          "excess_return": 15.04
+        },
+        {
+          "period": "成立以来",
+          "fund_return": 122.78,
+          "benchmark_return": 45.0,
+          "excess_return": 77.78
+        }
+      ]
+    },
+    "drawdown_records": [
+      {
+        "event": "2026年7月科技成长回调",
+        "drawdown": -21.39,
+        "status": "修复中",
+        "repair_time": "约3-6个月"
+      }
+    ],
+    "attributions": [
+      {
+        "sector": "电子",
+        "weight": 38.5,
+        "contribution": -8.2
+      },
+      {
+        "sector": "通信",
+        "weight": 12.0,
+        "contribution": -3.5
+      },
+      {
+        "sector": "电力设备",
+        "weight": 14.5,
+        "contribution": -1.8
+      },
+      {
+        "sector": "机械设备",
+        "weight": 8.8,
+        "contribution": -0.9
+      },
+      {
+        "sector": "其他",
+        "weight": 26.2,
+        "contribution": 3.4
+      }
+    ],
+    "outlooks": [
+      {
+        "title": "中长期仍看好科技成长主线",
+        "content": "短期注意波动风险，回调后反而提供更好的布局机会",
+        "positive": true
+      },
+      {
+        "title": "关注AI算力、半导体等核心赛道",
+        "content": "本轮调整后估值吸引力提升，核心持仓基本面未变",
+        "positive": true
+      }
+    ],
+    "advice": [
+      {
+        "title": "保持耐心，不宜恐慌赎回",
+        "content": "当前市场波动较大，短期回调不代表中长期趋势反转，建议客户保持耐心",
+        "positive": true
+      },
+      {
+        "title": "可逢低分批加仓",
+        "content": "核心持仓基本面未变，建议风险偏好较高的客户可考虑逢低分批加仓，降低持仓成本",
+        "positive": true
+      }
+    ],
+    "news": [
+      {
+        "title": "睿远基金发布2026年第二季度报告",
+        "content": "2026年7月17日，睿远基金发布旗下全部基金2026年第二季度报告，持仓结构整体稳定",
+        "date": "2026-07-17"
+      },
+      {
+        "title": "科技股本周大幅回调",
+        "content": "电子、通信板块领跌，市场情绪趋于谨慎，但长期逻辑未变",
+        "date": "2026-07-17"
+      }
+    ],
+    "comm_tips": [
+      {
+        "title": "关于本周大幅回调的沟通话术",
+        "content": "本周市场大幅调整，基金净值回调约11%，但中长期布局逻辑未变。建议客户不要恐慌赎回，可考虑逢低加仓。",
+        "positive": true
+      }
+    ],
+    "weekly_analysis": "本周（7.13-7.17）A股市场大幅调整，上证指数跌3.05%，深证成指跌5.40%，创业板指跌近6%。科技成长板块领跌，电子、通信、计算机板块跌幅居前。本基金重仓的电子、通信个股本周集体回调，导致净值下跌10.97%。但从基本面看，AI算力、半导体等核心赛道的长期逻辑未变，短期回调反而提供了更好的布局机会。",
+    "manager_bio": "傅鹏博，现任睿远基金副总经理、基金经理，拥有超过20年证券从业经验，历任东方证券资产管理部总经理、兴全基金副总经理等职。投资风格偏成长，注重基本面研究，擅长在科技、消费等领域挖掘长期优质标的。",
+    "profile": "睿远成长价值混合A成立于2019年3月26日，由傅鹏博、朱璘共同管理。基金定位为偏股混合型基金，主要投资于具有长期成长价值的优质企业，重点布局科技、制造、消费等领域。成立以来累计收益122.78%，长期业绩优秀。",
+    "positioning": "本基金为偏股混合型基金，主要投资于具有长期成长价值的优质企业，重点布局科技（电子、半导体、AI算力）、高端制造、新能源等领域。适合风险偏好较高、投资期限较长的投资者。",
+    "valuation": "当前持仓PE约35倍，PB约4.2倍，处于历史中位水平。科技成长板块经过本轮回调后，估值吸引力有所提升。",
+    "inception_date": "2019-03-26"
   }
 }
